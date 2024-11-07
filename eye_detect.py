@@ -18,11 +18,12 @@ while True:
     for (x, y, w, h) in faces:
         # Rysowanie prostokąta wokół twarzy
         cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
-        roi_gray = gray[y:y+h, x:x+w]
-        roi_color = frame[y:y+h, x:x+w]
+        cv2.rectangle(frame, (x, y), (x+w, y+h*2//3), (0, 0, 255), 2)
+        roi_gray = gray[y:y + h*2//3, x:x+w]
+        roi_color = frame[y:y + h*2//3, x:x+w]
 
         # Wykrywanie oczu
-        eyes = eye_cascade.detectMultiScale(roi_gray)
+        eyes = eye_cascade.detectMultiScale(roi_gray, scaleFactor=1.05, minNeighbors=10)
         for (ex, ey, ew, eh) in eyes:
             cv2.rectangle(roi_color, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 2)
 
