@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 
 # Ładowanie klasyfikatorów Haar
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
@@ -25,7 +26,26 @@ while True:
         # Wykrywanie oczu
         eyes = eye_cascade.detectMultiScale(roi_gray, scaleFactor=1.05, minNeighbors=10)
         for (ex, ey, ew, eh) in eyes:
+            eye_gray = roi_gray[ey:ey+eh, ex:ex+ew]
+            eye_color = roi_color[ey:ey+eh, ex:ex+ew]
+            
+            # Rysowanie prostokąta wokół oczu
             cv2.rectangle(roi_color, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 2)
+            
+            # Wykrywanie źrenicy - progowanie i wykrywanie konturów
+            _, threshold = cv2.threshold(eye_gray, 30, 255, cv2.THRESH_BINARY_INV)
+            contours, _ = cv2.findContours(threshold, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+            # Szukanie największego konturu, który może być źrenicą
+            if contours:
+                largest_contour = max(contours, key=cv2.contourArea)
+                (cx, cy), radius = cv2.minEnclosingCircle(largest_contour)
+
+                # Rysowanie okręgu wokół źrenicy
+                center = (int(cx), int(cy))
+                radius = int(radius)
+                if radius > 3:  # Filtracja małych obiektów
+                    cv2.circle(eye_color, center, radius, (0, 0, 255), 2)
 
     # Wyświetlanie obrazu
     cv2.imshow('Eye Tracking', frame)
