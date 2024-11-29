@@ -30,8 +30,8 @@ while True:
     for (x, y, w, h) in faces:
 
         # Rysowanie prostokąta wokół twarzy
-        #cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
-        #cv2.rectangle(frame, (x, y), (x+w, y+h*2//3), (0, 0, 255), 2)
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
+        cv2.rectangle(frame, (x, y), (x+w, y+h*2//3), (0, 0, 255), 2)
 
 
         # Region twarzy do analizy oczu
@@ -46,7 +46,7 @@ while True:
             eye_color = roi_color[ey:ey+eh, ex:ex+ew]
 
             # Rysowanie prostokąta wokół oczu
-            #cv2.rectangle(roi_color, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 2)
+            cv2.rectangle(roi_color, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 2)
 
             # Jeśli nie mamy pozycji źrenicy dla oka, wykryj ją
             if pupil_positions[i] is None:
