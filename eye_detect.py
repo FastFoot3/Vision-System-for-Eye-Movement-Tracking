@@ -13,12 +13,11 @@ lk_params = dict(winSize=(15, 15),
 # Uruchomienie kamerki
 cap = cv2.VideoCapture(0)
 
-# Zmienna do przechowywania punktów źrenicy (do Optical Flow)
-pupil_position = None
+# Zmienna do przechowywania punktów źrenic (lista pozycji dla obu oczu)
+pupil_positions = [None, None]
 old_gray = None
 
 while True:
-    # Odczyt obrazu z kamerki
     ret, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
@@ -33,44 +32,45 @@ while True:
         # Rysowanie prostokąta wokół twarzy
         #cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
         #cv2.rectangle(frame, (x, y), (x+w, y+h*2//3), (0, 0, 255), 2)
-        #roi_gray = gray[y:y + h*2//3, x:x+w]
-        #roi_color = frame[y:y + h*2//3, x:x+w]
+
 
         # Region twarzy do analizy oczu
+
         roi_gray = gray[y:y + h * 2 // 3, x:x + w]
         roi_color = frame[y:y + h * 2 // 3, x:x + w]
 
         # Wykrywanie oczu
         eyes = eye_cascade.detectMultiScale(roi_gray, scaleFactor=1.05, minNeighbors=10)
-        for (ex, ey, ew, eh) in eyes:
+        for i, (ex, ey, ew, eh) in enumerate(eyes[:2]):  # Ograniczamy do dwóch oczu
             eye_gray = roi_gray[ey:ey+eh, ex:ex+ew]
             eye_color = roi_color[ey:ey+eh, ex:ex+ew]
 
             # Rysowanie prostokąta wokół oczu
             #cv2.rectangle(roi_color, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 2)
 
-            # Jeśli nie mamy pozycji źrenicy, wykryj ją
-            if pupil_position is None:
+            # Jeśli nie mamy pozycji źrenicy dla oka, wykryj ją
+            if pupil_positions[i] is None:
                 _, threshold = cv2.threshold(eye_gray, 30, 255, cv2.THRESH_BINARY_INV)
                 contours, _ = cv2.findContours(threshold, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
                 if contours:
                     largest_contour = max(contours, key=cv2.contourArea)
                     (cx, cy), radius = cv2.minEnclosingCircle(largest_contour)
                     if radius > 3:
-                        pupil_position = np.array([[cx, cy]], dtype=np.float32)
+                        pupil_positions[i] = np.array([[cx, cy]], dtype=np.float32)
                         cv2.circle(eye_color, (int(cx), int(cy)), int(radius), (0, 0, 255), 2)
 
             # Jeśli mamy pozycję źrenicy, śledź ją optycznym przepływem
-            if pupil_position is not None:
-                new_pupil_position, st, err = cv2.calcOpticalFlowPyrLK(old_gray, gray, pupil_position, None, **lk_params)
+            if pupil_positions[i] is not None:
+                new_pupil_position, st, err = cv2.calcOpticalFlowPyrLK(
+                    old_gray, gray, pupil_positions[i], None, **lk_params
+                )
                 if st[0][0] == 1:  # Jeśli śledzenie jest poprawne
-                    pupil_position = new_pupil_position
+                    pupil_positions[i] = new_pupil_position
                     cx, cy = new_pupil_position.ravel()
                     cv2.circle(eye_color, (int(cx), int(cy)), 5, (255, 0, 0), -1)
                 else:
-                    pupil_position = None  # Jeśli śledzenie się zgubi, spróbuj ponownie wykryć źrenicę
+                    pupil_positions[i] = None  # Jeśli śledzenie się zgubi, spróbuj ponownie wykryć źrenicę
 
-    # Zaktualizowanie poprzedniej klatki
     old_gray = gray.copy()
 
     # Wyświetlanie obrazu
