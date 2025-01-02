@@ -47,9 +47,12 @@ with open('eye_tracking_data.txt', 'w') as file:
                 eye_center_x = ex + ew // 2
                 eye_center_y = ey + eh // 2
 
+                # Wyświetlenie binarnego obrazu oka
+                _, threshold = cv2.threshold(eye_gray, 30, 255, cv2.THRESH_BINARY_INV)
+                cv2.imshow(f'Binary Eye {i}', threshold)  # Okno binarne dla każdego oka
+
                 # Jeśli nie mamy pozycji źrenicy dla oka, wykryj ją
                 if pupil_positions[i] is None:
-                    _, threshold = cv2.threshold(eye_gray, 30, 255, cv2.THRESH_BINARY_INV)
                     contours, _ = cv2.findContours(threshold, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
                     if contours:
                         largest_contour = max(contours, key=cv2.contourArea)
@@ -81,7 +84,7 @@ with open('eye_tracking_data.txt', 'w') as file:
 
         old_gray = gray.copy()
 
-        # Wyświetlanie obrazu
+        # Wyświetlanie obrazu głównego
         cv2.imshow('Eye Tracking with Optical Flow', frame)
 
         # Zatrzymanie programu po wciśnięciu 'q'
