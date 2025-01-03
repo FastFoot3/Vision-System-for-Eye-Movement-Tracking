@@ -1,41 +1,41 @@
-import cv2
-import numpy as np
+import cv2 # Biblioteka OpenCV do przetwarzania obrazów i analizy wideo.
+import numpy as np # Biblioteka do operacji matematycznych i pracy z tablicami danych.
 
-# Ładowanie klasyfikatorów Haar
-face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml')
+# Ładowanie klasyfikatorów Haar (gotowe modele służące do wykrywania twarzy i oczu na obrazie)
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml') # Wykrywa twarz
+eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml') # Wykrywa oczy
 
-# Parametry dla Optical Flow (Lucas-Kanade)
-lk_params = dict(winSize=(15, 15),
-                 maxLevel=2,
-                 criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))
+# Parametry dla Optical Flow Lucas-Kanade (metoda śledzenia ruchu punktów między kolejnymi klatkami)
+lk_params = dict(winSize=(15, 15), # Rozmiar okna, w którym analizowane są zmiany
+                 maxLevel=2, # Maksymalny poziom piramidy obrazu (obniżonej rozdzielczości)
+                 criteria=(cv2.TERM_CRITERIA_COUNT | cv2.TERM_CRITERIA_EPS, 10, 0.03)) # Kryteria zatrzymania algorytmu (ilość iteracji LUB dokładność, iteracje=10, dokładność=0.03)
 
 # Uruchomienie kamerki
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0) # 0 to pierwsza kamera
 
 # Zmienna do przechowywania punktów źrenic (lista pozycji dla obu oczu)
-pupil_positions = [None, None]
-old_gray = None
+pupil_positions = [None, None] # Lista przechowująca pozycje źrenic dla obu oczu
+old_gray = None # Poprzednia klatka w skali szarości (do Optical Flow)
 
 # Otwarcie pliku do zapisu pozycji źrenic
-with open('eye_tracking_data.txt', 'w') as file:
+with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzanie zasobami jak się kończy to automatycznie zamyka plik
     file.write('Eye_Index X_Displacement Y_Displacement\n')  # Nagłówek pliku
 
-    while True:
-        ret, frame = cap.read()
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    while True: # Główna pętla programu
+        ret, frame = cap.read() # Pobranie klatki obrazu do frame, ret to wartość bool która informuje czy udało się pobrać klatkę
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) # Konwertuje klatkę z kamery na grayscale
 
-        if old_gray is None:
-            old_gray = gray.copy()
+        if old_gray is None: # żeby wykonało się tylko na początku pętli
+            old_gray = gray.copy() # Ustawia old_gray na to samo co gray
 
         # Wykrywanie twarzy
-        faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+        faces = face_cascade.detectMultiScale(gray, 1.3, 5) # skalowanie obrazu 1.3, liczba trafień żeby uznać twarz 5 # faces to prostokąty
 
-        for (x, y, w, h) in faces:
+        for (x, y, w, h) in faces: # współrzędna X górnego lewego rogu prostokąta # współrzędna Y górnego lewego rogu prostokąta # szerokość prostokąta # wysokość prostokąta # całość dla każdej twarzy
 
             # Region twarzy do analizy oczu
-            roi_gray = gray[y:y + h * 2 // 3, x:x + w]
-            roi_color = frame[y:y + h * 2 // 3, x:x + w]
+            roi_gray = gray[y:y + h * 2 // 3, x:x + w] # Obszar twarzy (szarość) do szukania oczu (górne 2/3)
+            roi_color = frame[y:y + h * 2 // 3, x:x + w] # to samo w kolorze do rysowania
 
             # Wykrywanie oczu
             eyes = eye_cascade.detectMultiScale(roi_gray, scaleFactor=1.05, minNeighbors=10)
