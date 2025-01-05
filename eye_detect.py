@@ -15,6 +15,9 @@ cap = cv2.VideoCapture(0) # 0 to pierwsza kamera
 
 # Zmienna do przechowywania punktów źrenic (lista pozycji dla obu oczu)
 pupil_positions = [None, None] # Lista przechowująca pozycje źrenic dla obu oczu
+eye_bin = [None, None] # Lista przechowująca obraz binarny nieprzetworzony
+eye_bin_mopen_mclose = [None, None] # Lista przechowująca obraz binarny po operacjach morfologicznych
+
 old_gray = None # Poprzednia klatka w skali szarości (do Optical Flow)
 
 # Otwarcie pliku do zapisu pozycji źrenic
@@ -63,8 +66,6 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                 cv2.line(roi_color, (ex, eye_center_y), (ex + ew, eye_center_y), (0, 0, 255), 1) # rysowanie środka
                 cv2.line(roi_color, (eye_center_x, ey), (eye_center_x, ey + eh), (0, 0, 255), 1) # rysowanie środka
 
-                # Wyświetlenie binarnego obrazu oka
-
                 """działanie retval, dst = cv2.threshold(src, thresh, maxval, type)
                 retval (symbol _) - Zwraca wartość użytego progu (można ją pominąć, stąd _)
                 dst (eye_bin) - Obraz binarny wynikowy (czarno-biały obraz źrenicy)
@@ -73,8 +74,16 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                 maxval (255) - Maksymalna wartość, którą piksele przyjmują (tutaj biały)
                 type (cv2.THRESH_BINARY_INV) - Rodzaj progu (tutaj pracujemy na negatywie, czyli piksele ciemniejsze od 30 dają 1)
                 """
-                _, eye_bin = cv2.threshold(eye_gray, 30, 255, cv2.THRESH_BINARY_INV)
-                cv2.imshow(f'Binary Eye {i}', eye_bin)  # Okno binarne dla każdego oka
+                _, eye_bin[i] = cv2.threshold(eye_gray, 30, 255, cv2.THRESH_BINARY_INV)
+
+                # Tworzymy kernel (macierz do operacji morfologicznych)
+                kernel = np.ones((3, 3), np.uint8)  # Możesz dostosować rozmiar
+
+                # Usuwanie zakłóceń (otwarcie) - Usuwa szumy i małe zakłócenia, zachowuje główne struktury obiektów
+                eye_bin_mopen = cv2.morphologyEx(eye_bin[i], cv2.MORPH_OPEN, kernel)
+
+                # Wypełnianie małych dziur (zamknięcie) - Wypełnia dziury w obiektach, wygładza krawędzie obiektów (nie usuwa szumów)
+                eye_bin_mopen_mclose[i] = cv2.morphologyEx(eye_bin_mopen, cv2.MORPH_CLOSE, kernel)
 
                 # Jeśli nie mamy pozycji źrenicy dla oka, wykryj ją
                 if pupil_positions[i] is None:
@@ -84,7 +93,7 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                     cv2.CHAIN_APPROX_SIMPLE - Upraszcza kontury, przechowując tylko kluczowe punkty
                     """
 
-                    contours, _ = cv2.findContours(eye_bin, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+                    contours, _ = cv2.findContours(eye_bin_mopen_mclose[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
                     if contours:
                         largest_contour = max(contours, key=cv2.contourArea) # Największy kontur prawdopodobnie odpowiada źrenicy
                         (cx, cy), radius = cv2.minEnclosingCircle(largest_contour) # Znajduje najmniejszy okrąg otaczający kontur i zwraca jego środek i promień (źrenicę)
@@ -127,6 +136,17 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                         pupil_positions[i] = None  # Jeśli śledzenie się zgubi, spróbuj ponownie wykryć źrenicę
 
         old_gray = gray.copy()
+
+        # Wyświetlanie oczu binarnych
+        if all(img is not None for img in [eye_bin[0], eye_bin[1], eye_bin_mopen_mclose[0], eye_bin_mopen_mclose[1]]):
+            # Skalowanie obrazów do wspólnego rozmiaru
+            eye_bin[0] = cv2.resize(eye_bin[0], (100, 100))
+            eye_bin[1] = cv2.resize(eye_bin[1], (100, 100))
+            eye_bin_mopen_mclose[0] = cv2.resize(eye_bin_mopen_mclose[0], (100, 100))
+            eye_bin_mopen_mclose[1] = cv2.resize(eye_bin_mopen_mclose[1], (100, 100))
+            
+            numpy_horizontal_concat = np.concatenate((eye_bin[0], eye_bin[1], eye_bin_mopen_mclose[0], eye_bin_mopen_mclose[1]), axis=1)
+            cv2.imshow('Bin eyes for testing', numpy_horizontal_concat)
 
         # Wyświetlanie obrazu głównego
         cv2.imshow('Eye Tracking with Optical Flow', frame)
