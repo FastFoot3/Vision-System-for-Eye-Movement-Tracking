@@ -39,9 +39,13 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
             y1:y2 - zakres linii (od góry do dołu).
             x1:x2 - zakres kolumn (od lewej do prawej)."""
 
+            cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 255), 2) # rysowanie twarzy
+
             # Region twarzy do analizy oczu
             roi_gray = gray[y:y + h * 2 // 3, x:x + w] # Obszar twarzy (wycinek z obrazu szarość) do szukania oczu (górne 2/3)
             roi_color = frame[y:y + h * 2 // 3, x:x + w] # to samo w kolorze do rysowania
+
+            cv2.rectangle(frame, (x, y), (x+w, y+h*2//3), (255, 0, 255), 2) # rysowanie twarzy roi
 
             # Wykrywanie oczu
             eyes = eye_cascade.detectMultiScale(roi_gray, scaleFactor=1.05, minNeighbors=10) # skalowanie obrazu 1.05, liczba trafień żeby uznać twarz 10 # eyes to prostokąty
@@ -49,9 +53,15 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                 eye_gray = roi_gray[ey:ey + eh, ex:ex + ew]
                 eye_color = roi_color[ey:ey + eh, ex:ex + ew]
 
+
+                cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (255, 0, 255), 2) # rysowanie oczu
+
                 # Obliczenie środka oka
                 eye_center_x = ex + ew // 2 # obliczenie współrzędnej x
                 eye_center_y = ey + eh // 2 # obliczenie współrzędnej y
+
+                cv2.line(roi_color, (ex, eye_center_y), (ex + ew, eye_center_y), (0, 0, 255), 1) # rysowanie środka
+                cv2.line(roi_color, (eye_center_x, ey), (eye_center_x, ey + eh), (0, 0, 255), 1) # rysowanie środka
 
                 # Wyświetlenie binarnego obrazu oka
 
