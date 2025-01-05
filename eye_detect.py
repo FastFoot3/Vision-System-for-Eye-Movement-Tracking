@@ -5,6 +5,11 @@ import numpy as np # Biblioteka do operacji matematycznych i pracy z tablicami d
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml') # Wykrywa twarz
 eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml') # Wykrywa oczy
 
+
+# Sprawdzenie, czy klasyfikatory zostały poprawnie załadowane
+if face_cascade.empty() or eye_cascade.empty():
+    raise IOError("Nie można załadować klasyfikatorów Haar")
+
 # Parametry dla Optical Flow Lucas-Kanade (metoda śledzenia ruchu punktów między kolejnymi klatkami)
 lk_params = dict(winSize=(15, 15), # Rozmiar okna, w którym analizowane są zmiany
                  maxLevel=2, # Maksymalny poziom piramidy obrazu (obniżonej rozdzielczości)
@@ -12,6 +17,10 @@ lk_params = dict(winSize=(15, 15), # Rozmiar okna, w którym analizowane są zmi
 
 # Uruchomienie kamerki
 cap = cv2.VideoCapture(0) # 0 to pierwsza kamera
+
+# Sprawdzenie, czy kamera została poprawnie otwarta
+if not cap.isOpened():
+    raise IOError("Nie można otworzyć kamery")
 
 # Zmienna do przechowywania punktów źrenic (lista pozycji dla obu oczu)
 pupil_positions = [None, None] # Lista przechowująca pozycje źrenic dla obu oczu
