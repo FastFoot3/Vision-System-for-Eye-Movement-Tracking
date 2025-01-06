@@ -1,5 +1,21 @@
 import cv2 # Biblioteka OpenCV do przetwarzania obrazów i analizy wideo.
 import numpy as np # Biblioteka do operacji matematycznych i pracy z tablicami danych.
+import time # Biblioteka do pracy z czasem.
+
+# funkcja do suwaka progu
+def update_threshold(val):
+    global thresh
+    thresh = val
+
+# Inicjalizacja wartości progu
+thresh = 15
+max_thresh = 100
+
+# Tworzenie okna do wyświetlania obrazu
+cv2.namedWindow('Eye Detection')
+
+# Tworzenie suwaka do dynamicznego dostosowywania wartości progu
+cv2.createTrackbar('Thresh', 'Eye Detection', thresh, max_thresh, update_threshold)
 
 
 # Ładowanie klasyfikatorów Haar (gotowe modele służące do wykrywania twarzy i oczu na obrazie)
@@ -23,6 +39,8 @@ if not cap.isOpened():
 eye_bin = [None, None] # Lista przechowująca obraz binarny nieprzetworzony
 eye_bin_mopen_mclose = [None, None] # Lista przechowująca obraz binarny po operacjach morfologicznych
 
+
+start_time = time.time() # Pobranie czasu rozpoczęcia programu
 
 # Otwarcie pliku do zapisu pozycji źrenic
 with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzanie zasobami jak się kończy to automatycznie zamyka plik
@@ -75,7 +93,7 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                 maxval (255) - Maksymalna wartość, którą piksele przyjmują (tutaj biały)
                 type (cv2.THRESH_BINARY_INV) - Rodzaj progu (tutaj pracujemy na negatywie, czyli piksele ciemniejsze od 30 dają 1)"""
 
-                _, eye_bin[i] = cv2.threshold(eye_gray, 30, 255, cv2.THRESH_BINARY_INV)
+                _, eye_bin[i] = cv2.threshold(eye_gray, thresh, 255, cv2.THRESH_BINARY_INV)
 
                 # Tworzymy kernel (macierz do operacji morfologicznych)
                 kernel = np.ones((3, 3), np.uint8)  # Możesz dostosować rozmiar
@@ -112,6 +130,7 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                     displacement_x = cx - eye_center_x
                     displacement_y = cy - eye_center_y
 
+
                     # Zapis danych do pliku
                     file.write(f'{i} {displacement_x:.2f} {displacement_y:.2f}\n')
 
@@ -130,7 +149,7 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
             cv2.imshow('Bin eyes for testing', numpy_horizontal_concat)
 
         # Wyświetlanie obrazu głównego
-        cv2.imshow('Eye Tracking with Optical Flow', frame)
+        cv2.imshow('Eye Detection', frame)
 
         # Zatrzymanie programu po wciśnięciu 'q'
         if cv2.waitKey(1) & 0xFF == ord('q'):
