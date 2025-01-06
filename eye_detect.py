@@ -44,7 +44,7 @@ start_time = time.time() # Pobranie czasu rozpoczęcia programu
 
 # Otwarcie pliku do zapisu pozycji źrenic
 with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzanie zasobami jak się kończy to automatycznie zamyka plik
-    file.write('Eye_Index X_Displacement Y_Displacement\n')  # Nagłówek pliku
+    file.write('Eye_Index time X_Displacement Y_Displacement\n')  # Nagłówek pliku
 
     while True: # Główna pętla programu
         ret, frame = cap.read() # Pobranie klatki obrazu do frame, ret to wartość bool która informuje czy udało się pobrać klatkę
@@ -130,9 +130,12 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                     displacement_x = cx - eye_center_x
                     displacement_y = cy - eye_center_y
 
+                    # Obliczenie czasu działania programu
+                    program_runtime = time.time() - start_time
+
 
                     # Zapis danych do pliku
-                    file.write(f'{i} {displacement_x:.2f} {displacement_y:.2f}\n')
+                    file.write(f'{i} {program_runtime:.2f} {displacement_x:.2f} {displacement_y:.2f}\n')
 
                     # Rysowanie źrenicy
                     cv2.circle(eye_color, (int(cx), int(cy)), 5, (255, 0, 0), -1) # Mały niebieski punkt powinien śledzić środek źrenicy
