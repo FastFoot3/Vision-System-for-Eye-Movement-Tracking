@@ -45,19 +45,19 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
 
         for (x, y, w, h) in faces: # współrzędna X górnego lewego rogu prostokąta # współrzędna Y górnego lewego rogu prostokąta # szerokość prostokąta # wysokość prostokąta # całość dla każdej twarzy
 
+            cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 255), 2) # rysowanie twarzy
+
             """W Pythonie, korzystając z biblioteki OpenCV, obraz jest reprezentowany jako macierz pikseli (tablica 2D lub 3D)
             Pierwszy indeks (przed przecinkiem) oznacza współrzędną pionową (oś Y) czyli linie (rzędy) pikseli.
             Drugi indeks (po przecinku) oznacza współrzędną poziomą (oś X) czyli kolumny pikseli.
             y1:y2 - zakres linii (od góry do dołu).
             x1:x2 - zakres kolumn (od lewej do prawej)."""
 
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 255), 2) # rysowanie twarzy
-
             # Region twarzy do analizy oczu
             roi_gray = gray[y:y + h * 2 // 3, x:x + w] # Obszar twarzy (wycinek z obrazu szarość) do szukania oczu (górne 2/3)
             roi_color = frame[y:y + h * 2 // 3, x:x + w] # to samo w kolorze do rysowania
 
-            cv2.rectangle(frame, (x, y), (x+w, y+h*2//3), (255, 0, 255), 2) # rysowanie twarzy roi
+            cv2.rectangle(frame, (x, y), (x+w, y+h*2//3), (255, 0, 255), 2) # rysowanie twarzy roi (region of interest)
 
             # Wykrywanie oczu
             eyes = eye_cascade.detectMultiScale(roi_gray, scaleFactor=1.05, minNeighbors=10) # skalowanie obrazu 1.05, liczba trafień żeby uznać twarz 10 # eyes to prostokąty
@@ -81,8 +81,8 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                 src (eye_gray) - Obraz wejściowy
                 thresh (30) - Wartość progu. Piksele są porównywane z tą wartością
                 maxval (255) - Maksymalna wartość, którą piksele przyjmują (tutaj biały)
-                type (cv2.THRESH_BINARY_INV) - Rodzaj progu (tutaj pracujemy na negatywie, czyli piksele ciemniejsze od 30 dają 1)
-                """
+                type (cv2.THRESH_BINARY_INV) - Rodzaj progu (tutaj pracujemy na negatywie, czyli piksele ciemniejsze od 30 dają 1)"""
+
                 _, eye_bin[i] = cv2.threshold(eye_gray, 30, 255, cv2.THRESH_BINARY_INV)
 
                 # Tworzymy kernel (macierz do operacji morfologicznych)
@@ -106,10 +106,9 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                     if contours:
                         largest_contour = max(contours, key=cv2.contourArea) # Największy kontur prawdopodobnie odpowiada źrenicy
                         (cx, cy), radius = cv2.minEnclosingCircle(largest_contour) # Znajduje najmniejszy okrąg otaczający kontur i zwraca jego środek i promień (źrenicę)
-                        if radius > 3: # filtrujemy żeby nie wykrywać małych okręgów
-                            pupil_positions[i] = np.array([[cx, cy]], dtype=np.float32) # tablica punktów do funkcji optical flow (wymagana) tutaj jest to jeden punkt
-                            cv2.circle(eye_color, (int(cx), int(cy)), int(radius), (0, 0, 255), 2) # Rysowanie czerwonego okręgu wokół wykrytej źrenicy
-                            """!!!W OPENCV KOLORY SĄ ZAPISYWANE JAKO BGR A NIE RGB (kto to wymyślił w ogóle smh)!!!"""
+                        pupil_positions[i] = np.array([[cx, cy]], dtype=np.float32) # tablica punktów do funkcji optical flow (wymagana) tutaj jest to jeden punkt
+                        cv2.circle(eye_color, (int(cx), int(cy)), int(radius), (0, 0, 255), 2) # Rysowanie czerwonego okręgu wokół wykrytej źrenicy
+                        """!!!W OPENCV KOLORY SĄ ZAPISYWANE JAKO BGR A NIE RGB (kto to wymyślił w ogóle smh)!!!"""
 
                 # Jeśli mamy pozycję źrenicy, śledź ją optycznym przepływem
                 if pupil_positions[i] is not None:
