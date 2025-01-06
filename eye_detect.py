@@ -106,6 +106,17 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                     if contours:
                         largest_contour = max(contours, key=cv2.contourArea) # Największy kontur prawdopodobnie odpowiada źrenicy
                         (cx, cy), radius = cv2.minEnclosingCircle(largest_contour) # Znajduje najmniejszy okrąg otaczający kontur i zwraca jego środek i promień (źrenicę)
+                        
+                        """# Obliczanie momentów konturu
+                        M = cv2.moments(largest_contour)
+
+                        # Obliczanie środka ciężkości konturu
+                        if M["m00"] != 0:
+                            cx = int(M["m10"] / M["m00"] + 1e-5)
+                            cy = int(M["m01"] / M["m00"] + 1e-5)
+                        else:
+                            cx, cy = None, None"""
+
                         pupil_positions[i] = np.array([[cx, cy]], dtype=np.float32) # tablica punktów do funkcji optical flow (wymagana) tutaj jest to jeden punkt
                         cv2.circle(eye_color, (int(cx), int(cy)), int(radius), (0, 0, 255), 2) # Rysowanie czerwonego okręgu wokół wykrytej źrenicy
                         """!!!W OPENCV KOLORY SĄ ZAPISYWANE JAKO BGR A NIE RGB (kto to wymyślił w ogóle smh)!!!"""
