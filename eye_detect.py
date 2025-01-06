@@ -140,6 +140,15 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                     # Rysowanie źrenicy
                     cv2.circle(eye_color, (int(cx), int(cy)), 5, (255, 0, 0), -1) # Mały niebieski punkt powinien śledzić środek źrenicy
 
+                    # Linie referencyjne dla najczęściej występujących wartości przemieszczeń
+                    #cv2.line(eye_color, (int(eye_center_x - 60), 0), (int(eye_center_x - 60), int(ey + eh)), (0, 0, 0), 2)  # Czarna linia dla -60 jest na lewym oku (na środku)
+
+                    #cv2.line(eye_color, (int(eye_center_x - 160), 0), (int(eye_center_x - 160), int(ey + eh)), (0, 0, 0), 2)  # Czarna linia dla -160 jest na prawym oku po prawej (praktycznie na środku)
+
+                    #cv2.line(eye_color, (int(eye_center_x - 40), int(ey)), (int(eye_center_x - 40), int(ey + eh)), (0, 0, 0), 2)  # Czarna linia dla -40
+
+                    #cv2.line(eye_color, (int(eye_center_x - 180), 0), (int(eye_center_x - 180), int(ey + eh)), (0, 0, 0), 2)  # Czarna linia dla -180                    
+
         # Wyświetlanie oczu binarnych
         if all(img is not None for img in [eye_bin[0], eye_bin[1], eye_bin_mopen_mclose[0], eye_bin_mopen_mclose[1]]):
             # Skalowanie obrazów do wspólnego rozmiaru
