@@ -1,19 +1,15 @@
 import cv2 # Biblioteka OpenCV do przetwarzania obrazów i analizy wideo.
 import numpy as np # Biblioteka do operacji matematycznych i pracy z tablicami danych.
 
+
 # Ładowanie klasyfikatorów Haar (gotowe modele służące do wykrywania twarzy i oczu na obrazie)
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml') # Wykrywa twarz
 eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml') # Wykrywa oczy
-
 
 # Sprawdzenie, czy klasyfikatory zostały poprawnie załadowane
 if face_cascade.empty() or eye_cascade.empty():
     raise IOError("Nie można załadować klasyfikatorów Haar")
 
-# Parametry dla Optical Flow Lucas-Kanade (metoda śledzenia ruchu punktów między kolejnymi klatkami)
-lk_params = dict(winSize=(15, 15), # Rozmiar okna, w którym analizowane są zmiany
-                 maxLevel=2, # Maksymalny poziom piramidy obrazu (obniżonej rozdzielczości)
-                 criteria=(cv2.TERM_CRITERIA_COUNT | cv2.TERM_CRITERIA_EPS, 10, 0.03)) # Kryteria zatrzymania algorytmu (ilość iteracji LUB dokładność, iteracje=10, dokładność=0.03)
 
 # Uruchomienie kamerki
 cap = cv2.VideoCapture(0) # 0 to pierwsza kamera
@@ -22,12 +18,11 @@ cap = cv2.VideoCapture(0) # 0 to pierwsza kamera
 if not cap.isOpened():
     raise IOError("Nie można otworzyć kamery")
 
+
 # Zmienna do przechowywania punktów źrenic (lista pozycji dla obu oczu)
-pupil_positions = [None, None] # Lista przechowująca pozycje źrenic dla obu oczu
 eye_bin = [None, None] # Lista przechowująca obraz binarny nieprzetworzony
 eye_bin_mopen_mclose = [None, None] # Lista przechowująca obraz binarny po operacjach morfologicznych
 
-old_gray = None # Poprzednia klatka w skali szarości (do Optical Flow)
 
 # Otwarcie pliku do zapisu pozycji źrenic
 with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzanie zasobami jak się kończy to automatycznie zamyka plik
@@ -36,9 +31,6 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
     while True: # Główna pętla programu
         ret, frame = cap.read() # Pobranie klatki obrazu do frame, ret to wartość bool która informuje czy udało się pobrać klatkę
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) # Konwertuje klatkę z kamery na grayscale
-
-        if old_gray is None: # żeby wykonało się tylko na początku pętli
-            old_gray = gray.copy() # Ustawia old_gray na to samo co gray
 
         # Wykrywanie twarzy
         faces = face_cascade.detectMultiScale(gray, 1.3, 5) # skalowanie obrazu 1.3, liczba trafień żeby uznać twarz 5 # faces to prostokąty
@@ -94,67 +86,37 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                 # Wypełnianie małych dziur (zamknięcie) - Wypełnia dziury w obiektach, wygładza krawędzie obiektów (nie usuwa szumów)
                 eye_bin_mopen_mclose[i] = cv2.morphologyEx(eye_bin_mopen, cv2.MORPH_CLOSE, kernel)
 
-                # Jeśli nie mamy pozycji źrenicy dla oka, wykryj ją
-                if pupil_positions[i] is None:
-
-                    """cv2.findContours - Znajdowanie konturów (Tworzy listę współrzędnych punktów (x, y) dla każdego konturu)
+                """cv2.findContours - Znajdowanie konturów (Tworzy listę współrzędnych punktów (x, y) dla każdego konturu)
                     cv2.RETR_TREE - Zbiera wszystkie kontury, w tym również te zagnieżdżone
-                    cv2.CHAIN_APPROX_SIMPLE - Upraszcza kontury, przechowując tylko kluczowe punkty
-                    """
+                    cv2.CHAIN_APPROX_SIMPLE - Upraszcza kontury, przechowując tylko kluczowe punkty"""
 
-                    contours, _ = cv2.findContours(eye_bin_mopen_mclose[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
-                    if contours:
-                        largest_contour = max(contours, key=cv2.contourArea) # Największy kontur prawdopodobnie odpowiada źrenicy
-                        (cx, cy), radius = cv2.minEnclosingCircle(largest_contour) # Znajduje najmniejszy okrąg otaczający kontur i zwraca jego środek i promień (źrenicę)
-                        
-                        """# Obliczanie momentów konturu
-                        M = cv2.moments(largest_contour)
+                contours, _ = cv2.findContours(eye_bin_mopen_mclose[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
+                if contours:
+                    largest_contour = max(contours, key=cv2.contourArea) # Największy kontur prawdopodobnie odpowiada źrenicy
+                    (cx, cy), radius = cv2.minEnclosingCircle(largest_contour) # Znajduje najmniejszy okrąg otaczający kontur i zwraca jego środek i promień (źrenicę)
+                    
+                    """# Obliczanie momentów konturu
+                    M = cv2.moments(largest_contour)
 
-                        # Obliczanie środka ciężkości konturu
-                        if M["m00"] != 0:
-                            cx = int(M["m10"] / M["m00"] + 1e-5)
-                            cy = int(M["m01"] / M["m00"] + 1e-5)
-                        else:
-                            cx, cy = None, None"""
-
-                        pupil_positions[i] = np.array([[cx, cy]], dtype=np.float32) # tablica punktów do funkcji optical flow (wymagana) tutaj jest to jeden punkt
-                        cv2.circle(eye_color, (int(cx), int(cy)), int(radius), (0, 0, 255), 2) # Rysowanie czerwonego okręgu wokół wykrytej źrenicy
-                        """!!!W OPENCV KOLORY SĄ ZAPISYWANE JAKO BGR A NIE RGB (kto to wymyślił w ogóle smh)!!!"""
-
-                # Jeśli mamy pozycję źrenicy, śledź ją optycznym przepływem
-                if pupil_positions[i] is not None:
-
-                    """new_pupil_position, st, err = cv2.calcOpticalFlowPyrLK(
-                        prevImg,  # Poprzednia klatka (obraz szary)
-                        nextImg,  # Aktualna klatka (obraz szary)
-                        prevPts,  # Punkty do śledzenia (np. pozycja źrenicy)
-                        nextPts,  # Opcjonalnie: sugerowane nowe punkty (None jeśli nie mamy)
-                        **lk_params  # Parametry algorytmu Lucas-Kanade zdefiniowane na początku
-                    )
-                    new_pupil_position - Tablica NumPy z nowymi współrzędnymi śledzonego punktu (źrenicy) w bieżącej klatce
-                    st (status) - Tablica NumPy informująca, czy punkt został skutecznie znaleziony
-                    err (błąd) - Niższa wartość błędu oznacza lepsze śledzenie"""
-
-                    new_pupil_position, st, err = cv2.calcOpticalFlowPyrLK(
-                        old_gray, gray, pupil_positions[i], None, **lk_params
-                    )
-                    if st[0][0] == 1:  # Jeśli śledzenie jest poprawne
-                        pupil_positions[i] = new_pupil_position
-                        cx, cy = new_pupil_position.ravel() # Wyciągamy wartości wspołrzednych nowo wykrytej źrenicy
-
-                        # Obliczenie przemieszczenia względem środka oka
-                        displacement_x = cx - eye_center_x
-                        displacement_y = cy - eye_center_y
-
-                        # Zapis danych do pliku
-                        file.write(f'{i} {displacement_x:.2f} {displacement_y:.2f}\n')
-
-                        # Rysowanie źrenicy
-                        cv2.circle(eye_color, (int(cx), int(cy)), 5, (255, 0, 0), -1) # Mały niebieski punkt powinien śledzić środek źrenicy
+                    # Obliczanie środka ciężkości konturu
+                    if M["m00"] != 0:
+                        cx = int(M["m10"] / M["m00"] + 1e-5)
+                        cy = int(M["m01"] / M["m00"] + 1e-5)
                     else:
-                        pupil_positions[i] = None  # Jeśli śledzenie się zgubi, spróbuj ponownie wykryć źrenicę
+                        cx, cy = None, None"""
 
-        old_gray = gray.copy()
+                    cv2.circle(eye_color, (int(cx), int(cy)), int(radius), (0, 0, 255), 2) # Rysowanie czerwonego okręgu wokół wykrytej źrenicy
+                    # !!!W OPENCV KOLORY SĄ ZAPISYWANE JAKO BGR A NIE RGB (kto to wymyślił w ogóle smh)!!!
+
+                    # Obliczenie przemieszczenia względem środka oka
+                    displacement_x = cx - eye_center_x
+                    displacement_y = cy - eye_center_y
+
+                    # Zapis danych do pliku
+                    file.write(f'{i} {displacement_x:.2f} {displacement_y:.2f}\n')
+
+                    # Rysowanie źrenicy
+                    cv2.circle(eye_color, (int(cx), int(cy)), 5, (255, 0, 0), -1) # Mały niebieski punkt powinien śledzić środek źrenicy
 
         # Wyświetlanie oczu binarnych
         if all(img is not None for img in [eye_bin[0], eye_bin[1], eye_bin_mopen_mclose[0], eye_bin_mopen_mclose[1]]):
