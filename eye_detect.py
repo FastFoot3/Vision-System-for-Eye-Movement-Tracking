@@ -2,20 +2,37 @@ import cv2 # Biblioteka OpenCV do przetwarzania obrazów i analizy wideo.
 import numpy as np # Biblioteka do operacji matematycznych i pracy z tablicami danych.
 import time # Biblioteka do pracy z czasem.
 
-# funkcja do suwaka progu
-def update_threshold(val):
-    global thresh
-    thresh = val
 
-# Inicjalizacja wartości progu
-thresh = 15
-max_thresh = 100
+# funkcja do suwaka progu oczu
+def update_eye_threshold(val):
+    global eye_thresh
+    eye_thresh = val
+
+
+# funkcja do suwaka progu światła
+def update_light_threshold(val):
+    global light_thresh
+    light_thresh = val
+
 
 # Tworzenie okna do wyświetlania obrazu
 cv2.namedWindow('Eye Detection')
 
-# Tworzenie suwaka do dynamicznego dostosowywania wartości progu
-cv2.createTrackbar('Thresh', 'Eye Detection', thresh, max_thresh, update_threshold)
+
+# Inicjalizacja wartości progu oczu
+eye_thresh = 15
+max_eye_thresh = 100
+
+# Tworzenie suwaka do dynamicznego dostosowywania wartości progu oczu
+cv2.createTrackbar('Eye thresh', 'Eye Detection', eye_thresh, max_eye_thresh, update_eye_threshold)
+
+
+# Inicjalizacja wartości progu światła
+light_thresh = 15
+max_light_thresh = 100
+
+# Tworzenie suwaka do dynamicznego dostosowywania wartości progu światła
+cv2.createTrackbar('Eye thresh', 'Eye Detection', light_thresh, max_light_thresh, update_light_threshold)
 
 
 # Ładowanie klasyfikatorów Haar (gotowe modele służące do wykrywania twarzy i oczu na obrazie)
@@ -38,6 +55,13 @@ if not cap.isOpened():
 # Zmienna do przechowywania punktów źrenic (lista pozycji dla obu oczu)
 eye_bin = [None, None] # Lista przechowująca obraz binarny nieprzetworzony
 eye_bin_mopen_mclose = [None, None] # Lista przechowująca obraz binarny po operacjach morfologicznych
+
+
+# Zmienna do przechowywania obrazu binarnego odbicia światła w oku
+light_bin = [None, None]
+
+# Zmienna do kontrolowania trybu kalibracji pozycji źrenic 
+light_calibration_mode = False # False: kalibracja prosta (środek wykrytego obrazu oka), True: kalibracja zaawansowana (odbicie światła od gałki ocznej)
 
 
 start_time = time.time() # Pobranie czasu rozpoczęcia programu
@@ -122,8 +146,13 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                 maxval (255) - Maksymalna wartość, którą piksele przyjmują (tutaj biały)
                 type (cv2.THRESH_BINARY_INV) - Rodzaj progu (tutaj pracujemy na negatywie, czyli piksele ciemniejsze od 30 dają 1)"""
 
+
+                # Progowanie odbicia światła w oku
+                _, light_bin[i] = cv2.threshold(eye_gray, light_thresh, 255, cv2.THRESH_BINARY)
+
+
                 # Progowanie obrazu (binaryzacja)
-                _, eye_bin[i] = cv2.threshold(eye_gray, thresh, 255, cv2.THRESH_BINARY_INV)
+                _, eye_bin[i] = cv2.threshold(eye_gray, eye_thresh, 255, cv2.THRESH_BINARY_INV)
 
                 # Tworzymy kernel (macierz do operacji morfologicznych)
                 kernel = np.ones((3, 3), np.uint8)  # Możesz dostosować rozmiar
@@ -201,6 +230,12 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
         key = cv2.waitKey(1) & 0xFF # Pobranie kodu klawisza z klawiatury (pozbycie się zbędnych bitów)
         if key == ord('r'):
             draw_mode = (draw_mode + 1) % 3 # Przełączanie między trybami rysowania (0, 1, 2)
+
+
+        # Sprawdzenie, czy naciśnięto klawisz 'x' do włączenia/wyłączenia kalibracji odbitym światłem
+        if key == ord('x'):
+            light_calibration_mode = not light_calibration_mode # Przełączanie między trybami kalibracji punktu 0, 0 źrenic (prosta, zaawansowana)
+
 
         # Zatrzymanie programu po wciśnięciu 'q'
         if key == ord('q'):
