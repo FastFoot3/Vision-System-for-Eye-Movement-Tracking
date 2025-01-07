@@ -43,6 +43,10 @@ eye_bin_mopen_mclose = [None, None] # Lista przechowująca obraz binarny po oper
 start_time = time.time() # Pobranie czasu rozpoczęcia programu
 
 
+# Zmienna do kontrolowania rysowania
+draw_mode = 0 # 0: pełne rysowanie, 1: tylko niebieskie punkty, 2: brak rysowania
+
+
 # Otwarcie pliku do zapisu pozycji źrenic
 with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzanie zasobami jak się kończy to automatycznie zamyka plik
     
@@ -64,7 +68,8 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
         # Dla każdej twarzy
         for (x, y, w, h) in faces: # współrzędna X górnego lewego rogu prostokąta # współrzędna Y górnego lewego rogu prostokąta # szerokość prostokąta # wysokość prostokąta # całość dla każdej twarzy
 
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 255), 2) # rysowanie twarzy
+            if draw_mode == 0:
+                cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 255), 2) # rysowanie twarzy
 
 
             """W Pythonie, korzystając z biblioteki OpenCV, obraz jest reprezentowany jako macierz pikseli (tablica 2D lub 3D)
@@ -77,7 +82,8 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
             roi_gray = gray[y:y + h * 2 // 3, x:x + w] # Obszar twarzy (wycinek z obrazu szarość) do szukania oczu (górne 2/3)
             roi_color = frame[y:y + h * 2 // 3, x:x + w] # to samo w kolorze do rysowania
 
-            cv2.rectangle(frame, (x, y), (x+w, y+h*2//3), (255, 0, 255), 2) # rysowanie twarzy roi (region of interest)
+            if draw_mode == 0:
+                cv2.rectangle(frame, (x, y), (x+w, y+h*2//3), (255, 0, 255), 2) # rysowanie twarzy roi (region of interest)
 
             # Wykrywanie oczu
             eyes = eye_cascade.detectMultiScale(roi_gray, scaleFactor=1.05, minNeighbors=10) # skalowanie obrazu 1.05, liczba trafień żeby uznać twarz 10 # eyes to prostokąty
@@ -90,7 +96,8 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                 eye_color = roi_color[ey:ey + eh, ex:ex + ew]
 
                 # Rysowanie prostokąta wokół oczu (jest to obszar eye_gray)
-                cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (255, 0, 255), 2)
+                if draw_mode == 0:
+                    cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (255, 0, 255), 2)
 
 
                 # Obliczenie środka oka względem wycinka eye_gray
@@ -98,9 +105,14 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                 eye_center_y = eh // 2 # obliczenie współrzędnej y
 
                 # Rysowanie środka oka
-                cv2.line(eye_color, (0, eye_center_y), (ew, eye_center_y), (0, 0, 255), 1)
-                cv2.line(eye_color, (eye_center_x, 0), (eye_center_x, eh), (0, 0, 255), 1)
-
+                if draw_mode == 0:
+                    # Rysowanie lini przecinających środek oka
+                    cv2.line(eye_color, (0, eye_center_y), (ew, eye_center_y), (0, 0, 255), 1)
+                    cv2.line(eye_color, (eye_center_x, 0), (eye_center_x, eh), (0, 0, 255), 1)
+                elif draw_mode == 1:
+                    # Rysowanie małego 'x' w punkcie (eye_center_x, eye_center_y)
+                    cv2.line(eye_color, (eye_center_x - 5, eye_center_y - 5), (eye_center_x + 5, eye_center_y + 5), (0, 0, 255), 1)
+                    cv2.line(eye_color, (eye_center_x + 5, eye_center_y - 5), (eye_center_x - 5, eye_center_y + 5), (0, 0, 255), 1)
 
                 """działanie retval, dst = cv2.threshold(src, thresh, maxval, type)
                 retval (symbol _) - Zwraca wartość użytego progu (można ją pominąć, stąd _)
@@ -150,11 +162,13 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                         cx, cy = None, None"""
 
                     # Rysowanie okręgu wokół źrenicy
-                    cv2.circle(eye_color, (int(cx), int(cy)), int(radius), (0, 0, 255), 2) # Rysowanie czerwonego okręgu wokół wykrytej źrenicy
+                    if draw_mode == 0:
+                        cv2.circle(eye_color, (int(cx), int(cy)), int(radius), (0, 0, 255), 2) # Rysowanie czerwonego okręgu wokół wykrytej źrenicy
                     # !!!W OPENCV KOLORY SĄ ZAPISYWANE JAKO BGR A NIE RGB (kto to wymyślił w ogóle smh)!!!
 
                     # Rysowanie źrenicy
-                    cv2.circle(eye_color, (int(cx), int(cy)), 5, (255, 0, 0), -1) # Mały niebieski punkt powinien śledzić środek źrenicy
+                    if draw_mode in [0, 1]:
+                        cv2.circle(eye_color, (int(cx), int(cy)), 5, (255, 0, 0), -1) # Mały niebieski punkt powinien śledzić środek źrenicy
 
 
                     # Obliczenie przemieszczenia względem środka oka
@@ -183,9 +197,15 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
         # Wyświetlanie obrazu głównego
         cv2.imshow('Eye Detection', frame)
 
+        # Sprawdzenie, czy naciśnięto klawisz 'r' do włączenia/wyłączenia rysowania
+        key = cv2.waitKey(1) & 0xFF # Pobranie kodu klawisza z klawiatury (pozbycie się zbędnych bitów)
+        if key == ord('r'):
+            draw_mode = (draw_mode + 1) % 3 # Przełączanie między trybami rysowania (0, 1, 2)
+
         # Zatrzymanie programu po wciśnięciu 'q'
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if key == ord('q'):
             break
+
 
 # Zakończenie programu
 cap.release()
