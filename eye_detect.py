@@ -61,7 +61,7 @@ eye_bin_mopen_mclose = [None, None] # Lista przechowująca obraz binarny po oper
 light_bin = [None, None]
 
 # Zmienna do kontrolowania trybu kalibracji pozycji źrenic 
-light_calibration_mode = False # False: kalibracja prosta (środek wykrytego obrazu oka), True: kalibracja zaawansowana (odbicie światła od gałki ocznej)
+calibration_mode = 0 # 0: kalibracja automatyczna (środek wykrytego obrazu oka), 1: kalibracja ręczna (aktualna pozycja źrenicy) 2: kalibracja zaawansowana (odbicie światła od gałki ocznej)
 
 
 start_time = time.time() # Pobranie czasu rozpoczęcia programu
@@ -152,7 +152,16 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                 # Znajdowanie konturów na obrazie binarnym
                 eye_contours, _ = cv2.findContours(eye_bin_mopen_mclose[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
-                if light_calibration_mode:
+
+                if calibration_mode == 0: # Obliczenie środka oka względem wycinka eye_gray
+
+                    eye_center_x = ew // 2 # obliczenie współrzędnej x
+                    eye_center_y = eh // 2 # obliczenie współrzędnej y
+                elif calibration_mode == 1: # Obliczenie środka oka względem kalibracji ręcznej
+
+                    eye_center_x, eye_center_y = calibrated_x, calibrated_y # Skalibrowane współrzędne
+                elif calibration_mode == 2: # Obliczenie środka oka względem odbicia światła
+                    
                     # Progowanie odbicia światła w oku
                     _, light_bin[i] = cv2.threshold(eye_gray, light_thresh, 255, cv2.THRESH_BINARY)
 
@@ -164,14 +173,10 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                         # Znalezienie największego konturu odbicia światła
                         largest_light_contour = max(light_countours, key=cv2.contourArea, default=None)
 
-                        # Obliczenie środka oka względem punktu odbicia światła
+                        # Wyznaczanie środka oka względem środka punktu odbicia światła
                         (eye_center_x, eye_center_y), _ = cv2.minEnclosingCircle(largest_light_contour)
                     else:
                         eye_center_x, eye_center_y = None, None
-                else:
-                    # Obliczenie środka oka względem wycinka eye_gray
-                    eye_center_x = ew // 2 # obliczenie współrzędnej x
-                    eye_center_y = eh // 2 # obliczenie współrzędnej y
 
 
                 # Rysowanie środka oka
@@ -204,6 +209,7 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                         cy = int(M["m01"] / M["m00"] + 1e-5)
                     else:
                         cx, cy = None, None"""
+
 
                     # Rysowanie okręgu wokół źrenicy
                     if draw_mode == 0:
@@ -262,9 +268,20 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
             draw_mode = (draw_mode + 1) % 3 # Przełączanie między trybami rysowania (0, 1, 2)
 
 
+        # Sprawdzenie, czy naciśnięto klawisz 'z' do włączenia/wyłączenia kalibracji automatycznej
+        if key == ord('z'):
+            calibration_mode = 0 # Kalibracja automatyczna (środek wykrytego obrazu oka)
+
+
+        # Sprawdzenie, czy naciśnięto klawisz 'z' do włączenia/wyłączenia kalibracji automatycznej
+        if key == ord('c'):
+            calibration_mode = 1 # Kalibracja automatyczna (środek wykrytego obrazu oka)
+            calibrated_x, calibrated_y = cx, cy # Zapisanie pozycji źrenicy do kalibracji ręcznej
+
+
         # Sprawdzenie, czy naciśnięto klawisz 'x' do włączenia/wyłączenia kalibracji odbitym światłem
         if key == ord('x'):
-            light_calibration_mode = not light_calibration_mode # Przełączanie między trybami kalibracji punktu 0, 0 źrenic (prosta, zaawansowana)
+            calibration_mode = 2 # Kalibracja zaawansowana (odbicie światła od gałki ocznej)
 
 
         # Zatrzymanie programu po wciśnięciu 'q'
