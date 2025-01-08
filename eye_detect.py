@@ -215,18 +215,18 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                         cv2.circle(eye_color, (int(cx), int(cy)), 5, (255, 0, 0), -1) # Mały niebieski punkt powinien śledzić środek źrenicy
 
 
-                    # Obliczenie przemieszczenia względem środka oka (jeśli istnieje środek oka)
+                    # Jeśli znaleziono środek oka
                     if eye_center_x is not None and eye_center_y is not None:
+                        # Obliczenie przemieszczenia względem środka oka
                         displacement_x = cx - eye_center_x
                         displacement_y = cy - eye_center_y
-                    else:
-                        displacement_x, displacement_y = 0, 0
 
-                    # Obliczenie czasu działania programu
-                    program_runtime = time.time() - start_time
+                        
+                        # Obliczenie czasu działania programu
+                        program_runtime = time.time() - start_time
 
-                    # Zapis danych do pliku
-                    file.write(f'{i} {program_runtime:.2f} {displacement_x:.2f} {displacement_y:.2f}\n')
+                        # Zapis danych do pliku
+                        file.write(f'{i} {program_runtime:.2f} {displacement_x:.2f} {displacement_y:.2f}\n')
 
 
         # Wyświetlanie oczu binarnych
