@@ -32,7 +32,7 @@ light_thresh = 15
 max_light_thresh = 100
 
 # Tworzenie suwaka do dynamicznego dostosowywania wartości progu światła
-cv2.createTrackbar('Eye thresh', 'Eye Detection', light_thresh, max_light_thresh, update_light_threshold)
+cv2.createTrackbar('Light thresh', 'Eye Detection', light_thresh, max_light_thresh, update_light_threshold)
 
 
 # Ładowanie klasyfikatorów Haar (gotowe modele służące do wykrywania twarzy i oczu na obrazie)
