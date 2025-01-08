@@ -63,6 +63,11 @@ light_bin = [None, None]
 # Zmienna do kontrolowania trybu kalibracji pozycji źrenic 
 calibration_mode = 0 # 0: kalibracja automatyczna (środek wykrytego obrazu oka), 1: kalibracja ręczna (aktualna pozycja źrenicy) 2: kalibracja zaawansowana (odbicie światła od gałki ocznej)
 
+calibrated_x = [None, None] # Lista przechowująca współrzędne X źrenicy do kalibracji ręcznej
+calibrated_y = [None, None] # Lista przechowująca współrzędne Y źrenicy do kalibracji ręcznej
+calibration_point_x = [None, None] # Lista przechowująca współrzędne X punktu kalibracji (aktualna pozycja źrenicy)
+calibration_point_y = [None, None] # Lista przechowująca współrzędne Y punktu kalibracji (aktualna pozycja źrenicy)
+
 
 start_time = time.time() # Pobranie czasu rozpoczęcia programu
 
@@ -159,7 +164,7 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                     eye_center_y = eh // 2 # obliczenie współrzędnej y
                 elif calibration_mode == 1: # Obliczenie środka oka względem kalibracji ręcznej
 
-                    eye_center_x, eye_center_y = calibrated_x, calibrated_y # Skalibrowane współrzędne
+                    eye_center_x, eye_center_y = calibrated_x[i], calibrated_y[i] # Skalibrowane współrzędne
                 elif calibration_mode == 2: # Obliczenie środka oka względem odbicia światła
                     
                     # Progowanie odbicia światła w oku
@@ -209,6 +214,10 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                         cy = int(M["m01"] / M["m00"] + 1e-5)
                     else:
                         cx, cy = None, None"""
+
+
+                    calibration_point_x[i] = cx # Zapisanie współrzędnej X punktu kalibracji
+                    calibration_point_y[i] = cy # Zapisanie współrzędnej Y punktu kalibracji
 
 
                     # Rysowanie okręgu wokół źrenicy
@@ -276,7 +285,7 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
         # Sprawdzenie, czy naciśnięto klawisz 'z' do włączenia/wyłączenia kalibracji automatycznej
         if key == ord('c'):
             calibration_mode = 1 # Kalibracja automatyczna (środek wykrytego obrazu oka)
-            calibrated_x, calibrated_y = cx, cy # Zapisanie pozycji źrenicy do kalibracji ręcznej
+            calibrated_x[0], calibrated_y[0], calibrated_x[1], calibrated_y[1] = calibration_point_x[0], calibration_point_y[0], calibration_point_x[1], calibration_point_y[1] # Kalibracja środka oka
 
 
         # Sprawdzenie, czy naciśnięto klawisz 'x' do włączenia/wyłączenia kalibracji odbitym światłem
