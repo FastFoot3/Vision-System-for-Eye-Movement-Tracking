@@ -52,6 +52,10 @@ if not cap.isOpened():
     raise IOError("Nie można otworzyć kamery")
 
 
+eye_gray = [None, None] # Zmienna do przechowywania obrazu oka w skali szarości
+eye_color = [None, None] # Zmienna do przechowywania obrazu oka w kolorze
+
+
 # Zmienna do przechowywania punktów źrenic (lista pozycji dla obu oczu)
 eye_bin = [None, None] # Lista przechowująca obraz binarny nieprzetworzony
 eye_bin_mopen_mclose = [None, None] # Lista przechowująca obraz binarny po operacjach morfologicznych
@@ -62,6 +66,9 @@ light_bin = [None, None]
 
 # Zmienna do kontrolowania trybu kalibracji pozycji źrenic 
 calibration_mode = 0 # 0: kalibracja automatyczna (środek wykrytego obrazu oka), 1: kalibracja ręczna (aktualna pozycja źrenicy) 2: kalibracja zaawansowana (odbicie światła od gałki ocznej)
+
+eye_center_x = [None, None] # Lista przechowująca współrzędną X środka oka
+eye_center_y = [None, None] # Lista przechowująca współrzędną Y środka oka
 
 calibrated_x = [None, None] # Lista przechowująca współrzędne X źrenicy do kalibracji ręcznej
 calibrated_y = [None, None] # Lista przechowująca współrzędne Y źrenicy do kalibracji ręcznej
@@ -117,12 +124,15 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
             # Wykrywanie oczu
             eyes = eye_cascade.detectMultiScale(roi_gray, scaleFactor=1.05, minNeighbors=10) # skalowanie obrazu 1.05, liczba trafień żeby uznać twarz 10 # eyes to prostokąty
             
+            # Sortowanie oczu na podstawie pozycji x (lewe oko będzie miało mniejszą wartość x)
+            eyes = sorted(eyes, key=lambda eye: eye[0]) # eyes to lista prostokątów oczu, key to funkcja która zwraca wartość do sortowania (tutaj x), lambda to funkcja anonimowa, eye to zmienna, eye[0] to współrzędna x
+
             
             # Dla każdego oka
             for i, (ex, ey, ew, eh) in enumerate(eyes[:2]):  # enumerate indeksuje sekwencję (i), a [:2] zwraca wycinek listy do 2 (bez niego, czyli 0 i 1) # współrzędne jak w twarzach
                 
-                eye_gray = roi_gray[ey:ey + eh, ex:ex + ew]
-                eye_color = roi_color[ey:ey + eh, ex:ex + ew]
+                eye_gray[i] = roi_gray[ey:ey + eh, ex:ex + ew]
+                eye_color[i] = roi_color[ey:ey + eh, ex:ex + ew]
 
                 # Rysowanie prostokąta wokół oczu (jest to obszar eye_gray)
                 if draw_mode == 0:
@@ -138,7 +148,7 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                 type (cv2.THRESH_BINARY_INV) - Rodzaj progu (tutaj pracujemy na negatywie, czyli piksele ciemniejsze od 30 dają 1)"""
 
                 # Progowanie obrazu (binaryzacja)
-                _, eye_bin[i] = cv2.threshold(eye_gray, eye_thresh, 255, cv2.THRESH_BINARY_INV)
+                _, eye_bin[i] = cv2.threshold(eye_gray[i], eye_thresh, 255, cv2.THRESH_BINARY_INV)
 
                 # Tworzymy kernel (macierz do operacji morfologicznych)
                 kernel = np.ones((3, 3), np.uint8)  # Możesz dostosować rozmiar
@@ -160,15 +170,15 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
 
                 if calibration_mode == 0: # Obliczenie środka oka względem wycinka eye_gray
 
-                    eye_center_x = ew // 2 # obliczenie współrzędnej x
-                    eye_center_y = eh // 2 # obliczenie współrzędnej y
+                    eye_center_x[i] = ew // 2 # obliczenie współrzędnej x
+                    eye_center_y[i] = eh // 2 # obliczenie współrzędnej y
                 elif calibration_mode == 1: # Obliczenie środka oka względem kalibracji ręcznej
 
-                    eye_center_x, eye_center_y = calibrated_x[i], calibrated_y[i] # Skalibrowane współrzędne
+                    eye_center_x[i], eye_center_y[i] = calibrated_x[i], calibrated_y[i] # Skalibrowane współrzędne
                 elif calibration_mode == 2: # Obliczenie środka oka względem odbicia światła
                     
                     # Progowanie odbicia światła w oku
-                    _, light_bin[i] = cv2.threshold(eye_gray, light_thresh, 255, cv2.THRESH_BINARY)
+                    _, light_bin[i] = cv2.threshold(eye_gray[i], light_thresh, 255, cv2.THRESH_BINARY)
 
                     # Znajdowanie konturów na obrazie binarnym odbicia światła
                     light_countours, _ = cv2.findContours(light_bin[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
@@ -179,21 +189,21 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
                         largest_light_contour = max(light_countours, key=cv2.contourArea, default=None)
 
                         # Wyznaczanie środka oka względem środka punktu odbicia światła
-                        (eye_center_x, eye_center_y), _ = cv2.minEnclosingCircle(largest_light_contour)
+                        (eye_center_x[i], eye_center_y[i]), _ = cv2.minEnclosingCircle(largest_light_contour)
                     else:
-                        eye_center_x, eye_center_y = None, None
+                        eye_center_x[i], eye_center_y[i] = None, None
 
 
                 # Rysowanie środka oka
-                if eye_center_x is not None and eye_center_y is not None:
+                if eye_center_x[i] is not None and eye_center_y[i] is not None:
                     if draw_mode == 0:
                         # Rysowanie lini przecinających środek oka
-                        cv2.line(eye_color, (0, int(eye_center_y)), (ew, int(eye_center_y)), (0, 0, 255), 1)
-                        cv2.line(eye_color, (int(eye_center_x), 0), (int(eye_center_x), eh), (0, 0, 255), 1)
+                        cv2.line(eye_color[i], (0, int(eye_center_y[i])), (ew, int(eye_center_y[i])), (0, 0, 255), 1)
+                        cv2.line(eye_color[i], (int(eye_center_x[i]), 0), (int(eye_center_x[i]), eh), (0, 0, 255), 1)
                     elif draw_mode == 1:
                         # Rysowanie małego 'x' w punkcie (eye_center_x, eye_center_y)
-                        cv2.line(eye_color, (int(eye_center_x) - 5, int(eye_center_y) - 5), (int(eye_center_x) + 5, int(eye_center_y) + 5), (0, 0, 255), 1)
-                        cv2.line(eye_color, (int(eye_center_x) + 5, int(eye_center_y) - 5), (int(eye_center_x) - 5, int(eye_center_y) + 5), (0, 0, 255), 1)
+                        cv2.line(eye_color[i], (int(eye_center_x[i]) - 5, int(eye_center_y[i]) - 5), (int(eye_center_x[i]) + 5, int(eye_center_y[i]) + 5), (0, 0, 255), 1)
+                        cv2.line(eye_color[i], (int(eye_center_x[i]) + 5, int(eye_center_y[i]) - 5), (int(eye_center_x[i]) - 5, int(eye_center_y[i]) + 5), (0, 0, 255), 1)
 
 
                 # Sprawdzenie, czy znaleziono jakieś kontury
@@ -222,19 +232,19 @@ with open('eye_tracking_data.txt', 'w') as file: # With to bezpieczne zarządzan
 
                     # Rysowanie okręgu wokół źrenicy
                     if draw_mode == 0:
-                        cv2.circle(eye_color, (int(cx), int(cy)), int(radius), (0, 0, 255), 2) # Rysowanie czerwonego okręgu wokół wykrytej źrenicy
+                        cv2.circle(eye_color[i], (int(cx), int(cy)), int(radius), (0, 0, 255), 2) # Rysowanie czerwonego okręgu wokół wykrytej źrenicy
                     # !!!W OPENCV KOLORY SĄ ZAPISYWANE JAKO BGR A NIE RGB (kto to wymyślił w ogóle smh)!!!
 
                     # Rysowanie źrenicy
                     if draw_mode in [0, 1]:
-                        cv2.circle(eye_color, (int(cx), int(cy)), 5, (255, 0, 0), -1) # Mały niebieski punkt powinien śledzić środek źrenicy
+                        cv2.circle(eye_color[i], (int(cx), int(cy)), 5, (255, 0, 0), -1) # Mały niebieski punkt powinien śledzić środek źrenicy
 
 
                     # Jeśli znaleziono środek oka
-                    if eye_center_x is not None and eye_center_y is not None:
+                    if eye_center_x[i] is not None and eye_center_y[i] is not None:
                         # Obliczenie przemieszczenia względem środka oka
-                        displacement_x = cx - eye_center_x
-                        displacement_y = cy - eye_center_y
+                        displacement_x = cx - eye_center_x[i]
+                        displacement_y = cy - eye_center_y[i]
 
                         
                         # Obliczenie czasu działania programu
