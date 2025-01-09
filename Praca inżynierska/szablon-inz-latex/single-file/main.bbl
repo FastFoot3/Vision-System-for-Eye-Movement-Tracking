@@ -17,6 +17,58 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global/global}
+  \entry{bib:tobii-alzheimer}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=MI}{%
+         family={Miseviciute},
+         familyi={M\bibinitperiod},
+         given={Ieva},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MI1}
+    \strng{fullhash}{MI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{4 methods to assess Alzheimer's with eye tracking}
+    \verb{url}
+    \verb https://www.tobii.com/resource-center/learn-articles/4-methods-to-ass
+    \verb ess-alzheimers-with-eye-tracking
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{09}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:tobii-parkinson}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=MI}{%
+         family={Miseviciute},
+         familyi={M\bibinitperiod},
+         given={Ieva},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MI1}
+    \strng{fullhash}{MI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{How does Parkinson's disease alter visual search?}
+    \verb{url}
+    \verb https://www.tobii.com/resource-center/scientific-publications/how-doe
+    \verb s-parkinsons-disease-alter-visual-search
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{09}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
+  \endentry
+
   \entry{bib:internet}{online}{}{}
     \name{author}{2}{}{%
       {{hash=NI}{%
@@ -152,6 +204,54 @@
       {Warszawa}%
     }
     \field{year}{2017}
+  \endentry
+
+  \entry{bib:tobii-autyzm}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={Tobii},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{T1}
+    \strng{fullhash}{T1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Eye tracking in neurology and psychiatry research}
+    \verb{url}
+    \verb https://www.tobii.com/resource-center/reports-and-papers/eye-tracking
+    \verb -neurology-and-psychiatry-research
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{09}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:tobii-main}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={Tobii},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{T1}
+    \strng{fullhash}{T1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Psychology and neuroscience use cases}
+    \verb{url}
+    \verb https://www.tobii.com/products/eye-trackers/screen-based/psychology-n
+    \verb euroscience-use-cases
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{09}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
   \endentry
 \enddatalist
 \endinput

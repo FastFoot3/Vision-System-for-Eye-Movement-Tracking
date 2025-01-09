@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  9 JAN 2025 20:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  10 JAN 2025 00:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -957,39 +957,35 @@ File: listings.cfg 2024/05/25 1.10b listings configuration
 Package: listings 2024/05/25 1.10b (Carsten Heinz)
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/05/25 1.10b listings language file
-) (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2024/05/25 1.10b listings language file
-) (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'polish'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 382.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 388.
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 388.
+LaTeX Font Info:    ... okay on input line 388.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 388.
+LaTeX Font Info:    ... okay on input line 388.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 388.
+LaTeX Font Info:    ... okay on input line 388.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 388.
+LaTeX Font Info:    ... okay on input line 388.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 388.
+LaTeX Font Info:    ... okay on input line 388.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 388.
+LaTeX Font Info:    ... okay on input line 388.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 388.
+LaTeX Font Info:    ... okay on input line 388.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 388.
+LaTeX Font Info:    ... okay on input line 388.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 388.
+LaTeX Font Info:    ... okay on input line 388.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1044,7 +1040,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 382.
+Package hyperref Info: Link coloring OFF on input line 388.
  (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1052,7 +1048,7 @@ Package hyperref Info: Link coloring OFF on input line 382.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 382.
+ on input line 388.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
@@ -1082,8 +1078,8 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 382.
-Package biblatex Info: Reference segment=0 on input line 382.
+Package biblatex Info: Reference section=0 on input line 388.
+Package biblatex Info: Reference segment=0 on input line 388.
 \c@lstlisting=\count491
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -1117,51 +1113,22 @@ Package biblatex Info: Reference segment=0 on input line 382.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 407.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 413.
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 <politechnika_sl_logo_bw_pion_pl.pdf, id=58, 179.67125pt x 230.8625pt>
 File: politechnika_sl_logo_bw_pion_pl.pdf Graphic file (type pdf)
 <use politechnika_sl_logo_bw_pion_pl.pdf>
-Package pdftex.def Info: politechnika_sl_logo_bw_pion_pl.pdf  used on input line 409.
+Package pdftex.def Info: politechnika_sl_logo_bw_pion_pl.pdf  used on input line 415.
 (pdftex.def)             Requested size: 142.26378pt x 182.80913pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 428.
- (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 428.
- (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 428.
- (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 428.
- (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 428.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 428.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 428.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 428.
- (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 428.
- (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+
 
 [1
 
 
 
-{C:/Users/Szniobatron/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./politechnika_sl_logo_bw_pion_pl.pdf>]
+{C:/Users/Szniobatron/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./politechnika_sl_logo_bw_pion_pl.pdf>]
 
 [2
 
@@ -1184,15 +1151,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 Rozdzia\l  1.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 521.
-(C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
+
 
 [1
 
 
-{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 562.
+ (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1201,19 +1169,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[2
-
-]
-Rozdzia\l  2.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 542.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 542.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 542.
+[2{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 
 
-[3{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[3]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1225,10 +1190,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4
 
 ]
-Rozdzia\l  3.
+Rozdzia\l  2.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 589.
+(C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 589.
+ (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 589.
+ (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 589.
+ (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 589.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 589.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 589.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 589.
+ (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 589.
+ (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
-
-[5]
+[5{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1240,7 +1234,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [6
 
 ]
-Rozdzia\l  4.
+Rozdzia\l  3.
 
 
 [7]
@@ -1252,16 +1246,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8]
-Rozdzia\l  5.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 683.
-(C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-
-[9
+[8
 
 ]
+Rozdzia\l  4.
+
+
+[9]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1271,8 +1262,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
-Rozdzia\l  6.
-
+Rozdzia\l  5.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 748.
+(C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
 [11
 
@@ -1286,7 +1280,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [12]
-Rozdzia\l  7.
+Rozdzia\l  6.
 
 
 [13
@@ -1300,9 +1294,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14
+[14{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+Rozdzia\l  7.
 
-]
 
 [15
 
@@ -1319,11 +1313,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 
-[17]
-
-[18]
-
-[19
+[17
 
 ]
 
@@ -1334,11 +1324,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20
+[18
 
 ]
 
-[21]
+[19]
+
+[20]
+
+[21
+
+]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1350,11 +1346,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [22
 
 ]
-Overfull \hbox (2.38579pt too wide) in paragraph at lines 840--841
-[]\T1/lmr/m/n/12 film po-ka-zu-j¡cy dzia-ªa-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
- []
-
-
 
 [23]
 
@@ -1367,9 +1358,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [24
 
-] (main.lof)
-\tf@lof=\write7
-\openout7 = `main.lof'.
+]
+Overfull \hbox (2.38579pt too wide) in paragraph at lines 935--936
+[]\T1/lmr/m/n/12 film po-ka-zu-j¡cy dzia-ªa-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
+ []
 
 
 
@@ -1384,13 +1376,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [26
 
+] (main.lof)
+\tf@lof=\write7
+\openout7 = `main.lof'.
+
+
+
+[27]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28
+
 ] (main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
 
 
-[27] (main.aux)
+[29] (main.aux)
  ***********
 LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
@@ -1402,17 +1411,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45715 strings out of 473938
- 1015868 string characters out of 5724560
- 1998893 words of memory out of 5000000
- 67764 multiletter control sequences out of 15000+600000
- 622849 words of font info for 84 fonts, out of 8000000 for 9000
+ 45705 strings out of 473938
+ 1015988 string characters out of 5724560
+ 1999893 words of memory out of 5000000
+ 67757 multiletter control sequences out of 15000+600000
+ 610800 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,2000b,3512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (33 pages, 296928 bytes).
+Output written on main.pdf (35 pages, 310845 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
- 80 named destinations out of 1000 (max. 500000)
+ 372 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
  122 words of extra memory for PDF output out of 10000 (max. 10000000)
 
