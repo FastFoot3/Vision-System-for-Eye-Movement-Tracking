@@ -539,7 +539,7 @@ escapeinside={@*}{*@},%
 % wprowadzenie w problem/zagadnienie
 Śledzenie ruchu gałek ocznych (ang. eye-tracking), zwane również jako okulografia, jest techniką która badana jest od ponad stu lat. Istotność tej techniki wynika z faktu, że ruchy gałek ocznych są ściśle związane z procesami poznawczymi, takimi jak uwaga, percepcja, pamięć, czy procesy decyzyjne. Skupiając wzrok na danym punkcie, umieszczamy go w centralnym obszarze naszego pola widzenia które charakteryzuje się największą rozdzielczością, co pozwala na dokładne analizowanie szczegółów. Ten fakt wpływa także na proces skupienia -- gdy koncentrujemy się na danym obiekcie lub obszarze skupiamy na nim wzrok (często wystarczy jedynie krótki moment).
 
-Możliwość rejestrowania ruchów oczu pozwala na zrozumienie w jaki sposób obserwator eksploruje otaczający go świat. Posiadając tą wiedzę możliwe jest wyciągnięcie wniosków na temat tego co jest interesujące lub istotne dla obserwatora, jakie emocje wzbudza w nim to co widzi, czy nawet jakie procesy poznawcze zachodzą w jego umyśle, czy rozumie on to co widzi. Nie trudnym jest zauważyć jak cenne mogą być te informacje w szerokim spektrum dziedzin.
+Możliwość rejestrowania ruchów oczu pozwala na zrozumienie w jaki sposób obserwator eksploruje otaczający go świat. Posiadając tą wiedzę możliwe jest wyciągnięcie wniosków na temat tego co jest interesujące lub istotne dla obserwatora, jakie emocje się z tym wiążą, czy nawet jakie procesy poznawcze zachodzą w jego umyśle, czy rozumie on to co widzi. Nie trudnym jest zauważyć jak cenne mogą być te informacje w szerokim spektrum dziedzin.
 
 % osadzenie problemu w dziedzinie
 Okulografia odgrywa kluczową rolę w psychologi poznawczej, psychologi społecznej, neurobiologii, marketingu, czy medycynie. W psychologii poznawczej ruch oczu jest ściśle związany z pamięcią, podejmowaniem decyzji, obciążeniem poznawczym i uczeniem się asocjacyjnym. W psychologii społecznej eye-tracking pozwala na wgląd w zachowania społeczne i ich analizę, co pozwala badać empatię, prospołeczność, czy fobie społeczne \cite{bib:tobii-main}. W neurobiologii bada się powiązania ruchu oczu ze szlakami neuronowymi odpowiedzialnymi za podejmowane akcje i procesy myślowe, dając możliwość w diagnozach i wsparciu osób dotkniętych chorobą Parkinsona \cite{bib:tobii-parkinson}, Alzheimera \cite{bib:tobii-alzheimer}, a także autyzmem czy łagodnym upośledzeniem funkcji poznawczych \cite{bib:tobii-autyzm}. W medycynie okulografia pozwala na diagnozę między innymi oczopląsu, który może być objawem np. stwardnienia rozsianego, uszkodzenia śródmózgowia lub urazu ucha wewnętrznego \cite{bib:Diagnostyka-oczoplas}. Niezaprzeczalnie technika ta jest niezwykle cenna i efektywna na wielu płaszczyznach naukowych i praktycznych.
@@ -565,11 +565,62 @@ Praca ta skupia się przede wszystkim na samym procesie wykrywania źrenic i śl
 %--------------------------------------
 %
 %
-% TODO: sformułowanie problemu, state of the art, studia literaturowe
+% TODO: sformułowanie problemu (20%?), state of the art, studia literaturowe
 %
-% Status: 0%
+% Status: 10%
 %--------------------------------------
 \chapter{[Analiza tematu]}
+
+% =========== wzorowanie się na przykładzie ===========
+Szczegółowe sformułowanie problemu
+Śledzenie ruchu gałek ocznych (ang. eye-tracking) to proces rejestrowania i analizy sposobu, w jaki ludzkie oczy poruszają się w trakcie obserwacji otoczenia lub analizowania określonych bodźców wizualnych. Problem ten jest istotny, ponieważ ludzki wzrok jest kluczowym narzędziem percepcji, a sposób, w jaki poruszamy oczami, dostarcza bezpośrednich informacji o mechanizmach uwagi, percepcji i procesów decyzyjnych. Oczy rejestrują jedynie niewielki obszar otoczenia w wysokiej rozdzielczości (tzw. plamka żółta), co wymaga ciągłego ruchu w celu skupienia wzroku na interesujących obszarach.
+
+Główne pytania badawcze dotyczą:
+
+Identyfikacji mechanizmów leżących u podstaw ruchów oczu, takich jak sakady, fiksacje czy dryfy;
+Analizy trajektorii ruchów w celu interpretacji procesów poznawczych, takich jak uwaga selektywna czy eksploracja wizualna;
+Opracowania efektywnych metod analizy i wizualizacji dużych zbiorów danych generowanych podczas badań eye-trackingowych.
+Współczesny rozwój technologii eye-trackingu umożliwił precyzyjną rejestrację trajektorii ruchów gałek ocznych, jednak nadal istnieją wyzwania związane z interpretacją wyników, skalowalnością analiz oraz adaptacją narzędzi do różnych dziedzin badawczych i aplikacji.
+
+Osadzenie tematu w kontekście aktualnego stanu wiedzy (state of the art)
+Eye-tracking to technologia zyskująca na popularności dzięki postępowi w precyzji urządzeń rejestrujących oraz spadkowi ich kosztów. Obecny stan wiedzy obejmuje zarówno aspekty techniczne, jak i teoretyczne związane z analizą danych eye-trackingowych.
+
+Technologie i urządzenia eye-trackingowe:
+Najnowocześniejsze urządzenia korzystają z technologii optycznych i wideo, takich jak systemy montowane na głowie (np. okulary rejestrujące ruchy oczu) oraz stacjonarne urządzenia rejestrujące pozycję oka w czasie rzeczywistym. Firmy takie jak Tobii, EyeLink czy Pupil Labs dominują na rynku, oferując rozwiązania różniące się precyzją, mobilnością i kosztem.
+
+Zastosowania eye-trackingu:
+W psychologii i neurobiologii eye-tracking wykorzystywany jest do badania procesów uwagi, percepcji oraz podejmowania decyzji. W marketingu umożliwia analizę wzorców oglądania reklam, a w interfejsach człowiek-komputer pozwala na projektowanie bardziej intuicyjnych systemów. W medycynie stosuje się go m.in. do diagnostyki chorób neurologicznych, takich jak autyzm czy choroba Parkinsona.
+
+Ograniczenia technologiczne i wyzwania:
+Pomimo rozwoju technologii, istnieją trudności w interpretacji wyników badań. Brak uniwersalnych standardów analizy, a także różnorodność dostępnych algorytmów detekcji fiksacji i sakad, sprawiają, że analiza ruchów oczu wymaga znacznego doświadczenia i dostosowywania parametrów.
+
+Studia literaturowe – opis znanych rozwiązań
+Badania naukowe i literatura fachowa dostarczają licznych przykładów metod i algorytmów stosowanych w analizie danych eye-trackingowych. Poniżej przedstawiono najważniejsze rozwiązania opisane w literaturze.
+
+Algorytmy analizy trajektorii ruchów oczu:
+
+Algorytmy detekcji fiksacji:
+Velocity-Threshold Identification (I-VT) – metoda oparta na progach prędkości ruchu gałki ocznej, używana do identyfikacji okresów stabilnego spojrzenia (fiksacji) oraz szybkich ruchów (sakad).
+Dispersion-Threshold Identification (I-DT) – bazuje na obliczaniu dyspersji (rozproszenia) punktów spojrzenia w określonym przedziale czasowym.
+Algorytmy segmentacji trajektorii:
+Hidden Markov Models (HMM) – modele statystyczne używane do identyfikacji sekwencji ruchów oczu w danych złożonych.
+Clustering-Based Methods – wykorzystujące algorytmy grupowania, takie jak k-średnie, w celu klasyfikacji punktów spojrzenia.
+Przykłady narzędzi i oprogramowania:
+
+Tobii Pro Lab – komercyjne oprogramowanie pozwalające na analizę i wizualizację danych eye-trackingowych, szeroko stosowane w badaniach naukowych i marketingowych.
+PsychoPy i PyGaze – otwarte platformy do projektowania eksperymentów i analizy danych.
+OpenGaze – inicjatywa open-source rozwijająca algorytmy analizy i wizualizacji danych eye-trackingowych.
+Porównanie podejść:
+Badania naukowe, takie jak [Duchowski, 2017], podkreślają, że wybór metody analizy zależy od charakteru danych i celów badawczych. Metody proste, takie jak I-VT, są skuteczne w analizie podstawowych wzorców, natomiast bardziej zaawansowane podejścia, jak HMM, oferują większą elastyczność, ale kosztem złożoności obliczeniowej.
+
+Podsumowanie:
+Studia literaturowe wskazują, że rozwój algorytmów i narzędzi analizy danych eye-trackingowych jest kluczowy dla efektywnego wykorzystania tej technologii w badaniach naukowych i praktycznych zastosowaniach. Jednak wciąż istnieją wyzwania związane z interpretacją wyników, integracją danych z różnych źródeł oraz tworzeniem intuicyjnych narzędzi do analizy.
+
+% =========== moja część ===========
+% sformułowanie problemu
+Widzeniem fovealnym nazywamy wspomniany już wcześniej fakt, że widzimy w największej rozdzielczości jedynie centrum pola widzenia. Wynika to z budowy siatkówki, która posiada dołek środkowy (fovea centralis), jest to niewielki obszar, który charakteryzuje się największym zagęszczeniem czopków. Taka budowa siatkówki, która odpowiada za odbiór bodźców wzrokowych, sprawia, że nieustannie poruszamy oczami. Skupiając wzrok na danym punkcie, musimy być gotowi na to, że cała reszta pola widzenia straci dla nas na ostrości, jest to proces, który przypomina filtracje wielu otaczających nas informacji, do paru, które mają w tym momencie znaczenie.
+
+Uwaga wzrokowa może zostać opisana przez idiomy "gdzie" i "co", które pozwalają na zobrazowanie jej selektywnej natury. "Gdzie" to proces wizualnego wyszukiwania i wyboru lokalizacji, które zwróciło naszą uwagę, w celu dokładniejszego zbadania. Istotnym aspektem tego procesu selekcji jest widzenie peryferyjne, czyli te oddalone od naszego punktu skupienia, ale wciąż pozwalające na wyodrębnienie kształtów i ruchu, co w pewien sposób prowadzi nasze centralne spojrzenie. Przykładem może być spojrzenie przez okno, w pierwszym momencie nasz wzrok kierowany jest na wyraźne kształty, światła czy nagły ruch taki jak np. lądujący ptak. "Co" można nazwać odwrotnością "gdzie", jest to proces szczegółowego badania danego obszaru, charakteryzują go takie zjawiska jak fiksacja, czyli stabilizacja wzroku na danym punkcie oraz ruchy sakkadowe, czyli szybkie ruchy oczu pomiędzy kolejnymi punktami, które pozwalają na obserwacje. Całość tworzy kanał percepcyjny o ograniczonym zasięgu przestrzennym, obejmujący interesujący obszar, budując w ten sposób naszą świadomość i zrozumienie celu naszego spojrzenia. Wracając do poprzedniego przykładu, po zauważeniu ptaka, nasze spojrzenie skupi się na nim, a ruchy oczu pozwolą na dokładne zbadanie jego kształtu, koloru i detali. To właśnie połączenie "gdzie" i "co" pozwala na głębsze zrozumienie otaczającego nas świata.
 
 
 
