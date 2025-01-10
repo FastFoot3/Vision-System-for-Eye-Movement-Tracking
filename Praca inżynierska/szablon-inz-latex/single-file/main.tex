@@ -528,35 +528,28 @@ escapeinside={@*}{*@},%
 %--------------------------------------
 %
 %
-% TODO: cel pracy, zakres pracy, zwięzła charakterystyka rozdziałów
+% TODO: cel pracy (99.9%), zakres pracy(99%), zwięzła charakterystyka rozdziałów
 %
-% Status: 40%
+% Status: 80%
 %--------------------------------------
 \chapter{Wstęp}
 \label{ch:wstep}
 
-%============================do inspiracji=============================================================
-Śledzenie ruchu gałek ocznych (ang. eye-tracking) jest kluczową metodą badawczą, ponieważ umożliwia analizę mechanizmów percepcji i uwagi. W naturalnym procesie widzenia nasze oczy poruszają się, aby skierować centralny punkt spojrzenia, czyli obszar o najwyższej rozdzielczości w polu widzenia, na interesujący nas obiekt lub region. Najczęściej proces ten jest sprzężony z uwagą – przenosimy koncentrację na dany punkt, co pozwala nam dokładniej analizować jego szczegóły, nawet jeśli trwa to zaledwie ułamek sekundy.
-
-Zdolność do rejestrowania ruchu oczu otwiera drzwi do zrozumienia sposobu, w jaki obserwator eksploruje otaczający świat. Analiza trajektorii spojrzenia może dostarczyć informacji o tym, co zwróciło uwagę obserwatora, co uznał za interesujące lub istotne. Dzięki temu możemy lepiej zrozumieć, jak osoba postrzega oglądane sceny czy obiekty, a także uzyskać wgląd w jej procesy poznawcze i emocjonalne.
-
-Eye-tracking, czyli technologia śledzenia ruchów gałek ocznych, odgrywa kluczową rolę w wielu dziedzinach, takich jak psychologia poznawcza, marketing, badania UX, czy medycyna. W psychologii i neurobiologii pozwala na badanie procesów poznawczych, takich jak uwaga, percepcja czy procesy podejmowania decyzji. W marketingu eye-tracking umożliwia analizę zachowań konsumentów, wspierając tworzenie bardziej efektywnych kampanii reklamowych oraz optymalizację układu treści wizualnych. Z kolei w badaniach użyteczności (UX) pomaga projektantom zrozumieć, jak użytkownicy wchodzą w interakcję z aplikacjami i stronami internetowymi, co przekłada się na bardziej intuicyjne i przyjazne interfejsy. W medycynie eye-tracking jest wykorzystywany do diagnozowania i monitorowania zaburzeń neurologicznych, takich jak stwardnienie rozsiane, czy zaburzenia ze spektrum autyzmu.
-
-Jednak analiza danych zebranych podczas eksperymentów eye-trackingowych niesie za sobą liczne wyzwania. Są one związane nie tylko z przetwarzaniem dużych ilości danych, ale także z ich wizualizacją w sposób, który wspiera interpretację wyników. Brak standardowych metod integracji i wizualizacji danych prowadzi do konieczności tworzenia dedykowanych narzędzi, które są dostosowane do specyfiki konkretnego projektu badawczego.
-
-Pomimo postępów w technologii eye-tracking, brakuje rozwiązań pozwalających na efektywną i łatwą w interpretacji wizualizację ruchów oczu w czasie rzeczywistym oraz ich przetwarzanie w kontekście analizy zachowań użytkowników. Istniejące narzędzia często są albo zbyt ogólne, albo wymagają zaawansowanej wiedzy technicznej, co ogranicza ich zastosowanie w praktyce.
-
-Celem niniejszej pracy inżynierskiej jest opracowanie i wdrożenie narzędzia do przetwarzania i wizualizacji danych eye-trackingowych. Rozwiązanie to pozwoli na intuicyjną analizę danych, ułatwiając interpretację wyników oraz wspierając decyzje badawcze i projektowe. Poprzez implementację odpowiednich algorytmów oraz technik wizualizacyjnych, praca przyczyni się do zniwelowania barier w wykorzystaniu eye-tracking w różnych dziedzinach.
-
-% ============================MOJA CZĘŚĆ=============================================================
+\section{Wprowadzenie i osadzenie w dziedzinie}
 % wprowadzenie w problem/zagadnienie
-Śledzenie ruchu gałek ocznych (ang. eye-tracking), zwane również jako okulografia, jest techniką która badana jest od ponad stu lat. Istotność tej techniki wynika z faktu, że ruchy gałek ocznych są ściśle związane z procesami poznawczymi, takimi jak uwaga, percepcja, pamięć, czy procesy decyzyjne. Skupiając wzrok na danym punkcie, umieszczamy go w centralnym obszarze naszego pola widzenia które charakteryzuje się największą rozdzielczością, co pozwala na dokładne analizowanie szczegółów. Ten fakt wpływa także na proces skupienia - gdy koncentrujemy się na danym obiekcie lub obszarze skupiamy na nim wzrok (często wystarczy jedynie krótki moment).
+Śledzenie ruchu gałek ocznych (ang. eye-tracking), zwane również jako okulografia, jest techniką która badana jest od ponad stu lat. Istotność tej techniki wynika z faktu, że ruchy gałek ocznych są ściśle związane z procesami poznawczymi, takimi jak uwaga, percepcja, pamięć, czy procesy decyzyjne. Skupiając wzrok na danym punkcie, umieszczamy go w centralnym obszarze naszego pola widzenia które charakteryzuje się największą rozdzielczością, co pozwala na dokładne analizowanie szczegółów. Ten fakt wpływa także na proces skupienia -- gdy koncentrujemy się na danym obiekcie lub obszarze skupiamy na nim wzrok (często wystarczy jedynie krótki moment).
 
 Możliwość rejestrowania ruchów oczu pozwala na zrozumienie w jaki sposób obserwator eksploruje otaczający go świat. Posiadając tą wiedzę możliwe jest wyciągnięcie wniosków na temat tego co jest interesujące lub istotne dla obserwatora, jakie emocje wzbudza w nim to co widzi, czy nawet jakie procesy poznawcze zachodzą w jego umyśle, czy rozumie on to co widzi. Nie trudnym jest zauważyć jak cenne mogą być te informacje w szerokim spektrum dziedzin.
 
 % osadzenie problemu w dziedzinie
-Okulografia odgrywa kluczową rolę w psychologi poznawczej, psychologi społecznej, neurobiologii, marketingu, czy medycynie. W psychologii poznawczej ruch oczu jest ściśle związany z pamięcią, podejmowaniem decyzji, obciążeniem poznawczym i uczeniem się asocjacyjnym. W psychologii społecznej, eye-tracking pozwala na wgląd w zachowania społeczne i ich analizę, co pozwala badać empatię, prospołeczność, czy fobie społeczne \cite{bib:tobii-main}. W neurobiologii bada się powiązania ruchu oczu z szlakami neuronowymi odpowiedzialnymi za podejmowane akcje i procesy myślowe, dając możliwość w diagnozach i wsparciu osób dotkniętych chorobą Parkinsona \cite{bib:tobii-parkinson}, Alzheimer \cite{bib:tobii-alzheimer} a także autyzmem czy łagodnym upośledzeniem funkcji poznawczych \cite{bib:tobii-autyzm}. W medycynie okulografia pozwala na diagnozę między innymi oczopląsu, który może być objawem np. stwardnienia rozsianego, uszkodzenia śródmózgowia lub urazu ucha wewnętrznego \cite{bib:Diagnostyka-oczoplas}. Niezaprzeczalnie technika ta jest niezwykle cenna i efektywna na wielu płaszczyznach naukowych i praktycznych.
+Okulografia odgrywa kluczową rolę w psychologi poznawczej, psychologi społecznej, neurobiologii, marketingu, czy medycynie. W psychologii poznawczej ruch oczu jest ściśle związany z pamięcią, podejmowaniem decyzji, obciążeniem poznawczym i uczeniem się asocjacyjnym. W psychologii społecznej eye-tracking pozwala na wgląd w zachowania społeczne i ich analizę, co pozwala badać empatię, prospołeczność, czy fobie społeczne \cite{bib:tobii-main}. W neurobiologii bada się powiązania ruchu oczu ze szlakami neuronowymi odpowiedzialnymi za podejmowane akcje i procesy myślowe, dając możliwość w diagnozach i wsparciu osób dotkniętych chorobą Parkinsona \cite{bib:tobii-parkinson}, Alzheimera \cite{bib:tobii-alzheimer}, a także autyzmem czy łagodnym upośledzeniem funkcji poznawczych \cite{bib:tobii-autyzm}. W medycynie okulografia pozwala na diagnozę między innymi oczopląsu, który może być objawem np. stwardnienia rozsianego, uszkodzenia śródmózgowia lub urazu ucha wewnętrznego \cite{bib:Diagnostyka-oczoplas}. Niezaprzeczalnie technika ta jest niezwykle cenna i efektywna na wielu płaszczyznach naukowych i praktycznych.
 
+\section{Cel oraz zakres pracy}
+% cel pracy
+Celem niniejszej pracy jest stworzenie narzędzia które pozwoli na uniwersalne śledzenie ruchu gałek ocznych, bez zdefiniowanej docelowej grupy użytkowników. System ten powinien być prosty w obsłudze i niewymagający zaawansowanej technologii, ale nie ograniczający w razie potrzeby bardziej zaawansowanych użytkowników, prezentując użyteczność zarówno dla naukowców, studentów, jak i hobbystów. Tego typu narzędzie pozwoli na eksplorację danych eye-trackingowych, otwierając możliwości na dalszą analizę i interpretację wyników, a także zapewni solidną podstawę w razie potrzeby modyfikacji lub rozbudowy systemu w bardziej ukierunkowany sposób.
+
+% zakres pracy
+Praca ta skupia się przede wszystkim na samym procesie wykrywania źrenic i śledzenia ruchu gałek ocznych na ich podstawie oraz implementacji systemu wizyjnego, który pozwoli na zapis, wizualizację i potencjalną dalszą analizę danych zebranych przez kamerę, w tym także kamerę internetową. Całość zrealizowana jest w języku Python, z wykorzystaniem bibliotek takich jak OpenCV, NumPy, Pandas oraz Matplotlib, a wszelkie prezentowane dane zostały uchwycone przy użyciu wbudowanej kamery laptopa. Praca nie będzie obejmować rozległej analizy zebranych danych, ani eksperymentów przeprowadzonych z użyciem owego systemu. Nie została także stworzona grupa testowa, więc większość testów przeprowadzone zostały na autorze pracy.
 
 \begin{itemize}
 \item wprowadzenie w problem/zagadnienie
@@ -577,6 +570,8 @@ Okulografia odgrywa kluczową rolę w psychologi poznawczej, psychologi społecz
 % Status: 0%
 %--------------------------------------
 \chapter{[Analiza tematu]}
+
+
 
 \begin{itemize}
 \item sformułowanie problemu
