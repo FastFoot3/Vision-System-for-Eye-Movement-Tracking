@@ -629,7 +629,7 @@ Powyższe rozważania pozwalają przejść do głównego nurtu tematu śledzenia
 Sygnał sakad można opisać jako funkcja impuls/skok, gdzie impuls na wejściu reprezentuje prędkość, a skok pozycję, impuls jest przepuszczany przez filtr, który przekształca go w skok. Prostą reprezentacją ruchu sakadowego jest filtr liniowy różniczkujący, który dokonuje potrzebnej konwersji informacji prędkość na przemieszczenie. Wzór owego filtra w dziedzinie czasu można zapisać następująco
 
 \begin{align*}
-	x_t = g_0 \cdot s_t + g_1 \cdot s_{t-1} + g_2 \cdot s_{t-2} + \ldots
+	x_t &= g_0 \cdot s_t + g_1 \cdot s_{t-1} + g_2 \cdot s_{t-2} + \ldots
 \end{align*}
 
 Wyjście $x_t$ zależy od bieżącego wejścia $s_t$ oraz jego poprzednich wartości $s_{t-1}, s_{t-2}, \ldots$ ważonych odpowiednimi współczynnikami filtra $(g_0, g_1, g_2, \ldots)$. W zapisie sumarycznym wzór prezentuje się następująco
@@ -648,9 +648,23 @@ Filtr Haara jest jednym z przykładów filtrów który przybliża różniczkowan
 	\frac{X(z)}{S(z)} &= 1 - z
 \end{align*}
 
+Płynne podążanie występuje gdy obserwator śledzi obiekt w ruchu, ruch ten oczywiście nie może być zbyt gwałtowny. Tego typu śledzenie ruchu jest przykładem systemu sterowania z ujemnym sprzężeniem zwrotnym. Do modelowania owych ruchów używana jest prosta pętla, którą można opisać nastepujacym równaniem w dziedzinie czasu
 
+\begin{align*}
+	h(s_t - x_t) &= x_{t+1}
+\end{align*}
 
+Wejście $s_t$ to pozycja celu, wyjście $x_t$ to pożądana pozycja oka. Można zauważyć, że w tym przypadku nie jest wymagana transformacja informacji wejściowej na wyjściową, a jedynie zmodyfikowanie jej wartości, w związku z tym $h$ jest liniowym niezmiennym w czasie filtrem, czyli po prostu wzmocnieniem systemu. Przeprowadźmy teraz transformację Laurenta na powyższym równaniu by uzyskać transmitancję systemu
 
+\begin{align*}
+	\mathcal{Z}\{h(s_t - x_t)\} &= \mathcal{Z}\{x_{t+1}\} \\
+	H(z) \cdot (S(z) - X(z)) &=  X(z) \\
+	H(z) \cdot S(z) - H(z) \cdot X(z) &=  X(z) \\
+	H(z) \cdot S(z) &= (H(z) + 1) \cdot X(z) \\
+	\frac{X(z)}{S(z)} &= \frac{H(z)}{H(z) + 1}
+\end{align*}
+
+W ten sposób płynne sygnał z receptorów oka służy za błąd, który następnie jest kompensowany w celu utrzymania obrazu w przestrzeni widzenia plamkowego.
 
 
 
