@@ -571,51 +571,6 @@ Praca ta skupia się przede wszystkim na samym procesie wykrywania źrenic i śl
 %--------------------------------------
 \chapter{[Analiza tematu]}
 
-% =========== wzorowanie się na przykładzie ===========
-Szczegółowe sformułowanie problemu
-Śledzenie ruchu gałek ocznych (ang. eye-tracking) to proces rejestrowania i analizy sposobu, w jaki ludzkie oczy poruszają się w trakcie obserwacji otoczenia lub analizowania określonych bodźców wizualnych. Problem ten jest istotny, ponieważ ludzki wzrok jest kluczowym narzędziem percepcji, a sposób, w jaki poruszamy oczami, dostarcza bezpośrednich informacji o mechanizmach uwagi, percepcji i procesów decyzyjnych. Oczy rejestrują jedynie niewielki obszar otoczenia w wysokiej rozdzielczości (tzw. plamka żółta), co wymaga ciągłego ruchu w celu skupienia wzroku na interesujących obszarach.
-
-Główne pytania badawcze dotyczą:
-
-Identyfikacji mechanizmów leżących u podstaw ruchów oczu, takich jak sakady, fiksacje czy dryfy;
-Analizy trajektorii ruchów w celu interpretacji procesów poznawczych, takich jak uwaga selektywna czy eksploracja wizualna;
-Opracowania efektywnych metod analizy i wizualizacji dużych zbiorów danych generowanych podczas badań eye-trackingowych.
-Współczesny rozwój technologii eye-trackingu umożliwił precyzyjną rejestrację trajektorii ruchów gałek ocznych, jednak nadal istnieją wyzwania związane z interpretacją wyników, skalowalnością analiz oraz adaptacją narzędzi do różnych dziedzin badawczych i aplikacji.
-
-Osadzenie tematu w kontekście aktualnego stanu wiedzy (state of the art)
-Eye-tracking to technologia zyskująca na popularności dzięki postępowi w precyzji urządzeń rejestrujących oraz spadkowi ich kosztów. Obecny stan wiedzy obejmuje zarówno aspekty techniczne, jak i teoretyczne związane z analizą danych eye-trackingowych.
-
-Technologie i urządzenia eye-trackingowe:
-Najnowocześniejsze urządzenia korzystają z technologii optycznych i wideo, takich jak systemy montowane na głowie (np. okulary rejestrujące ruchy oczu) oraz stacjonarne urządzenia rejestrujące pozycję oka w czasie rzeczywistym. Firmy takie jak Tobii, EyeLink czy Pupil Labs dominują na rynku, oferując rozwiązania różniące się precyzją, mobilnością i kosztem.
-
-Zastosowania eye-trackingu:
-W psychologii i neurobiologii eye-tracking wykorzystywany jest do badania procesów uwagi, percepcji oraz podejmowania decyzji. W marketingu umożliwia analizę wzorców oglądania reklam, a w interfejsach człowiek-komputer pozwala na projektowanie bardziej intuicyjnych systemów. W medycynie stosuje się go m.in. do diagnostyki chorób neurologicznych, takich jak autyzm czy choroba Parkinsona.
-
-Ograniczenia technologiczne i wyzwania:
-Pomimo rozwoju technologii, istnieją trudności w interpretacji wyników badań. Brak uniwersalnych standardów analizy, a także różnorodność dostępnych algorytmów detekcji fiksacji i sakad, sprawiają, że analiza ruchów oczu wymaga znacznego doświadczenia i dostosowywania parametrów.
-
-Studia literaturowe – opis znanych rozwiązań
-Badania naukowe i literatura fachowa dostarczają licznych przykładów metod i algorytmów stosowanych w analizie danych eye-trackingowych. Poniżej przedstawiono najważniejsze rozwiązania opisane w literaturze.
-
-Algorytmy analizy trajektorii ruchów oczu:
-
-Algorytmy detekcji fiksacji:
-Velocity-Threshold Identification (I-VT) – metoda oparta na progach prędkości ruchu gałki ocznej, używana do identyfikacji okresów stabilnego spojrzenia (fiksacji) oraz szybkich ruchów (sakad).
-Dispersion-Threshold Identification (I-DT) – bazuje na obliczaniu dyspersji (rozproszenia) punktów spojrzenia w określonym przedziale czasowym.
-Algorytmy segmentacji trajektorii:
-Hidden Markov Models (HMM) – modele statystyczne używane do identyfikacji sekwencji ruchów oczu w danych złożonych.
-Clustering-Based Methods – wykorzystujące algorytmy grupowania, takie jak k-średnie, w celu klasyfikacji punktów spojrzenia.
-Przykłady narzędzi i oprogramowania:
-
-Tobii Pro Lab – komercyjne oprogramowanie pozwalające na analizę i wizualizację danych eye-trackingowych, szeroko stosowane w badaniach naukowych i marketingowych.
-PsychoPy i PyGaze – otwarte platformy do projektowania eksperymentów i analizy danych.
-OpenGaze – inicjatywa open-source rozwijająca algorytmy analizy i wizualizacji danych eye-trackingowych.
-Porównanie podejść:
-Badania naukowe, takie jak [Duchowski, 2017], podkreślają, że wybór metody analizy zależy od charakteru danych i celów badawczych. Metody proste, takie jak I-VT, są skuteczne w analizie podstawowych wzorców, natomiast bardziej zaawansowane podejścia, jak HMM, oferują większą elastyczność, ale kosztem złożoności obliczeniowej.
-
-Podsumowanie:
-Studia literaturowe wskazują, że rozwój algorytmów i narzędzi analizy danych eye-trackingowych jest kluczowy dla efektywnego wykorzystania tej technologii w badaniach naukowych i praktycznych zastosowaniach. Jednak wciąż istnieją wyzwania związane z interpretacją wyników, integracją danych z różnych źródeł oraz tworzeniem intuicyjnych narzędzi do analizy.
-
 % =========== moja część ===========
 % sformułowanie problemu
 \section{Sformułowanie problemu}
@@ -624,9 +579,9 @@ Widzeniem plamkowym (fovealnym) nazywamy wspomniane już wcześniej zjawisko, ż
 
 \subsection{Uwaga wzrokowa}
 
-Uwaga wzrokowa może zostać opisana przez idiomy "gdzie" i "co", które pozwalają na zobrazowanie jej selektywnej natury. "Gdzie" to proces wizualnego wyszukiwania i wyboru lokalizacji, która zwróciła naszą uwagę, w celu dokładniejszego zbadania. Istotnym aspektem tego procesu selekcji jest widzenie peryferyjne, czyli takie obejmujące obszar oddalony od naszego punktu skupienia, ale wciąż pozwalający na wyodrębnienie kształtów i ruchu, co w pewien sposób prowadzi nasze centralne spojrzenie. Przykładem może być spojrzenie przez okno -- w pierwszym momencie nasz wzrok kierowany jest na wyraźne kształty, światła czy nagły ruch taki jak np. lądujący ptak. 
+Uwaga wzrokowa może zostać opisana przez idiomy ''gdzie'' i ''co'', które pozwalają na zobrazowanie jej selektywnej natury. ''Gdzie'' to proces wizualnego wyszukiwania i wyboru lokalizacji, która zwróciła naszą uwagę, w celu dokładniejszego zbadania. Istotnym aspektem tego procesu selekcji jest widzenie peryferyjne, czyli takie obejmujące obszar oddalony od naszego punktu skupienia, ale wciąż pozwalający na wyodrębnienie kształtów i ruchu, co w pewien sposób prowadzi nasze centralne spojrzenie. Przykładem może być spojrzenie przez okno -- w pierwszym momencie nasz wzrok kierowany jest na wyraźne kształty, światła czy nagłe ruchy jak np. lądujący ptak. 
 
-"Co" można nazwać odwrotnością "gdzie" -- jest to proces szczegółowego badania danego obszaru, charakteryzują go takie zjawiska jak fiksacja, czyli stabilizacja wzroku na danym punkcie oraz ruchy sakadowe, czyli szybkie mimowolne ruchy oczu pomiędzy kolejnymi punktami, które pozwalają na obserwacje. Całość tworzy kanał percepcyjny o ograniczonym zasięgu przestrzennym, obejmujący interesujący obszar, budując w ten sposób naszą świadomość i zrozumienie celu naszego spojrzenia. Wracając do poprzedniego przykładu, po zauważeniu ptaka, nasze spojrzenie skupi się na nim (fiksacja), a ruchy sakadowe oczu pozwolą na dokładne zbadanie jego kształtu, koloru i detali. To właśnie połączenie "gdzie" i "co" pozwala na głębsze zrozumienie otaczającego nas świata, a owe ścieżki skanowania dają nam 
+''Co'' można nazwać odwrotnością ''gdzie'' -- jest to proces szczegółowego badania danego obszaru, charakteryzują go takie zjawiska jak fiksacja, czyli stabilizacja wzroku na danym punkcie oraz ruchy sakadowe, czyli szybkie mimowolne ruchy oczu pomiędzy kolejnymi punktami, które pozwalają na obserwacje. Całość tworzy kanał percepcyjny o ograniczonym zasięgu przestrzennym, obejmujący interesujący obszar, budując w ten sposób naszą świadomość i zrozumienie celu naszego spojrzenia. Wracając do poprzedniego przykładu, po zauważeniu ptaka, nasze spojrzenie skupi się na nim (fiksacja), a ruchy sakadowe oczu pozwolą na dokładne zbadanie jego kształtu, koloru i detali. To właśnie połączenie ''gdzie'' i ''co'' pozwala na głębsze zrozumienie otaczającego nas świata, a owe ścieżki skanowania dają nam 
 wgląd w proces poznawczy badanej osoby, jako że pomiar widzenia fovealnego w czasie odzwierciedla chwilowe i jawne skupienie uwagi wzrokowej obserwatora. 
 
 \subsection{Poszukiwanie wzrokowe}
@@ -635,7 +590,7 @@ Tutaj warto wspomnieć o poszukiwaniu wzrokowym, jest to proces aktywnego przesz
 
 \subsection{Analiza ruchów oczu}
 
-Powyższe rozważania pozwalają przejść do głównego nurtu tematu śledzenia ruchu gałek ocznych, czyli analiza ruchów oczu. Rozróżniamy pięć podstawowych typów ruchów oczu: wspomniane już wcześniej sakadyczne, wergencyjne, przedsionkowe, płynne podążanie (smooth pursuit) oraz oczopląs fizjologiczny, który jest naturalny dla zdrowej osoby i często występuje podczas fiksacji. Ruchy te można podzielić na dobrowolne, mimowolne i odruchowe, a sygnały je kontrolujące pochodzą z obszarów korowych mózgu. Do opisania tych procesów można posłużyć się modelowaniem matematycznym. Do zrozumienia jawnej uwagi wzrokowej wystarczy modelowanie trzech typów ruchów: fiksacji, która pokazuje chęć utrzymania wzroku na stacjonarnym obiekcie, sakad, które mogą wskazywać na chęć zmiany punktu uwagi oraz płynnych pościgów, które podobnie do fiksacji, pozwalają na śledzenie ruchomego obiektu. 
+Powyższe rozważania pozwalają przejść do głównego nurtu tematu śledzenia ruchu gałek ocznych, czyli analiza ruchów oczu. Rozróżniamy pięć podstawowych typów ruchów oczu: wspomniane już wcześniej sakadyczne, wergencyjne, przedsionkowe, płynne podążanie (smooth pursuit) oraz oczopląs fizjologiczny, który jest naturalny dla zdrowej osoby i często występuje podczas fiksacji. Ruchy te można podzielić na dobrowolne, mimowolne i odruchowe, a sygnały je kontrolujące pochodzą z obszarów korowych mózgu. Do opisania tych procesów można posłużyć się modelowaniem matematycznym. Do zrozumienia jawnej uwagi wzrokowej wystarczy modelowanie trzech typów ruchów: fiksacji, która pokazuje chęć utrzymania wzroku na stacjonarnym obiekcie, sakad, które mogą wskazywać na chęć zmiany punktu uwagi oraz płynnych pościgów, które podobnie do fiksacji, pozwalają na śledzenie obiektu, ale ruchomego. 
 
 \subsubsection{Ruchy sakadowe}
 
@@ -645,7 +600,7 @@ Sygnał sakad można opisać jako funkcja impuls/skok, gdzie impuls na wejściu 
 	x_t &= g_0 \cdot s_t + g_1 \cdot s_{t-1} + g_2 \cdot s_{t-2} + \ldots
 \end{align*}
 
-Wyjście $x_t$ zależy od bieżącego wejścia $s_t$ oraz jego poprzednich wartości $s_{t-1}, s_{t-2}, \ldots$ ważonych odpowiednimi współczynnikami filtra $(g_0, g_1, g_2, \ldots)$. W zapisie sumarycznym wzór prezentuje się następująco
+Wyjście $x_t$ zależy od bieżącego wejścia $s_t$ oraz jego poprzednich wartości $(s_{t-1}, s_{t-2}, \ldots)$ ważonych odpowiednimi współczynnikami filtra $(g_0, g_1, g_2, \ldots)$. W zapisie sumarycznym wzór prezentuje się następująco
 
 \begin{align*}
 	x_t &= \sum_{k=0}^{\infty} g_k \cdot s_{t-k}
@@ -657,6 +612,7 @@ Filtr Haara jest jednym z przykładów filtrów który przybliża różniczkowan
 	x_t &= g_0 \cdot s_t + g_1 \cdot s_{t-1} \\
 	x_t &= 1 \cdot s_t - 1 \cdot s_{t-1} \\
 	x_t &= s_t - s_{t-1} \\
+	\mathcal{Z}\{x_t\} &= \mathcal{Z} \{s_t - s_{t-1}\} \\
 	X(z) &= (1 - z) \cdot S(z) \\
 	\frac{X(z)}{S(z)} &= 1 - z
 \end{align*}
@@ -675,18 +631,18 @@ Diagram omawianego modelu przedstawiony jest na rysunku \ref{fig:model-sakad}.
 Płynne podążanie występuje gdy obserwator śledzi obiekt w ruchu, ruch ten oczywiście nie może być zbyt gwałtowny. Tego typu śledzenie ruchu jest przykładem systemu sterowania z ujemnym sprzężeniem zwrotnym. Do modelowania owych ruchów używana jest prosta pętla, którą można opisać nastepujacym równaniem w dziedzinie czasu
 
 \begin{align*}
-	h(s_t - x_t) &= x_{t+1}
+	h \cdot (s_t - x_t) &= x_{t+1}
 \end{align*}
 
-Wejście $s_t$ to pozycja celu, wyjście $x_t$ to pożądana pozycja oka. Można zauważyć, że w tym przypadku nie jest wymagana transformacja informacji wejściowej na wyjściową, a jedynie zmodyfikowanie jej wartości, w związku z tym $h$ jest liniowym niezmiennym w czasie filtrem, czyli po prostu wzmocnieniem systemu. Przeprowadźmy teraz transformację Laurenta na powyższym równaniu by uzyskać transmitancję systemu
+Wejście $s_t$ to pozycja celu, wyjście $x_t$ to pożądana pozycja oka. Można zauważyć, że w tym przypadku nie jest wymagana transformacja informacji wejściowej na wyjściową, a jedynie zmodyfikowanie jej wartości, w związku z tym $h$ jest liniowym niezmiennym w czasie filtrem, czyli po prostu wzmocnieniem systemu. Przeprowadźmy teraz transformację Z na powyższym równaniu by uzyskać transmitancję systemu
 
-\begin{align*}
-	\mathcal{Z}\{h(s_t - x_t)\} &= \mathcal{Z}\{x_{t+1}\} \\
-	H(z) \cdot (S(z) - X(z)) &=  X(z) \\
+\begin{align*} %!!!!!!!!!!!!!!!!!!!!!!!!!!!!TUTAJ JEST COŚ ŹLE Z TYM RÓWNANIEM%!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	\mathcal{Z}\{h \cdot (s_t - x_t)\} &= \mathcal{Z}\{x_{t+1}\} \\
+	H(z) \cdot (S(z) - X(z)) &=  X(z) \\ % POWINNO BYĆ CHYBA z \cdot X(z)
 	H(z) \cdot S(z) - H(z) \cdot X(z) &=  X(z) \\
 	H(z) \cdot S(z) &= (H(z) + 1) \cdot X(z) \\
 	\frac{X(z)}{S(z)} &= \frac{H(z)}{H(z) + 1}
-\end{align*}
+\end{align*}   %!!!!!!!!!!!!!!!!!!!!!!!!!!!!TUTAJ JEST COŚ ŹLE Z TYM RÓWNANIEM%!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 W ten sposób sygnał z receptorów oka służy za błąd, który następnie jest kompensowany w celu utrzymania obrazu w przestrzeni widzenia plamkowego. Diagram modelu przedstawiony jest na rysunku \ref{fig:model-smooth}.
 
@@ -701,8 +657,13 @@ W ten sposób sygnał z receptorów oka służy za błąd, który następnie jes
 
 Można zauważyć, że fiksacja jest procesem podobnym do płynnego podążania, z tą różnicą, że w tym przypadku obiekt jest nieruchomy. Jednakże proces ten nie da się bezpośrednio z sobą porównać i najprawdopodobniej nie ma wspólnego obwodu neuronalnego. Nasze komórki systemu wzrokowego są fizjologicznie wrażliwe na ruch, gdyby dany obiekt został unieruchomiony względem siatkówki, po krótkim czasie widzenie zaniknie. Powoduje to konieczność mikrosakad i innych mimowolnych, drobnych ruchów oczu. Można więc uznać, że model fiksacji jest podobny do modelu płynnego podążania, który próbuje utrzymać pozycję oka na danym punkcie, a mikrosakady i inne ruchy można uznać za szum w systemie kontrolnym, który można wyrazić jako $e_t = x_t - s_t$. Jest to losowa fluktuacja wokół punktu fiksacji, a jej wartość średnia pozostaje stała.
 
-%Ruch gałek ocznych i związane z nim widzenie jest bardzo szerokim tematem interdyscyplinarnym, na potrzeby tego projektu powyższe sformułowanie problemu, chociaż uproszczone i nie wyczerpujące, pozwala na zrozumienie w pełni istoty prezentowanego systemu.
+Ruch gałek ocznych i związane z nim widzenie jest bardzo szerokim tematem interdyscyplinarnym, na potrzeby tego projektu powyższe sformułowanie problemu, chociaż uproszczone i nie wyczerpujące, pozwala na zrozumienie w pełni istoty prezentowanego systemu.
 
+% Osadzenie tematu w kontekście aktualnego stanu wiedzy
+
+\section{Osadzenie tematu w kontekście aktualnego stanu wiedzy}
+
+Pomiar ruchu oczu był realizowany już w latach 70. XX wieku, nic dziwnego więc, że od tego momentu powstały różne techniki pozwalające zebranie owych danych. Poniżej przedstawiono kilka z nich, większość
 
 
 \begin{itemize}
