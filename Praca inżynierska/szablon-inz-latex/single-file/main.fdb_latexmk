@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1736626995.43837 "main.aux" "main.bbl" "main" 1736634680.71145 0
+["bibtex main"] 1736696725.03555 "main.aux" "main.bbl" "main" 1736696730.59858 0
   "./biblio.bib" 1736466426 3429 36105e051b66b4923fbfc902be735378 ""
-  "./main-blx.bib" 1736634679 343 343e095b1185c652a393dea4f8685441 ""
+  "./main-blx.bib" 1736696728 343 343e095b1185c652a393dea4f8685441 ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/bibtex/bst/biblatex/biblatex.bst" 1711466047 65510 b1f696b0241395385f422f67543c37fd ""
-  "main.aux" 1736634679 6568 e4c8cc6f11cdac3151daed3e88e3d6c0 "pdflatex"
+  "main.aux" 1736696728 8039 e3b7344d448b8e194cbe7986a20f1253 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1736634677.72674 "c:/Users/Szniobatron/Documents/GitHub/Vision-System-for-Eye-Movement-Tracking/Praca inżynierska/szablon-inz-latex/single-file/main.tex" "main.pdf" "main" 1736634680.71251 0
+["pdflatex"] 1736696725.60225 "c:/Users/Szniobatron/Documents/GitHub/Vision-System-for-Eye-Movement-Tracking/Praca inżynierska/szablon-inz-latex/single-file/main.tex" "main.pdf" "main" 1736696730.60022 0
   "C:/Users/Szniobatron/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1736444360 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Szniobatron/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1717602007 24265953 a9120d28d4a50bc357ffc93b7b33ae55 ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
@@ -285,15 +285,17 @@
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
-  "c:/Users/Szniobatron/Documents/GitHub/Vision-System-for-Eye-Movement-Tracking/Praca inżynierska/szablon-inz-latex/single-file/main.tex" 1736634677 44375 fc87e37bb71f78179b3845d32fbadc0b ""
-  "main.aux" 1736634679 6568 e4c8cc6f11cdac3151daed3e88e3d6c0 "pdflatex"
-  "main.bbl" 1736626995 7858 f4edeab9f16d48c69e4404ec76c8080c "bibtex main"
-  "main.lof" 1736634679 804 4916bc0e41f15ad2d422952b1e74ca3e "pdflatex"
-  "main.lot" 1736634679 698 2127adeb795bb5c8e57933459b251ae5 "pdflatex"
-  "main.out" 1736634679 2690 f3e3dd85a032e5f81a4792a68a11f98b "pdflatex"
-  "main.run.xml" 1736634679 2613 b0aada028a7f8702b3b5fdf798159577 "pdflatex"
-  "main.tex" 1736634677 44375 fc87e37bb71f78179b3845d32fbadc0b ""
-  "main.toc" 1736634679 1577 e66332e65d41b34549d39d9db7821743 "pdflatex"
+  "c:/Users/Szniobatron/Documents/GitHub/Vision-System-for-Eye-Movement-Tracking/Praca inżynierska/szablon-inz-latex/single-file/main.tex" 1736696718 46013 ae9550973470dd3ea73b0674a272bd20 ""
+  "main.aux" 1736696728 8039 e3b7344d448b8e194cbe7986a20f1253 "pdflatex"
+  "main.bbl" 1736696725 7858 f4edeab9f16d48c69e4404ec76c8080c "bibtex main"
+  "main.lof" 1736696728 1109 8b86e6da554f10f988008362b36a5170 "pdflatex"
+  "main.lot" 1736696728 698 6157e2f0691ebf5d2dee2e09845d9952 "pdflatex"
+  "main.out" 1736696728 3332 ccdba8ca53797c22425cf151bab5a401 "pdflatex"
+  "main.run.xml" 1736696728 2613 b0aada028a7f8702b3b5fdf798159577 "pdflatex"
+  "main.tex" 1736696718 46013 ae9550973470dd3ea73b0674a272bd20 ""
+  "main.toc" 1736696728 2112 35bc688dc9b145a5b824e51cf2a5b74c "pdflatex"
+  "pic/modele/model_sakad.png" 1736691890 3996 be9496f7977e62c94939e371f4b9f3ac ""
+  "pic/modele/model_smooth.png" 1736696089 9450 df810b115ba9e8a79be51df25f033a5f ""
   "politechnika_sl_logo_bw_pion_pl.pdf" 1736445413 22633 c6320640bafa38d406e62eed6fafdfbd ""
   (generated)
   "main-blx.bib"

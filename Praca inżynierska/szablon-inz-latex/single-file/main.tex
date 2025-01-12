@@ -537,7 +537,7 @@ escapeinside={@*}{*@},%
 
 \section{Wprowadzenie i osadzenie w dziedzinie}
 % wprowadzenie w problem/zagadnienie
-Śledzenie ruchu gałek ocznych (ang. eye-tracking), zwane również jako okulografia, jest techniką która badana jest od ponad stu lat. Istotność tej techniki wynika z faktu, że ruchy gałek ocznych są ściśle związane z procesami poznawczymi, takimi jak uwaga, percepcja, pamięć, czy procesy decyzyjne. Skupiając wzrok na danym punkcie, umieszczamy go w centralnym obszarze naszego pola widzenia które charakteryzuje się największą rozdzielczością, co pozwala na dokładne analizowanie szczegółów. Ten fakt wpływa także na proces skupienia -- gdy koncentrujemy się na danym obiekcie lub obszarze skupiamy na nim wzrok (często wystarczy jedynie krótki moment).
+Śledzenie ruchu gałek ocznych (ang. eye-tracking), zwane również jako okulografia, jest techniką, która badana jest od ponad stu lat. Istotność tej techniki wynika z faktu, że ruchy gałek ocznych są ściśle związane z procesami poznawczymi, takimi jak uwaga, percepcja, pamięć, czy procesy decyzyjne. Skupiając wzrok na danym punkcie, umieszczamy go w centralnym obszarze naszego pola widzenia które charakteryzuje się największą rozdzielczością, co pozwala na dokładne analizowanie szczegółów. Ten fakt wpływa także na proces skupienia -- gdy koncentrujemy się na danym obiekcie lub obszarze, skupiamy na nim wzrok (często wystarczy jedynie krótki moment).
 
 Możliwość rejestrowania ruchów oczu pozwala na zrozumienie w jaki sposób obserwator eksploruje otaczający go świat. Posiadając tą wiedzę możliwe jest wyciągnięcie wniosków na temat tego co jest interesujące lub istotne dla obserwatora, jakie emocje się z tym wiążą, czy nawet jakie procesy poznawcze zachodzą w jego umyśle, czy rozumie on to co widzi. Nie trudnym jest zauważyć jak cenne mogą być te informacje w szerokim spektrum dziedzin.
 
@@ -565,9 +565,9 @@ Praca ta skupia się przede wszystkim na samym procesie wykrywania źrenic i śl
 %--------------------------------------
 %
 %
-% TODO: sformułowanie problemu [płynne podążanie, fiksacja, wizualizacja modeli] (75% ), state of the art, studia literaturowe
+% TODO: sformułowanie problemu (99% ), state of the art, studia literaturowe
 %
-% Status: 32%
+% Status: 43%
 %--------------------------------------
 \chapter{[Analiza tematu]}
 
@@ -618,13 +618,26 @@ Studia literaturowe wskazują, że rozwój algorytmów i narzędzi analizy danyc
 
 % =========== moja część ===========
 % sformułowanie problemu
-Widzeniem plamkowym (fovealnym) nazywamy wspomniany już wcześniej fakt, że widzimy w największej rozdzielczości jedynie centrum pola widzenia. Wynika to z budowy siatkówki, która posiada plamkę żółtą (fovea), jest to niewielki obszar, który charakteryzuje się największym zagęszczeniem czopków. Taka budowa siatkówki, która odpowiada za odbiór bodźców wzrokowych, sprawia, że nieustannie poruszamy oczami. Skupiając wzrok na danym punkcie, musimy być gotowi na to, że cała reszta pola widzenia straci dla nas na ostrości, jest to proces, który przypomina filtracje wielu otaczających nas informacji, do paru, które mają w tym momencie znaczenie.
+\section{Sformułowanie problemu}
 
-Uwaga wzrokowa może zostać opisana przez idiomy "gdzie" i "co", które pozwalają na zobrazowanie jej selektywnej natury. "Gdzie" to proces wizualnego wyszukiwania i wyboru lokalizacji, które zwróciło naszą uwagę, w celu dokładniejszego zbadania. Istotnym aspektem tego procesu selekcji jest widzenie peryferyjne, czyli te oddalone od naszego punktu skupienia, ale wciąż pozwalające na wyodrębnienie kształtów i ruchu, co w pewien sposób prowadzi nasze centralne spojrzenie. Przykładem może być spojrzenie przez okno, w pierwszym momencie nasz wzrok kierowany jest na wyraźne kształty, światła czy nagły ruch taki jak np. lądujący ptak. "Co" można nazwać odwrotnością "gdzie", jest to proces szczegółowego badania danego obszaru, charakteryzują go takie zjawiska jak fiksacja, czyli stabilizacja wzroku na danym punkcie oraz ruchy sakadowe, czyli szybkie mimowolne ruchy oczu pomiędzy kolejnymi punktami, które pozwalają na obserwacje. Całość tworzy kanał percepcyjny o ograniczonym zasięgu przestrzennym, obejmujący interesujący obszar, budując w ten sposób naszą świadomość i zrozumienie celu naszego spojrzenia. Wracając do poprzedniego przykładu, po zauważeniu ptaka, nasze spojrzenie skupi się na nim (fiksacja), a ruchy sakadowe oczu pozwolą na dokładne zbadanie jego kształtu, koloru i detali. To właśnie połączenie "gdzie" i "co" pozwala na głębsze zrozumienie otaczającego nas świata, a owe ścieżki skanowania dają nam wgląd w badaną osobę, jako że pomiar widzenia fovealnego w czasie odzwierciedla chwilowe i jawne skupienie uwagi wzrokowej obserwatora. 
+Widzeniem plamkowym (fovealnym) nazywamy wspomniane już wcześniej zjawisko, że widzimy w największej rozdzielczości jedynie centrum pola widzenia. Wynika to z budowy siatkówki, która posiada plamkę żółtą (fovea) -- jest to niewielki obszar, który charakteryzuje się największym zagęszczeniem czopków. Taka budowa siatkówki sprawia, że nieustannie poruszamy oczami. Skupiając wzrok na danym punkcie, musimy być gotowi na to, że cała reszta pola widzenia straci dla nas na ostrości. Jest to proces, który przypomina filtracje wielu otaczających nas informacji, do paru, które mają w tym momencie znaczenie.
+
+\subsection{Uwaga wzrokowa}
+
+Uwaga wzrokowa może zostać opisana przez idiomy "gdzie" i "co", które pozwalają na zobrazowanie jej selektywnej natury. "Gdzie" to proces wizualnego wyszukiwania i wyboru lokalizacji, która zwróciła naszą uwagę, w celu dokładniejszego zbadania. Istotnym aspektem tego procesu selekcji jest widzenie peryferyjne, czyli takie obejmujące obszar oddalony od naszego punktu skupienia, ale wciąż pozwalający na wyodrębnienie kształtów i ruchu, co w pewien sposób prowadzi nasze centralne spojrzenie. Przykładem może być spojrzenie przez okno -- w pierwszym momencie nasz wzrok kierowany jest na wyraźne kształty, światła czy nagły ruch taki jak np. lądujący ptak. 
+
+"Co" można nazwać odwrotnością "gdzie" -- jest to proces szczegółowego badania danego obszaru, charakteryzują go takie zjawiska jak fiksacja, czyli stabilizacja wzroku na danym punkcie oraz ruchy sakadowe, czyli szybkie mimowolne ruchy oczu pomiędzy kolejnymi punktami, które pozwalają na obserwacje. Całość tworzy kanał percepcyjny o ograniczonym zasięgu przestrzennym, obejmujący interesujący obszar, budując w ten sposób naszą świadomość i zrozumienie celu naszego spojrzenia. Wracając do poprzedniego przykładu, po zauważeniu ptaka, nasze spojrzenie skupi się na nim (fiksacja), a ruchy sakadowe oczu pozwolą na dokładne zbadanie jego kształtu, koloru i detali. To właśnie połączenie "gdzie" i "co" pozwala na głębsze zrozumienie otaczającego nas świata, a owe ścieżki skanowania dają nam 
+wgląd w proces poznawczy badanej osoby, jako że pomiar widzenia fovealnego w czasie odzwierciedla chwilowe i jawne skupienie uwagi wzrokowej obserwatora. 
+
+\subsection{Poszukiwanie wzrokowe}
 
 Tutaj warto wspomnieć o poszukiwaniu wzrokowym, jest to proces aktywnego przeszukiwania pola widzenia w celu znalezienia konkretnego celu, a częścią tego procesu jest etap przeduwagowy. Etap ten równolegle analizuje duży obszar widzenia jednocześnie, dzieje się to automatycznie, nieświadomie i nie wymaga widzenia fovealnego. Co charakteryzuje ten proces to umiejętność rozpoznania czterech podstawowych cech: kolor, rozmiar, orientacja oraz obecność i/lub kierunek ruchu. Etap przeduwagowy jest pierwszym krokiem poszukiwania wzrokowego i obejmuje dużą część poszukiwania typu równoległego (np. próba zauważenia nagłego ruchu spadającej gwiazdy) i relatywnie niewielką część poszukiwania typu seryjnego (np. przeszukiwanie obiektów na stole w poszukiwaniu kluczy), które wymaga uwagi i przenoszenia wzroku od obiektu do obiektu. 
 
+\subsection{Analiza ruchów oczu}
+
 Powyższe rozważania pozwalają przejść do głównego nurtu tematu śledzenia ruchu gałek ocznych, czyli analiza ruchów oczu. Rozróżniamy pięć podstawowych typów ruchów oczu: wspomniane już wcześniej sakadyczne, wergencyjne, przedsionkowe, płynne podążanie (smooth pursuit) oraz oczopląs fizjologiczny, który jest naturalny dla zdrowej osoby i często występuje podczas fiksacji. Ruchy te można podzielić na dobrowolne, mimowolne i odruchowe, a sygnały je kontrolujące pochodzą z obszarów korowych mózgu. Do opisania tych procesów można posłużyć się modelowaniem matematycznym. Do zrozumienia jawnej uwagi wzrokowej wystarczy modelowanie trzech typów ruchów: fiksacji, która pokazuje chęć utrzymania wzroku na stacjonarnym obiekcie, sakad, które mogą wskazywać na chęć zmiany punktu uwagi oraz płynnych pościgów, które podobnie do fiksacji, pozwalają na śledzenie ruchomego obiektu. 
+
+\subsubsection{Ruchy sakadowe}
 
 Sygnał sakad można opisać jako funkcja impuls/skok, gdzie impuls na wejściu reprezentuje prędkość, a skok pozycję, impuls jest przepuszczany przez filtr, który przekształca go w skok. Prostą reprezentacją ruchu sakadowego jest filtr liniowy różniczkujący, który dokonuje potrzebnej konwersji informacji prędkość na przemieszczenie. Wzór owego filtra w dziedzinie czasu można zapisać następująco
 
@@ -648,6 +661,17 @@ Filtr Haara jest jednym z przykładów filtrów który przybliża różniczkowan
 	\frac{X(z)}{S(z)} &= 1 - z
 \end{align*}
 
+Diagram omawianego modelu przedstawiony jest na rysunku \ref{fig:model-sakad}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pic/modele/model_sakad.png}
+	\caption{Diagram modelu ruchów sakadowych z filtrem liniowym różniczkującym.}
+	\label{fig:model-sakad}
+\end{figure}
+
+\subsubsection{Płynne podążanie}
+
 Płynne podążanie występuje gdy obserwator śledzi obiekt w ruchu, ruch ten oczywiście nie może być zbyt gwałtowny. Tego typu śledzenie ruchu jest przykładem systemu sterowania z ujemnym sprzężeniem zwrotnym. Do modelowania owych ruchów używana jest prosta pętla, którą można opisać nastepujacym równaniem w dziedzinie czasu
 
 \begin{align*}
@@ -664,13 +688,20 @@ Wejście $s_t$ to pozycja celu, wyjście $x_t$ to pożądana pozycja oka. Można
 	\frac{X(z)}{S(z)} &= \frac{H(z)}{H(z) + 1}
 \end{align*}
 
-W ten sposób płynne sygnał z receptorów oka służy za błąd, który następnie jest kompensowany w celu utrzymania obrazu w przestrzeni widzenia plamkowego.
+W ten sposób sygnał z receptorów oka służy za błąd, który następnie jest kompensowany w celu utrzymania obrazu w przestrzeni widzenia plamkowego. Diagram modelu przedstawiony jest na rysunku \ref{fig:model-smooth}.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{pic/modele/model_smooth.png}
+	\caption{Diagram modelu płynnego podążania z liniowym sprzężeniem zwrotnym.}
+	\label{fig:model-smooth}
+\end{figure}
 
+\subsubsection{Fiksacja}
 
+Można zauważyć, że fiksacja jest procesem podobnym do płynnego podążania, z tą różnicą, że w tym przypadku obiekt jest nieruchomy. Jednakże proces ten nie da się bezpośrednio z sobą porównać i najprawdopodobniej nie ma wspólnego obwodu neuronalnego. Nasze komórki systemu wzrokowego są fizjologicznie wrażliwe na ruch, gdyby dany obiekt został unieruchomiony względem siatkówki, po krótkim czasie widzenie zaniknie. Powoduje to konieczność mikrosakad i innych mimowolnych, drobnych ruchów oczu. Można więc uznać, że model fiksacji jest podobny do modelu płynnego podążania, który próbuje utrzymać pozycję oka na danym punkcie, a mikrosakady i inne ruchy można uznać za szum w systemie kontrolnym, który można wyrazić jako $e_t = x_t - s_t$. Jest to losowa fluktuacja wokół punktu fiksacji, a jej wartość średnia pozostaje stała.
 
-
-Ruch gałek ocznych i związane z nim widzenie jest bardzo szerokim tematem interdyscyplinarnym, na potrzeby tego projektu powyższe sformułowanie problemu, chociaż uproszczone i nie wyczerpujące, pozwala na zrozumienie w pełni istoty prezentowanego systemu.
+%Ruch gałek ocznych i związane z nim widzenie jest bardzo szerokim tematem interdyscyplinarnym, na potrzeby tego projektu powyższe sformułowanie problemu, chociaż uproszczone i nie wyczerpujące, pozwala na zrozumienie w pełni istoty prezentowanego systemu.
 
 
 
