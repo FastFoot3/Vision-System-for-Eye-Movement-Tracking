@@ -18,9 +18,11 @@
 \contentsline {subsubsection}{Płynne podążanie}{5}{section*.10}%
 \contentsline {subsubsection}{Fiksacja}{6}{section*.12}%
 \contentsline {section}{\numberline {2.2}Osadzenie tematu w kontekście aktualnego stanu wiedzy}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Metody śledzenia ruchu oczu: przegląd historyczny i alternatywy}{7}{subsection.2.2.1}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Studia literaturowe}{9}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Analiza wideo z wykorzystaniem źrenicy i odbicia rogówkowego}{8}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Studia literaturowe}{9}{section.2.3}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \contentsline {chapter}{\numberline {3}Wymagania i narzędzia}{11}{chapter.3}%
