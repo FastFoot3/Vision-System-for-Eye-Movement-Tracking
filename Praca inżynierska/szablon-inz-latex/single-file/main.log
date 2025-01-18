@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  17 JAN 2025 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  18 JAN 2025 23:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1320,7 +1320,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14]
 Rozdzia\l  5.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 855.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 856.
 (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1369,6 +1369,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [20
 
 ]
+Overfull \hbox (1.07922pt too wide) in paragraph at lines 968--968
+[]\T1/lmr/m/n/12 Andrew Du-chow-ski. \T1/lmr/m/it/12 Eye Trac-king Me-tho-do-logy: The-ory and Prac-tice\T1/lmr/m/n/12 . Lon-dyn: Sprin-
+ []
+
+
 
 [21
 
@@ -1416,7 +1421,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [28
 
 ]
-Overfull \hbox (2.38579pt too wide) in paragraph at lines 1042--1043
+Overfull \hbox (2.38579pt too wide) in paragraph at lines 1043--1044
 []\T1/lmr/m/n/12 film po-ka-zu-j¡cy dzia-ªa-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
  []
 
@@ -1468,17 +1473,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45762 strings out of 473938
- 1017265 string characters out of 5724560
+ 45767 strings out of 473938
+ 1017542 string characters out of 5724560
  1999893 words of memory out of 5000000
- 67793 multiletter control sequences out of 15000+600000
+ 67797 multiletter control sequences out of 15000+600000
  622810 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,93p,2000b,3512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (39 pages, 386579 bytes).
+Output written on main.pdf (39 pages, 387645 bytes).
 PDF statistics:
- 483 PDF objects out of 1000 (max. 8388607)
- 106 named destinations out of 1000 (max. 500000)
+ 484 PDF objects out of 1000 (max. 8388607)
+ 107 named destinations out of 1000 (max. 500000)
  212 words of extra memory for PDF output out of 10000 (max. 10000000)
 

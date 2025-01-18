@@ -44,6 +44,32 @@
     \field{urlyear}{2025}
   \endentry
 
+  \entry{bib:eye-tracking-methodology}{book}{}{}
+    \name{author}{1}{}{%
+      {{hash=DA}{%
+         family={Duchowski},
+         familyi={D\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{DA1}
+    \strng{fullhash}{DA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{isbn}{978-1-84628-609-4}
+    \field{title}{Eye Tracking Methodology: Theory and Practice}
+    \list{location}{1}{%
+      {Londyn}%
+    }
+    \field{year}{2007}
+  \endentry
+
   \entry{bib:tobii-alzheimer}{online}{}{}
     \name{author}{1}{}{%
       {{hash=MI}{%
