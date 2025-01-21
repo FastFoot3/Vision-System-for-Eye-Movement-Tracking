@@ -46,18 +46,18 @@
 
   \entry{bib:eye-tracking-methodology}{book}{}{}
     \name{author}{1}{}{%
-      {{hash=DA}{%
+      {{hash=DAT}{%
          family={Duchowski},
          familyi={D\bibinitperiod},
-         given={Andrew},
-         giveni={A\bibinitperiod},
+         given={Andrew\bibnamedelima T.},
+         giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
       {Springer}%
     }
-    \strng{namehash}{DA1}
-    \strng{fullhash}{DA1}
+    \strng{namehash}{DAT1}
+    \strng{fullhash}{DAT1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{D}
@@ -68,6 +68,101 @@
       {Londyn}%
     }
     \field{year}{2007}
+  \endentry
+
+  \entry{bib:iMotions-children}{article}{}{}
+    \name{author}{12}{}{%
+      {{hash=MJE}{%
+         family={MacKenzie},
+         familyi={M\bibinitperiod},
+         given={Janelle\bibnamedelima E.},
+         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Klarkowski},
+         familyi={K\bibinitperiod},
+         given={Madison},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HEM}{%
+         family={Horton},
+         familyi={H\bibinitperiod},
+         given={Ella\bibnamedelima M.},
+         giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=TM}{%
+         family={Theobald},
+         familyi={T\bibinitperiod},
+         given={Maryanne},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DS}{%
+         family={Danby},
+         familyi={D\bibinitperiod},
+         given={Susan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KL}{%
+         family={Kervin},
+         familyi={K\bibinitperiod},
+         given={Lisa},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={Barrie},
+         familyi={B\bibinitperiod},
+         given={Lance},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=APK}{%
+         family={Amery},
+         familyi={A\bibinitperiod},
+         given={Philippa\bibnamedelima K.},
+         giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Andradi},
+         familyi={A\bibinitperiod},
+         given={Manesha},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SSS}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={Simon\bibnamedelima S.},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=MRL}{%
+         family={Mandryk},
+         familyi={M\bibinitperiod},
+         given={Regan\bibnamedelima L.},
+         giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=JD}{%
+         family={Johnson},
+         familyi={J\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MJE+1}
+    \strng{fullhash}{MJEKMHEMTMDSKLBLAPKAMSSSMRLJD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1145/3677112
+    \endverb
+    \field{number}{CHI PLAY}
+    \field{title}{Using Psychophysiological Data to Facilitate Reflective
+  Conversations with Children about their Player Experiences}
+    \verb{url}
+    \verb https://doi.org/10.1145/3677112
+    \endverb
+    \field{volume}{8}
+    \field{journaltitle}{Proc. ACM Hum.-Comput. Interact.}
+    \field{year}{2024}
   \endentry
 
   \entry{bib:tobii-alzheimer}{online}{}{}
@@ -257,6 +352,58 @@
       {Warszawa}%
     }
     \field{year}{2017}
+  \endentry
+
+  \entry{bib:iMotions-2023-report}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=iST}{%
+         prefix={iMotions},
+         prefixi={i\bibinitperiod},
+         family={Science\bibnamedelima Team},
+         familyi={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{STi1}
+    \strng{fullhash}{STi1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{iMotions Publications: 2023 Report}
+    \verb{url}
+    \verb https://imotions.com/wp-content/uploads/brochures/Research%20report%2
+    \verb 02024.pdf
+    \endverb
+    \field{year}{2024}
+    \field{urlday}{20}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:iMotions-smart-eye-ai-x}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=iST}{%
+         prefix={iMotions},
+         prefixi={i\bibinitperiod},
+         family={Science\bibnamedelima Team},
+         familyi={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{STi1}
+    \strng{fullhash}{STi1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Smart Eye AI-X}
+    \verb{url}
+    \verb https://imotions.com/products/hardware/smart-eye-ai-x/#product-specif
+    \verb ications
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{20}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
   \endentry
 
   \entry{bib:tobii-autyzm}{online}{}{}

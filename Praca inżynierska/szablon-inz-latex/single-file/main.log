@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  19 JAN 2025 23:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  21 JAN 2025 02:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -931,26 +931,67 @@ Package: fancyhdr 2025/01/01 v5.0 Extensive control of page headers and footers
 \@temptokenb=\toks52
 )
 \c@stronyPozaNumeracja=\count476
- (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count477
-\lst@gtempboxa=\box68
-\lst@token=\toks53
-\lst@length=\count478
-\lst@currlwidth=\dimen317
-\lst@column=\count479
-\lst@pos=\count480
-\lst@lostspace=\dimen318
-\lst@width=\dimen319
-\lst@newlines=\count481
-\lst@lineno=\count482
-\lst@maxwidth=\dimen320
+ (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2025-01-17 v3.4.2 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count477
+\l__siunitx_number_exponent_fixed_int=\count478
+\l__siunitx_number_min_decimal_int=\count479
+\l__siunitx_number_min_integer_int=\count480
+\l__siunitx_number_round_precision_int=\count481
+\l__siunitx_number_lower_threshold_int=\count482
+\l__siunitx_number_upper_threshold_int=\count483
+\l__siunitx_number_group_first_int=\count484
+\l__siunitx_number_group_size_int=\count485
+\l__siunitx_number_group_minimum_int=\count486
+\l__siunitx_angle_tmp_dim=\dimen317
+\l__siunitx_angle_marker_box=\box68
+\l__siunitx_angle_unit_box=\box69
+\l__siunitx_compound_count_int=\count487
+ (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+)
+\l__siunitx_table_tmp_box=\box70
+\l__siunitx_table_tmp_dim=\dimen318
+\l__siunitx_table_column_width_dim=\dimen319
+\l__siunitx_table_integer_box=\box71
+\l__siunitx_table_decimal_box=\box72
+\l__siunitx_table_uncert_box=\box73
+\l__siunitx_table_before_box=\box74
+\l__siunitx_table_after_box=\box75
+\l__siunitx_table_before_dim=\dimen320
+\l__siunitx_table_carry_dim=\dimen321
+\l__siunitx_unit_tmp_int=\count488
+\l__siunitx_unit_position_int=\count489
+\l__siunitx_unit_total_int=\count490
+ (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen322
+\ar@mcellbox=\box76
+\extrarowheight=\dimen323
+\NC@list=\toks53
+\extratabsurround=\skip98
+\backup@length=\skip99
+\ar@cellbox=\box77
+)) (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count491
+\lst@gtempboxa=\box78
+\lst@token=\toks54
+\lst@length=\count492
+\lst@currlwidth=\dimen324
+\lst@column=\count493
+\lst@pos=\count494
+\lst@lostspace=\dimen325
+\lst@width=\dimen326
+\lst@newlines=\count495
+\lst@lineno=\count496
+\lst@maxwidth=\dimen327
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2024/05/25 1.10b (Carsten Heinz)
 ) (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
-\c@lstnumber=\count483
-\lst@skipnumbers=\count484
-\lst@framebox=\box69
+\c@lstnumber=\count497
+\lst@skipnumbers=\count498
+\lst@framebox=\box79
 ) (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2024/05/25 1.10b listings configuration
 ))
@@ -1023,17 +1064,17 @@ LaTeX Font Info:    ... okay on input line 388.
 
 (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count485
-\scratchdimen=\dimen321
-\scratchbox=\box70
-\nofMPsegments=\count486
-\nofMParguments=\count487
-\everyMPshowfont=\toks54
-\MPscratchCnt=\count488
-\MPscratchDim=\dimen322
-\MPnumerator=\count489
-\makeMPintoPDFobject=\count490
-\everyMPtoPDFconversion=\toks55
+\scratchcounter=\count499
+\scratchdimen=\dimen328
+\scratchbox=\box80
+\nofMPsegments=\count500
+\nofMParguments=\count501
+\everyMPshowfont=\toks55
+\MPscratchCnt=\count502
+\MPscratchDim=\dimen329
+\MPnumerator=\count503
+\makeMPintoPDFobject=\count504
+\everyMPtoPDFconversion=\toks56
 ) (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1080,7 +1121,14 @@ Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
 Package biblatex Info: Reference section=0 on input line 388.
 Package biblatex Info: Reference segment=0 on input line 388.
-\c@lstlisting=\count491
+ (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-polish.trsl
+File: translations-basic-dictionary-polish.trsl (polish translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `polish'. on input line 388.
+ (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+\c@lstlisting=\count505
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1289,12 +1337,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
-Rozdzia\l  3.
 
 
-[11
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-]
+[11]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1306,7 +1357,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [12
 
 ]
-Rozdzia\l  4.
+Rozdzia\l  3.
 
 
 [13]
@@ -1318,16 +1369,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14]
-Rozdzia\l  5.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 862.
-(C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-
-[15
+[14
 
 ]
+Rozdzia\l  4.
+
+
+[15]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1337,8 +1385,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [16]
-Rozdzia\l  6.
-
+Rozdzia\l  5.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 864.
+(C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
 [17
 
@@ -1352,7 +1403,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18]
-Rozdzia\l  7.
+Rozdzia\l  6.
 
 
 [19
@@ -1366,13 +1417,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20
-
-]
-Overfull \hbox (1.07922pt too wide) in paragraph at lines 974--974
-[]\T1/lmr/m/n/12 Andrew Du-chow-ski. \T1/lmr/m/it/12 Eye Trac-king Me-tho-do-logy: The-ory and Prac-tice\T1/lmr/m/n/12 . Lon-dyn: Sprin-
- []
-
+[20]
+Rozdzia\l  7.
 
 
 [21
@@ -1390,11 +1436,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 
-[23]
-
-[24]
-
-[25
+[23
 
 ]
 
@@ -1405,11 +1447,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26
+[24]
+
+[25
 
 ]
 
-[27]
+[26]
+
+[27
+
+]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1421,11 +1469,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [28
 
 ]
-Overfull \hbox (2.38579pt too wide) in paragraph at lines 1049--1050
-[]\T1/lmr/m/n/12 film po-ka-zu-j¡cy dzia-ªa-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
- []
-
-
 
 [29]
 
@@ -1438,9 +1481,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [30
 
-] (main.lof)
-\tf@lof=\write7
-\openout7 = `main.lof'.
+]
+Overfull \hbox (2.38579pt too wide) in paragraph at lines 1051--1052
+[]\T1/lmr/m/n/12 film po-ka-zu-j¡cy dzia-ªa-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
+ []
 
 
 
@@ -1455,13 +1499,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [32
 
+] (main.lof)
+\tf@lof=\write7
+\openout7 = `main.lof'.
+
+
+
+[33]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[34
+
 ] (main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
 
 
-[33] (main.aux)
+[35] (main.aux)
  ***********
 LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
@@ -1473,17 +1534,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45767 strings out of 473938
- 1017542 string characters out of 5724560
- 1999893 words of memory out of 5000000
- 67797 multiletter control sequences out of 15000+600000
+ 49884 strings out of 473938
+ 1151457 string characters out of 5724560
+ 2000893 words of memory out of 5000000
+ 71891 multiletter control sequences out of 15000+600000
  622810 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,93p,2000b,3512s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,93p,3093b,3512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (39 pages, 388615 bytes).
+Output written on main.pdf (41 pages, 401084 bytes).
 PDF statistics:
- 484 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
+ 507 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 500000)
  212 words of extra memory for PDF output out of 10000 (max. 10000000)
 
