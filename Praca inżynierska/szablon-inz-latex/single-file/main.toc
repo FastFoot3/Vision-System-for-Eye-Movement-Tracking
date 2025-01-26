@@ -23,8 +23,9 @@
 \babel@toc {polish}{}\relax 
 \contentsline {subsection}{\numberline {2.2.2}Analiza wideo z wykorzystaniem źrenicy i odbicia rogówkowego}{8}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}Studia literaturowe}{9}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Metoda źrenicy i odbicia rogówkowego w badaniach}{9}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.1}Metoda źrenicy i odbicia rogówkowego w badaniach}{10}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Porównanie z video-okulografią z użyciem kamerki internetowej}{11}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Podsumowanie metod}{12}{subsection.2.3.3}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \contentsline {chapter}{\numberline {3}Wymagania i narzędzia}{13}{chapter.3}%

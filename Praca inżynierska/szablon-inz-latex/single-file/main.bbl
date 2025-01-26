@@ -446,6 +446,31 @@
     \field{urlyear}{2025}
   \endentry
 
+  \entry{bib:iMotions-about-us}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=iST}{%
+         prefix={iMotions},
+         prefixi={i\bibinitperiod},
+         family={Science\bibnamedelima Team},
+         familyi={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{STi1}
+    \strng{fullhash}{STi1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Who we are: about us}
+    \verb{url}
+    \verb https://imotions.com/about-us/
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{26}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
+  \endentry
+
   \entry{bib:iMotions-WebET}{report}{}{}
     \name{author}{3}{}{%
       {{hash=SD}{%
