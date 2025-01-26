@@ -70,6 +70,46 @@
     \field{year}{2007}
   \endentry
 
+  \entry{bib:GazeRecorder-Review}{inproceedings}{}{}
+    \name{author}{3}{}{%
+      {{hash=HM}{%
+         family={Heck},
+         familyi={H\bibinitperiod},
+         given={Melanie},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Becker},
+         familyi={B\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=DV}{%
+         family={Deutscher},
+         familyi={D\bibinitperiod},
+         given={Viola},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Hawaii International Conference on System Sciences}%
+    }
+    \strng{namehash}{HMBCDV1}
+    \strng{fullhash}{HMBCDV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{booktitle}{Proceedings of the Annual Hawaii International Conference
+  on System Sciences}
+    \verb{doi}
+    \verb 10.24251/HICSS.2023.825
+    \endverb
+    \field{title}{Webcam Eye Tracking for Desktop and Mobile Devices: A
+  Systematic Review}
+    \field{year}{2023}
+  \endentry
+
   \entry{bib:iMotions-children}{article}{}{}
     \name{author}{12}{}{%
       {{hash=MJE}{%
@@ -404,6 +444,44 @@
     \field{urlday}{20}
     \field{urlmonth}{01}
     \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:iMotions-WebET}{report}{}{}
+    \name{author}{3}{}{%
+      {{hash=SD}{%
+         family={Seernani},
+         familyi={S\bibinitperiod},
+         given={Divya},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PMM}{%
+         family={Pedersen},
+         familyi={P\bibinitperiod},
+         given={Morten\bibnamedelima Mosbaek},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=WK}{%
+         family={Wolf},
+         familyi={W\bibinitperiod},
+         given={Kerstin},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {iMotions}%
+    }
+    \strng{namehash}{SDPMMWK1}
+    \strng{fullhash}{SDPMMWK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.13140/RG.2.2.32959.07849
+    \endverb
+    \field{title}{{WebET} 3.0 -Validation Study Report}
+    \field{type}{techreport}
+    \field{year}{2023}
   \endentry
 
   \entry{bib:tobii-autyzm}{online}{}{}
