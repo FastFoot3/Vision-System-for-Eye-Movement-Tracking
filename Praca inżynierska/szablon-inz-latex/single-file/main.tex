@@ -549,7 +549,7 @@ Okulografia odgrywa kluczową rolę w psychologi poznawczej, psychologi społecz
 \section{Cel oraz zakres pracy}
 \label{sec:cel-oraz-zakres-pracy}
 % cel pracy
-Celem niniejszej pracy jest stworzenie narzędzia które pozwoli na uniwersalne śledzenie ruchu gałek ocznych, bez zdefiniowanej docelowej grupy użytkowników. System ten powinien być prosty w obsłudze i niewymagający zaawansowanej technologii, ale nie ograniczający w razie potrzeby bardziej zaawansowanych użytkowników, prezentując użyteczność zarówno dla naukowców, studentów, jak i hobbystów. Tego typu narzędzie pozwoli na eksplorację danych eye-trackingowych, otwierając możliwości na dalszą analizę i interpretację wyników, a także zapewni solidną podstawę w razie potrzeby modyfikacji lub rozbudowy systemu w bardziej ukierunkowany sposób.
+Celem niniejszej pracy jest wykonanie narzędzia które pozwoli na uniwersalne śledzenie ruchu gałek ocznych, bez zdefiniowanej docelowej grupy użytkowników. System ten powinien być prosty w obsłudze i niewymagający zaawansowanej technologii, ale nie ograniczający w razie potrzeby bardziej zaawansowanych użytkowników, prezentując użyteczność zarówno dla naukowców, studentów, jak i hobbystów. Tego typu narzędzie pozwoli na eksplorację danych eye-trackingowych, otwierając możliwości na dalszą analizę i interpretację wyników, a także zapewni solidną podstawę w razie potrzeby modyfikacji lub rozbudowy systemu w bardziej ukierunkowany sposób.
 
 % zakres pracy
 Praca ta skupia się przede wszystkim na samym procesie wykrywania źrenic i śledzenia ruchu gałek ocznych na ich podstawie oraz implementacji systemu wizyjnego, który pozwoli na zapis, wizualizację i potencjalną dalszą analizę danych zebranych przez kamerę, w tym także kamerę internetową. Całość zrealizowana jest w języku Python, z wykorzystaniem bibliotek takich jak OpenCV, NumPy, Pandas oraz Matplotlib, a wszelkie prezentowane dane zostały uchwycone przy użyciu wbudowanej kamery laptopa. Praca nie będzie obejmować rozległej analizy zebranych danych, ani eksperymentów przeprowadzonych z użyciem owego systemu. Nie została także stworzona grupa testowa, więc większość testów przeprowadzone zostały na autorze pracy.
@@ -568,9 +568,9 @@ Praca ta skupia się przede wszystkim na samym procesie wykrywania źrenic i śl
 %--------------------------------------
 %
 %
-% TODO: Dodać zdjęcia???, tytuł tematu???
+% TODO: Dodać zdjęcia???, tytuł tematu???, krótkie wprowadzenie na początku każdej sekcji/rozdziału
 %
-% Status: 99.99%
+% Status: 99.98%
 %--------------------------------------
 \chapter{Śledzenie ruchu gałek ocznych -- analiza tematu}
 \label{ch:analiza-tematu}
@@ -711,7 +711,7 @@ Jednym z przedstawicieli firm skupiających się na analizie zachowań ludzkich 
 
 Jednym z przeprowadzonych badań z użyciem technologii iMotions było ,,Using Psychophysiological Data to Facilitate Reflective Conversations with Children about their Player Experiences''. Podobne badania były przeprowadzane wielokrotnie w stosunku do osób dorosłych, jednak w przypadku grupy badanej składającej się z dzieci, badacze mogą napotkać znaczny problem z odpowiednim zrozumieniem wywiadu, w którym uczestnicy dzielą się swoimi wrażeniami z przeprowadzonej rozgrywki. Omawiane badanie miało głównie na celu sprawdzenie czy zebrane dane z biosensorów są wstanie wspomóc refleksje dzieci na temat ich doświadczenia w grze i czy dzieci napotkają problemy z interpretacją prezentowanych danych, jako że odnoszenie się do stanu psychofizjologicznego może zminimalizować problem z komunikacją pomiędzy dzieckiem, które posiada ograniczone umiejętności werbalne, a badaczem. 
 
-Do śledzenia ruchu gałek ocznych na ekranie zastosowano okulograf Smart Eye AI-X o częstotliwości próbkowania $60 \unit{\hertz}$, posługujący się techniką detekcji źrenic i odbicia rogówkowego, pozwalając na sporą swobodę ruchu głowy w przestrzeni $35 \, \unit{\centi\metre}$ na $30 \, \unit{\centi\metre}$, jednocześnie posiadając dokładność (różnica pomiędzy rzeczywistą pozycją spojrzenia a pozycją spojrzenia zarejestrowaną przez okulograf) $\ang{0.5}$ i precyzję (średnia kwadratowa punktów mierzonych w jednej pozycji oka) $\ang{0.1}$, zwracając dane wyjściowe binokularowe z wskaźnikiem jakości zawierające: punkt spojrzenia, średnicę źrenicy oraz znacznik czasowy \cite{bib:iMotions-smart-eye-ai-x}. Oprócz tego zastosowano moduł rejestrujący aktywność sercową, analizujący wyrazy twarzy oraz mierzący reakcję skórno-galwaniczną. 
+Do śledzenia ruchu gałek ocznych na ekranie zastosowano okulograf Smart Eye AI-X o częstotliwości próbkowania $60 \ \unit{\hertz}$, posługujący się techniką detekcji źrenic i odbicia rogówkowego, pozwalając na sporą swobodę ruchu głowy w przestrzeni $35 \, \unit{\centi\metre}$ na $30 \, \unit{\centi\metre}$, jednocześnie posiadając dokładność (różnica pomiędzy rzeczywistą pozycją spojrzenia a pozycją spojrzenia zarejestrowaną przez okulograf) $\ang{0.5}$ i precyzję (średnia kwadratowa punktów mierzonych w jednej pozycji oka) $\ang{0.1}$, zwracając dane wyjściowe binokularowe z wskaźnikiem jakości zawierające: punkt spojrzenia, średnicę źrenicy oraz znacznik czasowy \cite{bib:iMotions-smart-eye-ai-x}. Oprócz tego zastosowano moduł rejestrujący aktywność sercową, analizujący wyrazy twarzy oraz mierzący reakcję skórno-galwaniczną. 
 
 Badanie składało się z dwóch etapów, wpierw zebrano dane w laboratorium podczas gdy badane dzieci grały w dwie gry oraz podczas wywiadów bezpośrednio po zakończonej rozgrywce, a następnie prezentowano badanym momenty z pierwszego etapu z uwzględnieniem danych z biosensorów i zadawano pytania o ich doświadczenia. Badania wskazały, że dzieci są wstanie zrozumieć i odpowiednio odnieść się do prezentowanych danych psychofizjologicznych, a oparcie się o nie może pomóc w zwerbalizowaniu swojego doświadczenia i informacji zwrotnej przez badane dzieci. Dzieci nie miały problemu z zrozumieniem większości pomiarów za wyjątkiem reakcji skórno-galwanicznej, jednakże dane eye-trackingowe były swego rodzaju wyjątkiem, jako że nie prezentowały bezpośrednio doświadczenia i uczuć związanych z danym wydarzeniem w grze, a raczej dawały wgląd w strategię objęta przez dziecko zmagające się z aktualnym wyzwaniem, mimo tego prezentowane śledzenie punktu spojrzenia było naturalne w interpretacji przez badanych \cite{bib:iMotions-children}. Publikacja ta pokazuje jak okulografia może zostać skutecznie użyta w badaniach naukowych, ale przede wszystkim przedstawia istotność tej techniki w zastosowaniach komercyjnych np. testując doświadczenia graczy przy produkcji gier wideo dla różnych grup wiekowych.
 
@@ -749,21 +749,51 @@ Metoda śledzenia ruchu gałek ocznych przy użyciu źrenicy i odbicia rogówkow
 %--------------------------------------
 %
 %
-% TODO: wymagania funkcjonalne i niefunkcjonalne, przypadki użycia, opis narzędzi itp., metodyka pracy
+% TODO: wymagania funkcjonalne (60%) i niefunkcjonalne, przypadki użycia, opis narzędzi itp., metodyka pracy
 %
-% Status: 0%
+% Status: 10%
 %--------------------------------------
 \chapter{Wymagania i narzędzia}
 \label{ch:wymagania-i-narzedzia}
 
-\section{Stawiane wymagania}
-\label{sec:stawiane-wymagania}
+\section{Wymagania funkcjonalne}
+\label{sec:wymagania-funkcjonalne}
 
-\subsection{Wymagania funkcjonalne}
-\label{subsec:wymagania-funkcjonalne}
+Wymagania funkcjonalne definiują konkretne działania i funkcje, które system powinien zapewniać. W przypadku tego projektu są one związane z obsługą danych z eye-trackera, ich analizą oraz wizualizacją wyników. Niniejsza podsekcja przedstawia szczegółowy opis funkcjonalności, jakie musi oferować system, aby spełniać założenia pracy.
+%===========Moja część%===========
+Postawienie konkretnych granic funkcjonalnych projektu jest kluczowym elementem tworzenia rozwiązania. Działają one na zasadzie zabezpieczenia przed usprawnianiem i rozszerzaniem projektu bez końca, a także pozwalają na skupienie uwagi inżyniera na istotnych aspektach. Można zauważyć korelację pomiędzy rolą wymagań funkcjonalnych w tworzeniu projektu, a plamką żółtą w oku omawianej w sekcji \ref{sec:sformulowanie-problemu}, oba elementy dbają o to by wiele informacji zostało przefiltrowane do tych, które są najważniejsze.
 
-\subsection{Wymagania niefunkcjonalne}
-\label{subsec:wymagania-niefunkcjonalne}
+\subsection{Limitacje sprzętowe i środowiskowe}
+\label{subsec:Limitacje-sprzetowe-i-srodowiskowe}
+
+Do śledzenia ruchu gałek ocznych używany jest bardzo szeroki wachlarz sprzętów i związanych z nimi rozwiązań technicznych omówionych w sekcjach \ref{sec:osadzenie-tematu-w-kontekscie-aktualnego-stanu-wiedzy} i \ref{sec:studia-literaturowe}, jednakże w założeniu tego projektu było opierać się na systemie wizyjnym, co pozwala na ograniczenie znanych metod do video-okulografii. Kolejną ustaloną limitacją było opieranie się jedynie na aktualnie dostępnym sprzęcie, którym był laptop ASUS Vivobook 15 z wbudowaną kamerką internetową USB2.0 HD UVC o częstotliwości próbkowania $30 \ \unit{\hertz}$, podczas korzystania z kamery automatycznie włączane było także niewielkie źródło światła przylegające z jej prawej prawej strony. Tego typu laptop z wbudowaną kamerą reprezentuje jakość sprzętu często używaną do zastosowań biurowych i użytku własnego, dlatego też założono, że źródła światła powinny zostać ograniczone do podstawowego oświetlenia wewnętrznego, tworząc środowisko typowe do pokoju mieszkalnego, w którym korzysta się z komputera.
+
+\subsection{Wykorzystanie platform i narzędzi programistycznych}
+\label{subsec:Wykorzystanie-platform-i-narzedzi-programistycznych}
+
+By uprościć użycie komputera wspomnianego w sekcji \ref{subsec:Limitacje-sprzetowe-i-srodowiskowe} w pracy pozostano na już zainstalowanym systemie operacyjnym, którym jest Windows 11. Podobnie postawiono wymaganie względem edytora kodu źródłowego i systemu kontroli wersji, jako że użycie znajomego środowiska, które już jest zainstalowane i było wcześniej używane na wykorzystanym laptopie, pozwala na szybkie zamknięcie przygotowań do pracy. W związku z tym skupiono się na rozwiązaniach, które są kompatybilne z edytorem tekstu Visual Studio Code i klientem Git z graficznym interfejsem użytkownika GitHub Desktop, jako że narzędzia te ściśle z współpracują z sobą i serwisem hostingowym GitHub tworząc intuicyjną i znajomą w użyciu całość. Stawianym wymaganiem do języka programowania, oprócz wspomnianej kompatybilności, jest jego popularność, uniwersalność, klarowność i szeroki wybór bibliotek. Język o takich cechach znacznie zwiększy produktywność, uprości stosowanie bardziej skomplikowanych narzędzi i pozwoli na efektywne uczenie się i rozwiązywanie problemów opierając się na społeczności użytkowników. Zalety te wspomogą uzyskanie natychmiastowych rezultatów pracy oraz skoncentrowanie uwagi na poprawie i rozwój funkcjonalności systemu. Łatwo dostępnym i popularnym językiem o wysokim poziomie abstrakcji jest Python, który jest oficjalnie wspierany przez Visual Studio Code. Język ten posiada możliwość korzystania z biblioteki OpenCV, która daje dostęp do wielu rozwiązań przetwarzających obraz. Ostatnim, bardziej personalnym atutem proponowanego języka, jest niewielkie ówczesne doświadczenie programowania w nim, a co za tym idzie szansa na zyskanie cennych umiejętności w trakcie pracy.
+
+\subsection{Zakres działania systemu}
+\label{subsec:zakres-dzialania-systemu}
+
+Nakreślone wymagania w sekcji \ref{subsec:Limitacje-sprzetowe-i-srodowiskowe} i \ref{subsec:Wykorzystanie-platform-i-narzedzi-programistycznych} odpowiednio ograniczyły możliwe rozwiązania, pozwalając na ustalenie realnych funkcjonalności programu. Aspektem, który przede wszystkim determinuje stopień skomplikowania stawianych wymagań, jest ograniczony czas na wykonanie omawianego systemu. Skąplikowanie
+
+%fragmenty które muszą się znaleźć 
+Przetwarzanie obrazu z kamery odbywa się w czasie rzeczywistym
+Wykrywanie rejonu twarzy, w tym rejonie wykrywanie rejonu oczu, a w rejonie oczu wykrywa źrenicę
+Pozwala na wykrycie i zidentyfikowanie obu oczu z rozróżnieniem lewego i prawego
+Wykrywanie źrenic jest uniwersalne względem oświetlenia otoczenia
+pozwala na wizualizację procesu śledzenia, bez zaciemniania obrazu z kamery
+wyznacza umowny punkt odniesienia z możliwością prostej kalibracji
+Nie ogranicza bardziej zaawansowanych użytkowników, oferując wyznaczenie punktu odniesienia przy zastosowaniu dodatkowego sprzętu
+Zebranie danych o pozycji źrenicy z indeksem wskazującym odpowiednie oko i możliwość przedstawienia ich w formie wykresów czasowych
+
+
+\section{Wymagania niefunkcjonalne}
+\label{sec:wymagania-niefunkcjonalne}
+
+
+
 
 \section{Przypadki użycia}
 \label{sec:przypadki-uzycia}
