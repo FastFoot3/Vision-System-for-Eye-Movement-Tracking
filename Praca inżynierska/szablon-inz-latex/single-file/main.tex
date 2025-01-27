@@ -537,6 +537,7 @@ escapeinside={@*}{*@},%
 \label{ch:wstep}
 
 \section{Wprowadzenie i osadzenie w dziedzinie}
+\label{sec:wprowadzenie-i-osadzenie-w-dziedzinie}
 % wprowadzenie w problem/zagadnienie
 Śledzenie ruchu gałek ocznych (ang. eye-tracking), zwane również jako okulografia, jest techniką, która badana jest od ponad stu lat. Istotność tej techniki wynika z faktu, że ruchy gałek ocznych są ściśle związane z procesami poznawczymi, takimi jak uwaga, percepcja, pamięć, czy procesy decyzyjne. Skupiając wzrok na danym punkcie, umieszczamy go w centralnym obszarze naszego pola widzenia które charakteryzuje się największą rozdzielczością, co pozwala na dokładne analizowanie szczegółów. Ten fakt wpływa także na proces skupienia -- gdy koncentrujemy się na danym obiekcie lub obszarze, skupiamy na nim wzrok (często wystarczy jedynie krótki moment).
 
@@ -546,6 +547,7 @@ Możliwość rejestrowania ruchów oczu pozwala na zrozumienie w jaki sposób ob
 Okulografia odgrywa kluczową rolę w psychologi poznawczej, psychologi społecznej, neurobiologii, marketingu, czy medycynie. W psychologii poznawczej ruch oczu jest ściśle związany z pamięcią, podejmowaniem decyzji, obciążeniem poznawczym i uczeniem się asocjacyjnym. W psychologii społecznej eye-tracking pozwala na wgląd w zachowania społeczne i ich analizę, co pozwala badać empatię, prospołeczność, czy fobie społeczne \cite{bib:tobii-main}. W neurobiologii bada się powiązania ruchu oczu ze szlakami neuronowymi odpowiedzialnymi za podejmowane akcje i procesy myślowe, dając możliwość w diagnozach i wsparciu osób dotkniętych chorobą Parkinsona \cite{bib:tobii-parkinson}, Alzheimera \cite{bib:tobii-alzheimer}, a także autyzmem czy łagodnym upośledzeniem funkcji poznawczych \cite{bib:tobii-autyzm}. W medycynie okulografia pozwala na diagnozę między innymi oczopląsu, który może być objawem np. stwardnienia rozsianego, uszkodzenia śródmózgowia lub urazu ucha wewnętrznego \cite{bib:Diagnostyka-oczoplas}. Niezaprzeczalnie technika ta jest niezwykle cenna i efektywna na wielu płaszczyznach naukowych i praktycznych.
 
 \section{Cel oraz zakres pracy}
+\label{sec:cel-oraz-zakres-pracy}
 % cel pracy
 Celem niniejszej pracy jest stworzenie narzędzia które pozwoli na uniwersalne śledzenie ruchu gałek ocznych, bez zdefiniowanej docelowej grupy użytkowników. System ten powinien być prosty w obsłudze i niewymagający zaawansowanej technologii, ale nie ograniczający w razie potrzeby bardziej zaawansowanych użytkowników, prezentując użyteczność zarówno dla naukowców, studentów, jak i hobbystów. Tego typu narzędzie pozwoli na eksplorację danych eye-trackingowych, otwierając możliwości na dalszą analizę i interpretację wyników, a także zapewni solidną podstawę w razie potrzeby modyfikacji lub rozbudowy systemu w bardziej ukierunkowany sposób.
 
@@ -574,10 +576,12 @@ Praca ta skupia się przede wszystkim na samym procesie wykrywania źrenic i śl
 \label{ch:analiza-tematu}
 
 \section{Sformułowanie problemu}
+\label{sec:sformulowanie-problemu}
 
 Widzeniem plamkowym (fovealnym) nazywamy wspomniane już wcześniej zjawisko, że widzimy w największej rozdzielczości jedynie centrum pola widzenia. Wynika to z budowy siatkówki, która posiada plamkę żółtą (fovea) -- jest to niewielki obszar, który charakteryzuje się największym zagęszczeniem czopków. Taka budowa siatkówki sprawia, że nieustannie poruszamy oczami. Skupiając wzrok na danym punkcie, musimy być gotowi na to, że cała reszta pola widzenia straci dla nas na ostrości. Jest to proces, który przypomina filtracje wielu otaczających nas informacji, do paru, które mają w tym momencie znaczenie.
 
 \subsection{Uwaga wzrokowa}
+\label{subsec:uwaga-wzrokowa}
 
 Uwaga wzrokowa może zostać opisana przez idiomy ,,gdzie'' i ,,co'', które pozwalają na zobrazowanie jej selektywnej natury. ,,Gdzie'' to proces wizualnego wyszukiwania i wyboru lokalizacji, która zwróciła naszą uwagę, w celu dokładniejszego zbadania. Istotnym aspektem tego procesu selekcji jest widzenie peryferyjne, czyli takie obejmujące obszar oddalony od naszego punktu skupienia, ale wciąż pozwalający na wyodrębnienie kształtów i ruchu, co w pewien sposób prowadzi nasze centralne spojrzenie. Przykładem może być spojrzenie przez okno -- w pierwszym momencie nasz wzrok kierowany jest na wyraźne kształty, światła czy nagłe ruchy jak np. lądujący ptak. 
 
@@ -585,14 +589,17 @@ Uwaga wzrokowa może zostać opisana przez idiomy ,,gdzie'' i ,,co'', które poz
 wgląd w proces poznawczy badanej osoby, jako że pomiar widzenia fovealnego w czasie odzwierciedla chwilowe i jawne skupienie uwagi wzrokowej obserwatora. 
 
 \subsection{Poszukiwanie wzrokowe}
+\label{subsec:poszukiwanie-wzrokowe}
 
 Tutaj warto wspomnieć o poszukiwaniu wzrokowym, jest to proces aktywnego przeszukiwania pola widzenia w celu znalezienia konkretnego celu, a częścią tego procesu jest etap przeduwagowy. Etap ten równolegle analizuje duży obszar widzenia jednocześnie, dzieje się to automatycznie, nieświadomie i nie wymaga widzenia fovealnego. Co charakteryzuje ten proces to umiejętność rozpoznania czterech podstawowych cech: kolor, rozmiar, orientacja oraz obecność i/lub kierunek ruchu. Etap przeduwagowy jest pierwszym krokiem poszukiwania wzrokowego i obejmuje dużą część poszukiwania typu równoległego (np. próba zauważenia nagłego ruchu spadającej gwiazdy) i relatywnie niewielką część poszukiwania typu seryjnego (np. przeszukiwanie obiektów na stole w poszukiwaniu kluczy), które wymaga uwagi i przenoszenia wzroku od obiektu do obiektu. 
 
 \subsection{Analiza ruchów oczu}
+\label{subsec:analiza-ruchow-oczu}
 
 Powyższe rozważania pozwalają przejść do głównego nurtu tematu śledzenia ruchu gałek ocznych, czyli analiza ruchów oczu. Rozróżniamy pięć podstawowych typów ruchów oczu: wspomniane już wcześniej sakadyczne, wergencyjne, przedsionkowe, płynne podążanie (smooth pursuit) oraz oczopląs fizjologiczny, który jest naturalny dla zdrowej osoby i często występuje podczas fiksacji. Ruchy te można podzielić na dobrowolne, mimowolne i odruchowe, a sygnały je kontrolujące pochodzą z obszarów korowych mózgu. Do opisania tych procesów można posłużyć się modelowaniem matematycznym. Do zrozumienia jawnej uwagi wzrokowej wystarczy modelowanie trzech typów ruchów: fiksacji, która pokazuje chęć utrzymania wzroku na stacjonarnym obiekcie, sakad, które mogą wskazywać na chęć zmiany punktu uwagi oraz płynnych pościgów, które podobnie do fiksacji, pozwalają na śledzenie obiektu, ale ruchomego. 
 
 \subsubsection{Ruchy sakadowe}
+\label{subsubsec:ruchy-sakadowe}
 
 Sygnał sakad można opisać jako funkcja impuls/skok, gdzie impuls na wejściu reprezentuje prędkość, a skok pozycję, impuls jest przepuszczany przez filtr, który przekształca go w skok. Prostą reprezentacją ruchu sakadowego jest filtr liniowy różniczkujący, który dokonuje potrzebnej konwersji informacji prędkość na przemieszczenie. Wzór owego filtra w dziedzinie czasu można zapisać równaniem \ref{eq:sakady-filtr}.
 
@@ -629,6 +636,7 @@ Diagram omawianego modelu przedstawiony jest na rysunku \ref{fig:model-sakad}.
 \end{figure}
 
 \subsubsection{Płynne podążanie}
+\label{subsubsec:plynne-podazanie}
 
 Płynne podążanie występuje gdy obserwator śledzi obiekt w ruchu, ruch ten oczywiście nie może być zbyt gwałtowny. Tego typu śledzenie jest przykładem systemu sterowania z ujemnym sprzężeniem zwrotnym. Do modelowania owych ruchów używana jest prosta pętla, którą można opisać nastepujacym równaniem \ref{eq:plynne-podazanie-pentla} w dziedzinie czasu.
 
@@ -657,6 +665,7 @@ W ten sposób sygnał z receptorów oka służy za błąd, który następnie jes
 \end{figure}
 
 \subsubsection{Fiksacja}
+\label{subsubsec:fiksacja}
 
 Można zauważyć, że fiksacja jest procesem podobnym do płynnego podążania, z tą różnicą, że w tym przypadku obiekt jest nieruchomy. Jednakże proces ten nie da się bezpośrednio z sobą porównać i najprawdopodobniej nie ma wspólnego obwodu neuronalnego. Nasze komórki systemu wzrokowego są fizjologicznie wrażliwe na ruch, gdyby dany obiekt został unieruchomiony względem siatkówki, po krótkim czasie widzenie zaniknie. Powoduje to konieczność mikrosakad i innych mimowolnych, drobnych ruchów oczu. Można więc uznać, że model fiksacji jest podobny do modelu płynnego podążania, który próbuje utrzymać pozycję oka na danym punkcie, a mikrosakady i inne ruchy można uznać za szum w systemie kontrolnym, który można wyrazić jako $e_t = x_t - s_t$. Jest to losowa fluktuacja wokół punktu fiksacji, a jej wartość średnia pozostaje stała.
 
@@ -665,10 +674,12 @@ Ruch gałek ocznych i związane z nim widzenie jest bardzo szerokim tematem inte
 % Osadzenie tematu w kontekście aktualnego stanu wiedzy
 
 \section{Osadzenie tematu w kontekście aktualnego stanu wiedzy}
+\label{sec:osadzenie-tematu-w-kontekscie-aktualnego-stanu-wiedzy}
 
 Pomiar ruchu oczu był realizowany już w latach 70. XX wieku, nic dziwnego więc, że od tego momentu powstały różne techniki pozwalające na zebranie owych danych. Należy podkreślić, że metody te można podzielić na mierzące ruch oczu względem głowy, oraz takie które mierzą orientacje oczu w przestrzeni, czyli ,,punkt spojrzenia''. 
 
 \subsection{Metody śledzenia ruchu oczu: przegląd historyczny i alternatywy}
+\label{subsec:metody-sledzenia-ruchu-oczu-przeglad-historyczny-i-alternatywy}
 
 Najstarszą z metod śledzenia ruchu oczu jest elektro-okulografia (EOG ang. \english{electrooculography}), wciąż wykorzystywana np. w badaniach klinicznych. Metoda ta polega na umieszczeniu elektrod na skórze twarzy wokół oczu i pomiarze różnicy potencjałów. Metoda ta z założenia mierzy ruch oczu względem głowy, ale można rozszerzyć ją o pomiar ruchu głowy dając możliwość wyliczenia punktu spojrzenia. 
 
@@ -677,6 +688,7 @@ Jedna z najdokładniejszych metod pomiaru ruchu oczu polega na umieszczeniu socz
 Wideo-okulografia i foto-okulografia tworzą razem szeroką grupę metod, które opierają się na analizie wyróżniających się cech oka podczas jego obrotu, takich jak: kształt źrenicy, pozycja granicy tęczówki i twardówki, czy odbicie światła (często podczerwonego) od rogówki. Metody te są nieinwazyjne, ale same w sobie nie pozwalają na określenie punktu spojrzenia, więc w celu wyznaczenia owego punktu często stosuje się unieruchomienie głowy osoby badanej, wyznaczenie punktu odniesienia np. przez odbicia światła od powierzchni oka, lub odpowiednią kalibrację np. prosząc osobę badaną o utrzymanie wzroku na danym punkcie ekranu.
 
 \subsection{Analiza wideo z wykorzystaniem źrenicy i odbicia rogówkowego}
+\label{subsec:analiza-wideo-z-wykorzystaniem-zrenicy-i-odbicia-rogowkowego}
 
 Opisane metody wymagają unieruchomienia głowy (przez różnego rodzaju podpórki pod brodę lub głowę, albo nawet belki nagryzowe) lub zastosowanie dodatkowego sprzętu mierzącego ruch głowy, by wyznaczyć punkt spojrzenia. Jest to główna wada tych metod, jako że miejsce skupienia uwagi daje istotne informacje, które są najczęściej pożądane przez użytkowników okulografów. Dlatego metoda należąca do grupy wideo-okulografii, opierająca się na analizie obrazu wideo z kombinacją wykrycia źrenicy i odbicia rogówkowego, która pozwala na określenie punktu spojrzenia z dużą dokładnością, jest jedną z najpopularniejszych wyborów zarówno w świecie naukowym jak i komercyjnym. System prezentowany w tej pracy można zaliczyć do wideo-okulografii, z możliwością włączenia trybu z pomiarem odbicia rogówkowego, więc metoda ta zostanie omówiona szerzej od pozostałych.
 
@@ -685,6 +697,7 @@ Wykrywanie punktu spojrzenia metodą detekcji źrenicy i odbicia rogówkowego wy
 Omawiane odbicie rogówkowe nazywane jest obrazem Purkinjego, budowa oka sprawia, że pojawiają się cztery odbicia, pierwsze to odbicie od zewnętrznej powierzchni rogówki (najbardziej widoczne), drugie od wewnętrznej powierzchni rogówki, trzecie od zewnętrznej powierzchni soczewki, a czwarte od wewnętrznej powierzchni soczewki. By poprawnie wyznaczyć punkt spojrzenia, wymagane jest wyznaczenie dwóch punktów odniesienia, pierwszy określający obrót oczu w oczodole, a drugi określający stałe położenie względem oczu. Pierwszym punktem zazwyczaj jest środek źrenicy, a drugim najczęściej jest pierwszy obraz Purkinjego, powstały przez źródło światła ustabilizowane względem głowy, lub powierzchni badanej. Przy nieruchomej głowie, ruch oczu odczytywany będzie jako zmieniająca się różnica pomiędzy tymi dwoma punktami, w odwrotnym przypadku, gdy głowa poruszy się, a oczy pozostaną w fiksacji na danym punkcie, dla systemu montowanego na biurku różnica ta pozostanie stała, a dla systemu montowanego na głowie, różnica będzie zmieniać się proporcjonalnie do zmiany punktu widzenia. Istnieją także okulografy piątej generacji z technologią DPI (ang. Dual Purkinje Image), mierzą one dodatkowo czwarty obraz Purkinjego, dzięki temu, mogą rozróżniać ruchy translacyjne oka od ruchów rotacyjnych, jako że przy translacji obrazy Purkinjego poruszają się o tą samą odległość, a przy rotacji zmieniają swoje rozdzielenie, co zwiększa precyzję pomiaru, ale wymaga bardziej skomplikowanego oprogramowania, a także unieruchomienie głowy może okazać się konieczne.
 
 \section{Studia literaturowe}
+\label{sec:studia-literaturowe}
 
 % UWAGA - Czy cytat nie powinien być przeniesiony na koniec akapitu?
 Powyższe sformułowanie problemu i jego osadzenie w kontekście aktualnego stanu wiedzy zostało przedstawione w oparciu o książkę ,,Eye Tracking Methodology: Theory and Practice'' autorstwa Andrew T. Duchowskiego \cite{bib:eye-tracking-methodology}. Książka ta dogłębnie omawia temat śledzenia ruchu oczu, pozwalając na zgłębienie zarówno podstaw procesów wzrokowych w kontekstach różnych dziedzin naukowych, a także szeroko omawia praktykę pomiaru ruchu oczu. Powyższa analiza tematu skupia się jedynie na najistotniejszych aspektach, które pozwolą na zrozumienie istoty prezentowanego systemu, a wiedzę na ich temat można poszerzyć lekturą wspomnianej książki.
@@ -692,6 +705,7 @@ Powyższe sformułowanie problemu i jego osadzenie w kontekście aktualnego stan
 Eye-tracking staje się coraz bardziej dostępny, co sprawia że technologia ta znajduje zastosowanie w wielu obszarach, zarówno w badaniach naukowych jak i do użytku konsumenckiego czy komercyjnego. Część producentów owych systemów udostępnia publikacje naukowe, w których zostały one wykorzystane, a ich analiza przedstawia różne rozwiązania omawianego tematu.
 
 \subsection{Metoda źrenicy i odbicia rogówkowego w badaniach}
+\label{subsec:metoda-zrenicy-i-odbicia-rogowkowego-w-badaniach}
 
 Jednym z przedstawicieli firm skupiających się na analizie zachowań ludzkich jest iMotions, wyróżniając się modularnym systemem z centralnym hubem. Firma ta oferuje biosensory w formie modułów, pozwalające na np. śledzenie oczu, analizę wyrazu twarzy, rejestrowanie aktywności elektrycznej mózgu i rejestrowanie aktywności serca. Dane zebrane przez różne czujniki są integrowane w jednym oprogramowaniu co pozwala badaczom na prostą synchronizację i analizę danych w jednym systemie \cite{bib:iMotions-about-us}. Jednak mimo tak obszernego asortymentu biosensorów, to właśnie moduł śledzenia wzroku na ekranie (montowany na biurku) był wykorzystywany najczęściej w badaniach naukowych, z czego eye-tracking był najczęściej wykorzystywany w systemach jednomodułowych \cite{bib:iMotions-2023-report}. Pokazuje to jak uniwersalnym i podstawowym narzędziem jest eye-tracker w badaniach behawioralnych i nie tylko. 
 
@@ -702,6 +716,7 @@ Do śledzenia ruchu gałek ocznych na ekranie zastosowano okulograf Smart Eye AI
 Badanie składało się z dwóch etapów, wpierw zebrano dane w laboratorium podczas gdy badane dzieci grały w dwie gry oraz podczas wywiadów bezpośrednio po zakończonej rozgrywce, a następnie prezentowano badanym momenty z pierwszego etapu z uwzględnieniem danych z biosensorów i zadawano pytania o ich doświadczenia. Badania wskazały, że dzieci są wstanie zrozumieć i odpowiednio odnieść się do prezentowanych danych psychofizjologicznych, a oparcie się o nie może pomóc w zwerbalizowaniu swojego doświadczenia i informacji zwrotnej przez badane dzieci. Dzieci nie miały problemu z zrozumieniem większości pomiarów za wyjątkiem reakcji skórno-galwanicznej, jednakże dane eye-trackingowe były swego rodzaju wyjątkiem, jako że nie prezentowały bezpośrednio doświadczenia i uczuć związanych z danym wydarzeniem w grze, a raczej dawały wgląd w strategię objęta przez dziecko zmagające się z aktualnym wyzwaniem, mimo tego prezentowane śledzenie punktu spojrzenia było naturalne w interpretacji przez badanych \cite{bib:iMotions-children}. Publikacja ta pokazuje jak okulografia może zostać skutecznie użyta w badaniach naukowych, ale przede wszystkim przedstawia istotność tej techniki w zastosowaniach komercyjnych np. testując doświadczenia graczy przy produkcji gier wideo dla różnych grup wiekowych.
 
 \subsection{Porównanie z video-okulografią z użyciem kamerki internetowej}
+\label{subsec:porownanie-z-video-okulografia-z-uzyciem-kamerki-internetowej}
 
 Warto omówić także przykłady systemów opierających się jedynie na analizie wideo z kamerki internetowej, jako że system prezentowany w tej pracy działa przede wszystkim na tej zasadzie. Ten typ okulografii opartej na analizie wideo w czasie rzeczywistym cieszy się dużą popularnością wśród konsumentów, jako że sprzętowo wymaga od użytkownika posiadanie jedynie komputera z wbudowaną lub zewnętrzną kamerą, a całość przetwarzania obrazu, wyświetlania i zbierania danych oraz wyliczania punktu spojrzenia realizowane jest przez software producenta eye-trackera. Istotność takiego rozwiązania pojawia się także gdy przeprowadza się badania na dużej grupie, jako że osoba badana sama dostarcza sprzęt w formie laptopa czy nawet smartfona, a zbierane dane przesyłane są do badaczy przez internet, eliminując potrzebe stwarzania przestrzeni laboratoryjnej i planowania dogodnych terminów eksperymentów. Dlatego firmy specjalizujące się w okulografii, często oferują także oprogramowanie do śledzenia ruchu gałek ocznych przez kamerkę internetową, jak wspomniana już wcześniej firma iMotions. Często także dostępne są rozwiązania od niezależnych dostawców oprogramowania, które za subskrypcją, opłatę, lub całkowicie bezpłatnie oferują śledzenie punktu spojrzenia przez kamerę komputera, jednym z takich programów, który zostanie omówiony jest darmowy GazeRecorder. 
 
@@ -709,7 +724,8 @@ W publikacji ,,WebET 3.0 -Validation Study Report'' przeprowadzono badania spraw
 
 Wyniki dokładności wskazały, że system iMotions jest niezależny na zmienne wynikające z pochodzenia, koloru oczu, wieku, płci oraz owłosienia twarzy, jednak posiadanie okularów mogło wpływać na wynik śledzenia, rodzaj i natężenie oświetlenia także nie wpływał znacząco na działanie WebET 3.0. Ponad $90\%$ uczestników posiadało dokładność mniejszą od $\ang{5}$ dokładności, $70\%$ badanych posiadało dokładność mniejszą od $\ang{3}$ dokładności, a mediana dokładności wynosiła $\ang{2.08}$ \cite{bib:iMotions-WebET}. Dokładność alternatywnego darmowego oprogramowania GazeRecorder została zaprezentowana w przeglądzie systematycznym i wynosiła $\ang{1,43}$ z możliwością poprawy do $\ang{1,3}$ przez unieruchomienie głowy, pozwalając na noszenie okularów za wyjątkiem okularów antyrefleksyjnych \cite{bib:GazeRecorder-Review}. 
 
-\subsection{Podsumowanie metod}
+\subsection{Podsumowanie metod w literaturze}
+\label{subsec:Podsumowanie-metod-w-literaturze}
 
 Metoda śledzenia ruchu gałek ocznych przy użyciu źrenicy i odbicia rogówkowego w podczerwieni znacznie przewyższa -- pod względem dokładności -- metodę polegającą na kamerce internetowej, w związku z tym przy badaniach skupiających się na analizie gęsto ułożonych informacji wyspecjalizowany okulograf może być bardziej pożądany. Jednakże aktualna dostępność sprzętu i oprogramowania potrzebnego do śledzenia z użyciem kamerki internetowej daje możliwość na bardziej obszerne zastosowania, a ich dokładność pozwala na efektywne śledzenie punktu spojrzenia w przypadkach gdy informacje są ułożone z odpowiednimi dystansami.
 
@@ -741,12 +757,16 @@ Metoda śledzenia ruchu gałek ocznych przy użyciu źrenicy i odbicia rogówkow
 \label{ch:wymagania-i-narzedzia}
 
 \section{Stawiane wymagania}
+\label{sec:stawiane-wymagania}
 
 \subsection{Wymagania funkcjonalne}
+\label{subsec:wymagania-funkcjonalne}
 
 \subsection{Wymagania niefunkcjonalne}
+\label{subsec:wymagania-niefunkcjonalne}
 
 \section{Przypadki użycia}
+\label{sec:przypadki-uzycia}
 
 \begin{itemize}
 \item wymagania funkcjonalne i niefunkcjonalne
