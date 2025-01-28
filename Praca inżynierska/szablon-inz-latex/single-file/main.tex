@@ -749,9 +749,9 @@ Metoda śledzenia ruchu gałek ocznych przy użyciu źrenicy i odbicia rogówkow
 %--------------------------------------
 %
 %
-% TODO: wymagania funkcjonalne (60%) i niefunkcjonalne, przypadki użycia, opis narzędzi itp., metodyka pracy
+% TODO: przypadki użycia, opis narzędzi itp., metodyka pracy
 %
-% Status: 10%
+% Status: 25%
 %--------------------------------------
 \chapter{Wymagania i narzędzia}
 \label{ch:wymagania-i-narzedzia}
@@ -759,8 +759,6 @@ Metoda śledzenia ruchu gałek ocznych przy użyciu źrenicy i odbicia rogówkow
 \section{Wymagania funkcjonalne}
 \label{sec:wymagania-funkcjonalne}
 
-Wymagania funkcjonalne definiują konkretne działania i funkcje, które system powinien zapewniać. W przypadku tego projektu są one związane z obsługą danych z eye-trackera, ich analizą oraz wizualizacją wyników. Niniejsza podsekcja przedstawia szczegółowy opis funkcjonalności, jakie musi oferować system, aby spełniać założenia pracy.
-%===========Moja część%===========
 Postawienie konkretnych granic funkcjonalnych projektu jest kluczowym elementem tworzenia rozwiązania. Działają one na zasadzie zabezpieczenia przed usprawnianiem i rozszerzaniem projektu bez końca, a także pozwalają na skupienie uwagi inżyniera na istotnych aspektach. Można zauważyć korelację pomiędzy rolą wymagań funkcjonalnych w tworzeniu projektu, a plamką żółtą w oku omawianej w sekcji \ref{sec:sformulowanie-problemu}, oba elementy dbają o to by wiele informacji zostało przefiltrowane do tych, które są najważniejsze.
 
 \subsection{Limitacje sprzętowe i środowiskowe}
@@ -771,29 +769,37 @@ Do śledzenia ruchu gałek ocznych używany jest bardzo szeroki wachlarz sprzęt
 \subsection{Wykorzystanie platform i narzędzi programistycznych}
 \label{subsec:Wykorzystanie-platform-i-narzedzi-programistycznych}
 
-By uprościć użycie komputera wspomnianego w sekcji \ref{subsec:Limitacje-sprzetowe-i-srodowiskowe} w pracy pozostano na już zainstalowanym systemie operacyjnym, którym jest Windows 11. Podobnie postawiono wymaganie względem edytora kodu źródłowego i systemu kontroli wersji, jako że użycie znajomego środowiska, które już jest zainstalowane i było wcześniej używane na wykorzystanym laptopie, pozwala na szybkie zamknięcie przygotowań do pracy. W związku z tym skupiono się na rozwiązaniach, które są kompatybilne z edytorem tekstu Visual Studio Code i klientem Git z graficznym interfejsem użytkownika GitHub Desktop, jako że narzędzia te ściśle z współpracują z sobą i serwisem hostingowym GitHub tworząc intuicyjną i znajomą w użyciu całość. Stawianym wymaganiem do języka programowania, oprócz wspomnianej kompatybilności, jest jego popularność, uniwersalność, klarowność i szeroki wybór bibliotek. Język o takich cechach znacznie zwiększy produktywność, uprości stosowanie bardziej skomplikowanych narzędzi i pozwoli na efektywne uczenie się i rozwiązywanie problemów opierając się na społeczności użytkowników. Zalety te wspomogą uzyskanie natychmiastowych rezultatów pracy oraz skoncentrowanie uwagi na poprawie i rozwój funkcjonalności systemu. Łatwo dostępnym i popularnym językiem o wysokim poziomie abstrakcji jest Python, który jest oficjalnie wspierany przez Visual Studio Code. Język ten posiada możliwość korzystania z biblioteki OpenCV, która daje dostęp do wielu rozwiązań przetwarzających obraz. Ostatnim, bardziej personalnym atutem proponowanego języka, jest niewielkie ówczesne doświadczenie programowania w nim, a co za tym idzie szansa na zyskanie cennych umiejętności w trakcie pracy.
+By uprościć użycie komputera (wspomnianego w sekcji \ref{subsec:Limitacje-sprzetowe-i-srodowiskowe}), zdecydowano się na pozostaniu przy już zainstalowanym systemie operacyjnym, którym jest Windows 11. Podobnie postawiono wymaganie względem edytora kodu źródłowego i systemu kontroli wersji, jako że użycie znajomego środowiska, które już jest zainstalowane i było wcześniej używane na wykorzystanym laptopie, pozwala na szybkie zamknięcie przygotowań do pracy. W związku z tym skupiono się na rozwiązaniach, które są kompatybilne z edytorem tekstu Visual Studio Code i klientem Git z graficznym interfejsem użytkownika GitHub Desktop, jako że narzędzia te ściśle z współpracują z sobą i serwisem hostingowym GitHub tworząc intuicyjną i znajomą w użyciu całość. Stawianym wymaganiem do języka programowania, oprócz wspomnianej kompatybilności, jest jego popularność, uniwersalność, klarowność i szeroki wybór bibliotek. Język o takich cechach znacznie zwiększy produktywność, uprości stosowanie bardziej skomplikowanych narzędzi i pozwoli na efektywne uczenie się i rozwiązywanie problemów opierając się na społeczności użytkowników. Zalety te wspomogą uzyskanie natychmiastowych rezultatów pracy oraz skoncentrowanie uwagi na poprawie i rozwój funkcjonalności systemu. Łatwo dostępnym i popularnym językiem o wysokim poziomie abstrakcji jest Python, który jest oficjalnie wspierany przez Visual Studio Code. Język ten posiada możliwość korzystania z biblioteki OpenCV, która daje dostęp do wielu rozwiązań przetwarzających obraz. Ostatnim, bardziej personalnym atutem proponowanego języka, jest niewielkie ówczesne doświadczenie programowania w nim, a co za tym idzie szansa na zyskanie cennych umiejętności w trakcie pracy.
 
 \subsection{Zakres działania systemu}
 \label{subsec:zakres-dzialania-systemu}
 
-Nakreślone wymagania w sekcji \ref{subsec:Limitacje-sprzetowe-i-srodowiskowe} i \ref{subsec:Wykorzystanie-platform-i-narzedzi-programistycznych} odpowiednio ograniczyły możliwe rozwiązania, pozwalając na ustalenie realnych funkcjonalności programu. Aspektem, który przede wszystkim determinuje stopień skomplikowania stawianych wymagań, jest ograniczony czas na wykonanie omawianego systemu. Skąplikowanie
+Nakreślone limitacje w sekcji \ref{subsec:Limitacje-sprzetowe-i-srodowiskowe} i \ref{subsec:Wykorzystanie-platform-i-narzedzi-programistycznych} odpowiednio ograniczyły możliwe rozwiązania, pozwalając na ustalenie realnych funkcjonalności programu. Aspektem, który przede wszystkim determinuje stopień skomplikowania stawianych wymagań, jest ograniczony czas na wykonanie omawianego systemu. W związku z tym, rozwiązaniem, które może zapewnić użyteczność planowanego systemu, nawet w przypadku jego niepełnego ukończenia, jest skoncentrowanie się na podstawowych funkcjonalnościach. Dzięki temu powstanie solidny szkielet projektu, oferujący funkcje dostępne na danym etapie prac. W konsekwencji zakres działania systemu śledzącego ruch oczu przedstawia się następująco:
 
-%fragmenty które muszą się znaleźć 
-Przetwarzanie obrazu z kamery odbywa się w czasie rzeczywistym
-Wykrywanie rejonu twarzy, w tym rejonie wykrywanie rejonu oczu, a w rejonie oczu wykrywa źrenicę
-Pozwala na wykrycie i zidentyfikowanie obu oczu z rozróżnieniem lewego i prawego
-Wykrywanie źrenic jest uniwersalne względem oświetlenia otoczenia
-pozwala na wizualizację procesu śledzenia, bez zaciemniania obrazu z kamery
-wyznacza umowny punkt odniesienia z możliwością prostej kalibracji
-Nie ogranicza bardziej zaawansowanych użytkowników, oferując wyznaczenie punktu odniesienia przy zastosowaniu dodatkowego sprzętu
-Zebranie danych o pozycji źrenicy z indeksem wskazującym odpowiednie oko i możliwość przedstawienia ich w formie wykresów czasowych
+\begin{enumerate}
+	\item Przetwarzanie obrazu z kamery powinno odbywać się w czasie rzeczywistym. Dzięki takiemu rozwiązaniu nie będzie potrzebne nagrywanie, a także pozwoli to na weryfikację pracy systemu w trakcie użytkowania. Biblioteka OpenCV posiada wiele rozwiązań, które pozwalają na operowaniu na obrazie w czasie rzeczywistym.
+	\item Proces śledzenia ruchu gałek ocznych powinien przebiegać poprzez wpierw wykrycie twarzy, następnie w rejonie twarzy przeprowadzanie detekcja oczu, a dopiero w rejonie oczu dojdzie do wykrycia źrenicy. Dzięki takiemu założeniu obraz będzie stopniowo ograniczany do rejonu zainteresowania, gwarantując ograniczenie błędnych detekcji.
+	\item System powinien działać w sposób binokularny, pozwalając na wykrycie i zidentyfikowanie obu oczu (a następnie źrenic) z rozróżnieniem lewego i prawego oczodołu. Dzięki takiemu rozwiązaniu dane wyliczane przez system będą skategoryzowane, zabezpieczając przed błędami i niespójnościami w analizie.
+	\item Wykrywanie źrenic powinno być uniwersalne względem oświetlenia otoczenia. Oczywistym jest, że skrajnie złe oświetlenie uniemożliwi poprawne działanie, ale program powinien cechować się pewnym stopniem elastyczności, nie wymuszając użytkowania w jednym konkretnym środowisku.
+	\item By obliczyć przemieszczenie źrenicy musi zostać wyznaczony umowny punkt odniesienia względem powierzchni, na której skupiona jest uwaga, punkt ten powinien być odporny na niewielkie ruchy głowy. Dodatkowym atutem będzie możliwość prostej kalibracji owego punktu. Jest to kluczowy element pozwalający na detekcję ruchu oczu.
+	\item Wyznaczanie ruchu oczu poprzez jedynie umowny punkt odniesienia, o ograniczonej możliwości weryfikacji poprawności pomiaru, nie jest rozwiązaniem idealnym i może być niewystarczające dla bardziej zaawansowanych użytkowników. W związku z tym system powinien oferować opcję wyznaczenia ruchu gałek ocznych względem realnego punktu odniesienia np. poprzez zastosowanie dodatkowego sprzętu.
+	\item Wyliczone przemieszczenie źrenicy w czasie rzeczywistym powinno zostać zapisane do pliku, który pozwoli na analizę zebranych danych w tym pozycję źrenicy, indeks wskazujący przynależność do odpowiedniego oka oraz moment czasowy zebranego pomiaru.
+\end{enumerate}
 
 
 \section{Wymagania niefunkcjonalne}
 \label{sec:wymagania-niefunkcjonalne}
 
+Jak ustalono w sekcji \ref{subsec:zakres-dzialania-systemu} projekt ten ma skupić się na utworzeniu solidnego szkieletu programu, takie rozwiązanie kładzie nacisk przede wszystkim na funkcjonalność i wymusza jednocześnie zastosowanie jedynie najważniejszych elementów interfejsu, pozwalając użytkownikowi na wykorzystanie jego pełni możliwości. Wymagania niefunkcjonalne mogą w takim razie być skromniejsze względem funkcjonalnych, ale wciąż należy je dokładnie określić by uniknąć utraty kluczowych elementów przez zaniedbanie tej części. Wymagania te prezentują się następująco:
 
-
+\begin{enumerate}
+	\item Program powinien wyświetlać obraz z kamery, jest to najbardziej podstawowe wymaganie, ale także najbardziej istotne. Obserwacja obrazu daje informację zwrotną użytkownikowi, pozwalając na szybką weryfikację działania kamery, a także analizę przystępności otoczenia, w którym dokonuje śledzenia.
+	\item Jako że możliwe jest uszkodzenia pliku programu, lub braku odpowiedniego sprzętu wymaganego do przeprowadzenia detekcji, istotnym jest wdrożenie podstawowej kontroli błędów zwracającej odpowiednią informacje i zakańczając działanie programu w przypadku wykrycia nieprawidłowości. Informacja ta powinna nakierować użytkownika na źródło problemu, pozwalając na łatwiejsze dojście do jego rozwiązania.
+	\item W sekcji \ref{subsec:zakres-dzialania-systemu} wymieniono różne funkcjonalności programu, część z nich z reguły nie będzie działać równolegle, wymaga to więc prostego sposobu na kontrolowanie, która z użyteczności będzie w tym momencie wykorzystywana. 
+	\item Podczas działania systemu śledzenia ruchu gałek ocznych dokonywana będzie detekcja kilku elementów, takich jak twarz, oczy oraz źrenice, istotnym aspektem wizualnym jest podkreślenie tych obszarów, dając możliwość na naturalną kontrolę działania rozwiązania na każdym jego etapie. Dodatkowo warto zaznaczyć punkt odniesienia i punkt środka źrenicy, obrazując dzielący ich dystans. Jest to duża ilość informacji, która może zaciemnić obraz z kamery, program powinien w związku z tym zadbać o maksymalną przejrzystość.
+	\item Poza bardziej zrozumiałym empirycznie obrazowaniem działania systemu śledzącego, takim jak zaznaczanie obszarów detekcji, przydatnym może okazać się wizualizowanie technicznego aspektu wykrywania, prezentując to jak komputer odbiera i przekształca obraz z kamery. Tak przedstawione wyniki, chociaż mniej czytelne dla osób niezaznajomionych, pozwolą użytkownikowi na poprawę działania programu pod jego własne preferencje.
+	\item Przeglądanie zebranych danych może być dużym wyzwaniem, jako że komercyjnie dostępne kamery internetowe mogą rejestrować obraz $30$ lub nawet $60$ razy na sekundę, co przy dłuższym śledzeniu generuje obszerną ilość pomiarów. Z tego powodu wymagana jest wizualizacja zebranych danych w prosty sposób np. przez wykresy czasowe. Takie rozwiązanie pomoże w dalszej analizie i potencjalnej obróbce pomiarów.
+\end{enumerate}
 
 \section{Przypadki użycia}
 \label{sec:przypadki-uzycia}
