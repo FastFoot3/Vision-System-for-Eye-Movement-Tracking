@@ -35,17 +35,17 @@
 \contentsline {subsection}{\numberline {3.1.3}Zakres działania systemu}{14}{subsection.3.1.3}%
 \contentsline {section}{\numberline {3.2}Wymagania niefunkcjonalne}{15}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Przypadki użycia}{16}{section.3.3}%
-\contentsline {chapter}{\numberline {4}[Właściwy dla kierunku -- np. Specyfikacja zewnętrzna]}{17}{chapter.4}%
-\contentsline {chapter}{\numberline {5}[Właściwy dla kierunku -- np. Specyfikacja wewnętrzna]}{19}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{21}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{23}{chapter.7}%
-\contentsline {chapter}{Bibliografia}{26}{chapter*.16}%
-\contentsline {chapter}{Spis skrótów i symboli}{29}{appendix*.17}%
+\contentsline {chapter}{\numberline {4}[Właściwy dla kierunku -- np. Specyfikacja zewnętrzna]}{19}{chapter.4}%
+\contentsline {chapter}{\numberline {5}[Właściwy dla kierunku -- np. Specyfikacja wewnętrzna]}{21}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{23}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{25}{chapter.7}%
+\contentsline {chapter}{Bibliografia}{28}{chapter*.16}%
+\contentsline {chapter}{Spis skrótów i symboli}{31}{appendix*.17}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{31}{appendix*.18}%
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{33}{appendix*.19}%
-\contentsline {chapter}{Spis rysunków}{35}{appendix*.20}%
-\contentsline {chapter}{Spis tabel}{37}{appendix*.21}%
+\contentsline {chapter}{Źródła}{33}{appendix*.18}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{35}{appendix*.19}%
+\contentsline {chapter}{Spis rysunków}{37}{appendix*.20}%
+\contentsline {chapter}{Spis tabel}{39}{appendix*.21}%
