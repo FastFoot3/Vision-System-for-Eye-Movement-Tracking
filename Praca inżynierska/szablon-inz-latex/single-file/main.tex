@@ -749,9 +749,9 @@ Metoda śledzenia ruchu gałek ocznych przy użyciu źrenicy i odbicia rogówkow
 %--------------------------------------
 %
 %
-% TODO: przypadki użycia, opis narzędzi itp., metodyka pracy
+% TODO: opis narzędzi itp., metodyka pracy
 %
-% Status: 25%
+% Status: 50%
 %--------------------------------------
 \chapter{Wymagania i narzędzia}
 \label{ch:wymagania-i-narzedzia}
@@ -803,6 +803,17 @@ Jak ustalono w sekcji \ref{subsec:zakres-dzialania-systemu} projekt ten ma skupi
 
 \section{Przypadki użycia}
 \label{sec:przypadki-uzycia}
+
+Wymagania funkcjonalne i niefunkcjonalne omawiane w sekcji \ref{sec:wymagania-funkcjonalne} i \ref{sec:wymagania-niefunkcjonalne} pozwalają dokładnie opisać konkretne elementy systemu, ale mogą utrudniać zrozumienie całości. Diagram UML (Unified Modeling Language) przypadku użycia pozwala na łatwe zobrazowanie każdego elementu w kontekście całości programu, dopełniając analizę stawianych wymagań. Diagram przypadku użycia prezentowanego systemu widoczny jest na rysunku \ref{fig:UML-use-case}. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{pic/use case/use case diagram.png}
+	\caption{Diagram UML przypadku użycia systemu do śledzenia ruchu gałek ocznych.}
+	\label{fig:UML-use-case}
+\end{figure}
+
+Diagram na rysunku \ref{fig:UML-use-case} prezentuje po lewej użytkownika, który pełni rolę aktora wchodzącego w interakcję z systemem wizyjnym do śledzenia ruchu gałek ocznych. Użytkownik może oddziaływać na system na cztery sposoby, rozpoczynając śledzenie, kalibrując punkt odniesienia, personalizując ustawienia oraz wizualizując zebrane pomiary, akcje są ustawione od góy w kolejności sugerującej korzystanie z programu. Śledzenie ruchu gałek ocznych rozpoczyna się inicjalizacją systemu, jeśli program nie napotka błędu, rozpoczyna wykrywanie obszarów twarzy. Zawężanie obszarów zainteresowań następuje sekwencyjnie, dopiero gdy pojawi się twarz można będzie szukać oczu i następnie źrenic. Gdy oczy zostaną wykryte, automatycznie utworzony zostanie punkt odniesienia, a gdy detekcja przebiegnie w całości pomyślnie, zapisany zostanie pomiar pozycji źrenicy względem punktu odniesienia oraz zostanie wyświetlony przetworzony obraz pomagający w dostosowaniu czułości. Użytkownik może następnie przeprowadzić kalibrację punktu odniesienia ręcznie lub kalibracją zaawansowaną, może też w każdej chwili wrócić do kalibracji automatycznej. Personalizacja, pozwalająca dostosować czułość detekcji oraz opcje obrysowania wykrytych rejonów twarzy, może okazać się konieczna w przypadku różnych warunków oświetleniowych, lub zmieniających się preferencji użytkownika. Po udanej sesji śledzenia ruchu gałek ocznych, użytkownik może zdecydować się na wizualizację zebranych pomiarów, generując wykresy czasowe. W ten sposób omawiany diagram UML przedstawia symbolicznie pełen zakres interakcji użytkownika z systemem oraz kolejność operacji, obrazując działanie aplikacji w typowym scenariuszu.
 
 \begin{itemize}
 \item wymagania funkcjonalne i niefunkcjonalne

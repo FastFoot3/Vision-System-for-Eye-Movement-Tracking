@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  29 JAN 2025 20:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  30 JAN 2025 00:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1379,6 +1379,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [15]
+<pic/use case/use case diagram.png, id=354, 1095.09125pt x 1155.31625pt>
+File: pic/use case/use case diagram.png Graphic file (type png)
+<use pic/use case/use case diagram.png>
+Package pdftex.def Info: pic/use case/use case diagram.png  used on input line 811.
+(pdftex.def)             Requested size: 455.24411pt x 480.27586pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1396,7 +1402,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17]
+[17 <./pic/use case/use case diagram.png>]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1405,13 +1411,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18
-
-]
+[18]
 Rozdzia\l  4.
 
 
-[19]
+[19
+
+]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1422,7 +1428,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [20]
 Rozdzia\l  5.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 944.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 955.
 (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1518,7 +1524,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [34
 
 ]
-Overfull \hbox (2.38579pt too wide) in paragraph at lines 1131--1132
+Overfull \hbox (2.38579pt too wide) in paragraph at lines 1142--1143
 []\T1/lmr/m/n/12 film po-ka-zu-j¡cy dzia-ªa-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
  []
 
@@ -1564,23 +1570,23 @@ LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CDC7794FBABC3DF914C5CF1C6C61410F;7006.
+(rerunfilecheck)             Checksum: 533D9CAD6368B14D7F26FD2C83410488;7006.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49967 strings out of 473938
- 1153651 string characters out of 5724560
+ 49974 strings out of 473938
+ 1153913 string characters out of 5724560
  2000893 words of memory out of 5000000
- 71941 multiletter control sequences out of 15000+600000
+ 71947 multiletter control sequences out of 15000+600000
  622810 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,2058b,3512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (45 pages, 433095 bytes).
+Output written on main.pdf (45 pages, 538639 bytes).
 PDF statistics:
- 618 PDF objects out of 1000 (max. 8388607)
- 145 named destinations out of 1000 (max. 500000)
- 284 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 626 PDF objects out of 1000 (max. 8388607)
+ 146 named destinations out of 1000 (max. 500000)
+ 289 words of extra memory for PDF output out of 10000 (max. 10000000)
 
