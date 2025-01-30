@@ -38,7 +38,7 @@
 \contentsline {section}{\numberline {3.4}Narzędzia i metody wykorzystane w pracy}{18}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}ASUS Vivobook 15}{18}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Narzędzia programistyczne}{18}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Metodyka pracy nad projektem}{19}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.3}Metodyka pracy nad projektem}{20}{subsection.3.4.3}%
 \contentsline {chapter}{\numberline {4}[Właściwy dla kierunku -- np. Specyfikacja zewnętrzna]}{21}{chapter.4}%
 \contentsline {chapter}{\numberline {5}[Właściwy dla kierunku -- np. Specyfikacja wewnętrzna]}{23}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{25}{chapter.6}%

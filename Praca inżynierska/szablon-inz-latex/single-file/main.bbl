@@ -70,6 +70,32 @@
     \field{year}{2007}
   \endentry
 
+  \entry{bib:Python-a-byte}{book}{}{}
+    \name{author}{1}{}{%
+      {{hash=HSC}{%
+         family={H.},
+         familyi={H\bibinitperiod},
+         given={Swaroop\bibnamedelima C.},
+         giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {CreateSpace Independent Publishing Platform}%
+    }
+    \strng{namehash}{HSC1}
+    \strng{fullhash}{HSC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{isbn}{1514828146}
+    \field{title}{A Byte of Python}
+    \list{location}{1}{%
+      {North Charleston, SC, USA}%
+    }
+    \field{year}{2015}
+  \endentry
+
   \entry{bib:GazeRecorder-Review}{inproceedings}{}{}
     \name{author}{3}{}{%
       {{hash=HM}{%
@@ -108,6 +134,40 @@
     \field{title}{Webcam Eye Tracking for Desktop and Mobile Devices: A
   Systematic Review}
     \field{year}{2023}
+  \endentry
+
+  \entry{bib:VSCode-Essentials}{book}{}{}
+    \name{author}{2}{}{%
+      {{hash=LY}{%
+         family={Lasorsa},
+         familyi={L\bibinitperiod},
+         given={Yohan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=MC}{%
+         family={Maneu},
+         familyi={M\bibinitperiod},
+         given={Christopher},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Opublikowane samodzielnie}%
+    }
+    \strng{namehash}{LYMC1}
+    \strng{fullhash}{LYMC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{isbn}{9798321674161}
+    \field{note}{URL: \url{microsoft.github.io/vscode-essentials/en/} (term.
+  wiz. 30.01.2025)}
+    \field{title}{Visual Studio Code - The Essentials}
+    \list{location}{1}{%
+      {Londyn}%
+    }
+    \field{year}{2024}
   \endentry
 
   \entry{bib:iMotions-children}{article}{}{}
@@ -507,6 +567,31 @@
     \field{title}{{WebET} 3.0 -Validation Study Report}
     \field{type}{techreport}
     \field{year}{2023}
+  \endentry
+
+  \entry{bib:OpenCV-about}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=tO}{%
+         family={team},
+         familyi={t\bibinitperiod},
+         given={OpenCV},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tO1}
+    \strng{fullhash}{tO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{About}
+    \verb{url}
+    \verb https://opencv.org/about/
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{30}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
   \endentry
 
   \entry{bib:tobii-autyzm}{online}{}{}
