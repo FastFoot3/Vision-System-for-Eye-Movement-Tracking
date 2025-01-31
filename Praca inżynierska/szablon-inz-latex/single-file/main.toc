@@ -46,18 +46,19 @@
 \contentsline {subsubsection}{Matplotlib}{20}{section*.19}%
 \contentsline {subsubsection}{pandas}{20}{section*.20}%
 \contentsline {subsubsection}{Time}{20}{section*.21}%
+\contentsline {subsubsection}{PyInstaller}{21}{section*.22}%
 \contentsline {subsection}{\numberline {3.4.3}Metodyka pracy nad projektem}{21}{subsection.3.4.3}%
 \contentsline {chapter}{\numberline {4}[Właściwy dla kierunku -- np. Specyfikacja zewnętrzna]}{23}{chapter.4}%
 \contentsline {chapter}{\numberline {5}[Właściwy dla kierunku -- np. Specyfikacja wewnętrzna]}{25}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{27}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{29}{chapter.7}%
-\contentsline {chapter}{Bibliografia}{33}{chapter*.25}%
-\contentsline {chapter}{Spis skrótów i symboli}{35}{appendix*.26}%
+\contentsline {chapter}{Bibliografia}{33}{chapter*.26}%
+\contentsline {chapter}{Spis skrótów i symboli}{37}{appendix*.27}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{37}{appendix*.27}%
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{39}{appendix*.28}%
-\contentsline {chapter}{Spis rysunków}{41}{appendix*.29}%
-\contentsline {chapter}{Spis tabel}{43}{appendix*.30}%
+\contentsline {chapter}{Źródła}{39}{appendix*.28}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{41}{appendix*.29}%
+\contentsline {chapter}{Spis rysunków}{43}{appendix*.30}%
+\contentsline {chapter}{Spis tabel}{45}{appendix*.31}%

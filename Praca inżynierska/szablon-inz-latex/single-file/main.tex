@@ -749,9 +749,9 @@ Metoda śledzenia ruchu gałek ocznych przy użyciu źrenicy i odbicia rogówkow
 %--------------------------------------
 %
 %
-% TODO: opis narzędzi i metodyka pracy (Narzędzia programistyczne, metodyka pracy)
+% TODO: krótkie wprowadzenie na początku każdej sekcji/rozdziału
 %
-% Status: 70%
+% Status: 99%
 %--------------------------------------
 \chapter{Wymagania i narzędzia}
 \label{ch:wymagania-i-narzedzia}
@@ -857,9 +857,14 @@ Pandas to biblioteka do analizy i manipulacji danymi, posiadająca narzędzia do
 
 Time jest częścią podstawowej biblioteki Python i nie wymaga dodatkowej instalacji przed użyciem, służy do wykonywanie operacji związanych z czasem. Zbierany pomiary muszą być zapisywane razem z momentem czasowym, by pozwolić na pełną analizę, jest to nieskomplikowane zadanie, które można rozwiązać z użyciem tej biblioteki opierając się na oficjalnej dokumentacji Python \cite{bib:time-Python}.
 
+\subsubsection{PyInstaller}
+
+Następnym krokiem, który warto wykonać po zakończeniu prac nad rozwiązaniem, jest ułatwienie jego dystrybucji i użytkowania. W tym celu wykorzystano PyInstaller, który umożliwia spakowanie skryptu Pythona i wszystkich jego zależności do samodzielnego pliku wykonywalnego (exe). Dzięki temu użytkownicy mogą uruchomić program bez konieczności instalowania interpretera Pythona ani dodatkowych modułów. Warto jednak zaznaczyć, że użyto PyInstaller w wersji na system operacyjny Windows, a oprogramowanie te nie pozwala na kompilację krzyżową (czyli wymaga tego samego systemu od użytkownika) \cite{bib:PyInstaller-manual}. Taka forma dystrybucji znacząco ułatwia udostępnianie aplikacji, a także eliminuje problemy związane z niedopatrzeniem w konfigurowaniu środowiska.
+
 \subsection{Metodyka pracy nad projektem}
+\label{subsec:Metodyka-pracy-nad-projektem}
 
-
+Praca nad projektem przebiegała w sposób iteracyjny, co przypomina metodykę zwinnego wytwarzania oprogramowania, a w szczególności podejście stosowane w Scrum, które opiera się na empiryzmie. Proces ten polegał na wyznaczaniu pojedynczych zadań do realizacji, implementowaniu ich rozwiązań, a następnie analizowaniu wyników i dostosowywaniu kolejnych kroków \cite{bib:Scrum-guide}. Oznacza to, że stawiane wymagania i używane narzędzia, omawiane w rozdziale \ref{ch:wymagania-i-narzedzia}, także były poszerzane w sposób iteracyjny w czasie realizacji projektu. Dzięki takiemu podejściu możliwe było rozpoczęcie pracy z ograniczoną wiedzą i umiejętnościami, a wraz z postępem, rozbijając główne założenie projektu na coraz bardziej szczegółowe elementy, z jednoczesnym nabieraniem doświadczenia w używaniu narzędzi i poszerzając wiedzę na temat możliwych rozwiązań. Wraz z pracą funkcjonalności systemu były ulepszane, a problemy, zarówno w programie jak i założeniach, relatywnie szybko wykrywane i eliminowane.
 
 \begin{itemize}
 \item wymagania funkcjonalne i niefunkcjonalne

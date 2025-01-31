@@ -17,6 +17,49 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global/global}
+  \entry{bib:PyInstaller-manual}{online}{}{}
+    \name{author}{4}{}{%
+      {{hash=CD}{%
+         family={Cortesi},
+         familyi={C\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BG}{%
+         family={Bajo},
+         familyi={B\bibinitperiod},
+         given={Giovanni},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CW}{%
+         family={Caban},
+         familyi={C\bibinitperiod},
+         given={William},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=MG}{%
+         family={McMillan},
+         familyi={M\bibinitperiod},
+         given={Gordon},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CD+1}
+    \strng{fullhash}{CDBGCWMG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{PyInstaller Manual}
+    \verb{url}
+    \verb https://pyinstaller.org/en/stable/index.html#pyinstaller-manual
+    \endverb
+    \field{year}{2024}
+    \field{urlday}{31}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
+  \endentry
+
   \entry{bib:NumPy-quick-start}{online}{}{}
     \name{author}{1}{}{%
       {{hash=DN}{%
@@ -553,6 +596,37 @@
     \verb https://pandas.pydata.org/about/index.html
     \endverb
     \field{year}{2025}
+    \field{urlday}{31}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:Scrum-guide}{online}{}{}
+    \name{author}{2}{}{%
+      {{hash=SK}{%
+         family={Schwaber},
+         familyi={S\bibinitperiod},
+         given={Ken},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Sutherland},
+         familyi={S\bibinitperiod},
+         given={Jeff},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SKSJ1}
+    \strng{fullhash}{SKSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{The 2020 Scrum Guide™}
+    \verb{url}
+    \verb https://scrumguides.org/scrum-guide.html
+    \endverb
+    \field{year}{2020}
     \field{urlday}{31}
     \field{urlmonth}{01}
     \field{urlyear}{2025}
