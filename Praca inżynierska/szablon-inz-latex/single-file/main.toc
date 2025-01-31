@@ -38,18 +38,26 @@
 \contentsline {section}{\numberline {3.4}Narzędzia i metody wykorzystane w pracy}{18}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}ASUS Vivobook 15}{18}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Narzędzia programistyczne}{18}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Metodyka pracy nad projektem}{20}{subsection.3.4.3}%
-\contentsline {chapter}{\numberline {4}[Właściwy dla kierunku -- np. Specyfikacja zewnętrzna]}{21}{chapter.4}%
-\contentsline {chapter}{\numberline {5}[Właściwy dla kierunku -- np. Specyfikacja wewnętrzna]}{23}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{25}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{27}{chapter.7}%
-\contentsline {chapter}{Bibliografia}{30}{chapter*.17}%
-\contentsline {chapter}{Spis skrótów i symboli}{33}{appendix*.18}%
+\contentsline {subsubsection}{Github Desktop i Github}{18}{section*.14}%
+\contentsline {subsubsection}{Visual Studio Code (VS Code)}{19}{section*.15}%
+\contentsline {subsubsection}{Python}{19}{section*.16}%
+\contentsline {subsubsection}{OpenCV}{20}{section*.17}%
+\contentsline {subsubsection}{NumPy}{20}{section*.18}%
+\contentsline {subsubsection}{Matplotlib}{20}{section*.19}%
+\contentsline {subsubsection}{pandas}{20}{section*.20}%
+\contentsline {subsubsection}{Time}{20}{section*.21}%
+\contentsline {subsection}{\numberline {3.4.3}Metodyka pracy nad projektem}{22}{subsection.3.4.3}%
+\contentsline {chapter}{\numberline {4}[Właściwy dla kierunku -- np. Specyfikacja zewnętrzna]}{25}{chapter.4}%
+\contentsline {chapter}{\numberline {5}[Właściwy dla kierunku -- np. Specyfikacja wewnętrzna]}{27}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{29}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{31}{chapter.7}%
+\contentsline {chapter}{Bibliografia}{35}{chapter*.25}%
+\contentsline {chapter}{Spis skrótów i symboli}{37}{appendix*.26}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{35}{appendix*.19}%
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{37}{appendix*.20}%
-\contentsline {chapter}{Spis rysunków}{39}{appendix*.21}%
-\contentsline {chapter}{Spis tabel}{41}{appendix*.22}%
+\contentsline {chapter}{Źródła}{39}{appendix*.27}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{41}{appendix*.28}%
+\contentsline {chapter}{Spis rysunków}{43}{appendix*.29}%
+\contentsline {chapter}{Spis tabel}{45}{appendix*.30}%

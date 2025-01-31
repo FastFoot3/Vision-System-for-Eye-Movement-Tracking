@@ -17,6 +17,31 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global/global}
+  \entry{bib:NumPy-quick-start}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=DN}{%
+         family={Developers},
+         familyi={D\bibinitperiod},
+         given={NumPy},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DN1}
+    \strng{fullhash}{DN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{NumPy quickstart}
+    \verb{url}
+    \verb https://numpy.org/doc/stable/user/quickstart.html
+    \endverb
+    \field{year}{2024}
+    \field{urlday}{31}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
+  \endentry
+
   \entry{bib:Diagnostyka-oczoplas}{online}{}{}
     \name{author}{1}{}{%
       {{hash=DR}{%
@@ -68,6 +93,31 @@
       {Londyn}%
     }
     \field{year}{2007}
+  \endentry
+
+  \entry{bib:time-Python}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=FPS}{%
+         family={Foundation},
+         familyi={F\bibinitperiod},
+         given={Python\bibnamedelima Software},
+         giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FPS1}
+    \strng{fullhash}{FPS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{time — Time access and conversions}
+    \verb{url}
+    \verb https://docs.python.org/3/library/time.html
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{31}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
   \endentry
 
   \entry{bib:Python-a-byte}{book}{}{}
@@ -317,6 +367,37 @@
     \field{urlyear}{2025}
   \endentry
 
+  \entry{bib:NumPy-OpenCV}{online}{}{}
+    \name{author}{2}{}{%
+      {{hash=MA}{%
+         family={Mordvintsev},
+         familyi={M\bibinitperiod},
+         given={Alexander},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=RKA}{%
+         family={Rahman\bibnamedelima K.},
+         familyi={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+         given={Abid},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MARKA1}
+    \strng{fullhash}{MARKA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Introduction to OpenCV-Python Tutorials}
+    \verb{url}
+    \verb https://docs.opencv.org/4.x/d0/de3/tutorial_py_intro.html
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{31}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
+  \endentry
+
   \entry{bib:internet}{online}{}{}
     \name{author}{2}{}{%
       {{hash=NI}{%
@@ -452,6 +533,29 @@
       {Warszawa}%
     }
     \field{year}{2017}
+  \endentry
+
+  \entry{bib:Pandas-about}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=p}{%
+         family={pandas},
+         familyi={p\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{p1}
+    \strng{fullhash}{p1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{About pandas}
+    \verb{url}
+    \verb https://pandas.pydata.org/about/index.html
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{31}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
   \endentry
 
   \entry{bib:iMotions-2023-report}{online}{}{}
@@ -590,6 +694,33 @@
     \endverb
     \field{year}{2025}
     \field{urlday}{30}
+    \field{urlmonth}{01}
+    \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:Matplotlib-pyplot}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=dtTM}{%
+         prefix={development},
+         prefixi={d\bibinitperiod},
+         family={team},
+         familyi={t\bibinitperiod},
+         given={The\bibnamedelima Matplotlib},
+         giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tTMd1}
+    \strng{fullhash}{tTMd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Pyplot tutorial}
+    \verb{url}
+    \verb https://matplotlib.org/stable/tutorials/pyplot.html
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{31}
     \field{urlmonth}{01}
     \field{urlyear}{2025}
   \endentry
