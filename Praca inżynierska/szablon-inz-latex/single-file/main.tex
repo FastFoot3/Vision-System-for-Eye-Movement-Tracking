@@ -864,7 +864,7 @@ Następnym krokiem, który warto wykonać po zakończeniu prac nad rozwiązaniem
 \subsection{Metodyka pracy nad projektem}
 \label{subsec:Metodyka-pracy-nad-projektem}
 
-Praca nad projektem przebiegała w sposób iteracyjny, co przypomina metodykę zwinnego wytwarzania oprogramowania, a w szczególności podejście stosowane w Scrum, które opiera się na empiryzmie. Proces ten polegał na wyznaczaniu pojedynczych zadań do realizacji, implementowaniu ich rozwiązań, a następnie analizowaniu wyników i dostosowywaniu kolejnych kroków \cite{bib:Scrum-guide}. Oznacza to, że stawiane wymagania i używane narzędzia, omawiane w rozdziale \ref{ch:wymagania-i-narzedzia}, także były poszerzane w sposób iteracyjny w czasie realizacji projektu. Dzięki takiemu podejściu możliwe było rozpoczęcie pracy z ograniczoną wiedzą i umiejętnościami, a wraz z postępem, rozbijając główne założenie projektu na coraz bardziej szczegółowe elementy, z jednoczesnym nabieraniem doświadczenia w używaniu narzędzi i poszerzając wiedzę na temat możliwych rozwiązań. Wraz z pracą funkcjonalności systemu były ulepszane, a problemy, zarówno w programie jak i założeniach, relatywnie szybko wykrywane i eliminowane.
+Praca nad projektem przebiegała w sposób iteracyjny, co przypomina metodykę zwinnego wytwarzania oprogramowania, a w szczególności podejście stosowane w Scrum, które opiera się na empiryzmie. Proces ten polegał na wyznaczaniu pojedynczych zadań do realizacji, implementowaniu ich rozwiązań, a następnie analizowaniu wyników i dostosowywaniu kolejnych kroków \cite{bib:Scrum-guide}. Oznacza to, że stawiane wymagania i używane narzędzia, omawiane w rozdziale \ref{ch:wymagania-i-narzedzia}, także były poszerzane w sposób iteracyjny w czasie realizacji projektu. Dzięki takiemu podejściu możliwe było rozpoczęcie pracy z ograniczoną wiedzą i umiejętnościami, a wraz z postępem, rozbijanie głównego założenia projektu na coraz bardziej szczegółowe elementy, z jednoczesnym nabieraniem doświadczenia w używaniu narzędzi i poszerzając wiedzę na temat możliwych rozwiązań. Wraz z pracą funkcjonalności systemu były ulepszane, a problemy zarówno w programie jak i założeniach, szybko wykrywane i eliminowane.
 
 \begin{itemize}
 \item wymagania funkcjonalne i niefunkcjonalne
@@ -877,12 +877,38 @@ Praca nad projektem przebiegała w sposób iteracyjny, co przypomina metodykę z
 %--------------------------------------
 %
 %
-% TODO: wymagania sprzętowe i programowe, sposób instalacji, aktywacji, kategorie użytkowników, sposób obsługi, administracja systemem, kwestie bezpieczeństwa, przykład działania, scenariusze korzystania z systemu
+% TODO: wymagania sprzętowe i programowe, sposób instalacji, kategorie użytkowników, sposób obsługi, administracja systemem, kwestie bezpieczeństwa, przykład działania, scenariusze korzystania z systemu
 %
 % Status: 0%
 %--------------------------------------
-\chapter{[Właściwy dla kierunku -- np. Specyfikacja zewnętrzna]}
-\label{ch:04}
+\chapter{Specyfikacja zewnętrzna}
+\label{ch:Specyfikacja-zewnetrzna}
+
+\section{Wymagania sprzętowe i programowe}
+
+
+
+\section{Sposób instalacji}
+
+Rozwiązanie dzieli się na dwa pliki wykonywalne \texttt{eye\_detect.exe} \allowbreak i \texttt{eye\_\-tracking\_\-plot.exe}, które nie wymagają przeprowadzenia procesu instalacji. By uruchomić owe programy, wystarczy umieścić je na komputerze przy użyciu przenośnej pamięci USB, lub pobierając je z repozytorium Github, albo z udostępnionego folderu na dysku google pod linkiem \url{https://drive.google.com/drive/folders/1RGOLKfGqTqCwREWvMt3sQEOPwD7aKOdE?usp=sharing}. System do śledzenia ruchu gałek ocznych uruchomi się przez otworzenie pliku \texttt{eye\_detect.exe}, a zebrane dane można wyświetlić w formie wykresów czasowych otwierając plik \texttt{eye\_tracking\_plot.exe}. Plik \texttt{eye\_tracking\_data.txt} nie jest wymagany do uruchomienia \texttt{eye\_detect.exe}, który w przypadku jego braku utworzy go na koniec śledzenia, jednak jest on wymagany do uruchomienia \texttt{eye\_tracking\_plot.exe}. Plik tekstowy \texttt{eye\_tracking\_data.txt} oraz \texttt{Readme.txt} zawierający instrukcję instalacji i użytkowania dostępny jest razem z resztą plików wykonywalnych na dysku Google i Github.
+
+\section{Kategorie użytkowników}
+
+Prezentowany system wizyjny do śledzenia ruchu gałek ocznych nie jest kierowany do konkretnej grupy odbiorców, jest on z założenia uniwersalny w zastosowaniu i niewymagający sprzętowo, pozwalając każdej osobie wyposażonej w komputer z kamerą i posiadającej zainteresowanie w dziedzinie okulografii cieszyć się jego możliwościami. Chociaż, tak jak wspomniano w punkcie \ref{subsec:zakres-dzialania-systemu}, rozwiązanie te oferuje przede wszystkim podstawowe funkcje śledzenia, może one okazać się użyteczne zarówno dla hobbystów, jak i studentów, czy badaczy. Bardziej zaawansowani użytkownicy mogą skorzystać z funkcji pomiaru względem odbicia rogówkowego, na przykład wyposażając system w kamerę NIR i diodę podczerwoną. Z drugiej strony osoby mniej zaznajomione z tematem, lub posiadające gorszej jakości sprzęt, mogą wykorzystać kalibrację ręczną jako prosty sposób na badanie skupienia uwagi na jednym punkcie ekranu. 
+
+\section{Sposób obsługi}
+
+
+
+\section{Kwestie bezpieczeństwa}
+
+
+
+\section{Przykład działania}
+
+
+
+\section{Scenariusze korzystania z systemu}
 
 Jeśli „Specyfikacja zewnętrzna”:
 \begin{itemize}
