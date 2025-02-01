@@ -16,9 +16,12 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram UML przypadku użycia systemu do śledzenia ruchu gałek ocznych.}}{17}{figure.caption.13}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Podpis rysunku po rysunkiem.}}{25}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Główne okna programu \texttt {eye\_\-detect.exe} w momencie uruchamiania, przed połączeniem z kamerą.}}{24}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Wizualizacja obrazów binarnych wykorzystywanych w procesie wykrywania źrenic i odbicia rogówkowego.}}{25}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Okna programu \texttt {eye\_\-tracking\_\-plot.exe}, przedstawiające wykresy czasowe przemieszczenia źrenicy i terminal.}}{26}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Podpis rysunku po rysunkiem.}}{27}{figure.caption.26}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Pseudokod w \texttt {listings}.}}{28}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Pseudokod w \texttt {listings}.}}{30}{figure.caption.27}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

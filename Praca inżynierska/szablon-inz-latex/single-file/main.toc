@@ -53,19 +53,19 @@
 \contentsline {section}{\numberline {4.2}Sposób instalacji}{23}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Kategorie użytkowników}{23}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Sposób obsługi}{24}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Kwestie bezpieczeństwa}{24}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Przykład działania}{24}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Scenariusze korzystania z systemu}{24}{section.4.7}%
-\contentsline {chapter}{\numberline {5}[Właściwy dla kierunku -- np. Specyfikacja wewnętrzna]}{27}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{29}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{31}{chapter.7}%
-\contentsline {chapter}{Bibliografia}{35}{chapter*.26}%
-\contentsline {chapter}{Spis skrótów i symboli}{39}{appendix*.27}%
+\contentsline {section}{\numberline {4.5}Kwestie bezpieczeństwa}{27}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Przykład działania}{27}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Scenariusze korzystania z systemu}{27}{section.4.7}%
+\contentsline {chapter}{\numberline {5}[Właściwy dla kierunku -- np. Specyfikacja wewnętrzna]}{29}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{31}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{33}{chapter.7}%
+\contentsline {chapter}{Bibliografia}{37}{chapter*.29}%
+\contentsline {chapter}{Spis skrótów i symboli}{41}{appendix*.30}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{41}{appendix*.28}%
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{43}{appendix*.29}%
-\contentsline {chapter}{Spis rysunków}{45}{appendix*.30}%
-\contentsline {chapter}{Spis tabel}{47}{appendix*.31}%
+\contentsline {chapter}{Źródła}{43}{appendix*.31}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{45}{appendix*.32}%
+\contentsline {chapter}{Spis rysunków}{47}{appendix*.33}%
+\contentsline {chapter}{Spis tabel}{49}{appendix*.34}%

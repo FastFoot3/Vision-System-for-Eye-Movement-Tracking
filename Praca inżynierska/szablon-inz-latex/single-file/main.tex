@@ -628,7 +628,7 @@ Filtr Haara jest jednym z przykładów filtrów który przybliża różniczkowan
 
 Diagram omawianego modelu przedstawiony jest na rysunku \ref{fig:model-sakad}.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\textwidth]{pic/modele/model_sakad.png}
 	\caption{Diagram modelu ruchów sakadowych z filtrem liniowym różniczkującym.}
@@ -657,7 +657,7 @@ Wejście $s_t$ to pozycja celu, wyjście $x_t$ to pożądana pozycja oka. Można
 
 W ten sposób sygnał z receptorów oka służy za błąd, który następnie jest kompensowany w celu utrzymania obrazu w przestrzeni widzenia plamkowego. Diagram modelu przedstawiony jest na rysunku \ref{fig:model-smooth}.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pic/modele/model_smooth.png}
 	\caption{Diagram modelu płynnego podążania z liniowym sprzężeniem zwrotnym.}
@@ -806,7 +806,7 @@ Jak ustalono w punkcie \ref{subsec:zakres-dzialania-systemu} projekt ten ma skup
 
 Wymagania funkcjonalne i niefunkcjonalne omawiane w podrozdziale \ref{sec:wymagania-funkcjonalne} i \ref{sec:wymagania-niefunkcjonalne} pozwalają dokładnie opisać konkretne elementy systemu, ale mogą utrudniać zrozumienie całości. Diagram UML (Unified Modeling Language) przypadku użycia pozwala na łatwe zobrazowanie każdego elementu w kontekście całości programu, dopełniając analizę stawianych wymagań. Diagram przypadku użycia prezentowanego systemu widoczny jest na rysunku \ref{fig:UML-use-case}. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{pic/use case/use case diagram.png}
 	\caption{Diagram UML przypadku użycia systemu do śledzenia ruchu gałek ocznych.}
@@ -877,28 +877,68 @@ Praca nad projektem przebiegała w sposób iteracyjny, co przypomina metodykę z
 %--------------------------------------
 %
 %
-% TODO: wymagania sprzętowe i programowe, sposób obsługi, administracja systemem, kwestie bezpieczeństwa, przykład działania, scenariusze korzystania z systemu
+% TODO: wymagania sprzętowe i programowe, administracja systemem, kwestie bezpieczeństwa, przykład działania, scenariusze korzystania z systemu
 %
-% Status: 10%
+% Status: 20%
 %--------------------------------------
 \chapter{Specyfikacja zewnętrzna}
 \label{ch:Specyfikacja-zewnetrzna}
 
 \section{Wymagania sprzętowe i programowe}
 
-
+% w zasadzie trzeba było by to sprawdzić na wirtualce, albo można napisać od czapy że ma wymagania takie jak pyinstaller + kamera, wyświetlacz
 
 \section{Sposób instalacji}
 
-Rozwiązanie dzieli się na dwa pliki wykonywalne \texttt{eye\_detect.exe} \allowbreak i \texttt{eye\_\-tracking\_\-plot.exe}, które nie wymagają przeprowadzenia procesu instalacji. By uruchomić owe programy, wystarczy umieścić je na komputerze przy użyciu przenośnej pamięci USB, lub pobierając je z repozytorium Github, albo z udostępnionego folderu na dysku google pod linkiem \url{https://drive.google.com/drive/folders/1RGOLKfGqTqCwREWvMt3sQEOPwD7aKOdE?usp=sharing}. System do śledzenia ruchu gałek ocznych uruchomi się przez otworzenie pliku \texttt{eye\_detect.exe}, a zebrane dane można wyświetlić w formie wykresów czasowych otwierając plik \texttt{eye\_tracking\_plot.exe}. Plik \texttt{eye\_tracking\_data.txt} nie jest wymagany do uruchomienia \texttt{eye\_detect.exe}, który w przypadku jego braku utworzy go na koniec śledzenia, jednak jest on wymagany do uruchomienia \texttt{eye\_tracking\_plot.exe}. Plik tekstowy \texttt{eye\_tracking\_data.txt} oraz \texttt{Readme.txt} zawierający instrukcję instalacji i użytkowania dostępny jest razem z resztą plików wykonywalnych na dysku Google i Github.
+Rozwiązanie dzieli się na dwa pliki wykonywalne \texttt{eye\_\-detect.exe} \allowbreak i \texttt{eye\_\-tracking\_\-plot.exe}, które nie wymagają przeprowadzenia procesu instalacji. By uruchomić owe programy, wystarczy umieścić je na komputerze przy użyciu przenośnej pamięci USB, lub pobierając je z repozytorium Github, albo z udostępnionego folderu na dysku google pod linkiem \url{https://drive.google.com/drive/folders/1RGOLKfGqTqCwREWvMt3sQEOPwD7aKOdE?usp=sharing}. System do śledzenia ruchu gałek ocznych uruchomi się przez otworzenie pliku \texttt{eye\_detect.exe}, a zebrane dane można wyświetlić w formie wykresów czasowych otwierając plik \texttt{eye\_tracking\_plot.exe}. Plik \texttt{eye\_tracking\_data.txt} nie jest wymagany do uruchomienia \texttt{eye\_detect.exe}, który w przypadku jego braku utworzy go na koniec śledzenia, jednak jest on wymagany do uruchomienia \texttt{eye\_tracking\_plot.exe}. Plik tekstowy \texttt{eye\_tracking\_data.txt} oraz \texttt{Readme.txt} zawierający instrukcję instalacji i użytkowania dostępny jest razem z resztą plików wykonywalnych na dysku Google i Github.
 
 \section{Kategorie użytkowników}
 
 Prezentowany system wizyjny do śledzenia ruchu gałek ocznych nie jest kierowany do konkretnej grupy odbiorców, jest on z założenia uniwersalny w zastosowaniu i niewymagający sprzętowo, pozwalając każdej osobie wyposażonej w komputer z kamerą i posiadającej zainteresowanie w dziedzinie okulografii cieszyć się jego możliwościami. Chociaż, tak jak wspomniano w punkcie \ref{subsec:zakres-dzialania-systemu}, rozwiązanie te oferuje przede wszystkim podstawowe funkcje śledzenia, może one okazać się użyteczne zarówno dla hobbystów, jak i studentów, czy badaczy. Bardziej zaawansowani użytkownicy mogą skorzystać z funkcji pomiaru względem odbicia rogówkowego, na przykład wyposażając system w kamerę NIR i diodę podczerwoną. Z drugiej strony osoby mniej zaznajomione z tematem, lub posiadające gorszej jakości sprzęt, mogą wykorzystać kalibrację ręczną jako prosty sposób na badanie skupienia uwagi na jednym punkcie ekranu. 
 
 \section{Sposób obsługi}
+\label{sec:Sposob-obslugi}
 
+W pierwszej kolejności użytkownik musi zdecydować się czy chce rozpocząć śledzenie, czy wizualizacje pomiarów zebranych w pliku tekstowym, jako że funkcje te uruchamiane są przez osobne pliki wykonywalne. By rozpocząć śledzenie ruchu gałek ocznych, należy otworzyć plik \texttt{eye\_\-detect.exe} np. poprzez dwukrotne kliknięcie. Otwarty zostanie terminal na lokalizacji, w której znajduje się plik wykonywalny oraz okno ,,eye detection'', w którym, po uzyskaniu dostępu do kamery, wyświetlony zostanie obraz. Proces uruchamiania pokazano na rysunku \ref{fig:eye_detect-uruchamianie}.
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{pic/obsługa/okna przy otwarciu.png}
+	\caption{Główne okna programu \texttt{eye\_\-detect.exe} w momencie uruchamiania, przed połączeniem z kamerą.}
+	\label{fig:eye_detect-uruchamianie}
+\end{figure}
+
+Jeśli program uzyska dostęp do kamery automatycznie zacznie pobierać z niej obraz i wyszukiwać na nim twarz, oczy oraz źrenice, które oznaczy i wyświetli w oknie ,,eye detection''. Podczas działania programu mogą otworzyć się jeszcze dwa dodatkowe okna: ,,Bin eyes for testing'', pojawiający się w momencie wykrycia oczu oraz ,,Bin reflection for testing'', które otworzy się w momencie włączenia trybu kalibracji zaawansowanej. ,,Bin eyes for testing'' obrazuje binaryzację źrenic przed (po lewej) i po (po prawej) operacjach morfologicznych, z kolei ,,Bin reflection for testing'' pokazuje binaryzację dla odbicia rogówkowego. Okna te są wizualizacją techniczną ułatwiającą dostrojenie programu i są przedstawione na rysunku \ref{fig:eye_detect-okna-bin}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{pic/obsługa/okna binarne.png}
+	\caption{Wizualizacja obrazów binarnych wykorzystywanych w procesie wykrywania źrenic i odbicia rogówkowego.}
+	\label{fig:eye_detect-okna-bin}
+\end{figure}
+
+Użytkownik może wchodzić w interakcję z systemem na dwa sposoby, poprzez interfejs graficzny w formie suwaków widoczny na rysunku \ref{fig:eye_detect-uruchamianie}, lub przez naciśnięcie odpowiedniego klawisza na klawiaturze. Nad obrazem w oknie ,,eye detection'' widnieją dwa suwaki, których pozycje można zmieniać poprzez kliknięcie lub przeciąganie myszą. Suwak ,,Eye tresh'' (pierwszy od góry), odpowiada progowi używanego w binaryzacji źrenic, a jego wartość ustawiona jest na $15$, pozwalając na stabilne śledzenie przy dobrym oświetleniu frontalnym. Jednakże, w zależności od warunków oświetleniowych, a także preferencji związanych z stabilnością i dokładnością pomiaru, użytkownik powinien ręcznie dostosować wartość progu, aby zapewnić optymalną detekcję źrenic. Następny suwak ,,Light tresh'' (drugi od góry), używany jest jedynie w przypadku kalibracji zaawansowanej, on także odpowiada progowi binaryzacji, ale w tym przypadku odbicia rogówkowego. Użytkownik wyposażony w odpowiednio intensywne źródło światła i decydujący się na tego typu kalibrację punktu odniesienia, powinien ręcznie wybrać wartość na suwaku tak, aby na obrazie binaryzacji pozostał jedynie niewielki jasny punkt. 
+
+Reszta funkcjonalności dostępna jest po naciśnięciu danego klawiszu na klawiaturze, ich wykaz prezentuje się następująco:
+
+\begin{description}
+	\item[z (kalibracja automatyczna) --] tryb kalibracji punktu odniesienia, który ustawiany jest w momencie uruchomienia programu. Pozwala na pomiar ruchu źrenic względem środka obszaru wykrytego oka.
+	\item[x (kalibracja zaawansowana) --] tryb kalibracji punktu odniesienia na podstawie obrazu binarnego oka. Pozwala na pomiar ruchu źrenic względem wykrytego odbicia rogówkowego oka.
+	\item[c (kalibracja ręczna) --]  tryb kalibracji punktu odniesienia na aktualną pozycję źrenic. Pozwala na pomiar ruchu źrenic względem ustalonego miejsca w obszarze wykrytego oka.
+	\item[r (przełączanie trybów rysowania) --] są dostępne trzy tryby rysowania wykrytych obszarów na obrazie z kamery. Pierwszy tryb jest ustawiony wraz z uruchomieniem programu obrysowując: twarz, ograniczony obszar twarzy, oczy, źrenice, środki źrenic oraz punkt odniesienia. Drugi tryb pozwala na większą przejrzystość rysując najistotniejsze elementy detekcji, czyli środek źrenic i punkt odniesienia. Trzeci tryb wyłącza rysowanie, zwracając niezmodyfikowany obraz z kamery.
+	\item[q (wyłączenie programu) --] jedyny poprawny sposób na zatrzymanie systemu, po nacisnieciu bezpiecznie zamyka plik tekstowy z pomiarami, zwalnia kamerę i zamyka wszystkie okna programu.
+\end{description}
+
+Po udanej sesji śledzenia ruchu gałek ocznych, można zwizualizować zebrane pomiary zapisane w pliku tekstowym, otwierając plik \texttt{eye\_\-tracking\_\-plot.exe} umieszczony w tym samym folderze co plik tekstowy. Wygenerowane zostaną trzy zestawy wykresów w osobnych oknach, przedstawiając przemieszczenie źrenicy w osi względem punktu odniesienia (dla obu oczu wspólnie i osobno). Zostały one utworzone przy pomocy Pyplot, pozwalając użytkownikowi na swobodne przybliżanie i poruszanie się po wykresach. Możliwe jest także zapisanie utworzonego wykresu w wielu popularnych rozszerzeniach. Okna z wykresami wraz z terminalem przedstawione są na rysunku \ref{fig:eye_tracking_plot-wykresy-i-terminal}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{pic/obsługa/wykresy.png}
+	\caption{Okna programu \texttt{eye\_\-tracking\_\-plot.exe}, przedstawiające wykresy czasowe przemieszczenia źrenicy i terminal.}
+	\label{fig:eye_tracking_plot-wykresy-i-terminal}
+\end{figure}
+
+W momencie zamknięcia programu, wszystkie okna, a w tym okno terminalu, zostają zamknięte. Z racji tego użytkownicy zainteresowani informacjami zwracanymi w terminalu -- takimi jak informacja o błędzie, które mogą zostać zwrócone w przypadku uszkodzonego pliku, lub braku dostępu do kamery -- mogą uruchomić dany plik przy użyciu terminala. Wystarczy ustawić katalog roboczy terminala na ten, w którym znajduje się plik wykonywalny, a następnie wpisać jego nazwę wraz z rozszerzeniem i nacisnąć enter. W ten sposób po zakończeniu działania programu informacje w terminalu zostaną zachowane.
 
 \section{Kwestie bezpieczeństwa}
 
