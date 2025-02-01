@@ -747,6 +747,56 @@
     \field{year}{2023}
   \endentry
 
+  \entry{bib:PassMark-about-us}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=SP}{%
+         family={Software},
+         familyi={S\bibinitperiod},
+         given={PassMark®},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SP1}
+    \strng{fullhash}{SP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{About PassMark Software}
+    \verb{url}
+    \verb https://www.passmark.com/about/index.php
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{01}
+    \field{urlmonth}{02}
+    \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:PassMark-test}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=SP}{%
+         family={Software},
+         familyi={S\bibinitperiod},
+         given={PassMark®},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SP1}
+    \strng{fullhash}{SP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{CPU Benchmarks: CPU Test Information}
+    \verb{url}
+    \verb https://www.cpubenchmark.net/cpu_test_info.html
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{01}
+    \field{urlmonth}{02}
+    \field{urlyear}{2025}
+  \endentry
+
   \entry{bib:OpenCV-about}{online}{}{}
     \name{author}{1}{}{%
       {{hash=tO}{%

@@ -886,7 +886,18 @@ Praca nad projektem przebiegała w sposób iteracyjny, co przypomina metodykę z
 
 \section{Wymagania sprzętowe i programowe}
 
-% w zasadzie trzeba było by to sprawdzić na wirtualce, albo można napisać od czapy że ma wymagania takie jak pyinstaller + kamera, wyświetlacz
+% w zasadzie trzeba było by to sprawdzić na wirtualce, albo można napisać od czapy że ma wymagania takie jak pyinstaller + kamera, wyświetlacz - NIE! ROBIMY TO NA MENADŻERZE ZADAŃ
+
+44,1\% - 36\% -
+170 mb praktycznie stałe
+
+benchmark - 18500 * 0,45 = 8325 (Intel Xeon E5-4650 ma score 8407, a Intel Xeon E5-2660 v2 ma zapas 20\% i score 10440)
+
+By ustalić wymagania sprzętowe prezentowanego systemu przeprowadzono obserwację procentowego użycia procesora oraz pamięci RAM w trakcie przeprowadzania detekcji. System okazał się używać średnio $36\%$ procesora, z nagłymi wzrostami nawet do $44,1\%$, w konsekwencji przyjęto, że procentowe użycie tego zasobu nie powinna wzrosnąć ponad $45\%$. Zużycie pamięci RAM pozostawało niemalże niezmiennie na tym samym poziomie, czyli $170 \ \unit{\mega\byte}$. Znając podzespoły laptopa omówione w punkcie \ref{subsec:ASUS-Vivobook-15} można oszacować wymagania sprzętowe minimalne i zalecane.
+
+Do wyznaczenia procesora spełniającego minimalne wymagania do stabilnego korzystania z niniejszego rozwiązania, posłużono się największą na świecie stroną internetową z testowaniem wzorcowym procesorów utrzymywaną przez firmę PassMark Software \cite{bib:PassMark-about-us}. Opierając się na punktacji PassMark \cite{bib:PassMark-test}, można oszacować wysokość oceny procesora, który pozwoli na bezproblemowe korzystanie z programu śledzącego.
+
+
 
 \section{Sposób instalacji}
 
@@ -926,7 +937,7 @@ Reszta funkcjonalności dostępna jest po naciśnięciu danego klawiszu na klawi
 	\item[x (kalibracja zaawansowana) --] tryb kalibracji punktu odniesienia na podstawie obrazu binarnego oka. Pozwala na pomiar ruchu źrenic względem wykrytego odbicia rogówkowego oka.
 	\item[c (kalibracja ręczna) --]  tryb kalibracji punktu odniesienia na aktualną pozycję źrenic. Pozwala na pomiar ruchu źrenic względem ustalonego miejsca w obszarze wykrytego oka.
 	\item[r (przełączanie trybów rysowania) --] są dostępne trzy tryby rysowania wykrytych obszarów na obrazie z kamery. Pierwszy tryb jest ustawiony wraz z uruchomieniem programu obrysowując: twarz, ograniczony obszar twarzy, oczy, źrenice, środki źrenic oraz punkt odniesienia. Drugi tryb pozwala na większą przejrzystość rysując najistotniejsze elementy detekcji, czyli środek źrenic i punkt odniesienia. Trzeci tryb wyłącza rysowanie, zwracając niezmodyfikowany obraz z kamery.
-	\item[q (wyłączenie programu) --] jedyny poprawny sposób na zatrzymanie systemu, po nacisnieciu bezpiecznie zamyka plik tekstowy z pomiarami, zwalnia kamerę i zamyka wszystkie okna programu.
+	\item[q (wyłączenie programu) --] jedyny poprawny sposób na zatrzymanie systemu, po naciśnięciu bezpiecznie zamyka plik tekstowy z pomiarami, zwalnia kamerę i zamyka wszystkie okna programu.
 \end{description}
 
 Po udanej sesji śledzenia ruchu gałek ocznych, można zwizualizować zebrane pomiary zapisane w pliku tekstowym, otwierając plik \texttt{eye\_\-tracking\_\-plot.exe} umieszczony w tym samym folderze co plik tekstowy. Wygenerowane zostaną trzy zestawy wykresów w osobnych oknach, przedstawiając przemieszczenie źrenicy w osi względem punktu odniesienia (dla obu oczu wspólnie i osobno). Zostały one utworzone przy pomocy Pyplot, pozwalając użytkownikowi na swobodne przybliżanie i poruszanie się po wykresach. Możliwe jest także zapisanie utworzonego wykresu w wielu popularnych rozszerzeniach. Okna z wykresami wraz z terminalem przedstawione są na rysunku \ref{fig:eye_tracking_plot-wykresy-i-terminal}.

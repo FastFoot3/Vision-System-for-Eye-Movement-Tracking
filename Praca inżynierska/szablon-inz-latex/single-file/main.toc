@@ -51,7 +51,7 @@
 \contentsline {chapter}{\numberline {4}Specyfikacja zewnętrzna}{23}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Wymagania sprzętowe i programowe}{23}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Sposób instalacji}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Kategorie użytkowników}{23}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Kategorie użytkowników}{24}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Sposób obsługi}{24}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Kwestie bezpieczeństwa}{27}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Przykład działania}{27}{section.4.6}%
