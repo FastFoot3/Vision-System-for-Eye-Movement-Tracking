@@ -645,6 +645,32 @@
     \field{urlyear}{2025}
   \endentry
 
+  \entry{bib:youtube}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=sU}{%
+         family={sales},
+         familyi={s\bibinitperiod},
+         given={Uriel},
+         giveni={U\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{sU1}
+    \strng{fullhash}{sU1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Guy with drive jacket appears outta nowhere in the
+  brazillian's current president speech}
+    \verb{url}
+    \verb https://youtu.be/3ugQL5fCdbI?si=EQQ4jGSQ897SgRMX
+    \endverb
+    \field{year}{2022}
+    \field{urlday}{02}
+    \field{urlmonth}{02}
+    \field{urlyear}{2025}
+  \endentry
+
   \entry{bib:Scrum-guide}{online}{}{}
     \name{author}{2}{}{%
       {{hash=SK}{%

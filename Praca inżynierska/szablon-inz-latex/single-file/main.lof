@@ -19,9 +19,17 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Główne okna programu \texttt {eye\_\-detect.exe} w momencie uruchamiania, przed połączeniem z kamerą.}}{26}{figure.caption.23}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Wizualizacja obrazów binarnych wykorzystywanych w procesie wykrywania źrenic i odbicia rogówkowego.}}{27}{figure.caption.24}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Okna programu \texttt {eye\_\-tracking\_\-plot.exe}, przedstawiające wykresy czasowe przemieszczenia źrenicy i terminal.}}{28}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Podpis rysunku po rysunkiem.}}{30}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Użytkownik decyduje się na rozpoczęcie śledzenia.}}{29}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Użytkownik uruchomił pomyślnie system do śledzenia ruchu gałek ocznych.}}{30}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Użytkownik poprawił warunki oświetleniowe i dostosował ustawienia programu.}}{30}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Użytkownik uruchamia krótkie nagranie do analizy uwagi wzrokowej.}}{30}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Użytkownik decyduje się na wygenerowanie wykresów czasowych z zebranych pomiarów.}}{31}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Użytkownik analizuje wykresy dla obu oczu.}}{31}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Użytkownik dostosowuje ustawienia wizualne wykresów.}}{31}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Użytkownik zapisuje wykresy czasowe w wybranym przez siebie rozszerzeniu.}}{32}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Podpis rysunku po rysunkiem.}}{33}{figure.caption.34}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Pseudokod w \texttt {listings}.}}{32}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Pseudokod w \texttt {listings}.}}{36}{figure.caption.35}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

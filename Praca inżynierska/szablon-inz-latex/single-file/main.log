@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  2 FEB 2025 20:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  2 FEB 2025 23:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -972,26 +972,33 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \extratabsurround=\skip98
 \backup@length=\skip99
 \ar@cellbox=\box77
-)) (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count491
-\lst@gtempboxa=\box78
-\lst@token=\toks54
-\lst@length=\count492
+)) (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count491
+\float@exts=\toks54
+\float@box=\box78
+\@float@everytoks=\toks55
+\@floatcapt=\box79
+) (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count492
+\lst@gtempboxa=\box80
+\lst@token=\toks56
+\lst@length=\count493
 \lst@currlwidth=\dimen324
-\lst@column=\count493
-\lst@pos=\count494
+\lst@column=\count494
+\lst@pos=\count495
 \lst@lostspace=\dimen325
 \lst@width=\dimen326
-\lst@newlines=\count495
-\lst@lineno=\count496
+\lst@newlines=\count496
+\lst@lineno=\count497
 \lst@maxwidth=\dimen327
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2024/05/25 1.10b (Carsten Heinz)
 ) (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
-\c@lstnumber=\count497
-\lst@skipnumbers=\count498
-\lst@framebox=\box79
+\c@lstnumber=\count498
+\lst@skipnumbers=\count499
+\lst@framebox=\box81
 ) (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2024/05/25 1.10b listings configuration
 ))
@@ -1003,30 +1010,30 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'polish'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 389.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 391.
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 389.
-LaTeX Font Info:    ... okay on input line 389.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 389.
-LaTeX Font Info:    ... okay on input line 389.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 389.
-LaTeX Font Info:    ... okay on input line 389.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 389.
-LaTeX Font Info:    ... okay on input line 389.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 389.
-LaTeX Font Info:    ... okay on input line 389.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 389.
-LaTeX Font Info:    ... okay on input line 389.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 389.
-LaTeX Font Info:    ... okay on input line 389.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 389.
-LaTeX Font Info:    ... okay on input line 389.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 389.
-LaTeX Font Info:    ... okay on input line 389.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 391.
+LaTeX Font Info:    ... okay on input line 391.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 391.
+LaTeX Font Info:    ... okay on input line 391.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 391.
+LaTeX Font Info:    ... okay on input line 391.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 391.
+LaTeX Font Info:    ... okay on input line 391.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 391.
+LaTeX Font Info:    ... okay on input line 391.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 391.
+LaTeX Font Info:    ... okay on input line 391.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 391.
+LaTeX Font Info:    ... okay on input line 391.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 391.
+LaTeX Font Info:    ... okay on input line 391.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 391.
+LaTeX Font Info:    ... okay on input line 391.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1064,24 +1071,24 @@ LaTeX Font Info:    ... okay on input line 389.
 
 (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count499
+\scratchcounter=\count500
 \scratchdimen=\dimen328
-\scratchbox=\box80
-\nofMPsegments=\count500
-\nofMParguments=\count501
-\everyMPshowfont=\toks55
-\MPscratchCnt=\count502
+\scratchbox=\box82
+\nofMPsegments=\count501
+\nofMParguments=\count502
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count503
 \MPscratchDim=\dimen329
-\MPnumerator=\count503
-\makeMPintoPDFobject=\count504
-\everyMPtoPDFconversion=\toks56
+\MPnumerator=\count504
+\makeMPintoPDFobject=\count505
+\everyMPtoPDFconversion=\toks58
 ) (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 389.
+Package hyperref Info: Link coloring OFF on input line 391.
  (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1089,9 +1096,10 @@ Package hyperref Info: Link coloring OFF on input line 389.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 389.
+ on input line 391.
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'polish'...
@@ -1119,16 +1127,16 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 389.
-Package biblatex Info: Reference segment=0 on input line 389.
+Package biblatex Info: Reference section=0 on input line 391.
+Package biblatex Info: Reference segment=0 on input line 391.
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-polish.trsl
 File: translations-basic-dictionary-polish.trsl (polish translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `polish'. on input line 389.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `polish'. on input line 391.
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-\c@lstlisting=\count505
+\c@lstlisting=\count506
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1161,14 +1169,14 @@ File: translations-basic-dictionary-english.trsl (english translation file `tran
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 414.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 416.
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 <politechnika_sl_logo_bw_pion_pl.pdf, id=186, 179.67125pt x 230.8625pt>
 File: politechnika_sl_logo_bw_pion_pl.pdf Graphic file (type pdf)
 <use politechnika_sl_logo_bw_pion_pl.pdf>
-Package pdftex.def Info: politechnika_sl_logo_bw_pion_pl.pdf  used on input line 416.
+Package pdftex.def Info: politechnika_sl_logo_bw_pion_pl.pdf  used on input line 418.
 (pdftex.def)             Requested size: 142.26378pt x 182.80913pt.
 
 
@@ -1237,7 +1245,7 @@ Underfull \vbox (badness 1478) has occurred while \output is active []
 
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 558.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 560.
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1268,7 +1276,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <pic/modele/model_sakad.png, id=306, 337.26pt x 60.225pt>
 File: pic/modele/model_sakad.png Graphic file (type png)
 <use pic/modele/model_sakad.png>
-Package pdftex.def Info: pic/modele/model_sakad.png  used on input line 633.
+Package pdftex.def Info: pic/modele/model_sakad.png  used on input line 635.
 (pdftex.def)             Requested size: 227.62206pt x 40.64735pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1286,7 +1294,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <pic/modele/model_smooth.png, id=328, 427.5975pt x 173.64874pt>
 File: pic/modele/model_smooth.png Graphic file (type png)
 <use pic/modele/model_smooth.png>
-Package pdftex.def Info: pic/modele/model_smooth.png  used on input line 662.
+Package pdftex.def Info: pic/modele/model_smooth.png  used on input line 664.
 (pdftex.def)             Requested size: 273.14923pt x 110.92549pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1382,7 +1390,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <pic/use case/use case diagram.png, id=419, 1095.09125pt x 1155.31625pt>
 File: pic/use case/use case diagram.png Graphic file (type png)
 <use pic/use case/use case diagram.png>
-Package pdftex.def Info: pic/use case/use case diagram.png  used on input line 811.
+Package pdftex.def Info: pic/use case/use case diagram.png  used on input line 813.
 (pdftex.def)             Requested size: 455.24411pt x 480.27586pt.
 
 
@@ -1466,7 +1474,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 934.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 936.
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1482,12 +1490,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <pic/obsługa/okna przy otwarciu.png, id=525, 983.47424pt x 407.72325pt>
 File: pic/obsługa/okna przy otwarciu.png Graphic file (type png)
 <use pic/obsługa/okna przy otwarciu.png>
-Package pdftex.def Info: pic/obsługa/okna przy otwarciu.png  used on input line 948.
+Package pdftex.def Info: pic/obsługa/okna przy otwarciu.png  used on input line 950.
 (pdftex.def)             Requested size: 273.14923pt x 113.24097pt.
 <pic/obsługa/okna binarne.png, id=527, 307.74976pt x 196.3335pt>
 File: pic/obsługa/okna binarne.png Graphic file (type png)
 <use pic/obsługa/okna binarne.png>
-Package pdftex.def Info: pic/obsługa/okna binarne.png  used on input line 957.
+Package pdftex.def Info: pic/obsługa/okna binarne.png  used on input line 959.
 (pdftex.def)             Requested size: 273.14923pt x 174.2749pt.
 
 
@@ -1511,7 +1519,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <pic/obsługa/wykresy.png, id=542, 1155.1155pt x 611.886pt>
 File: pic/obsługa/wykresy.png Graphic file (type png)
 <use pic/obsługa/wykresy.png>
-Package pdftex.def Info: pic/obsługa/wykresy.png  used on input line 978.
+Package pdftex.def Info: pic/obsługa/wykresy.png  used on input line 980.
 (pdftex.def)             Requested size: 273.14923pt x 144.68953pt.
 
 
@@ -1523,6 +1531,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [28 <./pic/obsługa/wykresy.png>]
+<pic/scenariusz/odpalamy śledzenie.png, id=551, 643.203pt x 255.354pt>
+File: pic/scenariusz/odpalamy śledzenie.png Graphic file (type png)
+<use pic/scenariusz/odpalamy śledzenie.png>
+Package pdftex.def Info: pic/scenariusz/odpalamy śledzenie.png  used on input line 1004.
+(pdftex.def)             Requested size: 273.14923pt x 108.44023pt.
+<pic/scenariusz/śledzenie start.png, id=553, 886.512pt x 449.88075pt>
+File: pic/scenariusz/śledzenie start.png Graphic file (type png)
+<use pic/scenariusz/śledzenie start.png>
+Package pdftex.def Info: pic/scenariusz/śledzenie start.png  used on input line 1013.
+(pdftex.def)             Requested size: 273.14923pt x 138.61723pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1531,7 +1550,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[29]
+[29 <./pic/scenariusz/odpalamy śledzenie.png>]
+<pic/scenariusz/poprawienie śledzenia.png, id=564, 885.3075pt x 449.2785pt>
+File: pic/scenariusz/poprawienie śledzenia.png Graphic file (type png)
+<use pic/scenariusz/poprawienie śledzenia.png>
+Package pdftex.def Info: pic/scenariusz/poprawienie śledzenia.png  used on input line 1022.
+(pdftex.def)             Requested size: 273.14923pt x 138.61676pt.
+<pic/scenariusz/filmik yt.png, id=567, 1156.32pt x 650.43pt>
+File: pic/scenariusz/filmik yt.png Graphic file (type png)
+<use pic/scenariusz/filmik yt.png>
+Package pdftex.def Info: pic/scenariusz/filmik yt.png  used on input line 1031.
+(pdftex.def)             Requested size: 273.14923pt x 153.64505pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1540,13 +1570,71 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[30]
+[30 <./pic/scenariusz/śledzenie start.png> <./pic/scenariusz/poprawienie śledzenia.png> <./pic/scenariusz/filmik yt.png>]
+<pic/scenariusz/odpalam wykresy.png, id=581, 525.162pt x 163.812pt>
+File: pic/scenariusz/odpalam wykresy.png Graphic file (type png)
+<use pic/scenariusz/odpalam wykresy.png>
+Package pdftex.def Info: pic/scenariusz/odpalam wykresy.png  used on input line 1040.
+(pdftex.def)             Requested size: 273.14923pt x 85.20271pt.
+<pic/scenariusz/analiza wykresów.png, id=583, 1156.32pt x 650.43pt>
+File: pic/scenariusz/analiza wykresów.png Graphic file (type png)
+<use pic/scenariusz/analiza wykresów.png>
+Package pdftex.def Info: pic/scenariusz/analiza wykresów.png  used on input line 1049.
+(pdftex.def)             Requested size: 273.14923pt x 153.64505pt.
+<pic/scenariusz/dostosowanie wykresów.png, id=585, 1156.32pt x 650.43pt>
+File: pic/scenariusz/dostosowanie wykresów.png Graphic file (type png)
+<use pic/scenariusz/dostosowanie wykresów.png>
+Package pdftex.def Info: pic/scenariusz/dostosowanie wykresów.png  used on input line 1058.
+(pdftex.def)             Requested size: 273.14923pt x 153.64505pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[31 <./pic/scenariusz/odpalam wykresy.png> <./pic/scenariusz/analiza wykresów.png> <./pic/scenariusz/dostosowanie wykresów.png>]
+<pic/scenariusz/zapisanie wykresow.png, id=601, 605.8635pt x 434.22224pt>
+File: pic/scenariusz/zapisanie wykresow.png Graphic file (type png)
+<use pic/scenariusz/zapisanie wykresow.png>
+Package pdftex.def Info: pic/scenariusz/zapisanie wykresow.png  used on input line 1067.
+(pdftex.def)             Requested size: 273.14923pt x 195.76924pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32 <./pic/scenariusz/zapisanie wykresow.png>]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[33]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[34
+
+]
 Rozdzia\l  5.
 
 
-[31
-
-]
+[35]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1555,39 +1643,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[32]
+[36]
 Rozdzia\l  6.
 
-
-[33
-
-]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[34]
-Rozdzia\l  7.
-
-
-[35
-
-]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[36
-
-]
 
 [37
 
@@ -1601,25 +1659,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [38]
-Overfull \hbox (6.5381pt too wide) in paragraph at lines 1228--1228
-[]\T1/lmr/m/n/12 PassMark\TS1/lmr/m/n/12 � \T1/lmr/m/n/12 So-ftware. \T1/lmr/m/it/12 About Pas-sMark So-ftware\T1/lmr/m/n/12 . 2025. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / www . passmark .
- []
+Rozdzia\l  7.
 
 
-Overfull \hbox (5.42575pt too wide) in paragraph at lines 1228--1228
-[]\T1/lmr/m/n/12 The Mat-plo-tlib de-ve-lop-ment team. \T1/lmr/m/it/12 Py-plot tu-to-rial\T1/lmr/m/n/12 . 2025. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / matplotlib .
- []
+[39
 
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[39]
+]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1632,13 +1677,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 
-[41]
-
-[42]
-
-[43
+[41
 
 ]
+Overfull \hbox (13.31996pt too wide) in paragraph at lines 1304--1304
+\T1/lmr/m/it/12 pre-si-dent spe-ech\T1/lmr/m/n/12 . 2022. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / youtu . be / 3ugQL5fCdbI ? si = EQQ4jGSQ897SgRMX$[]
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42]
+Overfull \hbox (6.5381pt too wide) in paragraph at lines 1304--1304
+[]\T1/lmr/m/n/12 PassMark\TS1/lmr/m/n/12 � \T1/lmr/m/n/12 So-ftware. \T1/lmr/m/it/12 About Pas-sMark So-ftware\T1/lmr/m/n/12 . 2025. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / www . passmark .
+ []
+
+
+Overfull \hbox (5.42575pt too wide) in paragraph at lines 1304--1304
+[]\T1/lmr/m/n/12 The Mat-plo-tlib de-ve-lop-ment team. \T1/lmr/m/it/12 Py-plot tu-to-rial\T1/lmr/m/n/12 . 2025. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / matplotlib .
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[43]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1653,23 +1727,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [45]
 
+[46]
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[46
+[47
 
 ]
-Overfull \hbox (2.38579pt too wide) in paragraph at lines 1303--1304
-[]\T1/lmr/m/n/12 film po-ka-zu-j�cy dzia-�a-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
- []
-
-
-
-[47]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1680,11 +1742,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [48
 
-] (main.lof)
-\tf@lof=\write7
-\openout7 = `main.lof'.
-
-
+]
 
 [49]
 
@@ -1697,35 +1755,70 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [50
 
+]
+Overfull \hbox (2.38579pt too wide) in paragraph at lines 1379--1380
+[]\T1/lmr/m/n/12 film po-ka-zu-j�cy dzia-�a-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
+ []
+
+
+
+[51]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[52
+
+] (main.lof)
+\tf@lof=\write7
+\openout7 = `main.lof'.
+
+
+
+[53]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[54
+
 ] (main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
 
 
-[51] (main.aux)
+[55] (main.aux)
  ***********
 LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3439C0DBA3969514B67D1F521E4EE48B;9302.
+(rerunfilecheck)             Checksum: A17B0227873D3937AE6E25157A50868C;9302.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50148 strings out of 473938
- 1159671 string characters out of 5724560
+ 50298 strings out of 473938
+ 1163821 string characters out of 5724560
  2003893 words of memory out of 5000000
- 72064 multiletter control sequences out of 15000+600000
+ 72189 multiletter control sequences out of 15000+600000
  626217 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,2058b,3512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (57 pages, 900916 bytes).
+Output written on main.pdf (61 pages, 6753472 bytes).
 PDF statistics:
- 856 PDF objects out of 1000 (max. 8388607)
- 201 named destinations out of 1000 (max. 500000)
- 408 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 932 PDF objects out of 1000 (max. 8388607)
+ 222 named destinations out of 1000 (max. 500000)
+ 448 words of extra memory for PDF output out of 10000 (max. 10000000)
 

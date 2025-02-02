@@ -323,6 +323,8 @@
 
 \usepackage{siunitx}
 \sisetup{locale = PL}
+
+\usepackage{float}
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % listingi i fragmentu kodu źródłowego 
@@ -878,9 +880,9 @@ Praca nad projektem przebiegała w sposób iteracyjny, co przypomina metodykę z
 %--------------------------------------
 %
 %
-% TODO: scenariusze korzystania z systemu
+% TODO:
 %
-% Status: 85%
+% Status: 99.9% (basically DONE)
 %--------------------------------------
 \chapter{Specyfikacja zewnętrzna}
 \label{ch:Specyfikacja-zewnetrzna}
@@ -889,7 +891,7 @@ Praca nad projektem przebiegała w sposób iteracyjny, co przypomina metodykę z
 
 % w zasadzie trzeba było by to sprawdzić na wirtualce, albo można napisać od czapy że ma wymagania takie jak pyinstaller + kamera, wyświetlacz - NIE! ROBIMY TO NA MENADŻERZE ZADAŃ
 
-By móc korzystać z programu śledzącego ruch gałek ocznych wymagane jest użycie kamery i komputera wyposażonego w odpowiednie podzespoły i oprogramowanie. Jakość i rodzaj wymaganej kamery internetowej jest z grubsza bez znaczenia, jako że podczas korzystania z tego systemu, można dostosować jego ustawienia rekompensując niedociągnięcia sprzętowe. Równie prostym do wyznaczenia wymogiem jest wolne miejsce na dysku, które odpowiada sumie rozmiarów plików wykonywalnych z teoretycznym zapasem na powiększenie się pliku tekstowego z pomiarami ($10\%$ sumarycznego rozmiaru plików programowych), wynoszące $100 \ \unit{\mega\byte} \cdot 1.1 = 110 \ \unit{\mega\byte}$. Dzięki plikom wykonywalnym, do uruchomienia programu nie jest wymagane także żadne inne oprogramowanie. Aczkolwiek kwestia wymagań wydajności procesora, rozmiaru pamięci RAM oraz wspieranego systemu operacyjnego wymaga głębszej analizy.
+By móc korzystać z programu śledzącego ruch gałek ocznych wymagane jest użycie kamery i komputera wyposażonego w odpowiednie podzespoły i oprogramowanie. Jakość i rodzaj wymaganej kamery internetowej jest z grubsza bez znaczenia, jako że podczas korzystania z tego systemu, można dostosować jego ustawienia rekompensując niedociągnięcia kamerki internetowej. Równie prostym do wyznaczenia wymogiem jest wolne miejsce na dysku, które odpowiada sumie rozmiarów plików wykonywalnych z teoretycznym zapasem na powiększenie się pliku tekstowego z pomiarami ($10\%$ sumarycznego rozmiaru plików programowych), wynoszące $100 \ \unit{\mega\byte} \cdot 1.1 = 110 \ \unit{\mega\byte}$. Dzięki plikom wykonywalnym, do uruchomienia programu nie jest wymagane także żadne inne oprogramowanie. Aczkolwiek kwestia wymagań wydajności procesora, rozmiaru pamięci RAM oraz wspieranego systemu operacyjnego wymaga głębszej analizy.
 
 \subsection{Procesor i pamięć RAM}
 \label{subsec:Procesor-i-pamięć-RAM}
@@ -903,7 +905,7 @@ Do wyznaczenia procesora spełniającego minimalne wymagania do stabilnego korzy
 	\label{eq:PassMark-min}
 \end{align}
 
-Procesorem, który posiada niewiele wyższą ocenę równą $8407$ od obliczonego $P_{min}$ jest Intel Xeon E5-4650 @ 2.70GHz \cite{bib:min-procesor-benchmark}. Jednakże dla wygody użytkowania oraz zapewnienia płynnej pracy programu w różnych warunkach, warto zastosować procesor o wyższej wydajności. Dlatego, przyjmując dodatkowy zapas wydajności na poziomie 20\%, zalecany wynik PassMark ($P_{rec}$) obliczony został za pomocą równania \ref{eq:PassMark-rec}.
+Procesorem, który posiada niewiele wyższą ocenę od obliczonego $P_{min}$ równą $8407$, jest Intel Xeon E5-4650 @ 2.70GHz \cite{bib:min-procesor-benchmark}. Jednakże dla wygody użytkowania oraz zapewnienia płynnej pracy programu w różnych warunkach, warto zastosować procesor o wyższej wydajności. Dlatego, przyjmując dodatkowy zapas wydajności na poziomie 20\%, zalecany wynik PassMark ($P_{rec}$) obliczony został za pomocą równania \ref{eq:PassMark-rec}.
 
 \begin{align}
 	P_{rec} = 1.2 \cdot P_{min} = 1.2 \cdot 8325 = 9990
@@ -950,7 +952,7 @@ W pierwszej kolejności użytkownik musi zdecydować się czy chce rozpocząć �
 	\label{fig:eye_detect-uruchamianie}
 \end{figure}
 
-Jeśli program uzyska dostęp do kamery automatycznie zacznie pobierać z niej obraz, który przekształci do odcieni szarości, żeby móc wyszukiwać na nim twarz i oczy używając klasyfikatora Haar. Gdy uda się wyszukać oczy obraz w odcieniach szarości zostanie zbinaryzowany i poddany operacją morfologicznym w celu wyszukania źrenice. Wszystkie wykryte elementy zostają oznaczone na obrazie barwnym i wyświetlone w oknie ,,eye detection''. Podczas działania programu mogą otworzyć się jeszcze dwa dodatkowe okna: ,,Bin eyes for testing'', pojawiający się w momencie wykrycia oczu oraz ,,Bin reflection for testing'', które otworzy się w momencie włączenia trybu kalibracji zaawansowanej. ,,Bin eyes for testing'' obrazuje binaryzację źrenic przed (po lewej) i po (po prawej) operacjach morfologicznych, z kolei ,,Bin reflection for testing'' pokazuje binaryzację dla odbicia rogówkowego. Okna te są wizualizacją techniczną ułatwiającą dostrojenie programu i są przedstawione na rysunku \ref{fig:eye_detect-okna-bin}.
+Jeśli program uzyska dostęp do kamery automatycznie zacznie pobierać z niej obraz, który przekształci do odcieni szarości, żeby móc wyszukiwać na nim twarz i oczy używając klasyfikatora Haar. Gdy uda się wyszukać oczy, obraz w odcieniach szarości zostanie zbinaryzowany i poddany operacją morfologicznym w celu wyszukania źrenic. Wszystkie wykryte elementy zostają oznaczone na obrazie barwnym i wyświetlone w oknie ,,eye detection''. Podczas działania programu mogą otworzyć się jeszcze dwa dodatkowe okna: ,,Bin eyes for testing'', pojawiający się w momencie wykrycia oczu oraz ,,Bin reflection for testing'', które otworzy się w momencie włączenia trybu kalibracji zaawansowanej. ,,Bin eyes for testing'' obrazuje binaryzację źrenic przed (po lewej) i po (po prawej) operacjach morfologicznych, z kolei ,,Bin reflection for testing'' pokazuje binaryzację dla odbicia rogówkowego. Okna te są wizualizacją techniczną ułatwiającą dostrojenie programu i są przedstawione na rysunku \ref{fig:eye_detect-okna-bin}.
 
 \begin{figure}[htbp]
 	\centering
@@ -959,13 +961,13 @@ Jeśli program uzyska dostęp do kamery automatycznie zacznie pobierać z niej o
 	\label{fig:eye_detect-okna-bin}
 \end{figure}
 
-Użytkownik może wchodzić w interakcję z systemem na dwa sposoby, poprzez interfejs graficzny w formie suwaków widoczny na rysunku \ref{fig:eye_detect-uruchamianie}, lub przez naciśnięcie odpowiedniego klawisza na klawiaturze. Nad obrazem w oknie ,,eye detection'' widnieją dwa suwaki, których pozycje można zmieniać poprzez kliknięcie lub przeciąganie myszą. Suwak ,,Eye tresh'' (pierwszy od góry), odpowiada progowi używanego w binaryzacji źrenic, a jego wartość ustawiona jest na $15$, pozwalając na stabilne śledzenie przy dobrym oświetleniu frontalnym. Jednakże, w zależności od warunków oświetleniowych, a także preferencji związanych z stabilnością i dokładnością pomiaru, użytkownik powinien ręcznie dostosować wartość progu, aby zapewnić optymalną detekcję źrenic. Następny suwak ,,Light tresh'' (drugi od góry), używany jest jedynie w przypadku kalibracji zaawansowanej, on także odpowiada progowi binaryzacji, ale w tym przypadku odbicia rogówkowego. Użytkownik wyposażony w odpowiednio intensywne źródło światła i decydujący się na tego typu kalibrację punktu odniesienia, powinien ręcznie wybrać wartość na suwaku tak, aby na obrazie binaryzacji pozostał jedynie niewielki jasny punkt. 
+Użytkownik może wchodzić w interakcję z systemem na dwa sposoby, poprzez interfejs graficzny w formie suwaków widocznych na rysunku \ref{fig:eye_detect-uruchamianie}, lub przez naciśnięcie odpowiedniego klawisza na klawiaturze. Nad obrazem w oknie ,,eye detection'' widnieją dwa suwaki, których pozycje można zmieniać poprzez kliknięcie lub przeciąganie myszą. Suwak ,,Eye tresh'' (pierwszy od góry), odpowiada progowi używanego w binaryzacji źrenic, a jego wartość ustawiona jest na $15$, pozwalając na stabilne śledzenie przy dobrym oświetleniu frontalnym. Jednakże, w zależności od warunków oświetleniowych, a także preferencji związanych z stabilnością i dokładnością pomiaru, użytkownik powinien ręcznie dostosować wartość progu, aby zapewnić optymalną detekcję źrenic. Następny suwak ,,Light tresh'' (drugi od góry), używany jest jedynie w przypadku kalibracji zaawansowanej, on także odpowiada progowi binaryzacji, ale w tym przypadku odbicia rogówkowego. Użytkownik wyposażony w odpowiednio intensywne źródło światła i decydujący się na tego typu kalibrację punktu odniesienia, powinien ręcznie wybrać wartość na suwaku tak, aby na obrazie binaryzacji pozostał jedynie niewielki jasny punkt. 
 
 Reszta funkcjonalności dostępna jest po naciśnięciu danego klawiszu na klawiaturze, ich wykaz prezentuje się następująco:
 
 \begin{description}
 	\item[z (kalibracja automatyczna) --] tryb kalibracji punktu odniesienia, który ustawiany jest w momencie uruchomienia programu. Pozwala na pomiar ruchu źrenic względem środka obszaru wykrytego oka.
-	\item[x (kalibracja zaawansowana) --] tryb kalibracji punktu odniesienia na podstawie obrazu binarnego oka. Pozwala na pomiar ruchu źrenic względem wykrytego odbicia rogówkowego oka.
+	\item[x (kalibracja zaawansowana) --] tryb kalibracji punktu odniesienia na podstawie obrazu binarnego oka. Pozwala na pomiar ruchu źrenic względem wykrytego odbicia rogówkowego.
 	\item[c (kalibracja ręczna) --]  tryb kalibracji punktu odniesienia na aktualną pozycję źrenic. Pozwala na pomiar ruchu źrenic względem ustalonego miejsca w obszarze wykrytego oka.
 	\item[r (przełączanie trybów rysowania) --] są dostępne trzy tryby rysowania wykrytych obszarów na obrazie z kamery. Pierwszy tryb jest ustawiony wraz z uruchomieniem programu obrysowując: twarz, ograniczony obszar twarzy, oczy, źrenice, środki źrenic oraz punkt odniesienia. Drugi tryb pozwala na większą przejrzystość rysując najistotniejsze elementy detekcji, czyli środek źrenic i punkt odniesienia. Trzeci tryb wyłącza rysowanie, zwracając niezmodyfikowany obraz z kamery.
 	\item[q (wyłączenie programu) --] jedyny poprawny sposób na zatrzymanie systemu, po naciśnięciu bezpiecznie zamyka plik tekstowy z pomiarami, zwalnia kamerę i zamyka wszystkie okna programu.
@@ -980,7 +982,7 @@ Po udanej sesji śledzenia ruchu gałek ocznych, można zwizualizować zebrane p
 	\label{fig:eye_tracking_plot-wykresy-i-terminal}
 \end{figure}
 
-W momencie zamknięcia programu, wszystkie okna, a w tym okno terminalu, zostają zamknięte. Z racji tego użytkownicy zainteresowani informacjami zwracanymi w terminalu -- takimi jak informacja o błędzie, które mogą zostać zwrócone w przypadku uszkodzonego pliku, lub braku dostępu do kamery -- mogą uruchomić dany plik przy użyciu terminala. Wystarczy ustawić katalog roboczy terminala na ten, w którym znajduje się plik wykonywalny, a następnie wpisać jego nazwę wraz z rozszerzeniem i nacisnąć enter. W ten sposób po zakończeniu działania programu informacje w terminalu zostaną zachowane.
+W momencie zamknięcia programu, wszystkie okna, a w tym okno terminalu, zostają zamknięte. Z racji tego, użytkownicy zainteresowani informacjami zwracanymi w terminalu -- takimi jak informacja o błędzie, które mogą zostać zwrócone w przypadku uszkodzonego pliku, lub braku dostępu do kamery -- mogą uruchomić dany plik przy użyciu terminala. Wystarczy ustawić katalog roboczy terminala na ten, w którym znajduje się plik wykonywalny, a następnie wpisać jego nazwę wraz z rozszerzeniem i nacisnąć enter. W ten sposób po zakończeniu działania programu informacje w terminalu zostaną zachowane.
 
 \section{Kwestie bezpieczeństwa}
 \label{sec:Kwestie-bezpieczenstwa}
@@ -992,7 +994,81 @@ PyInstaller ostrzega, że istnieją niebezpieczeństwa związane z używaniem pl
 \section{Scenariusze korzystania z systemu}
 \label{Scenariusze-korzystania-z-systemu}
 
+Dla lepszego zobrazowania możliwości systemu śledzącego ruch gałek ocznych przedstawione zostaną kroki przykładowego scenariusza, ilustrowany zrzutami ekranu. 
 
+\begin{enumerate}
+	\item Użytkownik decyduje się na podjęcie śledzenia, więc uruchamia plik wykonywalny \texttt{eye\_\-detect.exe} (rysunek \ref{fig:scenariusz-odpalanie-sledzenia}).
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{pic/scenariusz/odpalamy śledzenie.png}
+		\caption{Użytkownik decyduje się na rozpoczęcie śledzenia.}
+		\label{fig:scenariusz-odpalanie-sledzenia}
+	\end{figure}
+
+	\item Program nie napotkał żadnych błędów i uruchomił się poprawnie wyświetlając obraz z kamery, źrenice nie zostały wykryte z powodu niesprzyjającego oświetlenia (rysunek \ref{fig:scenariusz-siema}).
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{pic/scenariusz/śledzenie start.png}
+		\caption{Użytkownik uruchomił pomyślnie system do śledzenia ruchu gałek ocznych.}
+		\label{fig:scenariusz-siema}
+	\end{figure}
+
+	\item Użytkownik poprawił swoje otoczenie, oświetlając twarz od frontu i odsłaniając włosy, tak żeby nie przeszkadzały w detekcji. Zmieniono także ustawienia, zwiększając próg detekcji i kalibrując punkt odniesienia przez spojrzenie się na środek ekranu i naciśnięcie klawisz ,,c'' (rysunek \ref{fig:scenariusz-poprawione-swiatlo}).
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{pic/scenariusz/poprawienie śledzenia.png}
+		\caption{Użytkownik poprawił warunki oświetleniowe i dostosował ustawienia programu.}
+		\label{fig:scenariusz-poprawione-swiatlo}
+	\end{figure}
+
+	\item Celem śledzenia była analiza ruchu gałek ocznych w trakcie oglądania krótkiego filmu na platformie YouTube (rysunek \ref{fig:scenariusz-yt}) \cite{bib:youtube}.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{pic/scenariusz/filmik yt.png}
+		\caption{Użytkownik uruchamia krótkie nagranie do analizy uwagi wzrokowej.}
+		\label{fig:scenariusz-yt}
+	\end{figure}
+
+	\item Po przeprowadzonym eksperymencie naciśnięto klawisz ,,q'' zakańczając pomiar. Użytkownik następnie zdecydował się na wygenerowanie wykresów czasowych do analizy i uruchomił plik \texttt{eye\_\-tracking\_\-plot.exe} (rysunek \ref{fig:scenariusz-odpalanie-wykresy}).
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{pic/scenariusz/odpalam wykresy.png}
+		\caption{Użytkownik decyduje się na wygenerowanie wykresów czasowych z zebranych pomiarów.}
+		\label{fig:scenariusz-odpalanie-wykresy}
+	\end{figure}
+
+	\item Analiza zebranych pomiarów w tym przypadku najlepiej widoczna jest dla wykresów obu oczu jednocześnie. Filmik trwał $33$ sekundy, a spojrzenie kierowane było głównie na środek ekranu i wzdłuż osi $Y$, co widoczne jest na wykresie (rysunek \ref{fig:scenariusz-analiza-wykresy}).
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{pic/scenariusz/analiza wykresów.png}
+		\caption{Użytkownik analizuje wykresy dla obu oczu.}
+		\label{fig:scenariusz-analiza-wykresy}
+	\end{figure}
+
+	\item Użytkownik przybliżył wykresy na interesującą część, a następnie zmodyfikował rozmieszczenie i wielkość pola wykresów, dla lepszej widoczności (rysunek \ref{fig:scenariusz-ustawianie-wykresy}).
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{pic/scenariusz/dostosowanie wykresów.png}
+		\caption{Użytkownik dostosowuje ustawienia wizualne wykresów.}
+		\label{fig:scenariusz-ustawianie-wykresy}
+	\end{figure}
+
+	\item Na koniec wykresy zostają zapisane, użytkownik może wybrać format, który najbardziej odpowiada jego wymaganiom i preferencją (rysunek \ref{fig:scenariusz-zapisywanie-wykresy})
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{pic/scenariusz/zapisanie wykresow.png}
+		\caption{Użytkownik zapisuje wykresy czasowe w wybranym przez siebie rozszerzeniu.}
+		\label{fig:scenariusz-zapisywanie-wykresy}
+	\end{figure}
+\end{enumerate}
 
 Jeśli „Specyfikacja zewnętrzna”:
 \begin{itemize}
