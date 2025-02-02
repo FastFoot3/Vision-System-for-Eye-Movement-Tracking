@@ -878,9 +878,9 @@ Praca nad projektem przebiegała w sposób iteracyjny, co przypomina metodykę z
 %--------------------------------------
 %
 %
-% TODO: przykład działania, scenariusze korzystania z systemu
+% TODO: scenariusze korzystania z systemu
 %
-% Status: 60%
+% Status: 85%
 %--------------------------------------
 \chapter{Specyfikacja zewnętrzna}
 \label{ch:Specyfikacja-zewnetrzna}
@@ -929,14 +929,16 @@ Kwestia systemu operacyjnego jest przede wszystkim zależna od programu PyInstal
 \end{description}
 
 \section{Sposób instalacji}
+\label{sec:Sposob-instalacji}
 
 Rozwiązanie dzieli się na dwa pliki wykonywalne \texttt{eye\_\-detect.exe} \allowbreak i \texttt{eye\_\-tracking\_\-plot.exe}, które nie wymagają przeprowadzenia procesu instalacji. By uruchomić owe programy, wystarczy umieścić je na komputerze przy użyciu przenośnej pamięci USB, lub pobierając je z repozytorium Github, albo z udostępnionego folderu na dysku google pod linkiem \url{https://drive.google.com/drive/folders/1RGOLKfGqTqCwREWvMt3sQEOPwD7aKOdE?usp=sharing}. System do śledzenia ruchu gałek ocznych uruchomi się przez otworzenie pliku \texttt{eye\_detect.exe}, a zebrane dane można wyświetlić w formie wykresów czasowych otwierając plik \texttt{eye\_tracking\_plot.exe}. Plik \texttt{eye\_tracking\_data.txt} nie jest wymagany do uruchomienia \texttt{eye\_detect.exe}, który w przypadku jego braku utworzy go na koniec śledzenia, jednak jest on wymagany do uruchomienia \texttt{eye\_tracking\_plot.exe}. Plik tekstowy \texttt{eye\_tracking\_data.txt} oraz \texttt{Readme.txt} zawierający instrukcję instalacji i użytkowania dostępny jest razem z resztą plików wykonywalnych na dysku Google i Github.
 
 \section{Kategorie użytkowników}
+\label{sec:Kategorie-uzytkownikow}
 
 Prezentowany system wizyjny do śledzenia ruchu gałek ocznych nie jest kierowany do konkretnej grupy odbiorców, jest on z założenia uniwersalny w zastosowaniu i niewymagający sprzętowo, pozwalając każdej osobie wyposażonej w komputer z kamerą i posiadającej zainteresowanie w dziedzinie okulografii cieszyć się jego możliwościami. Chociaż, tak jak wspomniano w punkcie \ref{subsec:zakres-dzialania-systemu}, rozwiązanie te oferuje przede wszystkim podstawowe funkcje śledzenia, może one okazać się użyteczne zarówno dla hobbystów, jak i studentów, czy badaczy. Bardziej zaawansowani użytkownicy mogą skorzystać z funkcji pomiaru względem odbicia rogówkowego, na przykład wyposażając system w kamerę NIR i diodę podczerwoną. Z drugiej strony osoby mniej zaznajomione z tematem, lub posiadające gorszej jakości sprzęt, mogą wykorzystać kalibrację ręczną jako prosty sposób na badanie skupienia uwagi na jednym punkcie ekranu. 
 
-\section{Sposób obsługi}
+\section{Sposób obsługi i działania}
 \label{sec:Sposob-obslugi}
 
 W pierwszej kolejności użytkownik musi zdecydować się czy chce rozpocząć śledzenie, czy wizualizacje pomiarów zebranych w pliku tekstowym, jako że funkcje te uruchamiane są przez osobne pliki wykonywalne. By rozpocząć śledzenie ruchu gałek ocznych, należy otworzyć plik \texttt{eye\_\-detect.exe} np. poprzez dwukrotne kliknięcie. Otwarty zostanie terminal na lokalizacji, w której znajduje się plik wykonywalny oraz okno ,,eye detection'', w którym, po uzyskaniu dostępu do kamery, wyświetlony zostanie obraz. Proces uruchamiania pokazano na rysunku \ref{fig:eye_detect-uruchamianie}.
@@ -948,7 +950,7 @@ W pierwszej kolejności użytkownik musi zdecydować się czy chce rozpocząć �
 	\label{fig:eye_detect-uruchamianie}
 \end{figure}
 
-Jeśli program uzyska dostęp do kamery automatycznie zacznie pobierać z niej obraz i wyszukiwać na nim twarz, oczy oraz źrenice, które oznaczy i wyświetli w oknie ,,eye detection''. Podczas działania programu mogą otworzyć się jeszcze dwa dodatkowe okna: ,,Bin eyes for testing'', pojawiający się w momencie wykrycia oczu oraz ,,Bin reflection for testing'', które otworzy się w momencie włączenia trybu kalibracji zaawansowanej. ,,Bin eyes for testing'' obrazuje binaryzację źrenic przed (po lewej) i po (po prawej) operacjach morfologicznych, z kolei ,,Bin reflection for testing'' pokazuje binaryzację dla odbicia rogówkowego. Okna te są wizualizacją techniczną ułatwiającą dostrojenie programu i są przedstawione na rysunku \ref{fig:eye_detect-okna-bin}.
+Jeśli program uzyska dostęp do kamery automatycznie zacznie pobierać z niej obraz, który przekształci do odcieni szarości, żeby móc wyszukiwać na nim twarz i oczy używając klasyfikatora Haar. Gdy uda się wyszukać oczy obraz w odcieniach szarości zostanie zbinaryzowany i poddany operacją morfologicznym w celu wyszukania źrenice. Wszystkie wykryte elementy zostają oznaczone na obrazie barwnym i wyświetlone w oknie ,,eye detection''. Podczas działania programu mogą otworzyć się jeszcze dwa dodatkowe okna: ,,Bin eyes for testing'', pojawiający się w momencie wykrycia oczu oraz ,,Bin reflection for testing'', które otworzy się w momencie włączenia trybu kalibracji zaawansowanej. ,,Bin eyes for testing'' obrazuje binaryzację źrenic przed (po lewej) i po (po prawej) operacjach morfologicznych, z kolei ,,Bin reflection for testing'' pokazuje binaryzację dla odbicia rogówkowego. Okna te są wizualizacją techniczną ułatwiającą dostrojenie programu i są przedstawione na rysunku \ref{fig:eye_detect-okna-bin}.
 
 \begin{figure}[htbp]
 	\centering
@@ -981,16 +983,16 @@ Po udanej sesji śledzenia ruchu gałek ocznych, można zwizualizować zebrane p
 W momencie zamknięcia programu, wszystkie okna, a w tym okno terminalu, zostają zamknięte. Z racji tego użytkownicy zainteresowani informacjami zwracanymi w terminalu -- takimi jak informacja o błędzie, które mogą zostać zwrócone w przypadku uszkodzonego pliku, lub braku dostępu do kamery -- mogą uruchomić dany plik przy użyciu terminala. Wystarczy ustawić katalog roboczy terminala na ten, w którym znajduje się plik wykonywalny, a następnie wpisać jego nazwę wraz z rozszerzeniem i nacisnąć enter. W ten sposób po zakończeniu działania programu informacje w terminalu zostaną zachowane.
 
 \section{Kwestie bezpieczeństwa}
+\label{sec:Kwestie-bezpieczenstwa}
 
 System do śledzenia ruchu gałek ocznych w żaden sposób nie przechowuje oraz nie nagrywa obrazów z kamery komputera, a wszelkie wykorzystywane zasoby zostają zwolnione w momencie zakończenia działania. Jedyną zapisywaną informacją są pomiary w pliku tekstowym, dostępnym w tym samym folderze co plik \texttt{eye\_\-detect.exe}, które można z łatwością usunąć przenosząc do kosza, a następnie opróżniając go. Prezentowany program nie korzysta także z połączenia sieciowego, wykonując wszystkie operacje lokalnie w katalogu, w którym się znajduje. 
 
 PyInstaller ostrzega, że istnieją niebezpieczeństwa związane z używaniem plików wykonywalnych w formie jednego pliku. PyInstaller rozpakowuje część swoich zasobów do tymczasowego folderu (nazwy zaczynające się od \_MEI) podczas uruchamiania aplikacji. Jeśli program zostanie nieoczekiwanie przerwany np. przez awarię, lub zakończenie przez Menedżera Zadań, folder ten może nie zostać usunięty. W skrajnych przypadkach -- przy częstych awariach -- może dojść do gromadzenia się niepotrzebnych plików, co w długoterminowej perspektywie może zużywać miejsce na dysku. Możliwe jest ręczne usunięcie nadmiarowych plików, które w przypadku systemu Windows zazwyczaj znajdują się w folderze ,,Temp'', można wyszukać jego lokalizację wpisując komendę \texttt{ECHO \-\%Temp\%} w wierszu poleceń. Nie należy także otwierać plików wykonywalnych utworzonych przez PyInstaller z uprawnieniami administratora, ponieważ daje to teoretyczną możliwość, że atakujący mógłby modyfikować pliki w tymczasowym folderze. Taka modyfikacja mogłaby potencjalnie prowadzić do eskalacji uprawnień \cite{bib:PyInstaller-how-it-works}.
 
-\section{Przykład działania}
-
-
-
 \section{Scenariusze korzystania z systemu}
+\label{Scenariusze-korzystania-z-systemu}
+
+
 
 Jeśli „Specyfikacja zewnętrzna”:
 \begin{itemize}

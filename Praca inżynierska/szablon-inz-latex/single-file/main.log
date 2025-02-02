@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  2 FEB 2025 18:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  2 FEB 2025 20:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1165,7 +1165,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 41
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<politechnika_sl_logo_bw_pion_pl.pdf, id=190, 179.67125pt x 230.8625pt>
+<politechnika_sl_logo_bw_pion_pl.pdf, id=186, 179.67125pt x 230.8625pt>
 File: politechnika_sl_logo_bw_pion_pl.pdf Graphic file (type pdf)
 <use politechnika_sl_logo_bw_pion_pl.pdf>
 Package pdftex.def Info: politechnika_sl_logo_bw_pion_pl.pdf  used on input line 416.
@@ -1265,7 +1265,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4]
-<pic/modele/model_sakad.png, id=311, 337.26pt x 60.225pt>
+<pic/modele/model_sakad.png, id=306, 337.26pt x 60.225pt>
 File: pic/modele/model_sakad.png Graphic file (type png)
 <use pic/modele/model_sakad.png>
 Package pdftex.def Info: pic/modele/model_sakad.png  used on input line 633.
@@ -1283,7 +1283,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.35403pt}.
 
 [5{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./pic/modele/model_sakad.png>]
-<pic/modele/model_smooth.png, id=333, 427.5975pt x 173.64874pt>
+<pic/modele/model_smooth.png, id=328, 427.5975pt x 173.64874pt>
 File: pic/modele/model_smooth.png Graphic file (type png)
 <use pic/modele/model_smooth.png>
 Package pdftex.def Info: pic/modele/model_smooth.png  used on input line 662.
@@ -1379,7 +1379,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [15]
-<pic/use case/use case diagram.png, id=424, 1095.09125pt x 1155.31625pt>
+<pic/use case/use case diagram.png, id=419, 1095.09125pt x 1155.31625pt>
 File: pic/use case/use case diagram.png Graphic file (type png)
 <use pic/use case/use case diagram.png>
 Package pdftex.def Info: pic/use case/use case diagram.png  used on input line 811.
@@ -1466,7 +1466,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 933.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 934.
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1479,15 +1479,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
-<pic/obsługa/okna przy otwarciu.png, id=530, 983.47424pt x 407.72325pt>
+<pic/obsługa/okna przy otwarciu.png, id=525, 983.47424pt x 407.72325pt>
 File: pic/obsługa/okna przy otwarciu.png Graphic file (type png)
 <use pic/obsługa/okna przy otwarciu.png>
-Package pdftex.def Info: pic/obsługa/okna przy otwarciu.png  used on input line 946.
+Package pdftex.def Info: pic/obsługa/okna przy otwarciu.png  used on input line 948.
 (pdftex.def)             Requested size: 273.14923pt x 113.24097pt.
-<pic/obsługa/okna binarne.png, id=532, 307.74976pt x 196.3335pt>
+<pic/obsługa/okna binarne.png, id=527, 307.74976pt x 196.3335pt>
 File: pic/obsługa/okna binarne.png Graphic file (type png)
 <use pic/obsługa/okna binarne.png>
-Package pdftex.def Info: pic/obsługa/okna binarne.png  used on input line 955.
+Package pdftex.def Info: pic/obsługa/okna binarne.png  used on input line 957.
 (pdftex.def)             Requested size: 273.14923pt x 174.2749pt.
 
 
@@ -1508,10 +1508,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [27 <./pic/obsługa/okna binarne.png>]
-<pic/obsługa/wykresy.png, id=547, 1155.1155pt x 611.886pt>
+<pic/obsługa/wykresy.png, id=542, 1155.1155pt x 611.886pt>
 File: pic/obsługa/wykresy.png Graphic file (type png)
 <use pic/obsługa/wykresy.png>
-Package pdftex.def Info: pic/obsługa/wykresy.png  used on input line 976.
+Package pdftex.def Info: pic/obsługa/wykresy.png  used on input line 978.
 (pdftex.def)             Requested size: 273.14923pt x 144.68953pt.
 
 
@@ -1601,12 +1601,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [38]
-Overfull \hbox (6.5381pt too wide) in paragraph at lines 1226--1226
+Overfull \hbox (6.5381pt too wide) in paragraph at lines 1228--1228
 []\T1/lmr/m/n/12 PassMark\TS1/lmr/m/n/12 � \T1/lmr/m/n/12 So-ftware. \T1/lmr/m/it/12 About Pas-sMark So-ftware\T1/lmr/m/n/12 . 2025. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / www . passmark .
  []
 
 
-Overfull \hbox (5.42575pt too wide) in paragraph at lines 1226--1226
+Overfull \hbox (5.42575pt too wide) in paragraph at lines 1228--1228
 []\T1/lmr/m/n/12 The Mat-plo-tlib de-ve-lop-ment team. \T1/lmr/m/it/12 Py-plot tu-to-rial\T1/lmr/m/n/12 . 2025. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / matplotlib .
  []
 
@@ -1663,7 +1663,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [46
 
 ]
-Overfull \hbox (2.38579pt too wide) in paragraph at lines 1301--1302
+Overfull \hbox (2.38579pt too wide) in paragraph at lines 1303--1304
 []\T1/lmr/m/n/12 film po-ka-zu-j�cy dzia-�a-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
  []
 
@@ -1709,23 +1709,23 @@ LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C1F5C5124468915767B81088946330E5;9387.
+(rerunfilecheck)             Checksum: 3439C0DBA3969514B67D1F521E4EE48B;9302.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50150 strings out of 473938
- 1159685 string characters out of 5724560
+ 50148 strings out of 473938
+ 1159671 string characters out of 5724560
  2003893 words of memory out of 5000000
- 72065 multiletter control sequences out of 15000+600000
+ 72064 multiletter control sequences out of 15000+600000
  626217 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,93p,2058b,3512s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,93p,2058b,3512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (57 pages, 901219 bytes).
+Output written on main.pdf (57 pages, 900916 bytes).
 PDF statistics:
- 861 PDF objects out of 1000 (max. 8388607)
- 202 named destinations out of 1000 (max. 500000)
- 416 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 856 PDF objects out of 1000 (max. 8388607)
+ 201 named destinations out of 1000 (max. 500000)
+ 408 words of extra memory for PDF output out of 10000 (max. 10000000)
 
