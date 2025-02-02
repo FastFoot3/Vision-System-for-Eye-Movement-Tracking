@@ -60,6 +60,50 @@
     \field{urlyear}{2025}
   \endentry
 
+  \entry{bib:PyInstaller-how-it-works}{online}{}{}
+    \name{author}{4}{}{%
+      {{hash=CD}{%
+         family={Cortesi},
+         familyi={C\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BG}{%
+         family={Bajo},
+         familyi={B\bibinitperiod},
+         given={Giovanni},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CW}{%
+         family={Caban},
+         familyi={C\bibinitperiod},
+         given={William},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=MG}{%
+         family={McMillan},
+         familyi={M\bibinitperiod},
+         given={Gordon},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CD+1}
+    \strng{fullhash}{CDBGCWMG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{What PyInstaller Does and How It Does It}
+    \verb{url}
+    \verb https://pyinstaller.org/en/stable/operating-mode.html#what-pyinstalle
+    \verb r-does-and-how-it-does-it
+    \endverb
+    \field{year}{2024}
+    \field{urlday}{02}
+    \field{urlmonth}{02}
+    \field{urlyear}{2025}
+  \endentry
+
   \entry{bib:NumPy-quick-start}{online}{}{}
     \name{author}{1}{}{%
       {{hash=DN}{%
@@ -772,6 +816,31 @@
     \field{urlyear}{2025}
   \endentry
 
+  \entry{bib:moj-procesor-benchmark}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=SP}{%
+         family={Software},
+         familyi={S\bibinitperiod},
+         given={PassMark®},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SP1}
+    \strng{fullhash}{SP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{CPU Benchmarks: AMD Ryzen 7 7730U}
+    \verb{url}
+    \verb https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+7730U&id=5215
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{01}
+    \field{urlmonth}{02}
+    \field{urlyear}{2025}
+  \endentry
+
   \entry{bib:PassMark-test}{online}{}{}
     \name{author}{1}{}{%
       {{hash=SP}{%
@@ -790,6 +859,58 @@
     \field{title}{CPU Benchmarks: CPU Test Information}
     \verb{url}
     \verb https://www.cpubenchmark.net/cpu_test_info.html
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{01}
+    \field{urlmonth}{02}
+    \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:ref-procesor-benchmark}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=SP}{%
+         family={Software},
+         familyi={S\bibinitperiod},
+         given={PassMark®},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SP1}
+    \strng{fullhash}{SP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{CPU Benchmarks: Intel Xeon E5-2660 v2 @ 2.20GHz}
+    \verb{url}
+    \verb https://www.cpubenchmark.net/cpu.php?id=2184&cpu=Intel%20Xeon%20E5-26
+    \verb 60%20v2%20@%202.20GHz
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{01}
+    \field{urlmonth}{02}
+    \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:min-procesor-benchmark}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=SP}{%
+         family={Software},
+         familyi={S\bibinitperiod},
+         given={PassMark®},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SP1}
+    \strng{fullhash}{SP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{CPU Benchmarks: Intel Xeon E5-4650 @ 2.70GHz}
+    \verb{url}
+    \verb https://www.cpubenchmark.net/cpu.php?id=1225&cpu=Intel%20Xeon%20E5-46
+    \verb 50%20@%202.70GHz
     \endverb
     \field{year}{2025}
     \field{urlday}{01}

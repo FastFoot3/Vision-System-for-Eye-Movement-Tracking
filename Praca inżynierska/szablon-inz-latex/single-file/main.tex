@@ -824,6 +824,7 @@ Diagram na rysunku \ref{fig:UML-use-case} prezentuje po lewej użytkownika, któ
 Projekt prezentowany w tej pracy skupia się przede wszystkim na oprogramowaniu, dlatego sprzęt wykorzystany do jego zrealizowania zamyka się na laptopie z wbudowaną kamerką internetową, który jest także źródłem stawianych wymagań w punkcie \ref{subsec:Limitacje-sprzetowe-i-srodowiskowe}. Jest to ASUS Vivobook 15 D1502YA-BQ309 posiadający ośmiordzeniowy procesor AMD Ryzen 7 7730U z zintegrowanym układem graficznym ATI AMD Radeon Graphics. Notebook ten oryginalnie stosowany był do nauki i programowania, co pozwoliło na szybkie przystosowanie go do pracy nad prezentowanym rozwiązaniem, wpasowuje się on również w założenie limitacji sprzętowych użytkowników. Wbudowana kamera to USB2.0 HD UVC WebCam producenta Realtek, urządzenie te rejestruje obraz w $30$ klatkach na sekundę w rozdzielczości $1280 \times 720$, posiada także diodę światła białego, która ułatwia śledzenie w niesprzyjających warunkach oświetleniowych i tworzy widoczne na obrazie odbicie rogówkowe. Mimo że nie jest to kamera specjalistyczna, jej parametry są wystarczające do realizacji założeń projektu, a podobne specyfikacje są powszechne w kamerach wbudowanych w laptopy, co sprawia, że opracowane rozwiązanie może być łatwo wdrożone przez użytkowników bez konieczności zakupu dodatkowego sprzętu.
 
 \subsection{Narzędzia programistyczne}
+\label{subsec:Narzedzia-programistyczne}
 
 \subsubsection{Github Desktop i Github}
 
@@ -833,7 +834,7 @@ Projekt o takiej skali wymaga użycia systemu kontroli wersji, by zabezpieczyć 
 
 Visual Studio Code to edytor kodu źródłowego, który świetnie integruje się z Github desktop i przez to także z Github. VS Code mimo niskich wymagań systemowych, oferuje wiele funkcjonalności, co pozwoliło na wykorzystanie go jako główne narzędzie programistyczne. Dzięki kolorowaniu składni, automatycznym podpowiedzą i uzupełnianie kodu, edytor ten przyśpiesza pracę i ogranicza ilość błędów. Obszerna biblioteka wtyczek, pozwala na dostosowanie VS Code do własnych potrzeb, np. dodając obsługę języków programowania takich jak Python, czy \LaTeX. Wbudowana integracja z systemem kontroli wersji podkreśla zmodyfikowane pliki, ułatwiając zarządzanie repozytorium. Wbudowana obsługa terminala oraz zaawansowane debugowanie z kontrolą punktu wstrzymania, inspekcją zmiennych i śledzeniem wykonywania kodu w czasie rzeczywistym pozwala na szybką kompilację i naprawę programu, zwłaszcza napisanego w języku Python \cite{bib:VSCode-Essentials}. Podsumowując, Visual Studio Code okazał się niezastąpionym narzędziem w procesie tworzenia zarówno projektu, jak i niniejszej pracy, pozwalając nie tylko na ułatwioną organizację, ale również zwiększoną efektywność.
 
-\subsubsection{Python}
+\subsubsection{Python 3.13.0}
 
 Python to wysokopoziomowy język programowania, który charakteryzuje się czytelną i intuicyjną składnią. Cechuje go dynamiczne typowanie, przypisując typy zmiennych w trakcie działania programu oraz automatyczne zarządzanie pamięcią. Największym atutem Pythona jest jego popularność i łatwość nauki, co sprawia, że wokół tego języka powstała spora społeczność programistów. Dzięki temu w sieci można znaleźć liczne fora dyskusyjne, obszerne dokumentacje, a także poradniki i kursy wideo, które okazały się niezastąpionym wsparciem w realizacji niniejszej pracy. Python posiada również obszerną bibliotekę standardową oraz szeroki wybór wysokiej jakości bibliotek zewnętrznych, które oferują gotowe rozwiązania dla niemal każdego zagadnienia programistycznego. Dzięki nim możliwe jest realizowanie złożonych zadań, takich jak analizy danych i przetwarzania obrazów, często przy użyciu zaledwie kilku linijek kodu \cite{bib:Python-a-byte}. W efekcie, Python zaopatrzony w odpowiednie biblioteki, w przypadku realizacji omawianego rozwiązania, okazał się jedynym językiem programowania potrzebnym do implementacji wszystkich funkcjonalności systemu.
 
@@ -857,7 +858,7 @@ Pandas to biblioteka do analizy i manipulacji danymi, posiadająca narzędzia do
 
 Time jest częścią podstawowej biblioteki Python i nie wymaga dodatkowej instalacji przed użyciem, służy do wykonywanie operacji związanych z czasem. Zbierany pomiary muszą być zapisywane razem z momentem czasowym, by pozwolić na pełną analizę, jest to nieskomplikowane zadanie, które można rozwiązać z użyciem tej biblioteki opierając się na oficjalnej dokumentacji Python \cite{bib:time-Python}.
 
-\subsubsection{PyInstaller}
+\subsubsection{PyInstaller 6.11.1}
 
 Następnym krokiem, który warto wykonać po zakończeniu prac nad rozwiązaniem, jest ułatwienie jego dystrybucji i użytkowania. W tym celu wykorzystano PyInstaller, który umożliwia spakowanie skryptu Pythona i wszystkich jego zależności do samodzielnego pliku wykonywalnego (exe). Dzięki temu użytkownicy mogą uruchomić program bez konieczności instalowania interpretera Pythona ani dodatkowych modułów. Warto jednak zaznaczyć, że użyto PyInstaller w wersji na system operacyjny Windows, a oprogramowanie te nie pozwala na kompilację krzyżową (czyli wymaga tego samego systemu od użytkownika) \cite{bib:PyInstaller-manual}. Taka forma dystrybucji znacząco ułatwia udostępnianie aplikacji, a także eliminuje problemy związane z niedopatrzeniem w konfigurowaniu środowiska.
 
@@ -877,9 +878,9 @@ Praca nad projektem przebiegała w sposób iteracyjny, co przypomina metodykę z
 %--------------------------------------
 %
 %
-% TODO: wymagania sprzętowe i programowe, administracja systemem, kwestie bezpieczeństwa, przykład działania, scenariusze korzystania z systemu
+% TODO: przykład działania, scenariusze korzystania z systemu
 %
-% Status: 20%
+% Status: 60%
 %--------------------------------------
 \chapter{Specyfikacja zewnętrzna}
 \label{ch:Specyfikacja-zewnetrzna}
@@ -888,16 +889,44 @@ Praca nad projektem przebiegała w sposób iteracyjny, co przypomina metodykę z
 
 % w zasadzie trzeba było by to sprawdzić na wirtualce, albo można napisać od czapy że ma wymagania takie jak pyinstaller + kamera, wyświetlacz - NIE! ROBIMY TO NA MENADŻERZE ZADAŃ
 
-44,1\% - 36\% -
-170 mb praktycznie stałe
+By móc korzystać z programu śledzącego ruch gałek ocznych wymagane jest użycie kamery i komputera wyposażonego w odpowiednie podzespoły i oprogramowanie. Jakość i rodzaj wymaganej kamery internetowej jest z grubsza bez znaczenia, jako że podczas korzystania z tego systemu, można dostosować jego ustawienia rekompensując niedociągnięcia sprzętowe. Równie prostym do wyznaczenia wymogiem jest wolne miejsce na dysku, które odpowiada sumie rozmiarów plików wykonywalnych z teoretycznym zapasem na powiększenie się pliku tekstowego z pomiarami ($10\%$ sumarycznego rozmiaru plików programowych), wynoszące $100 \ \unit{\mega\byte} \cdot 1.1 = 110 \ \unit{\mega\byte}$. Dzięki plikom wykonywalnym, do uruchomienia programu nie jest wymagane także żadne inne oprogramowanie. Aczkolwiek kwestia wymagań wydajności procesora, rozmiaru pamięci RAM oraz wspieranego systemu operacyjnego wymaga głębszej analizy.
 
-benchmark - 18500 * 0,45 = 8325 (Intel Xeon E5-4650 ma score 8407, a Intel Xeon E5-2660 v2 ma zapas 20\% i score 10440)
+\subsection{Procesor i pamięć RAM}
+\label{subsec:Procesor-i-pamięć-RAM}
 
-By ustalić wymagania sprzętowe prezentowanego systemu przeprowadzono obserwację procentowego użycia procesora oraz pamięci RAM w trakcie przeprowadzania detekcji. System okazał się używać średnio $36\%$ procesora, z nagłymi wzrostami nawet do $44,1\%$, w konsekwencji przyjęto, że procentowe użycie tego zasobu nie powinna wzrosnąć ponad $45\%$. Zużycie pamięci RAM pozostawało niemalże niezmiennie na tym samym poziomie, czyli $170 \ \unit{\mega\byte}$. Znając podzespoły laptopa omówione w punkcie \ref{subsec:ASUS-Vivobook-15} można oszacować wymagania sprzętowe minimalne i zalecane.
+By ustalić wymagania sprzętowe prezentowanego systemu przeprowadzono obserwację procentowego użycia procesora oraz pamięci RAM w trakcie detekcji. System okazał się używać średnio $36\%$ procesora, z nagłymi wzrostami nawet do $44,1\%$, w konsekwencji przyjęto, że procentowe użycie tego zasobu nie powinna wzrosnąć ponad $45\%$. Użycie pamięci RAM utrzymywało się na stałym poziomie $170 \ \unit{\mega\byte}$, jest to na tyle niewielka ilość, że nie stanowi istotnego obciążenia dla współczesnych standardów. W związku z tym można przyjąć, że minimalne wymagania pamięciowe pokrywają się z zaleceniami systemu operacyjnego. Znając podzespoły laptopa omówione w punkcie \ref{subsec:ASUS-Vivobook-15} można oszacować wymagania sprzętowe minimalne i zalecane.
 
-Do wyznaczenia procesora spełniającego minimalne wymagania do stabilnego korzystania z niniejszego rozwiązania, posłużono się największą na świecie stroną internetową z testowaniem wzorcowym procesorów utrzymywaną przez firmę PassMark Software \cite{bib:PassMark-about-us}. Opierając się na punktacji PassMark \cite{bib:PassMark-test}, można oszacować wysokość oceny procesora, który pozwoli na bezproblemowe korzystanie z programu śledzącego.
+Do wyznaczenia procesora spełniającego minimalne wymagania do stabilnego korzystania z niniejszego rozwiązania, posłużono się największą na świecie stroną internetową z testowaniem wzorcowym procesorów, utrzymywaną przez firmę PassMark Software \cite{bib:PassMark-about-us}. Opierając się na punktacji PassMark \cite{bib:PassMark-test}, można oszacować wysokość oceny procesora, który pozwoli na bezproblemowe korzystanie z programu śledzącego. Wiedząc, że procesor laptopa referencyjnego posiada ocenę wysokości $18500$ ($P_{ref}$) \cite{bib:moj-procesor-benchmark}, a program może wykorzystać do $45\%$ jego mocy obliczeniowej ($CPU_{\%ref}$), wyznaczono ilość punktów procesora, który będzie w stanie utrzymać działanie programu przy pełnym obciążeniu jego zasobów ($P_{min}$). Przedstawiono to na równaniu \ref{eq:PassMark-min}.
 
+\begin{align}
+	P_{min} &= P_{ref} \cdot CPU_{\%ref} = 18500 \cdot 45\% = 8325
+	\label{eq:PassMark-min}
+\end{align}
 
+Procesorem, który posiada niewiele wyższą ocenę równą $8407$ od obliczonego $P_{min}$ jest Intel Xeon E5-4650 @ 2.70GHz \cite{bib:min-procesor-benchmark}. Jednakże dla wygody użytkowania oraz zapewnienia płynnej pracy programu w różnych warunkach, warto zastosować procesor o wyższej wydajności. Dlatego, przyjmując dodatkowy zapas wydajności na poziomie 20\%, zalecany wynik PassMark ($P_{rec}$) obliczony został za pomocą równania \ref{eq:PassMark-rec}.
+
+\begin{align}
+	P_{rec} = 1.2 \cdot P_{min} = 1.2 \cdot 8325 = 9990
+	\label{eq:PassMark-rec}
+\end{align}
+
+Przystępnym cenowo procesorem posiadającym wynik $10440$, wyższy od obliczonego $P_{rec}$, jest Intel Xeon E5-2660 v2 @ 2.20GHz \cite{bib:ref-procesor-benchmark}. 
+
+\subsection{System operacyjny}
+\label{subsec:System-operacyjny}
+
+Kwestia systemu operacyjnego jest przede wszystkim zależna od programu PyInstaller. Jak już wspomniano w punkcie \ref{subsec:Narzedzia-programistyczne} PyInstaller nie jest narzędziem pozwalajacym na utworzenie plików wykonywalnych z kompilacją krzyżową, w związku z tym konieczne jest by użytkownik korzystał z systemu Windows firmy Microsoft. System wizyjny do śledzenia ruchu gałek ocznych został przetestowany na systemie Windows 11 (również na innej maszynie), gwarantując stabilną pracę w tej konkretnej wersji. Starsze wersje owego systemu operacyjnego, jako że nie zostały przetestowane, nie gwarantują poprawnego funkcjonowania. Warto jednak zaznaczyć, że użyte biblioteki oraz wersja Pythona i PyInstallera wspierają wersje systemu Microsoft od Windows 8 wzwyż, a tak stworzone pliki wykonywalne działają na zasadzie dołączonego interpretatora języka Python \cite{bib:PyInstaller-how-it-works}, w konsekwencji prezentowany w tej pracy program, nie powinien napotkać problemu działając na systemie Windows 8 lub nowszym.
+
+\subsection{Podsumowanie wymagań}
+\label{subsec:Podsumowanie-wymagan}
+
+\begin{description}
+	\item[System:] Windows 11 (stabilna praca), Windows 8 i Windows 10 (potencjalna kompatybilność -- nie przetestowane)
+	\item[Procesor:] Xeon E5-4650 @ 2.70GHz (minimalnie), Intel Xeon E5-2660 v2 @ 2.20GHz lub lepszy (zalecane)
+	\item[Pamięć RAM:] $2 \ \unit{\giga\byte}$ (wymaganie systemowe Windows 8 wersja 64-bitowa)
+	\item[Miejsce na dysku:] $110 \ \unit{\mega\byte}$
+	\item[Dodatkowy sprzęt:] Kamera internetowa, klawiatura
+\end{description}
 
 \section{Sposób instalacji}
 
@@ -953,7 +982,9 @@ W momencie zamknięcia programu, wszystkie okna, a w tym okno terminalu, zostaj�
 
 \section{Kwestie bezpieczeństwa}
 
+System do śledzenia ruchu gałek ocznych w żaden sposób nie przechowuje oraz nie nagrywa obrazów z kamery komputera, a wszelkie wykorzystywane zasoby zostają zwolnione w momencie zakończenia działania. Jedyną zapisywaną informacją są pomiary w pliku tekstowym, dostępnym w tym samym folderze co plik \texttt{eye\_\-detect.exe}, które można z łatwością usunąć przenosząc do kosza, a następnie opróżniając go. Prezentowany program nie korzysta także z połączenia sieciowego, wykonując wszystkie operacje lokalnie w katalogu, w którym się znajduje. 
 
+PyInstaller ostrzega, że istnieją niebezpieczeństwa związane z używaniem plików wykonywalnych w formie jednego pliku. PyInstaller rozpakowuje część swoich zasobów do tymczasowego folderu (nazwy zaczynające się od \_MEI) podczas uruchamiania aplikacji. Jeśli program zostanie nieoczekiwanie przerwany np. przez awarię, lub zakończenie przez Menedżera Zadań, folder ten może nie zostać usunięty. W skrajnych przypadkach -- przy częstych awariach -- może dojść do gromadzenia się niepotrzebnych plików, co w długoterminowej perspektywie może zużywać miejsce na dysku. Możliwe jest ręczne usunięcie nadmiarowych plików, które w przypadku systemu Windows zazwyczaj znajdują się w folderze ,,Temp'', można wyszukać jego lokalizację wpisując komendę \texttt{ECHO \-\%Temp\%} w wierszu poleceń. Nie należy także otwierać plików wykonywalnych utworzonych przez PyInstaller z uprawnieniami administratora, ponieważ daje to teoretyczną możliwość, że atakujący mógłby modyfikować pliki w tymczasowym folderze. Taka modyfikacja mogłaby potencjalnie prowadzić do eskalacji uprawnień \cite{bib:PyInstaller-how-it-works}.
 
 \section{Przykład działania}
 
