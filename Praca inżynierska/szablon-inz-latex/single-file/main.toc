@@ -58,7 +58,8 @@
 \contentsline {section}{\numberline {4.4}Sposób obsługi i działania}{26}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Kwestie bezpieczeństwa}{28}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Scenariusze korzystania z systemu}{29}{section.4.6}%
-\contentsline {chapter}{\numberline {5}[Właściwy dla kierunku -- np. Specyfikacja wewnętrzna]}{35}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Specyfikacja wewnętrzna}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Przedstawienie idei}{35}{section.5.1}%
 \contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{37}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{39}{chapter.7}%
 \contentsline {chapter}{Bibliografia}{43}{chapter*.37}%
