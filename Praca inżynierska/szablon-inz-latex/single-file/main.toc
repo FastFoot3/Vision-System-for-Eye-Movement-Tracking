@@ -60,15 +60,15 @@
 \contentsline {section}{\numberline {4.6}Scenariusze korzystania z systemu}{29}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Specyfikacja wewnętrzna}{35}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Przedstawienie idei}{35}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{37}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{39}{chapter.7}%
-\contentsline {chapter}{Bibliografia}{43}{chapter*.37}%
-\contentsline {chapter}{Spis skrótów i symboli}{47}{appendix*.38}%
+\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{41}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{43}{chapter.7}%
+\contentsline {chapter}{Bibliografia}{47}{chapter*.41}%
+\contentsline {chapter}{Spis skrótów i symboli}{51}{appendix*.42}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{49}{appendix*.39}%
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{51}{appendix*.40}%
-\contentsline {chapter}{Spis rysunków}{53}{appendix*.41}%
-\contentsline {chapter}{Spis tabel}{55}{appendix*.42}%
+\contentsline {chapter}{Źródła}{53}{appendix*.43}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{55}{appendix*.44}%
+\contentsline {chapter}{Spis rysunków}{57}{appendix*.45}%
+\contentsline {chapter}{Spis tabel}{59}{appendix*.46}%
