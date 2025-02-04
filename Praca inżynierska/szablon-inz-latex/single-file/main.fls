@@ -502,6 +502,10 @@ INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
 OUTPUT main.toc
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr17.tfm
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
@@ -539,10 +543,6 @@ INPUT .\pic\use case\use case diagram.png
 INPUT .\pic\use case\use case diagram.png
 INPUT .\pic\use case\use case diagram.png
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr8.tfm
-INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
 INPUT .\pic\obsługa\okna przy otwarciu.png
 INPUT .\pic\obsługa\okna przy otwarciu.png
 INPUT .\pic\obsługa\okna przy otwarciu.png
@@ -648,6 +648,8 @@ INPUT .\pic\diagram aktywności\druga próba\diagram aktywności 4.png
 INPUT .\pic\diagram aktywności\druga próba\diagram aktywności 4.png
 INPUT .\pic\diagram aktywności\druga próba\diagram aktywności 4.png
 INPUT .\pic\diagram aktywności\druga próba\diagram aktywności 4.png
+INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtk10.tfm
+INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtk10.tfm
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr6.tfm
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmcsc10.tfm
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmri12.tfm
@@ -690,6 +692,8 @@ INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\l
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
+INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtk10.pfb
+INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtk10.pfb
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
 INPUT C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb

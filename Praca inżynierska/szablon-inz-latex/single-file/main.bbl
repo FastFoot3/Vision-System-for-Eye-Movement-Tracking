@@ -129,6 +129,31 @@
     \field{urlyear}{2025}
   \endentry
 
+  \entry{bib:numpy-funkcje}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=DN}{%
+         family={Developers},
+         familyi={D\bibinitperiod},
+         given={NumPy},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DN1}
+    \strng{fullhash}{DN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Python API}
+    \verb{url}
+    \verb https://numpy.org/doc/stable/reference/index.html#python-api
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{04}
+    \field{urlmonth}{02}
+    \field{urlyear}{2025}
+  \endentry
+
   \entry{bib:Diagnostyka-oczoplas}{online}{}{}
     \name{author}{1}{}{%
       {{hash=DR}{%
@@ -624,17 +649,21 @@
 
   \entry{bib:Pandas-about}{online}{}{}
     \name{author}{1}{}{%
-      {{hash=p}{%
-         family={pandas},
-         familyi={p\bibinitperiod},
+      {{hash=pvNI}{%
+         prefix={pandas\bibnamedelima via},
+         prefixi={p\bibinitperiod\bibinitdelim v\bibinitperiod},
+         family={NumFOCUS},
+         familyi={N\bibinitperiod},
+         given={Inc.},
+         giveni={I\bibinitperiod},
       }}%
     }
-    \strng{namehash}{p1}
-    \strng{fullhash}{p1}
+    \strng{namehash}{NIpv1}
+    \strng{fullhash}{NIpv1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
     \field{title}{About pandas}
     \verb{url}
     \verb https://pandas.pydata.org/about/index.html
@@ -642,6 +671,33 @@
     \field{year}{2025}
     \field{urlday}{31}
     \field{urlmonth}{01}
+    \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:pandas-funkcje}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=pvNI}{%
+         prefix={pandas\bibnamedelima via},
+         prefixi={p\bibinitperiod\bibinitdelim v\bibinitperiod},
+         family={NumFOCUS},
+         familyi={N\bibinitperiod},
+         given={Inc.},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NIpv1}
+    \strng{fullhash}{NIpv1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{API reference}
+    \verb{url}
+    \verb https://pandas.pydata.org/docs/reference/index.html#api-reference
+    \endverb
+    \field{year}{2024}
+    \field{urlday}{04}
+    \field{urlmonth}{02}
     \field{urlyear}{2025}
   \endentry
 
@@ -966,6 +1022,59 @@
     \field{year}{2025}
     \field{urlday}{30}
     \field{urlmonth}{01}
+    \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:OpenCV-funkcje}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=tO}{%
+         family={team},
+         familyi={t\bibinitperiod},
+         given={OpenCV},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tO1}
+    \strng{fullhash}{tO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{cv Namespace Reference}
+    \verb{url}
+    \verb https://docs.opencv.org/3.4/d2/d75/namespacecv.html
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{04}
+    \field{urlmonth}{02}
+    \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:matplotlib-pyplot-funkcje}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=dtTM}{%
+         prefix={development},
+         prefixi={d\bibinitperiod},
+         family={team},
+         familyi={t\bibinitperiod},
+         given={The\bibnamedelima Matplotlib},
+         giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tTMd1}
+    \strng{fullhash}{tTMd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{matplotlib.pyplot}
+    \verb{url}
+    \verb https://matplotlib.org/stable/api/pyplot_summary.html#module-matplotl
+    \verb ib.pyplot
+    \endverb
+    \field{year}{2024}
+    \field{urlday}{04}
+    \field{urlmonth}{02}
     \field{urlyear}{2025}
   \endentry
 

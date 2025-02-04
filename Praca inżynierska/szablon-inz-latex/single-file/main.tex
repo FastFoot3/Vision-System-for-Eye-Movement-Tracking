@@ -1165,9 +1165,9 @@ Jeśli „Specyfikacja zewnętrzna”:
 %--------------------------------------
 %
 %
-% TODO: opis struktur danych, komponenty itp. (jeśli występują), przegląd ważniejszych algorytmów (jeśli występują), szczegóły implementacji wybranych fragmentów, diagramy UML
+% TODO:  przegląd ważniejszych algorytmów (jeśli występują), szczegóły implementacji wybranych fragmentów
 %
-% Status: 40%
+% Status: 7s0%
 %--------------------------------------
 \chapter{Specyfikacja wewnętrzna}
 \label{ch:Specyfikacja-wewnetrzna}
@@ -1213,7 +1213,104 @@ Program \texttt{eye\_\-tracking\_\-plot.exe} ze względu na nieskomplikowanie ni
 \section{Architektura systemu}
 \label{sec:Architektura-systemu}
 
-System wizyjny do śledzenia ruchu gałek ocznych opiera się na prostej architekturze, oba programy posiadają strukturę monolityczną. Struktura ta posiada jedną warstwę, w której realizowane są wszystkie funkcję programu, w przypadku \texttt{eye\_\-tracking\_\-plot.exe} wykonywane są tylko raz, a \texttt{eye\-\_detect.exe} wykonuje większość operacji w głównej pętli programu do momentu jej przerwania. Kod można opisać, że jest napisany w bardzo podstawowym paradygmacie imperatywnym, czyli takim, który operuje na ciągu instrukcji zmieniających stan programu, nie dzieląc go na obiekty, klasy czy struktury funkcji. Program zmienia swój stan przez sekwencyjne instrukcje, korzystając z pętli i warunków do określenie następnej ścieżki wykonywania. Kolejnym aspektem tego rozwiązania jest manipulacja zasobami komputera w sposób bezpośredni, zarówno względem pamięci komputera, używając zmiennych globalnych, jak i zasobów sprzętowych, łącząc się z kamerą i pobierając znaki ASCII z klawiatury. Nie dochodzi także do bezpośredniej komunikacji pomiędzy \texttt{eye\-\_detect.exe}, a \texttt{eye\_\-tracking\_\-plot.exe}, programy te są samodzielne i niezależne, ich jedynym elementem wspólnym jest wykorzystywanie pliku tekstowego \texttt{eye\_tracking\_data.txt} i to przez niego dochodzi do przekazania informacji.
+System wizyjny do śledzenia ruchu gałek ocznych opiera się na prostej architekturze, oba programy posiadają strukturę monolityczną. Struktura ta posiada jedną warstwę, w której realizowane są wszystkie funkcję programu, w przypadku \texttt{eye\_\-tracking\_\-plot.exe} wykonywane są tylko raz, a \texttt{eye\-\_detect.exe} wykonuje większość operacji w głównej pętli programu do momentu jej przerwania. Kod można opisać, że jest napisany w bardzo podstawowym paradygmacie imperatywnym, czyli takim, który operuje na ciągu instrukcji zmieniających stan programu, nie dzieląc go na własne obiekty, klasy czy struktury funkcji. Program zmienia swój stan przez sekwencyjne instrukcje, korzystając z pętli i warunków do określenie następnej ścieżki wykonywania. Kolejnym aspektem tego rozwiązania jest manipulacja zasobami komputera w sposób bezpośredni, zarówno względem pamięci komputera, używając zmiennych globalnych, jak i zasobów sprzętowych, łącząc się z kamerą i pobierając znaki ASCII z klawiatury. Nie dochodzi także do bezpośredniej komunikacji pomiędzy \texttt{eye\-\_detect.exe}, a \texttt{eye\_\-tracking\_\-plot.exe}, programy te są samodzielne i niezależne, ich jedynym elementem wspólnym jest wykorzystywanie pliku tekstowego \texttt{eye\_tracking\_data.txt} i to przez niego dochodzi do przekazania informacji.
+
+\section{Opis struktur danych}
+\label{sec:Opis-struktury-danych}
+
+By móc omówić zapisywane dane, trzeba wpierw opisać jak system przechowuje wartości w zmiennych. Program \texttt{eye\-\_detect\-.exe} posiada między innymi zmienne będące instancjami klas bibliotek i zmienne pojedyncze, które przechowują wartości progów binaryzacji, czasu oraz stanów wykorzystywanych w warunkach. Jednakże większość zmiennych używanych w kodzie jest listami dwóch elementów, które przechowują wartości uporządkowane względem pozycji dla obu oczu. Program \texttt{eye\_\-tracking\_\-plot\-.exe} używa jedynie instancji klas przechowujących wartości pomiarów z pliku tekstowego. 
+
+Po zakończeniu działania \texttt{eye\-\_detect\-.exe} oraz \texttt{eye\_\-tracking\_\-plot\-.exe} wszystkie zmienne zostają zwolnione, przy ponownym uruchomieniu tych programów zmienne są tworzone na nowo z wartościami ustalonymi w inicjalizacji. W związku z tym prezentowany system nie zapisuje swoich ustawień. Jedyną formą zapisu danych pomiarowych jest zapisanie ich wartości w pliku tekstowym przez program \texttt{eye\-\_detect.exe}. Dane w pliku \texttt{eye\_tracking\_data.txt} zapisywane są w następujący sposób:
+
+\begin{enumerate}
+	\item Zapisanie pierwszej linijki w formie nagłówka za pomocą \lstinline|file.write('Eye_Index time X_Displacement Y_Displacement\n')|, funkcja ta wstawia tekst. Nazwy kolumn oddzielane są spacjami a zakańczane znakiem końca lini.
+	\item Wstawianie wyliczonych wartości za pomocą \lstinline|file.write(f'{i} {program_runtime:.2f} {displacement_x:.2f} {displacement_y:.2f}\n')| w pętli. Zmienna \texttt{i} oznacza indeks oka i jest wyznaczona przez sortowanie wykrytych oczu, \texttt{program\-\_runtime} to moment czasowy pomiaru, jest obliczony przez odjęcie momentu uruchomienia programu od aktualnego czasu, a zmienne \texttt{displacement\-\_x} i \texttt{displacement\-\_y} to przesunięcie źrenicy względem punktu odniesienia w odpowiadających osiach. Tutaj także dane oddzielone są spacjami, a zakańczane znakiem końca lini.
+\end{enumerate}
+
+Czas wyrażony jest w sekundach, a przesunięcie w pikselach, obie wartości zapisywane są z dokładnością do dwóch miejsc po przecinku.
+
+\section{Funkcjonalności bibliotek}
+\label{sec:Funkcjonalnosci-bibliotek}
+
+Prezentowany system dzieli się na dwa oddzielne moduły \texttt{eye\-\_detect\-.exe} i \texttt{eye\_\-tracking\_\-plot\-.exe}, które korzystają z odrębnych bibliotek i ich funkcjonalności, omówione zostaną istotniejsze z nich.
+
+\subsection{\texttt{eye\-\_detect\-.exe}}
+\label{subsec:eye-detect.exe}
+
+\subsubsection{OpenCV (cv2)}
+
+\begin{description} 
+	\item[\texttt{cv2.VideoCapture.read():}] Pobiera pojedynczą klatkę z kamery i zwraca wynik powodzenia jako wartość \texttt{bool} oraz klatkę jako obraz.
+	\item[\texttt{cv2.CascadeClassifier.detectMultiScale():}] Wykrywa obiekty (np. twarze) na obrazie, zwracając listę prostokątów wokół wykrytych elementów.
+	\item[\texttt{cv2.cvtColor():}] Konwertuje obraz między różnymi przestrzeniami kolorów, np. z BGR na skalę szarości.
+	\item[\texttt{cv2.threshold():}] Przekształca obraz na obraz binarny, ustawiając piksele z wartością poniżej lub powyżej danej wartości progu na 0 lub 255.
+	\item[\texttt{cv2.morphologyEx():}] Stosuje operacje morfologiczne (np. otwarcie, zamknięcie) do przetwarzania obrazu.
+	\item[\texttt{cv2.findContours():}] Wyszukuje kontury obiektów w obrazie binarnym i zwraca ich współrzędne.
+	\item[\texttt{cv2.minEnclosingCircle():}] Znajduje najmniejszy okrąg obejmujący dany zestaw punktów (np. kontur obiektu).
+	\item[\texttt{cv2.imshow():}] Wyświetla obraz w osobnym oknie.
+	\item[\texttt{cv2.createTrackbar():}] Tworzy suwak w interfejsie OpenCV, który może służyć np. do dynamicznej zmiany parametrów.
+	\item[\texttt{cv2.rectangle():}] Rysuje prostokąt na obrazie, podając współrzędne jego rogów, kolor i grubość linii. W programie użyte zostały także analogiczne funkcję rysujące linie i okręgi.
+	\item[\texttt{cv2.waitKey():}] Oczekuje na naciśnięcie klawisza przez określony czas (w milisekundach) i zwraca jego kod.
+\end{description}
+
+Każda z tych funkcji jest dokładnie opisana w dokumentacji OpenCV \cite{bib:OpenCV-funkcje}.
+
+\subsubsection{numpy (np)}
+
+\begin{description}
+	\item[\texttt{np.concatenate():}] Łączy (konkatenacja) dwie lub więcej tablic NumPy wzdłuż określonej osi (np. poziomo lub pionowo).
+	\item[\texttt{np.ones():}] Tworzy tablicę NumPy wypełnioną jedynkami o podanym rozmiarze i opcjonalnym typie danych. 
+\end{description}
+
+Każda z tych funkcji jest dokładnie opisana w dokumentacji numpy \cite{bib:numpy-funkcje}.
+
+\subsubsection{time}
+
+\begin{description}
+	\item[\texttt{time.time()}] Zwraca aktualny czas w sekundach jako liczbę zmiennoprzecinkową, mierzoną od ustalonej epoki. Jest często używana do mierzenia czasu wykonania kodu.
+\end{description}
+
+Funkcja \texttt{time.time()} jest dokładniej opisana w dokumentacji modułu time \cite{bib:time-Python}.
+
+\subsection{\texttt{eye\_\-tracking\_\-plot\-.exe}}
+\label{subsec:eye-tracking-plot.exe}
+
+\subsubsection{Matplotlib.pyplot (plt)}
+
+\begin{description}
+	\item[\texttt{plt.subplots()}] Tworzy nową figurę Matplotlib i zestaw osi, zwracając obiekt figury oraz tablicę obiektów osi. Umożliwia łatwe rysowanie wielu wykresów w jednym oknie.
+	\item[\texttt{plt.tight\_layout()}] Automatycznie dostosowuje odstępy między wykresami, aby uniknąć nachodzenia na siebie elementów, poprawiając czytelność.
+	\item[\texttt{plt.show()}] Wyświetla aktualną figurę Matplotlib na ekranie, zatrzymując wykonanie programu do momentu zamknięcia okna wykresu (w trybie interaktywnym).
+	\item[\texttt{matplotlib.axes.Axes.plot()}] Rysuje wykres na określonej osi, przyjmując jako argumenty dane (np. wartości x i y) oraz opcjonalne style linii, kolory i etykiety.
+	\item[\texttt{plt.axes.Axes.set\_ylabel()}] Ustawia etykietę osi Y, określając jej nazwę (np. jednostkę miary lub opis).
+	\item[\texttt{plt.axes.Axes.set\_title()}] Nadaje tytuł wykresowi na danej osi, pomagając opisać prezentowane dane.
+	\item[\texttt{plt.axes.Axes.legend()}] Dodaje legendę do wykresu, opartą na etykietach linii/serii danych, co ułatwia ich rozróżnienie.
+	\item[\texttt{plt.axes.Axes.grid()}] Włącza lub wyłącza siatkę na wykresie.
+\end{description}
+
+Każda z tych funkcji jest dokładnie opisana w dokumentacji Matplotlib.pyplot \cite{bib:matplotlib-pyplot-funkcje}.
+
+\subsubsection{pandas (pd)}
+
+\begin{description}
+	\item[\texttt{pd.read\_csv()}] Wczytuje dane z pliku CSV (lub podobnego, np. TXT) do obiektu DataFrame, umożliwiając określenie separatora, nazw kolumn, pominiętych wierszy itp.
+	\item[\texttt{pd.DataFrame.groupby()}] Grupuje dane w \texttt{DataFrame} według jednej lub więcej kolumn, zwracając obiekt grupujący.
+\end{description}
+
+Każda z tych funkcji jest dokładnie opisana w dokumentacji pandas \cite{bib:pandas-funkcje}.
+
+\section{Przegląd algorytmów}
+\label{sec:Przegląd-algorytmow}
+
+
+
+
+
+
+
+
+
+
 
 Jeśli „Specyfikacja wewnętrzna”:
 \begin{itemize}
