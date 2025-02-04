@@ -3,7 +3,9 @@ from matplotlib.ticker import MultipleLocator # Importowanie klasy do ustawiania
 import pandas as pd # Importowanie biblioteki do analizy danych
 
 # Wczytanie danych z pliku
-data = pd.read_csv('eye_tracking_data.txt', sep=' ', skiprows=1, names=['Eye_Index', 'time', 'X_Displacement', 'Y_Displacement'])
+#data = pd.read_csv('eye_tracking_data.txt', sep=' ', skiprows=1, names=['Eye_Index', 'time', 'X_Displacement', 'Y_Displacement'])
+data = pd.read_csv('eye_tracking_data.txt', sep=' ')
+
 
 # Konwersja Eye_Index na kategorię dla lepszej czytelności
 colors = {0: 'b', 1: 'r'}

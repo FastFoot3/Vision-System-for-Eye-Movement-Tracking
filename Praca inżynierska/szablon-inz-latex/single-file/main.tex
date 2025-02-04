@@ -952,7 +952,7 @@ W pierwszej kolejności użytkownik musi zdecydować się czy chce rozpocząć �
 	\label{fig:eye_detect-uruchamianie}
 \end{figure}
 
-Jeśli program uzyska dostęp do kamery automatycznie zacznie pobierać z niej obraz, który przekształci do odcieni szarości, żeby móc wyszukiwać na nim twarz i oczy używając klasyfikatora Haar. Gdy uda się wyszukać oczy, obraz w odcieniach szarości zostanie zbinaryzowany i poddany operacją morfologicznym w celu wyszukania źrenic. Wszystkie wykryte elementy zostają oznaczone na obrazie barwnym i wyświetlone w oknie ,,eye detection''. Podczas działania programu mogą otworzyć się jeszcze dwa dodatkowe okna: ,,Bin eyes for testing'', pojawiający się w momencie wykrycia oczu oraz ,,Bin reflection for testing'', które otworzy się w momencie włączenia trybu kalibracji zaawansowanej. ,,Bin eyes for testing'' obrazuje binaryzację źrenic przed (po lewej) i po (po prawej) operacjach morfologicznych, z kolei ,,Bin reflection for testing'' pokazuje binaryzację dla odbicia rogówkowego. Okna te są wizualizacją techniczną ułatwiającą dostrojenie programu i są przedstawione na rysunku \ref{fig:eye_detect-okna-bin}.
+Jeśli program uzyska dostęp do kamery automatycznie zacznie pobierać z niej obraz, który przekształci do odcieni szarości, żeby móc wyszukiwać na nim twarz i oczy używając klasyfikatora Haara. Gdy uda się wyszukać oczy, obraz w odcieniach szarości zostanie zbinaryzowany i poddany operacją morfologicznym w celu wyszukania źrenic. Wszystkie wykryte elementy zostają oznaczone na obrazie barwnym i wyświetlone w oknie ,,eye detection''. Podczas działania programu mogą otworzyć się jeszcze dwa dodatkowe okna: ,,Bin eyes for testing'', pojawiający się w momencie wykrycia oczu oraz ,,Bin reflection for testing'', które otworzy się w momencie włączenia trybu kalibracji zaawansowanej. ,,Bin eyes for testing'' obrazuje binaryzację źrenic przed (po lewej) i po (po prawej) operacjach morfologicznych, z kolei ,,Bin reflection for testing'' pokazuje binaryzację dla odbicia rogówkowego. Okna te są wizualizacją techniczną ułatwiającą dostrojenie programu i są przedstawione na rysunku \ref{fig:eye_detect-okna-bin}.
 
 \begin{figure}[htbp]
 	\centering
@@ -1163,9 +1163,9 @@ Jeśli „Specyfikacja zewnętrzna”:
 %--------------------------------------
 %
 %
-% TODO: przedstawienie idei, architektura systemu, opis struktur danych, komponenty itp. (jeśli występują), przegląd ważniejszych algorytmów (jeśli występują), szczegóły implementacji wybranych fragmentów, diagramy UML
+% TODO: architektura systemu, opis struktur danych, komponenty itp. (jeśli występują), przegląd ważniejszych algorytmów (jeśli występują), szczegóły implementacji wybranych fragmentów, diagramy UML
 %
-% Status: 0%
+% Status: 30%
 %--------------------------------------
 \chapter{Specyfikacja wewnętrzna}
 \label{ch:Specyfikacja-wewnetrzna}
@@ -1173,35 +1173,42 @@ Jeśli „Specyfikacja zewnętrzna”:
 \section{Przedstawienie idei}
 \label{sec:Przedstawienie-idei}
 
+Z powodu architektury programu \texttt{eye\-\_detect.exe} zrozumienie jego idei opisanej jedynie słownie może okazać się wyzwaniem, dlatego stworzono diagram aktywności, który obrazuje wszystkie możliwe ścieżki działania programu w jednolity sposób. Niestety nawet taka forma opisu, chociaż bardziej przejrzysta, wciąż jest bardzo obszerna, w związku z tym diagram podzielony został na cztery osobne rysunki (rysunek \ref{fig:diagram-aktywnosci-1}, \ref{fig:diagram-aktywnosci-2}, \ref{fig:diagram-aktywnosci-3} i \ref{fig:diagram-aktywnosci-4}), które należy rozumieć jako jedną całość. Rozwiązanie te można podzielić na kilka części. 
+
+Inicjalizacja to część programu wykonująca się tylko raz na jego początku tworząc podstawowy interfejs oraz zmienne, w tym do przechowywania informacji dla obu oczu. Otwierany jest także plik tekstowy do zapisu pomiarów, w którym zapisywany jest nagłówek. W tej części jest także kontrola błędu sprawdzająca poprawność załadowania klasyfikatorów Haara i połączenia z kamerą. Następnie program wchodzi w główną nieskończoną pętle, to w niej wykonywane są wszystkie funkcje systemu. W pętli tej pobierana jest klatka z kamery, na której następnie wykrywane są wszystkie możliwe twarze i oczy kaskadą Haara, w zależności od sposobu kalibracji wyznaczany jest także punkt odniesienia, następnie wykrywane są źrenice przez binaryzację i operacje morfologiczne obrazu w odcieniach szarości. Gdy wyznaczenie punktu odniesienia i środka źrenicy się powiodło, program oblicza przesunięcie względem nich w osi $X$ i $Y$, a następnie zapisuje pomiar z indeksem oka i momentem czasowym do pliku tekstowego. W przypadku niepowodzenia na jednym z etapów detekcji, system po prostu przechodzi dalej, czekając na zmianę. W trakcie wykonywania się pętli program sprawdza spełnienie warunków by ustalić sposób kalibracji, a także tryb rysowania determinujacy sposób oznaczania wykrytych elementów. Na koniec wyświetlany jest obraz z kamery po wszystkich modyfikacjach, a także sprawdzane jest wprowadzenie przycisku z klawiatury, które może zmienić wartości zmiennych determinując sposób rysowania i kalibracji. Jeśli użytkownik naciśnie klawisz ,,q'' pętla zostaje przerwana, zasób kamery zostaje zwolniony, plik tekstowy zostaje bezpiecznie zamkniety i wszystkie okna zostają zniszczone, zakańczając działanie \texttt{eye\-\_detect.exe}. 
+
+Program \texttt{eye\_\-tracking\_\-plot.exe} ze względu na nieskomplikowanie nie posiada diagramu aktywności. Wpierw odczytywany jest plik \texttt{eye\_tracking\_data.txt} z oznaczeniem separatora danych. Następnie wykreślane są trzy wykresy złożone, za każdym razem w analogiczny sposób z użyciem funkcji biblioteki \texttt{Matplotlib\-.pyplot}: ustalany jest rozmiar wykresów i współdzielenie osi $X$; program przechodzi przez wszystkie dane w pliku, grupuje indeksami i ustala wartość na osiach; na wykres nanoszone są punkty, które łączone są prostą linią o odpowiednim kolorze; ustalane zostają ustawienia wykresów, takie jak nazwy osi, tytuły i obecność siatki. Program przeprowadza te operacje dla każdego wykresu złożonego, który prezentowany jest w osobnych oknach, dzięki temu wyświetlone zostają wykresy przemieszczenia w obu osiach, dla każdego oka z osobna oraz wspólnie.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.6\textwidth, height=0.96\textheight]{pic/diagram aktywności/druga próba/diagram aktywności 1.png}
-	\caption{Użytkownik zapisuje wykresy czasowe w wybranym przez siebie rozszerzeniu.}
-	\label{fig:1}
+	\caption{Diagram aktywności programu \texttt{eye\-\_detect.exe} (część 1).}
+	\label{fig:diagram-aktywnosci-1}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.6\textwidth, height=0.96\textheight]{pic/diagram aktywności/druga próba/diagram aktywności 2.png}
-	\caption{Użytkownik zapisuje wykresy czasowe w wybranym przez siebie rozszerzeniu.}
-	\label{fig:2}
+	\caption{Diagram aktywności programu \texttt{eye\-\_detect.exe} (część 2).}
+	\label{fig:diagram-aktywnosci-2}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pic/diagram aktywności/druga próba/diagram aktywności 3.png}
-	\caption{Użytkownik zapisuje wykresy czasowe w wybranym przez siebie rozszerzeniu.}
-	\label{fig:3}
+	\caption{Diagram aktywności programu \texttt{eye\-\_detect.exe} (część 3).}
+	\label{fig:diagram-aktywnosci-3}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pic/diagram aktywności/druga próba/diagram aktywności 4.png}
-	\caption{Użytkownik zapisuje wykresy czasowe w wybranym przez siebie rozszerzeniu.}
-	\label{fig:4}
+	\caption{Diagram aktywności programu \texttt{eye\-\_detect.exe} (część 4).}
+	\label{fig:diagram-aktywnosci-4}
 \end{figure}
 
-
+\section{Architektura systemu}
+\label{sec:Architektura-systemu}
 
 % Tutaj zacznę od opisania krok po kroku technicznego działania programu bazując na diagramie UML, w formie syntezy opiszę jakie informację są pomiędzy sobą przekazywane i ich kierunek z zaznaczeniem momentów gdy dany moduł wymienia się info, czyli: gdzie są ustawione klocki, jak klocki z sobą rozmawiają i jak idzie głuchy telefon. Jeżeli będą jakieś obliczenia to opiszę dlaczego zostały wykonane.
 
