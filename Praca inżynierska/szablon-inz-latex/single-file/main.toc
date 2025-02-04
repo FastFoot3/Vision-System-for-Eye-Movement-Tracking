@@ -70,16 +70,17 @@
 \contentsline {subsection}{\numberline {5.4.2}\texttt {eye\_\-tracking\_\-plot\-.exe}}{43}{subsection.5.4.2}%
 \contentsline {subsubsection}{Matplotlib.pyplot (plt)}{43}{section*.42}%
 \contentsline {subsubsection}{pandas (pd)}{43}{section*.43}%
-\contentsline {section}{\numberline {5.5}Przegląd algorytmów}{43}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{45}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{47}{chapter.7}%
-\contentsline {chapter}{Bibliografia}{51}{chapter*.46}%
-\contentsline {chapter}{Spis skrótów i symboli}{55}{appendix*.47}%
+\contentsline {section}{\numberline {5.5}Przegląd algorytmów}{44}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Kaskadowy klasyfikator oparty na cechach Haara}{44}{subsection.5.5.1}%
+\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{47}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{49}{chapter.7}%
+\contentsline {chapter}{Bibliografia}{54}{chapter*.47}%
+\contentsline {chapter}{Spis skrótów i symboli}{57}{appendix*.48}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{57}{appendix*.48}%
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{59}{appendix*.49}%
-\contentsline {chapter}{Spis rysunków}{61}{appendix*.50}%
-\contentsline {chapter}{Spis tabel}{63}{appendix*.51}%
+\contentsline {chapter}{Źródła}{59}{appendix*.49}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{61}{appendix*.50}%
+\contentsline {chapter}{Spis rysunków}{63}{appendix*.51}%
+\contentsline {chapter}{Spis tabel}{65}{appendix*.52}%

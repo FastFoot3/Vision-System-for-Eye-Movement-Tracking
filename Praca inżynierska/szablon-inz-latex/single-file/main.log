@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  4 FEB 2025 22:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  4 FEB 2025 23:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1175,7 +1175,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 41
  (C:\Users\Szniobatron\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<politechnika_sl_logo_bw_pion_pl.pdf, id=214, 179.67125pt x 230.8625pt>
+<politechnika_sl_logo_bw_pion_pl.pdf, id=218, 179.67125pt x 230.8625pt>
 File: politechnika_sl_logo_bw_pion_pl.pdf Graphic file (type pdf)
 <use politechnika_sl_logo_bw_pion_pl.pdf>
 Package pdftex.def Info: politechnika_sl_logo_bw_pion_pl.pdf  used on input line 420.
@@ -1279,7 +1279,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4]
-<pic/modele/model_sakad.png, id=342, 337.26pt x 60.225pt>
+<pic/modele/model_sakad.png, id=347, 337.26pt x 60.225pt>
 File: pic/modele/model_sakad.png Graphic file (type png)
 <use pic/modele/model_sakad.png>
 Package pdftex.def Info: pic/modele/model_sakad.png  used on input line 637.
@@ -1297,7 +1297,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.35403pt}.
 
 [5{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./pic/modele/model_sakad.png>]
-<pic/modele/model_smooth.png, id=364, 427.5975pt x 173.64874pt>
+<pic/modele/model_smooth.png, id=369, 427.5975pt x 173.64874pt>
 File: pic/modele/model_smooth.png Graphic file (type png)
 <use pic/modele/model_smooth.png>
 Package pdftex.def Info: pic/modele/model_smooth.png  used on input line 666.
@@ -1393,7 +1393,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [15]
-<pic/use case/use case diagram.png, id=455, 1095.09125pt x 1155.31625pt>
+<pic/use case/use case diagram.png, id=460, 1095.09125pt x 1155.31625pt>
 File: pic/use case/use case diagram.png Graphic file (type png)
 <use pic/use case/use case diagram.png>
 Package pdftex.def Info: pic/use case/use case diagram.png  used on input line 815.
@@ -1489,12 +1489,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
-<pic/obsługa/okna przy otwarciu.png, id=560, 983.47424pt x 407.72325pt>
+<pic/obsługa/okna przy otwarciu.png, id=565, 983.47424pt x 407.72325pt>
 File: pic/obsługa/okna przy otwarciu.png Graphic file (type png)
 <use pic/obsługa/okna przy otwarciu.png>
 Package pdftex.def Info: pic/obsługa/okna przy otwarciu.png  used on input line 952.
 (pdftex.def)             Requested size: 273.14923pt x 113.24097pt.
-<pic/obsługa/okna binarne.png, id=562, 307.74976pt x 196.3335pt>
+<pic/obsługa/okna binarne.png, id=567, 307.74976pt x 196.3335pt>
 File: pic/obsługa/okna binarne.png Graphic file (type png)
 <use pic/obsługa/okna binarne.png>
 Package pdftex.def Info: pic/obsługa/okna binarne.png  used on input line 961.
@@ -1518,7 +1518,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [27 <./pic/obsługa/okna binarne.png>]
-<pic/obsługa/wykresy.png, id=577, 1155.1155pt x 611.886pt>
+<pic/obsługa/wykresy.png, id=582, 1155.1155pt x 611.886pt>
 File: pic/obsługa/wykresy.png Graphic file (type png)
 <use pic/obsługa/wykresy.png>
 Package pdftex.def Info: pic/obsługa/wykresy.png  used on input line 982.
@@ -1533,12 +1533,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [28 <./pic/obsługa/wykresy.png>]
-<pic/scenariusz/odpalamy śledzenie.png, id=586, 643.203pt x 255.354pt>
+<pic/scenariusz/odpalamy śledzenie.png, id=591, 643.203pt x 255.354pt>
 File: pic/scenariusz/odpalamy śledzenie.png Graphic file (type png)
 <use pic/scenariusz/odpalamy śledzenie.png>
 Package pdftex.def Info: pic/scenariusz/odpalamy śledzenie.png  used on input line 1006.
 (pdftex.def)             Requested size: 273.14923pt x 108.44023pt.
-<pic/scenariusz/śledzenie start.png, id=588, 886.512pt x 449.88075pt>
+<pic/scenariusz/śledzenie start.png, id=593, 886.512pt x 449.88075pt>
 File: pic/scenariusz/śledzenie start.png Graphic file (type png)
 <use pic/scenariusz/śledzenie start.png>
 Package pdftex.def Info: pic/scenariusz/śledzenie start.png  used on input line 1015.
@@ -1553,12 +1553,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [29 <./pic/scenariusz/odpalamy śledzenie.png>]
-<pic/scenariusz/poprawienie śledzenia.png, id=599, 885.3075pt x 449.2785pt>
+<pic/scenariusz/poprawienie śledzenia.png, id=604, 885.3075pt x 449.2785pt>
 File: pic/scenariusz/poprawienie śledzenia.png Graphic file (type png)
 <use pic/scenariusz/poprawienie śledzenia.png>
 Package pdftex.def Info: pic/scenariusz/poprawienie śledzenia.png  used on input line 1024.
 (pdftex.def)             Requested size: 273.14923pt x 138.61676pt.
-<pic/scenariusz/filmik yt.png, id=602, 1156.32pt x 650.43pt>
+<pic/scenariusz/filmik yt.png, id=607, 1156.32pt x 650.43pt>
 File: pic/scenariusz/filmik yt.png Graphic file (type png)
 <use pic/scenariusz/filmik yt.png>
 Package pdftex.def Info: pic/scenariusz/filmik yt.png  used on input line 1033.
@@ -1573,17 +1573,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [30 <./pic/scenariusz/śledzenie start.png> <./pic/scenariusz/poprawienie śledzenia.png> <./pic/scenariusz/filmik yt.png>]
-<pic/scenariusz/odpalam wykresy.png, id=616, 525.162pt x 163.812pt>
+<pic/scenariusz/odpalam wykresy.png, id=621, 525.162pt x 163.812pt>
 File: pic/scenariusz/odpalam wykresy.png Graphic file (type png)
 <use pic/scenariusz/odpalam wykresy.png>
 Package pdftex.def Info: pic/scenariusz/odpalam wykresy.png  used on input line 1042.
 (pdftex.def)             Requested size: 273.14923pt x 85.20271pt.
-<pic/scenariusz/analiza wykresów.png, id=618, 1156.32pt x 650.43pt>
+<pic/scenariusz/analiza wykresów.png, id=623, 1156.32pt x 650.43pt>
 File: pic/scenariusz/analiza wykresów.png Graphic file (type png)
 <use pic/scenariusz/analiza wykresów.png>
 Package pdftex.def Info: pic/scenariusz/analiza wykresów.png  used on input line 1051.
 (pdftex.def)             Requested size: 273.14923pt x 153.64505pt.
-<pic/scenariusz/dostosowanie wykresów.png, id=620, 1156.32pt x 650.43pt>
+<pic/scenariusz/dostosowanie wykresów.png, id=625, 1156.32pt x 650.43pt>
 File: pic/scenariusz/dostosowanie wykresów.png Graphic file (type png)
 <use pic/scenariusz/dostosowanie wykresów.png>
 Package pdftex.def Info: pic/scenariusz/dostosowanie wykresów.png  used on input line 1060.
@@ -1598,7 +1598,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [31 <./pic/scenariusz/odpalam wykresy.png> <./pic/scenariusz/analiza wykresów.png> <./pic/scenariusz/dostosowanie wykresów.png>]
-<pic/scenariusz/zapisanie wykresow.png, id=636, 605.8635pt x 434.22224pt>
+<pic/scenariusz/zapisanie wykresow.png, id=641, 605.8635pt x 434.22224pt>
 File: pic/scenariusz/zapisanie wykresow.png Graphic file (type png)
 <use pic/scenariusz/zapisanie wykresow.png>
 Package pdftex.def Info: pic/scenariusz/zapisanie wykresow.png  used on input line 1069.
@@ -1640,22 +1640,22 @@ Underfull \vbox (badness 2343) has occurred while \output is active []
 
 
 [35]
-<pic/diagram aktywności/druga próba/diagram aktywności 1.png, id=665, 414.348pt x 1056.94875pt>
+<pic/diagram aktywności/druga próba/diagram aktywności 1.png, id=670, 414.348pt x 1056.94875pt>
 File: pic/diagram aktywności/druga próba/diagram aktywności 1.png Graphic file (type png)
 <use pic/diagram aktywności/druga próba/diagram aktywności 1.png>
 Package pdftex.def Info: pic/diagram aktywności/druga próba/diagram aktywności 1.png  used on input line 1186.
 (pdftex.def)             Requested size: 273.14807pt x 674.67085pt.
-<pic/diagram aktywności/druga próba/diagram aktywności 2.png, id=666, 414.348pt x 1085.2545pt>
+<pic/diagram aktywności/druga próba/diagram aktywności 2.png, id=671, 414.348pt x 1085.2545pt>
 File: pic/diagram aktywności/druga próba/diagram aktywności 2.png Graphic file (type png)
 <use pic/diagram aktywności/druga próba/diagram aktywności 2.png>
 Package pdftex.def Info: pic/diagram aktywności/druga próba/diagram aktywności 2.png  used on input line 1193.
 (pdftex.def)             Requested size: 273.14807pt x 674.67241pt.
-<pic/diagram aktywności/druga próba/diagram aktywności 3.png, id=667, 414.348pt x 984.0765pt>
+<pic/diagram aktywności/druga próba/diagram aktywności 3.png, id=672, 414.348pt x 984.0765pt>
 File: pic/diagram aktywności/druga próba/diagram aktywności 3.png Graphic file (type png)
 <use pic/diagram aktywności/druga próba/diagram aktywności 3.png>
 Package pdftex.def Info: pic/diagram aktywności/druga próba/diagram aktywności 3.png  used on input line 1200.
 (pdftex.def)             Requested size: 273.14923pt x 648.7267pt.
-<pic/diagram aktywności/druga próba/diagram aktywności 4.png, id=668, 414.348pt x 354.72525pt>
+<pic/diagram aktywności/druga próba/diagram aktywności 4.png, id=673, 414.348pt x 354.72525pt>
 File: pic/diagram aktywności/druga próba/diagram aktywności 4.png Graphic file (type png)
 <use pic/diagram aktywności/druga próba/diagram aktywności 4.png>
 Package pdftex.def Info: pic/diagram aktywności/druga próba/diagram aktywności 4.png  used on input line 1207.
@@ -1739,7 +1739,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [42]
-Overfull \hbox (4.47588pt too wide) in paragraph at lines 1317--1318
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[43]
+<pic/cechy haara/cechy Haara.png, id=732, 264.38776pt x 214.401pt>
+File: pic/cechy haara/cechy Haara.png Graphic file (type png)
+<use pic/cechy haara/cechy Haara.png>
+Package pdftex.def Info: pic/cechy haara/cechy Haara.png  used on input line 1314.
+(pdftex.def)             Requested size: 273.14923pt x 221.51596pt.
+
+Overfull \hbox (4.47588pt too wide) in paragraph at lines 1328--1329
 []\T1/lmr/m/n/12 przedstawienie idei -> wy-ko-na-nie nie-zb�d-nych ob-li-cze� pro-jek-to-wych, syn-tezy uk�adu 
  []
 
@@ -1752,7 +1767,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[43]
+[44 <./pic/cechy haara/cechy Haara.png>]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1761,13 +1776,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[44]
+[45]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[46
+
+]
 Rozdzia\l  6.
 
 
-[45
-
-]
+[47]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1776,29 +1800,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[46]
+[48]
 Rozdzia\l  7.
 
-
-[47
-
-]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[48
-
-]
 
 [49
 
 ]
-Overfull \hbox (13.31996pt too wide) in paragraph at lines 1447--1447
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[50
+
+]
+
+[51
+
+]
+Overfull \hbox (13.31996pt too wide) in paragraph at lines 1458--1458
 \T1/lmr/m/it/12 pre-si-dent spe-ech\T1/lmr/m/n/12 . 2022. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / youtu . be / 3ugQL5fCdbI ? si = EQQ4jGSQ897SgRMX$[]
  []
 
@@ -1811,18 +1835,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[50]
-Overfull \hbox (6.5381pt too wide) in paragraph at lines 1447--1447
+[52]
+Overfull \hbox (6.5381pt too wide) in paragraph at lines 1458--1458
 []\T1/lmr/m/n/12 PassMark\TS1/lmr/m/n/12 � \T1/lmr/m/n/12 So-ftware. \T1/lmr/m/it/12 About Pas-sMark So-ftware\T1/lmr/m/n/12 . 2025. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / www . passmark .
  []
 
 
-Overfull \hbox (16.81474pt too wide) in paragraph at lines 1447--1447
+Overfull \hbox (16.81474pt too wide) in paragraph at lines 1458--1458
 []\T1/lmr/m/n/12 The Mat-plo-tlib de-ve-lop-ment team. \T1/lmr/m/it/12 mat-plo-tlib.pyplot\T1/lmr/m/n/12 . 2024. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / matplotlib .
  []
 
 
-Overfull \hbox (5.42575pt too wide) in paragraph at lines 1447--1447
+Overfull \hbox (5.42575pt too wide) in paragraph at lines 1458--1458
 []\T1/lmr/m/n/12 The Mat-plo-tlib de-ve-lop-ment team. \T1/lmr/m/it/12 Py-plot tu-to-rial\T1/lmr/m/n/12 . 2025. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / matplotlib .
  []
 
@@ -1835,7 +1859,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51]
+[53]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1843,12 +1867,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[52
-
-]
-
-[53]
 
 [54]
 
@@ -1856,18 +1874,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 
+[56]
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[56
+[57
 
 ]
-
-[57]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1879,11 +1890,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [58
 
 ]
-Overfull \hbox (2.38579pt too wide) in paragraph at lines 1522--1523
-[]\T1/lmr/m/n/12 film po-ka-zu-j�cy dzia-�a-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
- []
-
-
 
 [59]
 
@@ -1896,9 +1902,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [60
 
-] (main.lof)
-\tf@lof=\write7
-\openout7 = `main.lof'.
+]
+Overfull \hbox (2.38579pt too wide) in paragraph at lines 1533--1534
+[]\T1/lmr/m/n/12 film po-ka-zu-j�cy dzia-�a-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
+ []
 
 
 
@@ -1913,35 +1920,52 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [62
 
+] (main.lof)
+\tf@lof=\write7
+\openout7 = `main.lof'.
+
+
+
+[63]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[64
+
 ] (main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
 
 
-[63] (main.aux)
+[65] (main.aux)
  ***********
 LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 00B1181FC20AD31852F52623D26E526C;10253.
+(rerunfilecheck)             Checksum: E5EA42495AE4FCBF71D86A83BB7BAE11;10560.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50425 strings out of 473938
- 1168217 string characters out of 5724560
+ 50444 strings out of 473938
+ 1168868 string characters out of 5724560
  2003893 words of memory out of 5000000
- 72281 multiletter control sequences out of 15000+600000
+ 72295 multiletter control sequences out of 15000+600000
  626853 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,2058b,3512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (69 pages, 7006796 bytes).
+Output written on main.pdf (71 pages, 7018760 bytes).
 PDF statistics:
- 1054 PDF objects out of 1200 (max. 8388607)
- 252 named destinations out of 1000 (max. 500000)
- 524 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1078 PDF objects out of 1200 (max. 8388607)
+ 257 named destinations out of 1000 (max. 500000)
+ 537 words of extra memory for PDF output out of 10000 (max. 10000000)
 

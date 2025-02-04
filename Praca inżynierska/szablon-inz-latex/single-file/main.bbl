@@ -1152,5 +1152,41 @@
     \field{urlmonth}{01}
     \field{urlyear}{2025}
   \endentry
+
+  \entry{bib:Rapid-object-detection}{inproceedings}{}{}
+    \name{author}{2}{}{%
+      {{hash=VP}{%
+         family={Viola},
+         familyi={V\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=JM}{%
+         family={Jones},
+         familyi={J\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {Institute of Electrical}%
+      {Electronics Engineers}%
+    }
+    \strng{namehash}{VPJM1}
+    \strng{fullhash}{VPJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{booktitle}{Proceedings of the 2001 IEEE Computer Society Conference
+  on Computer Vision and Pattern Recognition. CVPR 2001}
+    \verb{doi}
+    \verb 10.1109/CVPR.2001.990517
+    \endverb
+    \field{title}{Rapid object detection using a boosted cascade of simple
+  features}
+    \field{volume}{1}
+    \field{year}{2001}
+  \endentry
 \enddatalist
 \endinput

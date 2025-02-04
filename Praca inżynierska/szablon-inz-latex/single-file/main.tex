@@ -1302,8 +1302,19 @@ Każda z tych funkcji jest dokładnie opisana w dokumentacji pandas \cite{bib:pa
 \section{Przegląd algorytmów}
 \label{sec:Przegląd-algorytmow}
 
+\subsection{Kaskadowy klasyfikator oparty na cechach Haara}
+\label{subsec:kaskadowy-klasyfikator-Haara}
 
+Jest to najważniejszy algorytm w kontekście prezentowanego rozwiązania, dzięki niemu możliwe jest wykrywanie twarzy i oczu, bez których detekcja źrenic była by znacznie bardziej skomplikowana (jeśli w ogóle możliwa przy zastosowaniu sprzętu o jakości założonej w punkcie \ref{subsec:Limitacje-sprzetowe-i-srodowiskowe}). Metoda ta została zaproponowana przez Paula Violę i Michaela Jonesa w artykule ,,Rapid Object Detection using a Boosted Cascade of Simple Features'' \cite{bib:Rapid-object-detection}. Zasada działania opiera się na uczeniu maszynowym, w którym funkcję kaskadową trenuje się na dużej ilości obrazów pozytywnych, zawierających szukany obiekt i negatywnych, nieposiadających szukanego obiektu. Gdy klasyfikator zostanie wytrenowany testuje się jego działanie podając inne obrazy niż te, na których był uczony. W tym przypadku szukanymi obiektami są twarze oraz oczy.
 
+Do wyodrębnienia cech szukanego obiektu używane są tak zwane cechy Haara. Cechy te to pojedyncza wartość obliczana jako różnica sumy pikseli znajdujących się w białym obszarze od sumy pikseli znajdujących się w obszarze czarnym. Przykładowe cechy Haara pokazane są na rysunku \ref{fig:Cechy-Haara}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{pic/cechy haara/cechy Haara.png}
+	\caption{Cechy Haara pozwalające wykrycie między innymi krawędzi i lini.}
+	\label{fig:Cechy-Haara}
+\end{figure}
 
 
 
