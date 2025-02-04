@@ -325,6 +325,8 @@
 \sisetup{locale = PL}
 
 \usepackage{float}
+
+\usepackage{placeins}
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % listingi i fragmentu kodu źródłowego 
@@ -927,7 +929,7 @@ Kwestia systemu operacyjnego jest przede wszystkim zależna od programu PyInstal
 	\item[Procesor:] Xeon E5-4650 @ 2.70GHz (minimalnie), Intel Xeon E5-2660 v2 @ 2.20GHz lub lepszy (zalecane)
 	\item[Pamięć RAM:] $2 \ \unit{\giga\byte}$ (wymaganie systemowe Windows 8 wersja 64-bitowa)
 	\item[Miejsce na dysku:] $110 \ \unit{\mega\byte}$
-	\item[Dodatkowy sprzęt:] Kamera internetowa, klawiatura
+	\item[Dodatkowy sprzęt:] Kamera internetowa (zalecana częstotliwość odświeżania to $30$ klatek na sekundę), klawiatura
 \end{description}
 
 \section{Sposób instalacji}
@@ -1163,9 +1165,9 @@ Jeśli „Specyfikacja zewnętrzna”:
 %--------------------------------------
 %
 %
-% TODO: architektura systemu, opis struktur danych, komponenty itp. (jeśli występują), przegląd ważniejszych algorytmów (jeśli występują), szczegóły implementacji wybranych fragmentów, diagramy UML
+% TODO: opis struktur danych, komponenty itp. (jeśli występują), przegląd ważniejszych algorytmów (jeśli występują), szczegóły implementacji wybranych fragmentów, diagramy UML
 %
-% Status: 30%
+% Status: 40%
 %--------------------------------------
 \chapter{Specyfikacja wewnętrzna}
 \label{ch:Specyfikacja-wewnetrzna}
@@ -1206,11 +1208,12 @@ Program \texttt{eye\_\-tracking\_\-plot.exe} ze względu na nieskomplikowanie ni
 	\caption{Diagram aktywności programu \texttt{eye\-\_detect.exe} (część 4).}
 	\label{fig:diagram-aktywnosci-4}
 \end{figure}
+\FloatBarrier
 
 \section{Architektura systemu}
 \label{sec:Architektura-systemu}
 
-% Tutaj zacznę od opisania krok po kroku technicznego działania programu bazując na diagramie UML, w formie syntezy opiszę jakie informację są pomiędzy sobą przekazywane i ich kierunek z zaznaczeniem momentów gdy dany moduł wymienia się info, czyli: gdzie są ustawione klocki, jak klocki z sobą rozmawiają i jak idzie głuchy telefon. Jeżeli będą jakieś obliczenia to opiszę dlaczego zostały wykonane.
+System wizyjny do śledzenia ruchu gałek ocznych opiera się na prostej architekturze, oba programy posiadają strukturę monolityczną. Struktura ta posiada jedną warstwę, w której realizowane są wszystkie funkcję programu, w przypadku \texttt{eye\_\-tracking\_\-plot.exe} wykonywane są tylko raz, a \texttt{eye\-\_detect.exe} wykonuje większość operacji w głównej pętli programu do momentu jej przerwania. Kod można opisać, że jest napisany w bardzo podstawowym paradygmacie imperatywnym, czyli takim, który operuje na ciągu instrukcji zmieniających stan programu, nie dzieląc go na obiekty, klasy czy struktury funkcji. Program zmienia swój stan przez sekwencyjne instrukcje, korzystając z pętli i warunków do określenie następnej ścieżki wykonywania. Kolejnym aspektem tego rozwiązania jest manipulacja zasobami komputera w sposób bezpośredni, zarówno względem pamięci komputera, używając zmiennych globalnych, jak i zasobów sprzętowych, łącząc się z kamerą i pobierając znaki ASCII z klawiatury. Nie dochodzi także do bezpośredniej komunikacji pomiędzy \texttt{eye\-\_detect.exe}, a \texttt{eye\_\-tracking\_\-plot.exe}, programy te są samodzielne i niezależne, ich jedynym elementem wspólnym jest wykorzystywanie pliku tekstowego \texttt{eye\_tracking\_data.txt} i to przez niego dochodzi do przekazania informacji.
 
 Jeśli „Specyfikacja wewnętrzna”:
 \begin{itemize}
