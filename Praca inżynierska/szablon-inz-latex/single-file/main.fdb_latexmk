@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1738707559.20006 "main.aux" "main.bbl" "main" 1738709521.27382 0
-  "./biblio.bib" 1738705736 14805 2e4d90eb5a7f9cf480a6b47975c6f4da ""
-  "./main-blx.bib" 1738709519 343 343e095b1185c652a393dea4f8685441 ""
+["bibtex main"] 1738764550.73272 "main.aux" "main.bbl" "main" 1738767557.31263 0
+  "./biblio.bib" 1738759959 15143 ca703c255f3097fbb8293489c7cb5019 ""
+  "./main-blx.bib" 1738767556 343 343e095b1185c652a393dea4f8685441 ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/bibtex/bst/biblatex/biblatex.bst" 1711466047 65510 b1f696b0241395385f422f67543c37fd ""
-  "main.aux" 1738709519 32854 7b55f5523777f43bce3f69ba4f4b5b3f "pdflatex"
+  "main.aux" 1738767556 33683 cff373cd5294ad757ebef526f2a6e119 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1738709511.23708 "c:/Users/Szniobatron/Documents/GitHub/Vision-System-for-Eye-Movement-Tracking/Praca inżynierska/szablon-inz-latex/single-file/main.tex" "main.pdf" "main" 1738709521.27528 0
+["pdflatex"] 1738767551.04897 "c:/Users/Szniobatron/Documents/GitHub/Vision-System-for-Eye-Movement-Tracking/Praca inżynierska/szablon-inz-latex/single-file/main.tex" "main.pdf" "main" 1738767557.31384 0
   "C:/Users/Szniobatron/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1738681346 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Szniobatron/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1717602007 24265953 a9120d28d4a50bc357ffc93b7b33ae55 ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
@@ -35,6 +35,7 @@
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmssbx10.tfm" 1256929440 11168 06d87f5698fd1b642d96449b7c8d90b0 ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmtk10.tfm" 1256929440 1368 5bfeb1cf8f9f0acdb7436bfaa8e0da4e ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmtt12.tfm" 1256929440 1368 6a60e6a5e029141041d64d339b87e533 ""
+  "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmtt8.tfm" 1256929440 1380 64228d979098ac090aa3f98d5aa8ad3e ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/lmex10.tfm" 1256929440 992 ce925c9346c7613270a79afbee98c070 ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/lmmi12.tfm" 1256929440 1524 753b192b18f2991794f9d41a8228510b ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/lmmi6.tfm" 1256929440 1512 94a3fd88c6f27dbd9ecb46987e297a4e ""
@@ -296,15 +297,15 @@
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
-  "c:/Users/Szniobatron/Documents/GitHub/Vision-System-for-Eye-Movement-Tracking/Praca inżynierska/szablon-inz-latex/single-file/main.tex" 1738709509 115841 e3b09feac0ec2bb07d734f096bb94a04 ""
-  "main.aux" 1738709519 32854 7b55f5523777f43bce3f69ba4f4b5b3f "pdflatex"
-  "main.bbl" 1738707559 33424 9487cd2831625077aafa44aea4fc766e "bibtex main"
-  "main.lof" 1738709519 3845 8b748dfc629e6bf36c7477a38a00c9a5 "pdflatex"
-  "main.lot" 1738709519 757 d667390c22ee31ffeac38b34c1733e67 "pdflatex"
-  "main.out" 1738709519 10560 e5ea42495ae4fcbf71d86a83bb7bae11 "pdflatex"
-  "main.run.xml" 1738709519 2613 b0aada028a7f8702b3b5fdf798159577 "pdflatex"
-  "main.tex" 1738709509 115841 e3b09feac0ec2bb07d734f096bb94a04 ""
-  "main.toc" 1738709519 6326 8e75961b8a733f61fa573edfdfa57ba9 "pdflatex"
+  "c:/Users/Szniobatron/Documents/GitHub/Vision-System-for-Eye-Movement-Tracking/Praca inżynierska/szablon-inz-latex/single-file/main.tex" 1738767550 122644 ee589cba74fa1c0a50aabbbe80d32955 ""
+  "main.aux" 1738767556 33683 cff373cd5294ad757ebef526f2a6e119 "pdflatex"
+  "main.bbl" 1738764551 34097 c1002f389bb9298f19dd267899006085 "bibtex main"
+  "main.lof" 1738767556 3855 910980df819931db978d60b53b744726 "pdflatex"
+  "main.lot" 1738767556 757 5c63ed18c943758751141fb1adb188b4 "pdflatex"
+  "main.out" 1738767556 10811 4e12473b4449e3b670c4e05fa52bfbc2 "pdflatex"
+  "main.run.xml" 1738767556 2613 b0aada028a7f8702b3b5fdf798159577 "pdflatex"
+  "main.tex" 1738767550 122644 ee589cba74fa1c0a50aabbbe80d32955 ""
+  "main.toc" 1738767556 6433 327196c585cf53834f3164bbea9dfa7c "pdflatex"
   "pic/cechy haara/cechy Haara.png" 1738706962 7241 002012bae9914c450d436a11062793c5 ""
   "pic/diagram aktywności/druga próba/diagram aktywności 1.png" 1738624558 230141 551fc5597631fffd5925d40aa7f10b03 ""
   "pic/diagram aktywności/druga próba/diagram aktywności 2.png" 1738624943 235385 9a3a5729fcb360123f2c069d2ddab14a ""

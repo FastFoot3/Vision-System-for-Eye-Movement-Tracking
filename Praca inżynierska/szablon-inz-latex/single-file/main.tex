@@ -328,6 +328,7 @@
 
 \usepackage{placeins}
  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % listingi i fragmentu kodu źródłowego 
 % pakiet: listings lub minted
@@ -1305,23 +1306,64 @@ Każda z tych funkcji jest dokładnie opisana w dokumentacji pandas \cite{bib:pa
 \subsection{Kaskadowy klasyfikator oparty na cechach Haara}
 \label{subsec:kaskadowy-klasyfikator-Haara}
 
-Jest to najważniejszy algorytm w kontekście prezentowanego rozwiązania, dzięki niemu możliwe jest wykrywanie twarzy i oczu, bez których detekcja źrenic była by znacznie bardziej skomplikowana (jeśli w ogóle możliwa przy zastosowaniu sprzętu o jakości założonej w punkcie \ref{subsec:Limitacje-sprzetowe-i-srodowiskowe}). Metoda ta została zaproponowana przez Paula Violę i Michaela Jonesa w artykule ,,Rapid Object Detection using a Boosted Cascade of Simple Features'' \cite{bib:Rapid-object-detection}. Zasada działania opiera się na uczeniu maszynowym, w którym funkcję kaskadową trenuje się na dużej ilości obrazów pozytywnych, zawierających szukany obiekt i negatywnych, nieposiadających szukanego obiektu. Gdy klasyfikator zostanie wytrenowany testuje się jego działanie podając inne obrazy niż te, na których był uczony. W tym przypadku szukanymi obiektami są twarze oraz oczy.
+Jest to najważniejszy algorytm w kontekście prezentowanego rozwiązania, dzięki niemu możliwe jest wykrywanie twarzy i oczu, bez których detekcja źrenic była by znacznie bardziej skomplikowana (jeśli w ogóle możliwa przy zastosowaniu sprzętu o jakości założonej w punkcie \ref{subsec:Limitacje-sprzetowe-i-srodowiskowe}). Metoda ta została zaproponowana przez Paula Violę i Michaela Jonesa w artykule ,,Rapid Object Detection using a Boosted Cascade of Simple Features'' \cite{bib:Rapid-object-detection}. Zasada działania opiera się na uczeniu maszynowym, w którym funkcję kaskadową trenuje się na dużej ilości obrazów pozytywnych (zawierających szukany obiekt) i negatywnych (niezawierających szukanego obiektu). Gdy klasyfikator zostanie wytrenowany testuje się jego działanie podając inne obrazy niż te, na których był uczony. W tym przypadku szukanymi obiektami są twarze oraz oczy. Wykorzystane klasyfikatore są już wyuczone i dostępne w bibliotece OpenCV jako plik XML (\texttt{haarcascade\_\-frontalface\_\-default\-.xml}, \texttt{haarcascade\_\-eye.\-xml}).
 
-Do wyodrębnienia cech szukanego obiektu używane są tak zwane cechy Haara. Cechy te to pojedyncza wartość obliczana jako różnica sumy pikseli znajdujących się w białym obszarze od sumy pikseli znajdujących się w obszarze czarnym. Przykładowe cechy Haara pokazane są na rysunku \ref{fig:Cechy-Haara}.
+Do wyodrębnienia cech szukanego obiektu używane są tak zwane cechy Haara. Cechy te to pojedyncza wartość obliczana jako różnica sumy pikseli znajdujących się w białym obszarze od sumy pikseli znajdujących się w obszarze czarnym danej maski. Przykładowe maski splotowe Haara pokazane są na rysunku \ref{fig:Cechy-Haara}.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pic/cechy haara/cechy Haara.png}
-	\caption{Cechy Haara pozwalające wykrycie między innymi krawędzi i lini.}
+	\caption{Jądra splotowe Haara pozwalające wykrycie między innymi krawędzi i lini.}
 	\label{fig:Cechy-Haara}
 \end{figure}
 
+Wpierw do ustalenia cech używa się wszystkich masek splotowych o każdym możliwym rozmiarze i położeniu na wszystkich obrazach testowych, za każdym razem licząc sumę pikseli. By usprawnić sumowanie danego obszaru pikseli używa się obrazu całkowego (sum skumulowanych), w którym każdy piksel jest sumą oryginalnego piksela oraz piksela nad nim i na lewo w obrazie całkowym. Dzięki obrazowi sum skumulowanych można obliczyć sumę pikseli dowolnego prostokątnego obszaru na obrazie używając jedynie czterech wartości pikseli na jego rogach, można przedstawić to wzorem \ref{eq:obraz-calkowy}, gdzie $i(x,y)$ oznacza wartość piksela w oryginalnym obrazie na współrzędnych $(x,y)$, a $I(x,y)$ wartość w obrazie całkowym.
 
+\begin{align}
+	\sum_{\substack{x_0 < x \leq x_1 \\ y_0 < x \leq y_1}} i(x,y) &= I(x_1,y_1) + I(x_0,y_0) - I(x_1,y_0) - I(x_0,y_1)
+	\label{eq:obraz-calkowy}
+\end{align}
 
+Większość wyznaczonych cech jest nieistotnych, należy wybrać te, które opisują szukany obiekt, do tego zadania używa się algorytmu uczenia maszynowego AdaBoost. Wpierw wszystkie obrazy posiadają taką samą wagę (wszystkie są traktowane jednakowo), następnie przeprowadza się testowanie każdej cechy na każdym obrazie i wyznaczeniu takiego progu, który najlepiej rozdziela obrazy pozytywne i negatywne. Wagi obrazów, które zostały źle sklasyfikowane, zostają zwiększone, a następnie proces testowania i wyznaczania progu jest powtarzany, na koniec którego ponownie modyfikuje się wagi problematycznych obrazów. Algorytm wykonuje się do określonego momentu spełniającego kryterium stopu (np. osiągnięcie zadanej dokładności). Ostateczny klasyfikator składa się z zbioru wielu słabych klasyfikatorów, które same w sobie nie są wstanie klasyfikować obrazów, ale wspólnie już tak. W ten sposób ograniczona zostaje ilość cech, które pozwalają na wykrycie obiektu na obrazie.
 
+Ostatnim elementem omawianego algorytmu jest jego kaskadowość. W przetwarzanych obrazach większość przestrzeni nie jest obiektem poszukiwań, zatem analizowanie każdego fragmentu przy użyciu wszystkich wyodrębnionych cech byłoby nieefektywne i czasochłonne. Rozwiązaniem są kaskady klasyfikatorów, polegające na podzieleniu wszystkich cech na etapy, które używane są pojedynczo w określonej kolejności. Jeśli analizowany fragment przejdzie etap, to zostaje przepuszczony do następnego, a jeśli nie -- zostaje odrzucony i można przesunąć okno algorytmu do następnego fragmentu obrazu. Fragment zostaje uznany za szukany obiekt, jeśli przejdzie przez wszystkie etapy. Rozłożenie cech na etapy jest nieregularne -- pierwsze etapy zazwyczaj posiadają niewielką liczbę najbardziej istotnych cech, które pozwalają na szybkie odrzucenie większości obszarów niebędących poszukiwanym obiektem. Kolejne etapy zawierają coraz bardziej szczegółowe cechy, które zwiększają pewność detekcji. Dzięki temu obszary obrazu, które ewidentnie nie zawierają obiektu, są eliminowane na wczesnych etapach przetwarzania, co znacząco przyspiesza działanie algorytmu i redukuje liczbę niepotrzebnych obliczeń \cite{bib:Haar-OpenCV}.
 
+\subsection{Binaryzacja i operacje morfologiczne}
+\label{subsec:Binaryzacja-i-operacje-morfologiczne}
 
+Metoda wykorzystana do detekcji rejonu twarzy i oczu mogła by również zostać użyta do wykrycia źrenic, jednakże zastosowanie binaryzacji i operacji morfologicznych stanowi znacznie prostszą i równie skuteczną alternatywę, eliminującą konieczność stosowania złożonych technik uczenia maszynowego.
 
+Binaryzacja obrazu przeprowadzana jest przez proste progowanie, jeśli dany piksel ma wartość mniejszą lub równą niż ustalony próg, to przyjmuje wartość zero, w przeciwnym przypadku ustawiana jest maksymalna wartość. W prezentowanym rozwiązaniu wykorzystano dwa rodzaje binaryzacji.
+
+Pierwszy typ binaryzacji to klasyczne progowanie, stosowane bezpośrednio na niezmodyfikowanym obrazie monochromatycznym (oznaczone jako THRESH\_BINARY w OpenCV). Można je opisać wzorem \ref{eq:binaryzacja-prosta}. Metoda ta pozwala na wykrycie jasnych obiektów, dlatego użyta została w detekcji odbicia rogówkowego.
+
+\begin{align}
+    \texttt{dst}(x,y) =
+    \begin{cases} 
+        \texttt{maxval}, & \text{gdy } \texttt{src}(x,y) > \texttt{thresh} \\
+        0, & \text{w przeciwnym wypadku}
+    \end{cases}
+	\label{eq:binaryzacja-prosta}
+\end{align}
+
+Drugim typem jest progowanie w negatywie, które działa na tej samej zasadzie, ale na obrazie o odwróconych wartościach pikseli (oznaczone jako THRESH\_BINARY\_INV w OpenCV). Można je przedstawić wzorem \ref{eq:binaryzacja-negatyw}. Dzięki temu możliwe jest wykrywanie ciemnych obiektów, co zostało wykorzystane do identyfikacji źrenic.
+
+\begin{align}
+    \texttt{dst}(x,y) =
+    \begin{cases} 
+        0, & \text{gdy } \texttt{src}(x,y) > \texttt{thresh} \\
+        \texttt{maxval}, & \text{w przeciwnym wypadku}
+    \end{cases}
+	\label{eq:binaryzacja-negatyw}
+\end{align}
+
+Operacje morfologiczne to proste przekształcenia wykonywane na podstawie kształtu danego obiektu, w tym przypadku na obrazie binarnym. Polegają na przemieszczaniu elementu strukturalnego — okna o dowolnym kształcie i wielkości, z wartościami $0$ oraz $1$— po obrazie i porównywaniu ich zgodności.
+
+Pierwszą podstawową operacją morfologiczną jest erozja. W jej przypadku okno przemieszcza się po oryginalnym obrazie, analizując piksel centralny. Jeśli wszystkie piksele znajdujące się pod elementem strukturalnym są równe $1$ wartość punktu centralnego również wynosi $1$. W przeciwnym razie dochodzi do erozji, czyli piksel przyjmuje wartość $0$. W efekcie piksele znajdujące się blisko krawędzi zostają usunięte, co powoduje zmniejszenie obiektu.
+
+Drugą podstawową operacją morfologiczną jest dylatacja, będąca odwrotnością erozji. Jeśli choć jeden piksel znajdujący się pod elementem strukturalnym ma wartość $1$, punkt centralny również przyjmuje wartość $1$. Proces ten powoduje powiększenie obiektów, tworząc dodatkową warstwę na ich krawędziach.
+
+Do wykrycia źrenic zastosowano kombinację erozji i dylatacji w celu usunięcia zakłóceń oraz ujednolicenia kształtu. Najpierw przeprowadzono otwarcie, czyli erozję, po której następuje dylatacja. Dzięki temu usunięto niewielkie obiekty wykryte w tle. Następnie zastosowano domknięcie, czyli dylatację, po której następuje erozja, co pozwoliło wyeliminować niewielkie dziury wewnątrz wykrytej źrenicy.
 
 Jeśli „Specyfikacja wewnętrzna”:
 \begin{itemize}
