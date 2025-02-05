@@ -1075,6 +1075,56 @@
     \field{urlyear}{2025}
   \endentry
 
+  \entry{bib:Binaryzacja-OpenCV}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=tO}{%
+         family={team},
+         familyi={t\bibinitperiod},
+         given={OpenCV},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tO1}
+    \strng{fullhash}{tO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Image Thresholding}
+    \verb{url}
+    \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{05}
+    \field{urlmonth}{02}
+    \field{urlyear}{2025}
+  \endentry
+
+  \entry{bib:Morfologia-OpenCV}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=tO}{%
+         family={team},
+         familyi={t\bibinitperiod},
+         given={OpenCV},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tO1}
+    \strng{fullhash}{tO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Morphological Transformations}
+    \verb{url}
+    \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{05}
+    \field{urlmonth}{02}
+    \field{urlyear}{2025}
+  \endentry
+
   \entry{bib:matplotlib-pyplot-funkcje}{online}{}{}
     \name{author}{1}{}{%
       {{hash=dtTM}{%

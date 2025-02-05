@@ -34,7 +34,12 @@
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Diagram aktywności programu \texttt {eye\-\_detect.exe} (część 3).}}{39}{figure.caption.37}%
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Diagram aktywności programu \texttt {eye\-\_detect.exe} (część 4).}}{40}{figure.caption.38}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Jądra splotowe Haara pozwalające wykrycie między innymi krawędzi i lini.}}{44}{figure.caption.44}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Pseudokod w \texttt {listings}.}}{47}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Kod łączący z zasobami i kontrolą błędu systemu.}}{47}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Kod wykrywający twarz i wyznaczający ROI.}}{48}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Kod wykrywający oczy i sortujący je wzgledem pozycji.}}{49}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Kod prezentujący wybór trybu kalibracji.}}{50}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Kod przeprowadzający binaryzację i operacje morfologiczne na źrenicy.}}{51}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Kod wyznaczający środek wykrytej źrenicy.}}{52}{figure.caption.50}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

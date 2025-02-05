@@ -350,6 +350,7 @@ numberstyle=\tiny,%
 numbersep=5pt,%
 breaklines=true,%
 escapeinside={@*}{*@},%
+literate={ą}{{\k{a}}}1 {Ą}{{\k{A}}}1 {ę}{{\k{e}}}1 {Ę}{{\k{E}}}1 {ó}{{\'o}}1 {Ó}{{\'O}}1 {ś}{{\'s}}1 {Ś}{{\'S}}1 {ł}{{\l{}}}1 {Ł}{{\L{}}}1 {ż}{{\.z}}1 {Ż}{{\.Z}}1 {ź}{{\'z}}1 {Ź}{{\'Z}}1 {ć}{{\'c}}1 {Ć}{{\'C}}1 {ń}{{\'n}}1 {Ń}{{\'N}}1,%
 }
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -1166,9 +1167,9 @@ Jeśli „Specyfikacja zewnętrzna”:
 %--------------------------------------
 %
 %
-% TODO:  przegląd ważniejszych algorytmów (jeśli występują), szczegóły implementacji wybranych fragmentów
+% TODO:  
 %
-% Status: 7s0%
+% Status: 99% (basically DONE)
 %--------------------------------------
 \chapter{Specyfikacja wewnętrzna}
 \label{ch:Specyfikacja-wewnetrzna}
@@ -1219,9 +1220,9 @@ System wizyjny do śledzenia ruchu gałek ocznych opiera się na prostej archite
 \section{Opis struktur danych}
 \label{sec:Opis-struktury-danych}
 
-By móc omówić zapisywane dane, trzeba wpierw opisać jak system przechowuje wartości w zmiennych. Program \texttt{eye\-\_detect\-.exe} posiada między innymi zmienne będące instancjami klas bibliotek i zmienne pojedyncze, które przechowują wartości progów binaryzacji, czasu oraz stanów wykorzystywanych w warunkach. Jednakże większość zmiennych używanych w kodzie jest listami dwóch elementów, które przechowują wartości uporządkowane względem pozycji dla obu oczu. Program \texttt{eye\_\-tracking\_\-plot\-.exe} używa jedynie instancji klas przechowujących wartości pomiarów z pliku tekstowego. 
+By móc omówić zapisywane dane, należy najpierw opisać, w jaki sposób system przechowuje wartości w zmiennych. Program \texttt{eye\-\_detect\-.exe} wykorzystuje zarówno zmienne będące instancjami klas bibliotek, jak i zmienne pojedyncze, przechowujące wartości progów binaryzacji, czasu oraz stanów wykorzystywanych w warunkach logicznych. Większość zmiennych używanych w kodzie to jednak listy dwuelementowe, w których wartości są uporządkowane względem pozycji dla obu oczu. Z kolei program \texttt{eye\_\-tracking\_\-plot\-.exe} korzysta wyłącznie z instancji klas przechowujących wartości pomiarów wczytywanych z pliku tekstowego.
 
-Po zakończeniu działania \texttt{eye\-\_detect\-.exe} oraz \texttt{eye\_\-tracking\_\-plot\-.exe} wszystkie zmienne zostają zwolnione, przy ponownym uruchomieniu tych programów zmienne są tworzone na nowo z wartościami ustalonymi w inicjalizacji. W związku z tym prezentowany system nie zapisuje swoich ustawień. Jedyną formą zapisu danych pomiarowych jest zapisanie ich wartości w pliku tekstowym przez program \texttt{eye\-\_detect.exe}. Dane w pliku \texttt{eye\_tracking\_data.txt} zapisywane są w następujący sposób:
+Po zakończeniu działania \texttt{eye\-\_detect\-.exe} oraz \texttt{eye\_\-tracking\_\-plot\-.exe} wszystkie zmienne zostają zwolnione. Przy ponownym uruchomieniu tych programów zmienne są tworzone na nowo z wartościami ustalonymi w procesie inicjalizacji. W związku z tym prezentowany system nie zapisuje swoich ustawień. Jedyną formą zapisu danych pomiarowych jest ich zapis w pliku tekstowym przez program \texttt{eye\-\_detect.exe}. Dane w pliku \texttt{eye\-\_tracking\-\_data.txt} są przechowywane w następujący sposób:
 
 \begin{enumerate}
 	\item Zapisanie pierwszej linijki w formie nagłówka za pomocą \lstinline|file.write('Eye_Index time X_Displacement Y_Displacement\n')|, funkcja ta wstawia tekst. Nazwy kolumn oddzielane są spacjami a zakańczane znakiem końca lini.
@@ -1324,7 +1325,7 @@ Wpierw do ustalenia cech używa się wszystkich masek splotowych o każdym możl
 	\label{eq:obraz-calkowy}
 \end{align}
 
-Większość wyznaczonych cech jest nieistotnych, należy wybrać te, które opisują szukany obiekt, do tego zadania używa się algorytmu uczenia maszynowego AdaBoost. Wpierw wszystkie obrazy posiadają taką samą wagę (wszystkie są traktowane jednakowo), następnie przeprowadza się testowanie każdej cechy na każdym obrazie i wyznaczeniu takiego progu, który najlepiej rozdziela obrazy pozytywne i negatywne. Wagi obrazów, które zostały źle sklasyfikowane, zostają zwiększone, a następnie proces testowania i wyznaczania progu jest powtarzany, na koniec którego ponownie modyfikuje się wagi problematycznych obrazów. Algorytm wykonuje się do określonego momentu spełniającego kryterium stopu (np. osiągnięcie zadanej dokładności). Ostateczny klasyfikator składa się z zbioru wielu słabych klasyfikatorów, które same w sobie nie są wstanie klasyfikować obrazów, ale wspólnie już tak. W ten sposób ograniczona zostaje ilość cech, które pozwalają na wykrycie obiektu na obrazie.
+Większość wyznaczonych cech jest nieistotnych, należy wybrać te, które opisują szukany obiekt, do tego zadania używa się algorytmu uczenia maszynowego AdaBoost. Na początku wszystkie obrazy posiadają taką samą wagę (wszystkie są traktowane jednakowo), następnie przeprowadza się testowanie każdej cechy na każdym obrazie i wyznaczanie takiego progu, który najlepiej rozdziela obrazy pozytywne i negatywne. Wagi obrazów, które zostały źle sklasyfikowane, zostają zwiększone, a następnie proces testowania i wyznaczania progu jest powtarzany, na koniec którego ponownie modyfikuje się wagi problematycznych obrazów. Algorytm wykonuje się do określonego momentu spełniającego kryterium stopu (np. osiągnięcie zadanej dokładności). Ostateczny klasyfikator składa się z zbioru wielu słabych klasyfikatorów, które same w sobie nie są wstanie klasyfikować obrazów, ale wspólnie już tak. W ten sposób ograniczona zostaje ilość cech, które pozwalają na wykrycie obiektu na obrazie.
 
 Ostatnim elementem omawianego algorytmu jest jego kaskadowość. W przetwarzanych obrazach większość przestrzeni nie jest obiektem poszukiwań, zatem analizowanie każdego fragmentu przy użyciu wszystkich wyodrębnionych cech byłoby nieefektywne i czasochłonne. Rozwiązaniem są kaskady klasyfikatorów, polegające na podzieleniu wszystkich cech na etapy, które używane są pojedynczo w określonej kolejności. Jeśli analizowany fragment przejdzie etap, to zostaje przepuszczony do następnego, a jeśli nie -- zostaje odrzucony i można przesunąć okno algorytmu do następnego fragmentu obrazu. Fragment zostaje uznany za szukany obiekt, jeśli przejdzie przez wszystkie etapy. Rozłożenie cech na etapy jest nieregularne -- pierwsze etapy zazwyczaj posiadają niewielką liczbę najbardziej istotnych cech, które pozwalają na szybkie odrzucenie większości obszarów niebędących poszukiwanym obiektem. Kolejne etapy zawierają coraz bardziej szczegółowe cechy, które zwiększają pewność detekcji. Dzięki temu obszary obrazu, które ewidentnie nie zawierają obiektu, są eliminowane na wczesnych etapach przetwarzania, co znacząco przyspiesza działanie algorytmu i redukuje liczbę niepotrzebnych obliczeń \cite{bib:Haar-OpenCV}.
 
@@ -1346,7 +1347,7 @@ Pierwszy typ binaryzacji to klasyczne progowanie, stosowane bezpośrednio na nie
 	\label{eq:binaryzacja-prosta}
 \end{align}
 
-Drugim typem jest progowanie w negatywie, które działa na tej samej zasadzie, ale na obrazie o odwróconych wartościach pikseli (oznaczone jako THRESH\_BINARY\_INV w OpenCV). Można je przedstawić wzorem \ref{eq:binaryzacja-negatyw}. Dzięki temu możliwe jest wykrywanie ciemnych obiektów, co zostało wykorzystane do identyfikacji źrenic.
+Drugim typem jest progowanie w negatywie, które działa na tej samej zasadzie, ale na obrazie o odwróconych wartościach pikseli (oznaczone jako THRESH\_BINARY\_INV w OpenCV). Można je przedstawić wzorem \ref{eq:binaryzacja-negatyw}. Dzięki temu możliwe jest wykrywanie ciemnych obiektów, co zostało wykorzystane do identyfikacji źrenic \cite{bib:Binaryzacja-OpenCV}.
 
 \begin{align}
     \texttt{dst}(x,y) =
@@ -1357,24 +1358,203 @@ Drugim typem jest progowanie w negatywie, które działa na tej samej zasadzie, 
 	\label{eq:binaryzacja-negatyw}
 \end{align}
 
-Operacje morfologiczne to proste przekształcenia wykonywane na podstawie kształtu danego obiektu, w tym przypadku na obrazie binarnym. Polegają na przemieszczaniu elementu strukturalnego — okna o dowolnym kształcie i wielkości, z wartościami $0$ oraz $1$— po obrazie i porównywaniu ich zgodności.
+Operacje morfologiczne to proste przekształcenia wykonywane na podstawie kształtu danego obiektu, w tym przypadku na obrazie binarnym. Polegają na przemieszczaniu elementu strukturalnego -- okna o dowolnym kształcie i wielkości, z wartościami $0$ oraz $1$-- po obrazie i porównywaniu ich zgodności.
 
 Pierwszą podstawową operacją morfologiczną jest erozja. W jej przypadku okno przemieszcza się po oryginalnym obrazie, analizując piksel centralny. Jeśli wszystkie piksele znajdujące się pod elementem strukturalnym są równe $1$ wartość punktu centralnego również wynosi $1$. W przeciwnym razie dochodzi do erozji, czyli piksel przyjmuje wartość $0$. W efekcie piksele znajdujące się blisko krawędzi zostają usunięte, co powoduje zmniejszenie obiektu.
 
-Drugą podstawową operacją morfologiczną jest dylatacja, będąca odwrotnością erozji. Jeśli choć jeden piksel znajdujący się pod elementem strukturalnym ma wartość $1$, punkt centralny również przyjmuje wartość $1$. Proces ten powoduje powiększenie obiektów, tworząc dodatkową warstwę na ich krawędziach.
+Drugą podstawową operacją morfologiczną jest dylatacja, będąca odwrotnością erozji. Jeśli chociaż jeden piksel znajdujący się pod elementem strukturalnym ma wartość $1$, punkt centralny również przyjmuje wartość $1$. Proces ten powoduje powiększenie obiektów, tworząc dodatkową warstwę na ich krawędziach \cite{bib:Morfologia-OpenCV}.
 
 Do wykrycia źrenic zastosowano kombinację erozji i dylatacji w celu usunięcia zakłóceń oraz ujednolicenia kształtu. Najpierw przeprowadzono otwarcie, czyli erozję, po której następuje dylatacja. Dzięki temu usunięto niewielkie obiekty wykryte w tle. Następnie zastosowano domknięcie, czyli dylatację, po której następuje erozja, co pozwoliło wyeliminować niewielkie dziury wewnątrz wykrytej źrenicy.
 
-Jeśli „Specyfikacja wewnętrzna”:
-\begin{itemize}
-\item przedstawienie idei -> wykonanie niezbędnych obliczeń projektowych, syntezy układu
-\item architektura systemu -> opis architektury proponowanego rozwiązania
-\item opis struktur danych (i organizacji baz danych)
-\item komponenty, moduły, biblioteki, przegląd ważniejszych klas (jeśli występują) -> oprogramowania systemu
-\item przegląd ważniejszych algorytmów (jeśli występują) !!!
-\item szczegóły implementacji wybranych fragmentów, zastosowane wzorce projektowe !!!
-\item diagramy UML
-\end{itemize}
+
+\FloatBarrier
+
+\section{Szczegóły implementacji wybranych fragmentów}
+\label{sec:szczegoly-implementacji-wybranych-fragmentow}
+
+\subsection{Kontrola błędów i zasoby}
+\label{subsec:Kontrola-bledow}
+
+Na rysunku \ref{fig:kod-kontrola-bledow} widoczne jest wdrożenie podstawowej kontroli błędów programu i uzyskanie dostępu do potrzebnych zasobów. Pierwszym krokiem w implementacji jest załadowanie gotowych klasyfikatorów Haara, które służą do detekcji twarzy i oczu na obrazie. OpenCV udostępnia wbudowane modele klasyfikatorów w katalogu \texttt{cv2\-.data\-.haarcascades}. Jeśli pliki klasyfikatorów nie zostaną znalezione lub ich wczytanie się nie powiedzie, zwracana jest wartość pusta, co skutkuje błędem. Kolejnym krokiem jest uruchomienie kamery w celu przechwycenia obrazu w czasie rzeczywistym. Podobnie jak w przypadku klasyfikatorów, sprawdzana jest poprawność otwarcia kamery.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{lstlisting}
+		# Ładowanie klasyfikatorów Haar (gotowe modele służące do wykrywania twarzy i oczu na obrazie)
+		face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml') # Wykrywa twarz
+		eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml') # Wykrywa oczy
+		
+		# Sprawdzenie, czy klasyfikatory zostały poprawnie załadowane
+		if face_cascade.empty() or eye_cascade.empty():
+			raise IOError("Nie można załadować klasyfikatorów Haar")
+		
+		
+		# Uruchomienie kamerki
+		cap = cv2.VideoCapture(0) # 0 to pierwsza kamera
+		
+		# Sprawdzenie, czy kamera została poprawnie otwarta
+		if not cap.isOpened():
+			raise IOError("Nie można otworzyć kamery")
+	\end{lstlisting}
+\caption{Kod łączący z zasobami i kontrolą błędu systemu.}
+\label{fig:kod-kontrola-bledow}
+\end{figure}
+
+\subsection{Wykrywanie twarzy i wyznaczcie ROI}
+\label{subsec:Wykrywanie-twarzy-i-wyznaczcie-ROI}
+
+Fragment kodu na rysunku \ref{fig:kod-wykrywanie-twarzy} odpowiada za wykrywanie twarzy na obrazie z kamery oraz przygotowanie odpowiedniego obszaru do analizy oczu. Do wykrycia twarzy użyto metodę wykorzystująca wcześniej wczytaną kaskadę Haar'a operującą na obrazie monochromatycznym podanym w pierwszym parametrze. Drugi parametr determinuje o ile zmniejszany jest rozmiar obrazu przy każdej skali obrazu, dzięki temu większe twarze wciąż mogą być wykryte przez algorytm, wartość $1,3$ zapewnia szybkie wykrywanie ceną większej szansy pominięcia twarzy o danym rozmiarze. Trzeci parametr determinuje ilość sąsiadów potrzebną do poprawnej detekcji twarzy. Podczas detekcji pojawia się dużo pojedynczych fałszywych pozytywów, dzięki ustawieniu wartości $5$ determinujemy, że za twarz można uznać jedynie ten obszar, który został wykryty pięciokrotnie lub więcej, odrzucając fałszywe pozytywy.
+
+Metoda zwraca wielkość i lokalizacje prostokąta, w którym znajduje się twarz względem klatki z kamery, a program przechodzi w pętli po każdej wykrytej twarzy. Jako że dziurki w nosie sprawiają problemy w detekcji oczu, wycięty zostaje region zainteresowania obejmujący $\frac{2}{3}$ twarzy licząc od czoła i to na nim przeprowadzono dalsze wykrywanie.
+
+Widoczna jest też funkcja rysująca prostokąt wykrytej twarzy jeśli tryb rysowania jest właściwy, w analogiczny sposób oznaczane są inne rejony twarzy.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{lstlisting}
+		# Wykrywanie twarzy
+        faces = face_cascade.detectMultiScale(gray, 1.3, 5) # skalowanie obrazu 1.3, liczba trafień żeby uznać twarz 5 # faces to prostokąty
+
+        
+        # Dla każdej twarzy
+        for (x, y, w, h) in faces: # współrzędna X górnego lewego rogu prostokąta # współrzędna Y górnego lewego rogu prostokąta # szerokość prostokąta # wysokość prostokąta # całość dla każdej twarzy
+
+            if draw_mode == 0:
+                cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 255), 2) # rysowanie twarzy
+
+            # Region twarzy do analizy oczu
+            roi_gray = gray[y:y + h * 2 // 3, x:x + w] # Obszar twarzy (wycinek z obrazu szarość) do szukania oczu (górne 2/3)
+            roi_color = frame[y:y + h * 2 // 3, x:x + w] # to samo w kolorze do rysowania
+	\end{lstlisting}
+\caption{Kod wykrywający twarz i wyznaczający ROI.}
+\label{fig:kod-wykrywanie-twarzy}
+\end{figure}
+
+\subsection{Wykrywanie oczu i ich sortowanie}
+\label{subsec:Wykrywanie-oczu-i-ich-sortowanie}
+
+Metoda stosowana na rysunku \ref{fig:kod-wykrywanie-oczu} do wykrycia oczu jest identyczna jak omówiona w punkcie \ref{subsec:Wykrywanie-twarzy-i-wyznaczcie-ROI}. W tym przypadku obraz skalowany jest o mniejszą wartość gwarantując dokładniejszą detekcję, co rekompensowane jest zwiększoną ilością sąsiadów odrzucając wykryte tło. Wykryte oczy następnie sortowane są względem współrzędnej \texttt{x}, oko z indeksem \texttt{0} jest bliżej lewej strony rejonu zainteresowania. Następnie program przechodzi w pętli przez wykryte oczy, ograniczając się do pierwszych dwóch. Warto zauważyć że w tym przypadku używana jest zmienna \texttt{i}, która pozwala na zapis danych binokularnych.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{lstlisting}
+		# Wykrywanie oczu
+		eyes = eye_cascade.detectMultiScale(roi_gray, scaleFactor=1.05, minNeighbors=10) # skalowanie obrazu 1.05, liczba trafień żeby uznać oczy 10 # eyes to prostokąty
+		
+		# Sortowanie oczu na podstawie pozycji x (lewe oko będzie miało mniejszą wartość x)
+		eyes = sorted(eyes, key=lambda eye: eye[0]) # eyes to lista prostokątów oczu, key to funkcja która zwraca wartość do sortowania (tutaj x), lambda to funkcja anonimowa, eye to zmienna, eye[0] to współrzędna x
+
+		
+		# Dla każdego oka
+		for i, (ex, ey, ew, eh) in enumerate(eyes[:2]):  # enumerate indeksuje sekwencję (i), a [:2] zwraca wycinek listy do 2 (bez niego, czyli 0 i 1) # współrzędne jak w twarzach
+	\end{lstlisting}
+\caption{Kod wykrywający oczy i sortujący je wzgledem pozycji.}
+\label{fig:kod-wykrywanie-oczu}
+\end{figure}
+
+\subsection{Tryb kalibracji i punkt odniesienia}
+\label{subsec:Tryb-kalibracji-i-punkt-odniesienia}
+
+Fragment kodu, przedstawiony na rysunku \ref{fig:kod-punkt}, odpowiada za wyznaczenie środka oka na podstawie trzech różnych metod, zależnych od wyboru użytkownika.
+
+Pierwszy tryb kalibracji to kalibracja automatyczna, która jest domyślnie ustawiana po uruchomieniu programu. Punkt odniesienia wyznaczany jest w połowie szerokości i wysokości prostokątnego regionu \texttt{eye\-\_gray[i]}. Metoda ta może jednak tracić na dokładności przy obrocie głowy.
+
+Drugi tryb to kalibracja ręczna, działająca na tej samej zasadzie co kalibracja automatyczna, lecz pozwalająca użytkownikowi na samodzielne określenie punktu odniesienia poprzez ustawienie go na aktualną pozycję źrenic.
+
+Ostatnim trybem kalibracji jest tryb zaawansowany, który, wykorzystując progowanie obrazu i wykrywanie konturów (analogicznie do detekcji źrenic), pozwala na identyfikację odbicia rogówkowego. W założeniu obraz Purkinjego powinien być bardzo jasnym, lecz niewielkim punktem. Z tego powodu nie zastosowano operacji morfologicznych, które mogłyby go usunąć. Tryb ten jest trudny do wykorzystania przy użyciu światła białego, ponieważ musiałoby ono być na tyle intensywne, aby progowanie skutecznie usunęło oświetlony rejon twarzy bez usuwania odbicia od rogówki. Metoda ta jest znacznie bardziej odporna na ruch głowy, ale wymaga zastosowania dodatkowego sprzętu (np. kamery NIR i diody podczerwonej).
+
+\begin{figure}[htbp]
+	\centering
+	\begin{lstlisting}
+		if calibration_mode == 0: # Obliczenie środka oka względem wycinka eye_gray
+
+			eye_center_x[i] = ew // 2 # obliczenie współrzędnej x
+			eye_center_y[i] = eh // 2 # obliczenie współrzędnej y
+		elif calibration_mode == 1: # Obliczenie środka oka względem kalibracji ręcznej
+
+			eye_center_x[i], eye_center_y[i] = calibrated_x[i], calibrated_y[i] # Skalibrowane współrzędne
+		elif calibration_mode == 2: # Obliczenie środka oka względem odbicia światła
+		
+			# Progowanie odbicia światła w oku
+			_, light_bin[i] = cv2.threshold(eye_gray[i], light_thresh, 255, cv2.THRESH_BINARY)
+
+			# Znajdowanie konturów na obrazie binarnym odbicia światła
+			light_countours, _ = cv2.findContours(light_bin[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
+								
+			# Obliczenie środka oka względem odbicia światła (jeśli znaleziono kontury)
+			if light_countours:
+				# Znalezienie największego konturu odbicia światła
+				largest_light_contour = max(light_countours, key=cv2.contourArea, default=None)
+
+				# Wyznaczanie środka oka względem środka punktu odbicia światła
+				(eye_center_x[i], eye_center_y[i]), _ = cv2.minEnclosingCircle(largest_light_contour)
+			else:
+				eye_center_x[i], eye_center_y[i] = None, None
+	\end{lstlisting}
+\caption{Kod prezentujący wybór trybu kalibracji.}
+\label{fig:kod-punkt}
+\end{figure}
+
+\subsection{Binaryzacja, operacje morfologiczne i środek źrenic}
+\label{subsec:Binaryzacja-operacje-morfologiczne-i-srodek-srenic}
+
+Fragment kodu na rysunku \ref{fig:kod-binaryzacja} odpowiada za przetwarzanie obrazu binarnego oraz stosowanie operacji morfologicznych opisane w punkcie \ref{subsec:Binaryzacja-i-operacje-morfologiczne}. Zmienna używana do ustalenia progu binaryzacji jest wartością ustawioną na suwaku przez użytkownika. Na obrazie binarnym zapisywane są współrzędne konturów (kontury są wyznaczane bez aproksymacji, oznaczając każdy piksel).
+
+\begin{figure}[htbp]
+	\centering
+	\begin{lstlisting}
+		# Progowanie obrazu (binaryzacja)
+		_, eye_bin[i] = cv2.threshold(eye_gray[i], eye_thresh, 255, cv2.THRESH_BINARY_INV)
+
+		# Tworzymy kernel (macierz do operacji morfologicznych)
+		kernel = np.ones((3, 3), np.uint8)  # Możesz dostosować rozmiar
+
+		# Usuwanie zakłóceń (otwarcie) - Usuwa szumy i małe zakłócenia, zachowuje główne struktury obiektów
+		eye_bin_mopen = cv2.morphologyEx(eye_bin[i], cv2.MORPH_OPEN, kernel)
+
+		# Wypełnianie małych dziur (zamknięcie) - Wypełnia dziury w obiektach, wygładza krawędzie obiektów (nie usuwa szumów)
+		eye_bin_mopen_mclose[i] = cv2.morphologyEx(eye_bin_mopen, cv2.MORPH_CLOSE, kernel)
+
+		# Znajdowanie konturów na obrazie binarnym
+		eye_contours, _ = cv2.findContours(eye_bin_mopen_mclose[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
+	\end{lstlisting}
+\caption{Kod przeprowadzający binaryzację i operacje morfologiczne na źrenicy.}
+\label{fig:kod-binaryzacja}
+\end{figure}
+
+Jeśli udało się znaleźć kontury, to wyodrębniany jest największy z nich, a następnie wyznaczany jest jego środek przez funkcję znajdującą najmniejszy otaczający go okrąg. Punkt ten uznawany jest za środek źrenicy według którego obliczane jest przesunięcie względem punktu odniesienia. Przedstawiono to na rysunku \ref{fig:kod-zrenica}.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{lstlisting}
+		if eye_contours:
+
+		# Znaleziono kontury, wybieramy największy kontur
+		largest_eye_contour = max(eye_contours, key=cv2.contourArea) # Największy kontur prawdopodobnie odpowiada źrenicy
+
+		# Obliczenie środka i promienia okręgu otaczającego kontur
+		(cx, cy), radius = cv2.minEnclosingCircle(largest_eye_contour) # Znajduje najmniejszy okrąg otaczający kontur i zwraca jego środek i promień (źrenicę)
+	\end{lstlisting}
+\caption{Kod wyznaczający środek wykrytej źrenicy.}
+\label{fig:kod-zrenica}
+\end{figure}
+
+
+
+
+
+
+
+%Jeśli „Specyfikacja wewnętrzna”:
+%\begin{itemize}
+%\item przedstawienie idei -> wykonanie niezbędnych obliczeń projektowych, syntezy układu
+%\item architektura systemu -> opis architektury proponowanego rozwiązania
+%\item opis struktur danych (i organizacji baz danych)
+%\item komponenty, moduły, biblioteki, przegląd ważniejszych klas (jeśli występują) -> oprogramowania systemu
+%\item przegląd ważniejszych algorytmów (jeśli występują) !!!
+%\item szczegóły implementacji wybranych fragmentów, zastosowane wzorce projektowe !!!
+%\item diagramy UML
+%\end{itemize}
 
 
 
@@ -1385,29 +1565,29 @@ Jeśli „Specyfikacja wewnętrzna”:
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 
-Krótka wstawka kodu w linii tekstu jest możliwa, np.  \lstinline|int a;| (biblioteka \texttt{listings})% lub  \mintinline{C++}|int a;| (biblioteka \texttt{minted})
+%Krótka wstawka kodu w linii tekstu jest możliwa, np.  \lstinline|int a;| (biblioteka \texttt{listings})% lub  \mintinline{C++}|int a;| (biblioteka \texttt{minted})
 . 
-Dłuższe fragmenty lepiej jest umieszczać jako rysunek, np. kod na rys \ref{fig:pseudokod:listings}% i rys. \ref{fig:pseudokod:minted}
-, a naprawdę długie fragmenty – w załączniku.
+%Dłuższe fragmenty lepiej jest umieszczać jako rysunek, np. kod na rys \ref{fig:pseudokod:listings}% i rys. \ref{fig:pseudokod:minted}
+%, a naprawdę długie fragmenty – w załączniku.
 
 
-\begin{figure}
-\centering
-\begin{lstlisting}
-class test : public basic
-{
-    public:
-      test (int a);
-      friend std::ostream operator<<(std::ostream & s, 
-                                     const test & t);
-    protected:
-      int _a;  
-      
-};
-\end{lstlisting}
-\caption{Pseudokod w \texttt{listings}.}
-\label{fig:pseudokod:listings}
-\end{figure}
+%\begin{figure}
+%\centering
+%\begin{lstlisting}
+%class test : public basic
+%{
+%    public:
+%      test (int a);
+%      friend std::ostream operator<<(std::ostream & s, 
+%                                     const test & t);
+%    protected:
+%      int _a;  
+%      
+%};
+%\end{lstlisting}
+%\caption{Pseudokod w \texttt{listings}.}
+%\label{fig:pseudokod:listings}
+%\end{figure}
 
 %\begin{figure}
 %\centering
