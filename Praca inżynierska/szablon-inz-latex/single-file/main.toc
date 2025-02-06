@@ -80,14 +80,24 @@
 \contentsline {subsection}{\numberline {5.6.4}Tryb kalibracji i punkt odniesienia}{49}{subsection.5.6.4}%
 \contentsline {subsection}{\numberline {5.6.5}Binaryzacja, operacje morfologiczne i środek źrenic}{51}{subsection.5.6.5}%
 \contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{53}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{55}{chapter.7}%
-\contentsline {chapter}{Bibliografia}{60}{chapter*.52}%
-\contentsline {chapter}{Spis skrótów i symboli}{63}{appendix*.53}%
+\contentsline {section}{\numberline {6.1}Sposób testowanie w ramach pracy}{53}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Przypadki testowe}{53}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Testowanie uniwersalności dla innych twarzy (niepełne)}{54}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Testowanie odporności na różne oświetlenie (pełne)}{54}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Testowanie ustawień klasyfikatora Haara (niepełne)}{54}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Testowanie poprawności wyliczonych wartości}{55}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}Testowanie zapisywania do pliku (pełne)}{56}{subsection.6.2.5}%
+\contentsline {subsection}{\numberline {6.2.6}Testowanie integralności i stabilności (pełne)}{56}{subsection.6.2.6}%
+\contentsline {subsection}{\numberline {6.2.7}Testowanie kalibracji zaawansowanej (niepełne)}{56}{subsection.6.2.7}%
+\contentsline {section}{\numberline {6.3}Wykryte i usunięte błędy}{56}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{59}{chapter.7}%
+\contentsline {chapter}{Bibliografia}{64}{chapter*.54}%
+\contentsline {chapter}{Spis skrótów i symboli}{67}{appendix*.55}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{65}{appendix*.54}%
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{67}{appendix*.55}%
-\contentsline {chapter}{Spis rysunków}{70}{appendix*.56}%
-\contentsline {chapter}{Spis tabel}{71}{appendix*.57}%
+\contentsline {chapter}{Źródła}{69}{appendix*.56}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{71}{appendix*.57}%
+\contentsline {chapter}{Spis rysunków}{74}{appendix*.58}%
+\contentsline {chapter}{Spis tabel}{75}{appendix*.59}%

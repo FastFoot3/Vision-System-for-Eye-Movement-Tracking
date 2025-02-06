@@ -1613,12 +1613,85 @@ Jeśli udało się znaleźć kontury, to wyodrębniany jest największy z nich, 
 %--------------------------------------
 %
 %
-% TODO: sposób testowania w ramach pracy, organizacja eksperymentów, przypadki testowe zakres testowania, wykryte i usunięte błędy, opcjonalnie wyniki badań eksperymentalnych
+% TODO: organizacja eksperymentów?, przypadki testowe zakres testowania, wykryte i usunięte błędy, opcjonalnie wyniki badań eksperymentalnych
 %
-% Status: 0%
+% Status: 10%
 %--------------------------------------
 \chapter{Weryfikacja i walidacja}
-\label{ch:06}
+\label{ch:Weryfikacja-i-walidacja}
+
+\section{Sposób testowanie w ramach pracy}
+\label{sec:Sposob-testowanie-w-ramach-pracy}
+
+Projekt był realizowany w sposób zwinny, podejście Scrum wspomniane punkcie \ref{subsec:Metodyka-pracy-nad-projektem} jest w stanie po części opisać charakter pracy nad nim, jako że co pewien czas przeprowadzano większą analizę i planowanie dalszych kroków, jednakże wynikało to w większości z potrzeby poszerzenia wiedzy o możliwych rozwiązaniach by umożliwić następne iteracje. Metodyką, które najlepiej opisuje samo programowanie i testowanie rozwiązania, jest programowanie ekstremalne XP w wersji z mniej ścisłymi praktykami. Programowanie te skupia się na częstym i jak najwcześniejszym wydawaniu, otwartości na zmienianie (również gruntownie) kodu w miare zmieniających się wymagań i dogłębnym testowaniu jednostkowym. Takie podejście pozwala na tworzenie rozwiązania, bez wcześniejszej wiedzy jak go prawidłowo wykonać, obserwując inne projekty, które odniosły sukces i łącząc wiele metod w jedną całość.
+
+Testowanie przeprowadzano jak najczęściej, od razu po wprowadzeniu nowej funkcjonalności, sprawdzając jej standardowe działanie, spójność z resztą systemu oraz pracę w skrajnych warunkach. Testy jednostkowe, integracyjne i akceptacyjne wykonywane były manualnie. W przypadku wykrycia błędu, problemu z spójnością, lub niespełnieniem oczekiwanych standardów, dalsza rozbudowa systemu była wstrzymywana do momentu usunięcia problemu. Po każdej poprawce przeprowadzano testy regresyjne, aby upewnić się, że wcześniej działające funkcjonalności nie zostały przypadkowo zepsute.
+
+\section{Przypadki testowe}
+\label{sec:Przypadki-testowe}
+
+W przypadku wszystkich testów używano tego samego sprzętu opisanego w podrozdziale \ref{sec:Narzedzia-i-metody-wykorzystane-w-pracy}, za wyjątkiem testu plików wykonywalnych, których działanie potwierdzono przy użyciu innego laptopa. 
+
+\subsection{Testowanie uniwersalności dla innych twarzy (niepełne)}
+\label{subsec:Testowanie-twarzy}
+
+Działanie systemu wizyjnego do śledzenia ruchu gałek ocznych testowano w większości przypadków na autorze pracy. Jednakże, zarówno w trakcie rozwoju, jak i po ukończeniu rozwiązania, prezentowano jego działanie innym osobom. Pozwoliło to na określenie konieczności ograniczenia rejonu twarzy w celu wykrycia oczu. Potwierdzono również uniwersalność detekcji twarzy, oczu i źrenic względem różnych użytkowników. Rezultat ten był spodziewany, jako że klasyfikator Haara był dostarczonym, wyuczonym i przetestowanym narzędziem przez OpenCV, a źrenice w obrazie monochromatycznym są z natury najciemniejszym punktem na twarzy. Wymagane jest przeprowadzenie detekcji na grupie badanej większych rozmiarów by definitywnie potwierdzić ten aspekt rozwiązania.
+
+\subsection{Testowanie odporności na różne oświetlenie (pełne)}
+\label{subsec:Testowanie-oswietlenie}
+
+By nie uzależnić śledzenia od konkretnych warunków oświetleniowych, badano zachowanie systemu w różnych środowiskach na całym etapie jego rozwoju. Do testów użyto światła naturalnego, sztucznego o różnej barwie oraz ich kombinacji. Źródła światła były umieszczane w różnych miejscach względem użytkownika, badając wpływ kierunku padania światła. Przeprowadzono testy z światłem padającym od góry, od frontu, od tyłu oraz od lewego i prawego boku. Sprawdzono również limitacje związane z natężeniem oświetlenia, zarówno przy silnym naświetleniu jak i w półmroku. Prezentowane rozwiązanie działa najmniej stabilnie przy oświetleniu padającym od boków i centralnie od góry z powodu cienia na jednej połowie twarzy kontrastującego z silnym naświetleniem drugiej połowy. Mimo to ukończony system pozwala na śledzenie niezależnie od oświetlenia, z wyjątkiem skrajnych warunków.
+
+\subsection{Testowanie ustawień klasyfikatora Haara (niepełne)}
+\label{subsec:Testowanie-funkcji}
+
+Istotną częścią działania systemu jest ograniczanie obszaru detekcji źrenic do twarzy i oczu na ekranie. Obie detekcje korzystają z tej samej funkcji biblioteki OpenCV (\texttt{cv2.\-Cascade\-Classifier.\-detectMultiScale()}), która wymaga ustalenie współczynnika skalowania i minimalnej liczby sąsiadów pozytywnej detekcji. Współczynnik skalowania wpływa na szanse detekcji i szybkość wykonywania, a liczba sąsiadów na ilość detekcji i ich jakość. Wartości tych parametrów zostały określone przez wyszukiwanie wyczerpujące, modyfikując je tak długo aż obserwowany rezultat spełniał stawiane wymagania. Tak dobrane parametry pozwoliły na sprawną detekcje, co możne być zasługą solidności klasyfikatorów Haar dostępnego w bibliotece OpenCV, ale nie gwarantują optymalności. 
+
+\subsection{Testowanie poprawności wyliczonych wartości}
+\label{subsec:Testowanie-wartosci}
+
+Kod programu posiada zabezpieczenie przed obliczaniem pozycji źrenicy względem punktu odniesienia, jeśli chociaż jeden z tych elementów nie został wyznaczony. Przeprowadzono testy celowo przysłaniając kamerę oraz część twarzy, aby uzyskać efekt braku detekcji lub detekcji częściowej, które potwierdziły skuteczność tych warunków. Jedynym wyjątkiem jest sytuacja wykrycia jedynie jednego oka znajdującego się po prawej stronie obrazu, w tym przypadku interpretowane jest one jako oko po stronie lewej. Jest to spowodowane indeksowaniem oczu w kolejności występowania licząc od lewej strony obszaru twarzy. Warto zaznaczyć, że osiągnięcie takiej sytuacji było ciężkie, jako że w momencie przysłonięcia zbyt dużej ilości twarzy detekcja zostaje przerwana. Ten aspekt pomiaru został przetestowany w sposób pełny.
+
+W sposób niepełny sprawdzono poprawność obliczenia pozycji źrenicy i punktu odniesienia. Wyznaczenie środka źrenicy zostało sprawdzone empirycznie, obserwując rysowany punkt i obrys na obrazie. Stwierdzono, że jakość pomiaru zależy od ustawienia progu binaryzacji, zwiększanie tej wartości pozwala na pewniejszą detekcję, ale grozi interpretacją cienia lub tęczówki jako źrenicy, co znacząco wpłynie na jakość obliczeń. Punkt odniesienia również był oznaczany na obrazie z możliwością ustawienia jego położenie kalibracją ręczną. Oprócz empirycznego ustalenia poprawności wyznaczania punktu odniesienia, przeprowadzono badanie, w którym skupiano wzrok na jednym punkcie przy unieruchomionej głowie, następnie użyto kalibracje ręczną i po krótkim czasie zakańczano działanie programu. Wynik badania widoczny jest na rysunku \ref{fig:test-pomiary}, można zaobserwować, że na końcu sesji śledzenia źrenica oscylowała blisko środka punktu $(0,0)$ (punkt odniesienia), co wskazuje na poprawność wykonywanych obliczeń, jako że źrenica w momencie skupienia uwagi jest praktycznie nieruchoma.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{pic/testy/test punktu odniesienia.png}
+	\caption{Wykres czasowy sesji testującej poprawność wykonywanych pomiarów.}
+	\label{fig:test-pomiary}
+\end{figure}
+
+\subsection{Testowanie zapisywania do pliku (pełne)}
+\label{subsec:Testowanie-zapisywania}
+
+Zapisywanie do pliku warunkowane jest w ten sam sposób jak wyznaczenie pozycji źrenicy względem punktu odniesienia w punkcie \ref{subsec:Testowanie-wartosci}. Sprawdzenie poprawności działania zapisu do pliku została w związku z tym przeprowadzona równolegle z badaniem wyliczonych wartości.
+
+\subsection{Testowanie integralności i stabilności (pełne)}
+\label{subsec:Testowanie-interakcji}
+
+Testy integralności były przeprowadzane przez cały proces tworzenia rozwiązania, sprawdzając wszystkie możliwe kombinacje przechodząc od jednej funkcjonalności do każdej innej. Wszystkie funkcje systemu śledzącego są stabilne i mogą być dowolnie zmieniane w trakcie sesji, Jedyną niezamierzonym błędem jest możliwość zamrożenia funkcjonowania programu w momencie przenoszenia któregokolwiek z jego okien myszą. Podobny efekt powstaje w momencie przytrzymania dowolnego klawisza na klawiaturze, obraz w oknie odświeża się znacznie wolniej (jest zamrożony) z tą różnicą, że program wciąż jest wtedy wykonywany w swojej typowej częstotliwości ($\numrange{20}{30} \ \unit{\hertz}$), co zostało ustalone analizując różnice momentów czasowych pomiędzy wykonanymi pomiarami.
+
+\subsection{Testowanie kalibracji zaawansowanej (niepełne)}
+\label{subsec:Testowanie-zaawansowanej}
+
+Funkcjonalność kalibracji zaawansowanej nie została w pełni potwierdzona z powodu limitacji sprzętowych. Przeprowadzono test, w którym użyto intensywne źródło światła białego ustawione od frontu, a następnie próbowano dobrać poziom progowania tak, żeby na obrazie binarny pozostało jedynie odbicie rogówkowe. Próba ta zakończyła się niepowodzeniem, jako że wraz z zwiększaniem intensywności naświetlenia, białka oczne były coraz cięższe do usunięcia. Badanie te było także bardzo irytujące dla oczu, co wskazuje na mały potencjał zastosowania tej kalibracji w widzialnym spektrum. Obraz binarny w trakcie testu widoczny jest na rysunku \ref{fig:test-zaawansowana}. Istnieje możliwość, że funkcjonalność ta nie spełni swojej funkcji nawet operując w bliskiej podczerwieni, jako że poszukuje największy kontur na obrazie binarnym, a bez jego przetworzenia całkowite usunięcie innych wykrytych obiektów może być niemożliwe.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pic/testy/zaawansowana.png}
+	\caption{Obraz binarny odbicia rogówkowego, w trakcie próby testującej kalibrację zaawansowaną w widzialnym spektrum światła.}
+	\label{fig:test-zaawansowana}
+\end{figure}
+
+
+\section{Wykryte i usunięte błędy}
+\label{sec:wykryte-i-usunięte-bledy}
+
+
+
+
+
+
 \begin{itemize}
 \item sposób testowania w ramach pracy (np. odniesienie do modelu V)
 \item organizacja eksperymentów

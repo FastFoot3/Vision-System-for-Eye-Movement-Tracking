@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1738790747.52562 "main.aux" "main.bbl" "main" 1738790756.47625 0
+["bibtex main"] 1738864530.21534 "main.aux" "main.bbl" "main" 1738864559.67292 0
   "./biblio.bib" 1738789358 15855 7e917f840de22f012169bf46101dd386 ""
-  "./main-blx.bib" 1738790754 343 343e095b1185c652a393dea4f8685441 ""
+  "./main-blx.bib" 1738864558 343 343e095b1185c652a393dea4f8685441 ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/bibtex/bst/biblatex/biblatex.bst" 1711466047 65510 b1f696b0241395385f422f67543c37fd ""
-  "main.aux" 1738790754 37345 e4413003657b638864151c52430cbd66 "pdflatex"
+  "main.aux" 1738864558 40782 271fe57620edc8cf13bc91b25637b764 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1738790747.90925 "c:/Users/Szniobatron/Documents/GitHub/Vision-System-for-Eye-Movement-Tracking/Praca inżynierska/szablon-inz-latex/single-file/main.tex" "main.pdf" "main" 1738790756.47772 0
+["pdflatex"] 1738864552.74053 "c:/Users/Szniobatron/Documents/GitHub/Vision-System-for-Eye-Movement-Tracking/Praca inżynierska/szablon-inz-latex/single-file/main.tex" "main.pdf" "main" 1738864559.67424 0
   "C:/Users/Szniobatron/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1738681346 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Szniobatron/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1717602007 24265953 a9120d28d4a50bc357ffc93b7b33ae55 ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
@@ -297,15 +297,15 @@
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
   "C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
-  "c:/Users/Szniobatron/Documents/GitHub/Vision-System-for-Eye-Movement-Tracking/Praca inżynierska/szablon-inz-latex/single-file/main.tex" 1738790735 134448 124d128ec9d72c23d3e143034edd7b7f ""
-  "main.aux" 1738790754 37345 e4413003657b638864151c52430cbd66 "pdflatex"
-  "main.bbl" 1738790747 35466 072972c43ed5f99a0b93d8a344746bf6 "bibtex main"
-  "main.lof" 1738790754 4546 acec99155e6ea32d3648e0ab852646b7 "pdflatex"
-  "main.lot" 1738790754 757 3daac62a79313c13be06594caaffed92 "pdflatex"
-  "main.out" 1738790754 12369 ff924904a63242e8ec2b78d062831602 "pdflatex"
-  "main.run.xml" 1738790754 2613 b0aada028a7f8702b3b5fdf798159577 "pdflatex"
-  "main.tex" 1738790735 134448 124d128ec9d72c23d3e143034edd7b7f ""
-  "main.toc" 1738790754 7077 ecdc72ee38dc22064af9a5d5d69e9600 "pdflatex"
+  "c:/Users/Szniobatron/Documents/GitHub/Vision-System-for-Eye-Movement-Tracking/Praca inżynierska/szablon-inz-latex/single-file/main.tex" 1738864552 144321 0d582059f48ee1e60730a831997c5d07 ""
+  "main.aux" 1738864558 40782 271fe57620edc8cf13bc91b25637b764 "pdflatex"
+  "main.bbl" 1738864530 35466 072972c43ed5f99a0b93d8a344746bf6 "bibtex main"
+  "main.lof" 1738864558 4902 e981ce9301cfcfabb0e8ad21ab433920 "pdflatex"
+  "main.lot" 1738864558 757 346d3c153a6d78ae35f49ac8d6c9ca47 "pdflatex"
+  "main.out" 1738864558 15177 8e8456796726fd0f91da694bcabbc318 "pdflatex"
+  "main.run.xml" 1738864558 2613 b0aada028a7f8702b3b5fdf798159577 "pdflatex"
+  "main.tex" 1738864552 144321 0d582059f48ee1e60730a831997c5d07 ""
+  "main.toc" 1738864558 8178 f0436e4d607297c0e5f328da1a631295 "pdflatex"
   "pic/cechy haara/cechy Haara.png" 1738706962 7241 002012bae9914c450d436a11062793c5 ""
   "pic/diagram aktywności/druga próba/diagram aktywności 1.png" 1738624558 230141 551fc5597631fffd5925d40aa7f10b03 ""
   "pic/diagram aktywności/druga próba/diagram aktywności 2.png" 1738624943 235385 9a3a5729fcb360123f2c069d2ddab14a ""
@@ -324,6 +324,8 @@
   "pic/scenariusz/poprawienie śledzenia.png" 1738527129 501799 941fd73ba8b3bdcd3005221df739e4bc ""
   "pic/scenariusz/zapisanie wykresow.png" 1738528223 83779 d14019343c611d774c2a0d0a32d0ab7e ""
   "pic/scenariusz/śledzenie start.png" 1738526889 551097 e208b82813b9ba71fdfe3fa7a0d1918e ""
+  "pic/testy/test punktu odniesienia.png" 1738856304 166216 af5b6ecd1bd5797991ad79b431cc89df ""
+  "pic/testy/zaawansowana.png" 1738862244 5888 ed4b8190754307b5c28e73b99ef65e86 ""
   "pic/use case/use case diagram.png" 1738191835 202005 03f263c666988b11437941262fa2ae7e ""
   "politechnika_sl_logo_bw_pion_pl.pdf" 1736445413 22633 c6320640bafa38d406e62eed6fafdfbd ""
   (generated)
