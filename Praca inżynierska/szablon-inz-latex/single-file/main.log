@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  6 FEB 2025 18:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.5)  6 FEB 2025 22:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1845,7 +1845,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [52]
 Rozdzia\l  6.
 
-Underfull \vbox (badness 1132) has occurred while \output is active []
+Underfull \vbox (badness 4316) has occurred while \output is active []
 
 
 
@@ -1894,6 +1894,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [56]
+Overfull \hbox (4.87271pt too wide) in paragraph at lines 1691--1692
+[]\T1/lmr/m/n/12 Pierwszym na-po-tka-nym bª¦-dem byªo
+ []
+
+
+Overfull \hbox (9.53664pt too wide) in paragraph at lines 1694--1695
+[]\T1/lmr/m/n/12 Funkcja \T1/lmtt/m/n/12 cv2-.find-Contours() \T1/lmr/m/n/12 z opcj¡ \T1/lmtt/m/n/12 CHAIN-_APPROX-_SIMPLE
+ []
+
+
+Overfull \hbox (8.96349pt too wide) in paragraph at lines 1695--1696
+[]\T1/lmr/m/n/12 Funkcja \T1/lmtt/m/n/12 cv2-.minEnclosing-Circle() \T1/lmr/m/n/12 zwraca ±ro-
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1903,6 +1918,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [57 <./pic/testy/zaawansowana.png>]
+Overfull \hbox (9.69005pt too wide) in paragraph at lines 1698--1699
+[]\T1/lmr/m/n/12 Pocz¡tkowe u»y-cie Py-
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1911,11 +1931,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[58
+[58]
 
-]
-Rozdzia\l  7.
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [59]
 
@@ -1929,11 +1952,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [60
 
 ]
+Rozdzia\l  7.
 
-[61
+
+[61]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[62
 
 ]
-Overfull \hbox (13.31996pt too wide) in paragraph at lines 1753--1753
+
+[63
+
+]
+Overfull \hbox (13.31996pt too wide) in paragraph at lines 1762--1762
 \T1/lmr/m/it/12 pre-si-dent spe-ech\T1/lmr/m/n/12 . 2022. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / youtu . be / 3ugQL5fCdbI ? si = EQQ4jGSQ897SgRMX$[]
  []
 
@@ -1946,23 +1984,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[62]
-Overfull \hbox (6.5381pt too wide) in paragraph at lines 1753--1753
+[64]
+Overfull \hbox (6.5381pt too wide) in paragraph at lines 1762--1762
 []\T1/lmr/m/n/12 PassMark\TS1/lmr/m/n/12 ® \T1/lmr/m/n/12 So-ftware. \T1/lmr/m/it/12 About Pas-sMark So-ftware\T1/lmr/m/n/12 . 2025. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / www . passmark .
  []
 
 
-Overfull \hbox (2.68314pt too wide) in paragraph at lines 1753--1753
+Overfull \hbox (2.68314pt too wide) in paragraph at lines 1762--1762
 \T1/lmtt/m/n/12 org / 4 . x / d9 / d61 / tutorial _ py _ morphological _ ops . html$[] \T1/lmr/m/n/12 (term. wiz. 05. 02. 2025). 
  []
 
 
-Overfull \hbox (16.81474pt too wide) in paragraph at lines 1753--1753
+Overfull \hbox (16.81474pt too wide) in paragraph at lines 1762--1762
 []\T1/lmr/m/n/12 The Mat-plo-tlib de-ve-lop-ment team. \T1/lmr/m/it/12 mat-plo-tlib.pyplot\T1/lmr/m/n/12 . 2024. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / matplotlib .
  []
 
 
-Overfull \hbox (5.42575pt too wide) in paragraph at lines 1753--1753
+Overfull \hbox (5.42575pt too wide) in paragraph at lines 1762--1762
 []\T1/lmr/m/n/12 The Mat-plo-tlib de-ve-lop-ment team. \T1/lmr/m/it/12 Py-plot tu-to-rial\T1/lmr/m/n/12 . 2025. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / matplotlib .
  []
 
@@ -1975,7 +2013,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[63]
+[65]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1983,12 +2021,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[64]
-
-[65
-
-]
 
 [66]
 
@@ -1996,18 +2028,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 
+[68]
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[68
+[69
 
 ]
-
-[69]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2019,11 +2044,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [70
 
 ]
-Overfull \hbox (2.38579pt too wide) in paragraph at lines 1828--1829
-[]\T1/lmr/m/n/12 film po-ka-zu-j¡cy dzia-ªa-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
- []
-
-
 
 [71]
 
@@ -2036,9 +2056,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [72
 
+]
+Overfull \hbox (2.38579pt too wide) in paragraph at lines 1837--1838
+[]\T1/lmr/m/n/12 film po-ka-zu-j¡cy dzia-ªa-nie opra-co-wa-nego opro-gra-mo-wa-nia lub za-pro-jek-to-wa-nego i wy-
+ []
+
+
+
+[73]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[74
+
 ] (main.lof
 
-[73])
+[75])
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
@@ -2051,13 +2089,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[74] (main.lot)
+[76] (main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
 
 
-[75
+[77
 
 ] (main.aux)
  ***********
@@ -2072,16 +2110,16 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  50717 strings out of 473938
- 1173958 string characters out of 5724560
+ 1173920 string characters out of 5724560
  2122893 words of memory out of 5000000
- 72448 multiletter control sequences out of 15000+600000
+ 72446 multiletter control sequences out of 15000+600000
  627495 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,16n,93p,2058b,3512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Szniobatron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (83 pages, 7274229 bytes).
+Output written on main.pdf (85 pages, 7279159 bytes).
 PDF statistics:
- 1366 PDF objects out of 1440 (max. 8388607)
- 376 named destinations out of 1000 (max. 500000)
+ 1375 PDF objects out of 1440 (max. 8388607)
+ 378 named destinations out of 1000 (max. 500000)
  683 words of extra memory for PDF output out of 10000 (max. 10000000)
 

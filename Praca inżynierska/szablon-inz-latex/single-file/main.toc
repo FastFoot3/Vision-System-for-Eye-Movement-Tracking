@@ -89,15 +89,15 @@
 \contentsline {subsection}{\numberline {6.2.5}Testowanie zapisywania do pliku (pełne)}{56}{subsection.6.2.5}%
 \contentsline {subsection}{\numberline {6.2.6}Testowanie integralności i stabilności (pełne)}{56}{subsection.6.2.6}%
 \contentsline {subsection}{\numberline {6.2.7}Testowanie kalibracji zaawansowanej (niepełne)}{56}{subsection.6.2.7}%
-\contentsline {section}{\numberline {6.3}Wykryte i usunięte błędy}{56}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{59}{chapter.7}%
-\contentsline {chapter}{Bibliografia}{64}{chapter*.54}%
-\contentsline {chapter}{Spis skrótów i symboli}{67}{appendix*.55}%
+\contentsline {section}{\numberline {6.3}Wykryte i usunięte błędy}{57}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{61}{chapter.7}%
+\contentsline {chapter}{Bibliografia}{66}{chapter*.54}%
+\contentsline {chapter}{Spis skrótów i symboli}{69}{appendix*.55}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{69}{appendix*.56}%
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{71}{appendix*.57}%
-\contentsline {chapter}{Spis rysunków}{74}{appendix*.58}%
-\contentsline {chapter}{Spis tabel}{75}{appendix*.59}%
+\contentsline {chapter}{Źródła}{71}{appendix*.56}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{73}{appendix*.57}%
+\contentsline {chapter}{Spis rysunków}{76}{appendix*.58}%
+\contentsline {chapter}{Spis tabel}{77}{appendix*.59}%
