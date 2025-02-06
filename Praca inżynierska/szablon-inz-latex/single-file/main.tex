@@ -486,18 +486,25 @@ literate={ą}{{\k{a}}}1 {Ą}{{\k{A}}}1 {ę}{{\k{e}}}1 {Ę}{{\k{E}}}1 {ó}{{\'o}}
 %--------------------------------------
 %
 %
-% TODO: Streszczenie, słowa kluczowe, abstract, keywords
+% TODO: None
 %
-% Status: 0%
+% Status: 100% (DONE)
 %--------------------------------------
 \subsubsection*{Tytuł pracy} 
 \Title
 
 \subsubsection*{Streszczenie}  
-(Streszczenie pracy – odpowiednie pole w systemie APD powinno zawierać kopię tego streszczenia.)
+
+Praca inżynierska dotyczy opracowania systemu do wykrywania i śledzenia ruchu oczu w czasie rzeczywistym, wykorzystującego metody przetwarzania obrazu i uczenia maszynowego.
+
+Projekt koncentruje się na stworzeniu rozwiązania umożliwiającego detekcję oczu oraz dalszą analizę ruchu źrenic, co może znaleźć zastosowanie w testowaniu interfejsów użytkownika, badaniach nad percepcją wzrokową oraz innych dziedzinach wymagających śledzenia wzroku.
+
+Do implementacji systemu wykorzystano język Python oraz biblioteki o otwartym kodzie źródłowym, głównie OpenCV. W systemie zastosowano klasyfikatory Haara do wykrycia twarzy i oczu oraz operacje binaryzacji i morfologii matematycznej w celu precyzyjnej lokalizacji źrenic. Opracowano również trzy metody kalibracji, pozwalające dostosować działanie systemu do różnych warunków oświetleniowych i preferencji użytkownika.
+
+System został przetestowany w różnych warunkach, a wyniki analizy pozwoliły na poprawę stabilności wykrywania oczu. Opracowane rozwiązanie stanowi punkt wyjścia do dalszych badań nad algorytmami eye trackingu i może być rozwijane w przyszłości.
 
 \subsubsection*{Słowa kluczowe} 
-(2-5 slow (fraz) kluczowych, oddzielonych przecinkami)
+Okulografia, Przetwarzanie obrazu, Detekcja w czasie rzeczywistym, Uczenie maszynowe, Wizja komputerowa
 
 \subsubsection*{Thesis title} 
 \begin{otherlanguage}{british}
@@ -506,11 +513,17 @@ literate={ą}{{\k{a}}}1 {Ą}{{\k{A}}}1 {ę}{{\k{e}}}1 {Ę}{{\k{E}}}1 {ó}{{\'o}}
 
 \subsubsection*{Abstract} 
 \begin{otherlanguage}{british}
-(Thesis abstract – to be copied into an appropriate field during an electronic submission – in English.)
+	This engineering thesis focuses on the development of a real-time eye detection and tracking system using image processing and machine learning methods.
+
+	The project aims to create a solution that enables eye detection and further pupil movement analysis, which can be applied in user interface testing, research on visual perception, and other fields requiring eye-tracking technology.
+	
+	The system was implemented in Python using open-source libraries, primarily OpenCV. It employs Haar classifiers for face and eye detection, along with binarization and morphological operations to precisely locate pupils. Additionally, three calibration methods were developed to adjust the system's functionality to various lighting conditions and user preferences.
+	
+	The system was tested under different conditions, and the analysis results contributed to improving the stability of eye detection. The developed solution serves as a foundation for further research on eye tracking algorithms and can be expanded in the future.
 \end{otherlanguage}
 \subsubsection*{Key words}  
 \begin{otherlanguage}{british}
-(2-5 keywords, separated by commas)
+	Eye tracking, Image processing, Real-time detection, Machine learning, Computer vision
 \end{otherlanguage}
 
 
@@ -545,12 +558,12 @@ literate={ą}{{\k{a}}}1 {Ą}{{\k{A}}}1 {ę}{{\k{e}}}1 {Ę}{{\k{E}}}1 {ó}{{\'o}}
 \section{Wprowadzenie i osadzenie w dziedzinie}
 \label{sec:wprowadzenie-i-osadzenie-w-dziedzinie}
 % wprowadzenie w problem/zagadnienie
-Śledzenie ruchu gałek ocznych (ang. eye-tracking), zwane również jako okulografia, jest techniką, która badana jest od ponad stu lat. Istotność tej techniki wynika z faktu, że ruchy gałek ocznych są ściśle związane z procesami poznawczymi, takimi jak uwaga, percepcja, pamięć, czy procesy decyzyjne. Skupiając wzrok na danym punkcie, umieszczamy go w centralnym obszarze naszego pola widzenia które charakteryzuje się największą rozdzielczością, co pozwala na dokładne analizowanie szczegółów. Ten fakt wpływa także na proces skupienia -- gdy koncentrujemy się na danym obiekcie lub obszarze, skupiamy na nim wzrok (często wystarczy jedynie krótki moment).
+Śledzenie ruchu gałek ocznych (ang. eye tracking), zwane również jako okulografia, jest techniką, która badana jest od ponad stu lat. Istotność tej techniki wynika z faktu, że ruchy gałek ocznych są ściśle związane z procesami poznawczymi, takimi jak uwaga, percepcja, pamięć, czy procesy decyzyjne. Skupiając wzrok na danym punkcie, umieszczamy go w centralnym obszarze naszego pola widzenia które charakteryzuje się największą rozdzielczością, co pozwala na dokładne analizowanie szczegółów. Ten fakt wpływa także na proces skupienia -- gdy koncentrujemy się na danym obiekcie lub obszarze, skupiamy na nim wzrok (często wystarczy jedynie krótki moment).
 
 Możliwość rejestrowania ruchów oczu pozwala na zrozumienie w jaki sposób obserwator eksploruje otaczający go świat. Posiadając tą wiedzę możliwe jest wyciągnięcie wniosków na temat tego co jest interesujące lub istotne dla obserwatora, jakie emocje się z tym wiążą, czy nawet jakie procesy poznawcze zachodzą w jego umyśle, czy rozumie on to co widzi. Nie trudnym jest zauważyć jak cenne mogą być te informacje w szerokim spektrum dziedzin.
 
 % osadzenie problemu w dziedzinie
-Okulografia odgrywa kluczową rolę w psychologi poznawczej, psychologi społecznej, neurobiologii, marketingu, czy medycynie. W psychologii poznawczej ruch oczu jest ściśle związany z pamięcią, podejmowaniem decyzji, obciążeniem poznawczym i uczeniem się asocjacyjnym. W psychologii społecznej eye-tracking pozwala na wgląd w zachowania społeczne i ich analizę, co pozwala badać empatię, prospołeczność, czy fobie społeczne \cite{bib:tobii-main}. W neurobiologii bada się powiązania ruchu oczu ze szlakami neuronowymi odpowiedzialnymi za podejmowane akcje i procesy myślowe, dając możliwość w diagnozach i wsparciu osób dotkniętych chorobą Parkinsona \cite{bib:tobii-parkinson}, Alzheimera \cite{bib:tobii-alzheimer}, a także autyzmem czy łagodnym upośledzeniem funkcji poznawczych \cite{bib:tobii-autyzm}. W medycynie okulografia pozwala na diagnozę między innymi oczopląsu, który może być objawem np. stwardnienia rozsianego, uszkodzenia śródmózgowia lub urazu ucha wewnętrznego \cite{bib:Diagnostyka-oczoplas}. Niezaprzeczalnie technika ta jest niezwykle cenna i efektywna na wielu płaszczyznach naukowych i praktycznych.
+Okulografia odgrywa kluczową rolę w psychologi poznawczej, psychologi społecznej, neurobiologii, marketingu, czy medycynie. W psychologii poznawczej ruch oczu jest ściśle związany z pamięcią, podejmowaniem decyzji, obciążeniem poznawczym i uczeniem się asocjacyjnym. W psychologii społecznej eye tracking pozwala na wgląd w zachowania społeczne i ich analizę, co pozwala badać empatię, prospołeczność, czy fobie społeczne \cite{bib:tobii-main}. W neurobiologii bada się powiązania ruchu oczu ze szlakami neuronowymi odpowiedzialnymi za podejmowane akcje i procesy myślowe, dając możliwość w diagnozach i wsparciu osób dotkniętych chorobą Parkinsona \cite{bib:tobii-parkinson}, Alzheimera \cite{bib:tobii-alzheimer}, a także autyzmem czy łagodnym upośledzeniem funkcji poznawczych \cite{bib:tobii-autyzm}. W medycynie okulografia pozwala na diagnozę między innymi oczopląsu, który może być objawem np. stwardnienia rozsianego, uszkodzenia śródmózgowia lub urazu ucha wewnętrznego \cite{bib:Diagnostyka-oczoplas}. Niezaprzeczalnie technika ta jest niezwykle cenna i efektywna na wielu płaszczyznach naukowych i praktycznych.
 
 \section{Cel oraz zakres pracy}
 \label{sec:cel-oraz-zakres-pracy}
@@ -602,7 +615,7 @@ Tutaj warto wspomnieć o poszukiwaniu wzrokowym, jest to proces aktywnego przesz
 \subsection{Analiza ruchów oczu}
 \label{subsec:analiza-ruchow-oczu}
 
-Powyższe rozważania pozwalają przejść do głównego nurtu tematu śledzenia ruchu gałek ocznych, czyli analiza ruchów oczu. Rozróżniamy pięć podstawowych typów ruchów oczu: wspomniane już wcześniej sakadyczne, wergencyjne, przedsionkowe, płynne podążanie (smooth pursuit) oraz oczopląs fizjologiczny, który jest naturalny dla zdrowej osoby i często występuje podczas fiksacji. Ruchy te można podzielić na dobrowolne, mimowolne i odruchowe, a sygnały je kontrolujące pochodzą z obszarów korowych mózgu. Do opisania tych procesów można posłużyć się modelowaniem matematycznym. Do zrozumienia jawnej uwagi wzrokowej wystarczy modelowanie trzech typów ruchów: fiksacji, która pokazuje chęć utrzymania wzroku na stacjonarnym obiekcie, sakad, które mogą wskazywać na chęć zmiany punktu uwagi oraz płynnych pościgów, które podobnie do fiksacji, pozwalają na śledzenie obiektu, ale ruchomego. 
+Rozważania omówione w podrozdziale \ref{sec:sformulowanie-problemu} pozwalają przejść do głównego nurtu tematu śledzenia ruchu gałek ocznych, czyli analiza ruchów oczu. Rozróżniamy pięć podstawowych typów ruchów oczu: wspomniane już wcześniej sakadyczne, wergencyjne, przedsionkowe, płynne podążanie (smooth pursuit) oraz oczopląs fizjologiczny, który jest naturalny dla zdrowej osoby i często występuje podczas fiksacji. Ruchy te można podzielić na dobrowolne, mimowolne i odruchowe, a sygnały je kontrolujące pochodzą z obszarów korowych mózgu. Do opisania tych procesów można posłużyć się modelowaniem matematycznym. Do zrozumienia jawnej uwagi wzrokowej wystarczy modelowanie trzech typów ruchów: fiksacji, która pokazuje chęć utrzymania wzroku na stacjonarnym obiekcie, sakad, które mogą wskazywać na chęć zmiany punktu uwagi oraz płynnych pościgów, które podobnie do fiksacji, pozwalają na śledzenie obiektu, ale ruchomego. 
 
 \subsubsection{Ruchy sakadowe}
 \label{subsubsec:ruchy-sakadowe}
@@ -651,7 +664,7 @@ Płynne podążanie występuje gdy obserwator śledzi obiekt w ruchu, ruch ten o
 	\label{eq:plynne-podazanie-pentla}
 \end{align}
 
-Wejście $s_t$ to pozycja celu, wyjście $x_t$ to pożądana pozycja oka. Można zauważyć, że w tym przypadku nie jest wymagana transformacja informacji wejściowej na wyjściową, a jedynie zmodyfikowanie jej wartości, w związku z tym $h$ jest liniowym niezmiennym w czasie filtrem, czyli po prostu wzmocnieniem systemu. Przeprowadźmy teraz transformację Z na powyższym równaniu \ref{eq:plynne-podazanie-pentla} by uzyskać transmitancję systemu przedstawioną wzorem \ref{eq:plynne-podazanie-transmitancja}.
+Wejście $s_t$ to pozycja celu, wyjście $x_t$ to pożądana pozycja oka. Można zauważyć, że w tym przypadku nie jest wymagana transformacja informacji wejściowej na wyjściową, a jedynie zmodyfikowanie jej wartości, w związku z tym $h$ jest liniowym niezmiennym w czasie filtrem, czyli po prostu wzmocnieniem systemu. Przeprowadźmy teraz transformację Z na równaniu \ref{eq:plynne-podazanie-pentla} by uzyskać transmitancję systemu przedstawioną wzorem \ref{eq:plynne-podazanie-transmitancja}.
 
 \begin{align} %!!!!!!!!!!!!!!!!!!!!!!!!!!!!TUTAJ JEST COŚ ŹLE Z TYM RÓWNANIEM%!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	\mathcal{Z}\{h \cdot (s_t - x_t)\} &= \mathcal{Z}\{x_{t+1}\} \nonumber \\
@@ -675,7 +688,7 @@ W ten sposób sygnał z receptorów oka służy za błąd, który następnie jes
 
 Można zauważyć, że fiksacja jest procesem podobnym do płynnego podążania, z tą różnicą, że w tym przypadku obiekt jest nieruchomy. Jednakże proces ten nie da się bezpośrednio z sobą porównać i najprawdopodobniej nie ma wspólnego obwodu neuronalnego. Nasze komórki systemu wzrokowego są fizjologicznie wrażliwe na ruch, gdyby dany obiekt został unieruchomiony względem siatkówki, po krótkim czasie widzenie zaniknie. Powoduje to konieczność mikrosakad i innych mimowolnych, drobnych ruchów oczu. Można więc uznać, że model fiksacji jest podobny do modelu płynnego podążania, który próbuje utrzymać pozycję oka na danym punkcie, a mikrosakady i inne ruchy można uznać za szum w systemie kontrolnym, który można wyrazić jako $e_t = x_t - s_t$. Jest to losowa fluktuacja wokół punktu fiksacji, a jej wartość średnia pozostaje stała.
 
-Ruch gałek ocznych i związane z nim widzenie jest bardzo szerokim tematem interdyscyplinarnym, na potrzeby tego projektu powyższe sformułowanie problemu, chociaż uproszczone i nie wyczerpujące, pozwala na zrozumienie w pełni istoty prezentowanego systemu.
+Ruch gałek ocznych i związane z nim widzenie jest bardzo szerokim tematem interdyscyplinarnym, na potrzeby tego projektu sformułowanie problemu w podrozdziale \ref{sec:sformulowanie-problemu}, chociaż uproszczone i nie wyczerpujące, pozwala na zrozumienie w pełni istoty prezentowanego systemu.
 
 % Osadzenie tematu w kontekście aktualnego stanu wiedzy
 
@@ -706,14 +719,14 @@ Omawiane odbicie rogówkowe nazywane jest obrazem Purkinjego, budowa oka sprawia
 \label{sec:studia-literaturowe}
 
 % UWAGA - Czy cytat nie powinien być przeniesiony na koniec akapitu?
-Powyższe sformułowanie problemu i jego osadzenie w kontekście aktualnego stanu wiedzy zostało przedstawione w oparciu o książkę ,,Eye Tracking Methodology: Theory and Practice'' autorstwa Andrew T. Duchowskiego \cite{bib:eye-tracking-methodology}. Książka ta dogłębnie omawia temat śledzenia ruchu oczu, pozwalając na zgłębienie zarówno podstaw procesów wzrokowych w kontekstach różnych dziedzin naukowych, a także szeroko omawia praktykę pomiaru ruchu oczu. Powyższa analiza tematu skupia się jedynie na najistotniejszych aspektach, które pozwolą na zrozumienie istoty prezentowanego systemu, a wiedzę na ich temat można poszerzyć lekturą wspomnianej książki.
+Sformułowanie problemu i jego osadzenie w kontekście aktualnego stanu wiedzy w podrozdziałach \ref{sec:sformulowanie-problemu} i \ref{sec:osadzenie-tematu-w-kontekscie-aktualnego-stanu-wiedzy} zostało przedstawione w ścisłym oparciu o książkę ,,Eye Tracking Methodology: Theory and Practice'' autorstwa Andrew T. Duchowskiego \cite{bib:eye-tracking-methodology}. Treść tych podrozdziałów stanowi przełożenie i opracowanie wiedzy zawartej w tej pozycji, której autor jest uznanym specjalistą w zakresie śledzenia ruchu oczu. Książka ta dogłębnie omawia zarówno podstawowe procesy wzrokowe w różnych kontekstach naukowych, jak i szeroko przedstawia praktyczne aspekty pomiaru ruchu oczu. Część teoretyczna rozdziału \ref{ch:analiza-tematu} skupia się jedynie na najistotniejszych aspektach, niezbędnych do zrozumienie istoty prezentowanego systemu, a czytelnik zainteresowany pogłębieniem wiedzy w tym zakresie może odwołać się do wspomnianej książki.
 
-Eye-tracking staje się coraz bardziej dostępny, co sprawia że technologia ta znajduje zastosowanie w wielu obszarach, zarówno w badaniach naukowych jak i do użytku konsumenckiego czy komercyjnego. Część producentów owych systemów udostępnia publikacje naukowe, w których zostały one wykorzystane, a ich analiza przedstawia różne rozwiązania omawianego tematu.
+Eye tracking staje się coraz bardziej dostępny, co sprawia, że technologia ta znajduje zastosowanie w wielu obszarach, zarówno w badaniach naukowych jak i do użytku konsumenckiego czy komercyjnego. Część producentów owych systemów udostępnia publikacje naukowe, w których zostały one wykorzystane, a ich analiza przedstawia różne rozwiązania omawianego tematu.
 
 \subsection{Metoda źrenicy i odbicia rogówkowego w badaniach}
 \label{subsec:metoda-zrenicy-i-odbicia-rogowkowego-w-badaniach}
 
-Jednym z przedstawicieli firm skupiających się na analizie zachowań ludzkich jest iMotions, wyróżniając się modularnym systemem z centralnym hubem. Firma ta oferuje biosensory w formie modułów, pozwalające na np. śledzenie oczu, analizę wyrazu twarzy, rejestrowanie aktywności elektrycznej mózgu i rejestrowanie aktywności serca. Dane zebrane przez różne czujniki są integrowane w jednym oprogramowaniu co pozwala badaczom na prostą synchronizację i analizę danych w jednym systemie \cite{bib:iMotions-about-us}. Jednak mimo tak obszernego asortymentu biosensorów, to właśnie moduł śledzenia wzroku na ekranie (montowany na biurku) był wykorzystywany najczęściej w badaniach naukowych, z czego eye-tracking był najczęściej wykorzystywany w systemach jednomodułowych \cite{bib:iMotions-2023-report}. Pokazuje to jak uniwersalnym i podstawowym narzędziem jest eye-tracker w badaniach behawioralnych i nie tylko. 
+Jednym z przedstawicieli firm skupiających się na analizie zachowań ludzkich jest iMotions, wyróżniając się modularnym systemem z centralnym hubem. Firma ta oferuje biosensory w formie modułów, pozwalające na np. śledzenie oczu, analizę wyrazu twarzy, rejestrowanie aktywności elektrycznej mózgu i rejestrowanie aktywności serca. Dane zebrane przez różne czujniki są integrowane w jednym oprogramowaniu co pozwala badaczom na prostą synchronizację i analizę danych w jednym systemie \cite{bib:iMotions-about-us}. Jednak mimo tak obszernego asortymentu biosensorów, to właśnie moduł śledzenia wzroku na ekranie (montowany na biurku) był wykorzystywany najczęściej w badaniach naukowych, z czego eye tracking był najczęściej wykorzystywany w systemach jednomodułowych \cite{bib:iMotions-2023-report}. Pokazuje to jak uniwersalnym i podstawowym narzędziem jest eye tracker w badaniach behawioralnych i nie tylko. 
 
 Jednym z przeprowadzonych badań z użyciem technologii iMotions było ,,Using Psychophysiological Data to Facilitate Reflective Conversations with Children about their Player Experiences''. Podobne badania były przeprowadzane wielokrotnie w stosunku do osób dorosłych, jednak w przypadku grupy badanej składającej się z dzieci, badacze mogą napotkać znaczny problem z odpowiednim zrozumieniem wywiadu, w którym uczestnicy dzielą się swoimi wrażeniami z przeprowadzonej rozgrywki. Omawiane badanie miało głównie na celu sprawdzenie czy zebrane dane z biosensorów są wstanie wspomóc refleksje dzieci na temat ich doświadczenia w grze i czy dzieci napotkają problemy z interpretacją prezentowanych danych, jako że odnoszenie się do stanu psychofizjologicznego może zminimalizować problem z komunikacją pomiędzy dzieckiem, które posiada ograniczone umiejętności werbalne, a badaczem. 
 
@@ -724,7 +737,7 @@ Badanie składało się z dwóch etapów, wpierw zebrano dane w laboratorium pod
 \subsection{Porównanie z video-okulografią z użyciem kamerki internetowej}
 \label{subsec:porownanie-z-video-okulografia-z-uzyciem-kamerki-internetowej}
 
-Warto omówić także przykłady systemów opierających się jedynie na analizie wideo z kamerki internetowej, jako że system prezentowany w tej pracy działa przede wszystkim na tej zasadzie. Ten typ okulografii opartej na analizie wideo w czasie rzeczywistym cieszy się dużą popularnością wśród konsumentów, jako że sprzętowo wymaga od użytkownika posiadanie jedynie komputera z wbudowaną lub zewnętrzną kamerą, a całość przetwarzania obrazu, wyświetlania i zbierania danych oraz wyliczania punktu spojrzenia realizowane jest przez software producenta eye-trackera. Istotność takiego rozwiązania pojawia się także gdy przeprowadza się badania na dużej grupie, jako że osoba badana sama dostarcza sprzęt w formie laptopa czy nawet smartfona, a zbierane dane przesyłane są do badaczy przez internet, eliminując potrzebe stwarzania przestrzeni laboratoryjnej i planowania dogodnych terminów eksperymentów. Dlatego firmy specjalizujące się w okulografii, często oferują także oprogramowanie do śledzenia ruchu gałek ocznych przez kamerkę internetową, jak wspomniana już wcześniej firma iMotions. Często także dostępne są rozwiązania od niezależnych dostawców oprogramowania, które za subskrypcją, opłatę, lub całkowicie bezpłatnie oferują śledzenie punktu spojrzenia przez kamerę komputera, jednym z takich programów, który zostanie omówiony jest darmowy GazeRecorder. 
+Warto omówić także przykłady systemów opierających się jedynie na analizie wideo z kamerki internetowej, jako że system prezentowany w tej pracy działa przede wszystkim na tej zasadzie. Ten typ okulografii opartej na analizie wideo w czasie rzeczywistym cieszy się dużą popularnością wśród konsumentów, jako że sprzętowo wymaga od użytkownika posiadanie jedynie komputera z wbudowaną lub zewnętrzną kamerą, a całość przetwarzania obrazu, wyświetlania i zbierania danych oraz wyliczania punktu spojrzenia realizowane jest przez software producenta eye trackera. Istotność takiego rozwiązania pojawia się także gdy przeprowadza się badania na dużej grupie, jako że osoba badana sama dostarcza sprzęt w formie laptopa czy nawet smartfona, a zbierane dane przesyłane są do badaczy przez internet, eliminując potrzebe stwarzania przestrzeni laboratoryjnej i planowania dogodnych terminów eksperymentów. Dlatego firmy specjalizujące się w okulografii, często oferują także oprogramowanie do śledzenia ruchu gałek ocznych przez kamerkę internetową, jak wspomniana już wcześniej firma iMotions. Często także dostępne są rozwiązania od niezależnych dostawców oprogramowania, które za subskrypcją, opłatę, lub całkowicie bezpłatnie oferują śledzenie punktu spojrzenia przez kamerę komputera, jednym z takich programów, który zostanie omówiony jest darmowy GazeRecorder. 
 
 W publikacji ,,WebET 3.0 -Validation Study Report'' przeprowadzono badania sprawdzające efektywność śledzenia ruchu gałek ocznych przez oprogramowanie WebET 3.0 firmy iMotions z wykorzystaniem kamerek internetowych uczestników, bez względu na ich oświetlenie, rozdzielczość kamery czy prędkość internetu. Grupa badana została utworzona tak by reprezentować różne pochodzenie, wiek, płeć i kolor oczu, uczestnicy mogli także posiadać owłosienie twarzy oraz nosić okulary. By stworzyć punkty odniesienia pokazano badanym gify z kotami oraz emotikony w tych samych miejscach, a następnie obliczono dokładność mierząc odległości pomiędzy zarejestrowanymi punktami spojrzenia, a ustalonymi punktami odniesienia. 
 
