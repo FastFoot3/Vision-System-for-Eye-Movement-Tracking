@@ -8,70 +8,101 @@
 \thispagestyle {empty}
 \contentsline {chapter}{\numberline {1}Wstęp}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Wprowadzenie i osadzenie w dziedzinie}{1}{section.1.1}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \contentsline {section}{\numberline {1.2}Cel oraz zakres pracy}{2}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Śledzenie ruchu gałek ocznych -- analiza tematu}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Sformułowanie problemu}{3}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Uwaga wzrokowa}{3}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Poszukiwanie wzrokowe}{4}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Analiza ruchów oczu}{4}{subsection.2.1.3}%
-\contentsline {subsubsection}{Ruchy sakadowe}{4}{section*.8}%
-\contentsline {subsubsection}{Płynne podążanie}{6}{section*.10}%
-\contentsline {subsubsection}{Fiksacja}{6}{section*.12}%
-\contentsline {section}{\numberline {2.2}Osadzenie tematu w kontekście aktualnego stanu wiedzy}{7}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Metody śledzenia ruchu oczu: przegląd historyczny i alternatywy}{7}{subsection.2.2.1}%
+\contentsline {section}{\numberline {1.3}Charakterystyka rozdziałów}{2}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Śledzenie ruchu gałek ocznych -- analiza tematu}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Sformułowanie problemu}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Uwaga wzrokowa}{5}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Poszukiwanie wzrokowe}{6}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Analiza ruchów oczu}{6}{subsection.2.1.3}%
+\contentsline {subsubsection}{Ruchy sakadowe}{6}{section*.8}%
+\contentsline {subsubsection}{Płynne podążanie}{8}{section*.10}%
+\contentsline {subsubsection}{Fiksacja}{8}{section*.12}%
+\contentsline {section}{\numberline {2.2}Osadzenie tematu w kontekście aktualnego stanu wiedzy}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Metody śledzenia ruchu oczu: przegląd historyczny i alternatywy}{9}{subsection.2.2.1}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Analiza wideo z wykorzystaniem źrenicy i odbicia rogówkowego}{8}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Studia literaturowe}{9}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Metoda źrenicy i odbicia rogówkowego w badaniach}{10}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Porównanie z video-okulografią z użyciem kamerki internetowej}{11}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Podsumowanie metod w literaturze}{12}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.2.2}Analiza wideo z wykorzystaniem źrenicy i odbicia rogówkowego}{10}{subsection.2.2.2}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{\numberline {3}Wymagania i narzędzia}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Wymagania funkcjonalne}{13}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Limitacje sprzętowe i środowiskowe}{13}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Wykorzystanie platform i narzędzi programistycznych}{13}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Zakres działania systemu}{14}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Wymagania niefunkcjonalne}{15}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Przypadki użycia}{16}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Narzędzia i metody wykorzystane w pracy}{18}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}ASUS Vivobook 15}{18}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Narzędzia programistyczne}{18}{subsection.3.4.2}%
-\contentsline {subsubsection}{Github Desktop i Github}{18}{section*.14}%
-\contentsline {subsubsection}{Visual Studio Code (VS Code)}{19}{section*.15}%
-\contentsline {subsubsection}{Python 3.13.0}{19}{section*.16}%
-\contentsline {subsubsection}{OpenCV}{20}{section*.17}%
-\contentsline {subsubsection}{NumPy}{20}{section*.18}%
-\contentsline {subsubsection}{Matplotlib}{20}{section*.19}%
-\contentsline {subsubsection}{pandas}{20}{section*.20}%
-\contentsline {subsubsection}{Time}{20}{section*.21}%
-\contentsline {subsubsection}{PyInstaller 6.11.1}{21}{section*.22}%
-\contentsline {subsection}{\numberline {3.4.3}Metodyka pracy nad projektem}{21}{subsection.3.4.3}%
-\contentsline {chapter}{\numberline {4}Specyfikacja zewnętrzna}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Wymagania sprzętowe i programowe}{23}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Procesor i pamięć RAM}{23}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}System operacyjny}{24}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Podsumowanie wymagań}{25}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Sposób instalacji}{25}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Kategorie użytkowników}{25}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Sposób obsługi i działania}{26}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Kwestie bezpieczeństwa}{28}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Scenariusze korzystania z systemu}{29}{section.4.6}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {2.3}Studia literaturowe}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Metoda źrenicy i odbicia rogówkowego w badaniach}{12}{subsection.2.3.1}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsection}{\numberline {2.3.2}Porównanie z video-okulografią z użyciem kamerki internetowej}{13}{subsection.2.3.2}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsection}{\numberline {2.3.3}Podsumowanie metod w literaturze}{14}{subsection.2.3.3}%
+\contentsline {chapter}{\numberline {3}Wymagania i narzędzia}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Wymagania funkcjonalne}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Limitacje sprzętowe i środowiskowe}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Wykorzystanie platform i narzędzi programistycznych}{15}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Zakres działania systemu}{16}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Wymagania niefunkcjonalne}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Przypadki użycia}{18}{section.3.3}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {3.4}Narzędzia i metody wykorzystane w pracy}{20}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}ASUS Vivobook 15}{20}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Narzędzia programistyczne}{21}{subsection.3.4.2}%
+\contentsline {subsubsection}{Github Desktop i Github}{21}{section*.14}%
+\contentsline {subsubsection}{Visual Studio Code (VS Code)}{21}{section*.15}%
+\contentsline {subsubsection}{Python 3.13.0}{21}{section*.16}%
+\contentsline {subsubsection}{OpenCV}{22}{section*.17}%
+\contentsline {subsubsection}{NumPy}{22}{section*.18}%
+\contentsline {subsubsection}{Matplotlib}{22}{section*.19}%
+\contentsline {subsubsection}{pandas}{22}{section*.20}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsubsection}{Time}{23}{section*.21}%
+\contentsline {subsubsection}{PyInstaller 6.11.1}{23}{section*.22}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsection}{\numberline {3.4.3}Metodyka pracy nad projektem}{23}{subsection.3.4.3}%
+\contentsline {chapter}{\numberline {4}Specyfikacja zewnętrzna}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Wymagania sprzętowe i programowe}{25}{section.4.1}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Procesor i pamięć RAM}{25}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}System operacyjny}{26}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Podsumowanie wymagań}{27}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Sposób instalacji}{27}{section.4.2}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {4.3}Kategorie użytkowników}{27}{section.4.3}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {4.4}Sposób obsługi i działania}{28}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Kwestie bezpieczeństwa}{31}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Scenariusze korzystania z systemu}{31}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Specyfikacja wewnętrzna}{35}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Przedstawienie idei}{35}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Architektura systemu}{40}{section.5.2}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \contentsline {section}{\numberline {5.3}Opis struktur danych}{40}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Funkcjonalności bibliotek}{41}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}\texttt {eye\-\_detect\-.exe}}{41}{subsection.5.4.1}%
-\contentsline {subsubsection}{OpenCV (cv2)}{41}{section*.39}%
-\contentsline {subsubsection}{numpy (np)}{42}{section*.40}%
-\contentsline {subsubsection}{time}{42}{section*.41}%
+\contentsline {subsubsection}{OpenCV (cv2)}{41}{section*.38}%
+\contentsline {subsubsection}{numpy (np)}{42}{section*.39}%
+\contentsline {subsubsection}{time}{42}{section*.40}%
 \contentsline {subsection}{\numberline {5.4.2}\texttt {eye\_\-tracking\_\-plot\-.exe}}{43}{subsection.5.4.2}%
-\contentsline {subsubsection}{Matplotlib.pyplot (plt)}{43}{section*.42}%
-\contentsline {subsubsection}{pandas (pd)}{43}{section*.43}%
+\contentsline {subsubsection}{Matplotlib.pyplot (plt)}{43}{section*.41}%
+\contentsline {subsubsection}{pandas (pd)}{43}{section*.42}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \contentsline {section}{\numberline {5.5}Przegląd algorytmów}{44}{section.5.5}%
 \contentsline {subsection}{\numberline {5.5.1}Kaskadowy klasyfikator oparty na cechach Haara}{44}{subsection.5.5.1}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \contentsline {subsection}{\numberline {5.5.2}Binaryzacja i operacje morfologiczne}{45}{subsection.5.5.2}%
 \contentsline {section}{\numberline {5.6}Szczegóły implementacji wybranych fragmentów}{47}{section.5.6}%
 \contentsline {subsection}{\numberline {5.6.1}Kontrola błędów i zasoby}{47}{subsection.5.6.1}%
@@ -81,6 +112,8 @@
 \contentsline {subsection}{\numberline {5.6.5}Binaryzacja, operacje morfologiczne i środek źrenic}{51}{subsection.5.6.5}%
 \contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{53}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Sposób testowanie w ramach pracy}{53}{section.6.1}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \contentsline {section}{\numberline {6.2}Przypadki testowe}{53}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Testowanie uniwersalności dla innych twarzy (niepełne)}{54}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Testowanie odporności na różne oświetlenie (pełne)}{54}{subsection.6.2.2}%
@@ -90,14 +123,41 @@
 \contentsline {subsection}{\numberline {6.2.6}Testowanie integralności i stabilności (pełne)}{56}{subsection.6.2.6}%
 \contentsline {subsection}{\numberline {6.2.7}Testowanie kalibracji zaawansowanej (niepełne)}{56}{subsection.6.2.7}%
 \contentsline {section}{\numberline {6.3}Wykryte i usunięte błędy}{57}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{61}{chapter.7}%
-\contentsline {chapter}{Bibliografia}{66}{chapter*.54}%
-\contentsline {chapter}{Spis skrótów i symboli}{69}{appendix*.55}%
+\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{59}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Podsumowanie wyników w świetle postawionych wymagań}{59}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Potencjalne kierunki rozwoju}{60}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Problemy napotkane w trakcie pracy}{60}{section.7.3}%
+\contentsline {chapter}{Bibliografia}{63}{chapter*.52}%
+\contentsline {chapter}{Spis skrótów i symboli}{67}{appendix*.53}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{71}{appendix*.56}%
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{73}{appendix*.57}%
-\contentsline {chapter}{Spis rysunków}{76}{appendix*.58}%
-\contentsline {chapter}{Spis tabel}{77}{appendix*.59}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{Źródła}{69}{appendix*.54}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{71}{appendix*.55}%
+\contentsline {chapter}{Spis rysunków}{74}{appendix*.56}%
+\contentsline {chapter}{Spis tabel}{75}{appendix*.57}%

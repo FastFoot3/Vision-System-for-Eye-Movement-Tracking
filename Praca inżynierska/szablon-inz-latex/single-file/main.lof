@@ -6,45 +6,100 @@
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagram modelu ruchów sakadowych z filtrem liniowym różniczkującym.}}{5}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Diagram modelu płynnego podążania z liniowym sprzężeniem zwrotnym.}}{6}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagram modelu ruchów sakadowych z filtrem liniowym różniczkującym.}}{7}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Diagram modelu płynnego podążania z liniowym sprzężeniem zwrotnym.}}{8}{figure.caption.11}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram UML przypadku użycia systemu do śledzenia ruchu gałek ocznych.}}{17}{figure.caption.13}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram UML przypadku użycia systemu do śledzenia ruchu gałek ocznych.}}{19}{figure.caption.13}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Główne okna programu \texttt {eye\_\-detect.exe} w momencie uruchamiania, przed połączeniem z kamerą.}}{26}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Wizualizacja obrazów binarnych wykorzystywanych w procesie wykrywania źrenic i odbicia rogówkowego.}}{27}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Okna programu \texttt {eye\_\-tracking\_\-plot.exe}, przedstawiające wykresy czasowe przemieszczenia źrenicy i terminal.}}{28}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Użytkownik decyduje się na rozpoczęcie śledzenia.}}{29}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Użytkownik uruchomił pomyślnie system do śledzenia ruchu gałek ocznych.}}{30}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Użytkownik poprawił warunki oświetleniowe i dostosował ustawienia programu.}}{30}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Użytkownik uruchamia krótkie nagranie do analizy uwagi wzrokowej.}}{30}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Użytkownik decyduje się na wygenerowanie wykresów czasowych z zebranych pomiarów.}}{31}{figure.caption.30}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Użytkownik analizuje wykresy dla obu oczu.}}{31}{figure.caption.31}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Użytkownik dostosowuje ustawienia wizualne wykresów.}}{31}{figure.caption.32}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Użytkownik zapisuje wykresy czasowe w wybranym przez siebie rozszerzeniu.}}{32}{figure.caption.33}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Podpis rysunku po rysunkiem.}}{33}{figure.caption.34}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Główne okna programu \texttt {eye\_\-detect.exe} w momencie uruchamiania, przed połączeniem z kamerą.}}{28}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Wizualizacja obrazów binarnych wykorzystywanych w procesie wykrywania źrenic i odbicia rogówkowego.}}{29}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Okna programu \texttt {eye\_\-tracking\_\-plot.exe}, przedstawiające wykresy czasowe przemieszczenia źrenicy i terminal.}}{30}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Użytkownik decyduje się na rozpoczęcie śledzenia.}}{31}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Użytkownik uruchomił pomyślnie system do śledzenia ruchu gałek ocznych.}}{32}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Użytkownik poprawił warunki oświetleniowe i dostosował ustawienia programu.}}{32}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Użytkownik uruchamia krótkie nagranie do analizy uwagi wzrokowej.}}{33}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Użytkownik decyduje się na wygenerowanie wykresów czasowych z zebranych pomiarów.}}{33}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Użytkownik analizuje wykresy dla obu oczu.}}{33}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Użytkownik dostosowuje ustawienia wizualne wykresów.}}{34}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Użytkownik zapisuje wykresy czasowe w wybranym przez siebie rozszerzeniu.}}{34}{figure.caption.33}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram aktywności programu \texttt {eye\-\_detect.exe} (część 1).}}{37}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagram aktywności programu \texttt {eye\-\_detect.exe} (część 2).}}{38}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Diagram aktywności programu \texttt {eye\-\_detect.exe} (część 3).}}{39}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Diagram aktywności programu \texttt {eye\-\_detect.exe} (część 4).}}{40}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Jądra splotowe Haara pozwalające wykrycie między innymi krawędzi i lini.}}{44}{figure.caption.44}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Kod łączący z zasobami i kontrolą błędu systemu.}}{47}{figure.caption.45}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Kod wykrywający twarz i wyznaczający ROI.}}{48}{figure.caption.46}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Kod wykrywający oczy i sortujący je wzgledem pozycji.}}{49}{figure.caption.47}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Kod prezentujący wybór trybu kalibracji.}}{50}{figure.caption.48}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Kod przeprowadzający binaryzację i operacje morfologiczne na źrenicy.}}{51}{figure.caption.49}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Kod wyznaczający środek wykrytej źrenicy.}}{52}{figure.caption.50}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram aktywności programu \texttt {eye\-\_detect.exe} (część 1).}}{37}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagram aktywności programu \texttt {eye\-\_detect.exe} (część 2).}}{38}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Diagram aktywności programu \texttt {eye\-\_detect.exe} (część 3).}}{39}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Diagram aktywności programu \texttt {eye\-\_detect.exe} (część 4).}}{40}{figure.caption.37}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Jądra splotowe Haara pozwalające wykrycie między innymi krawędzi i lini.}}{44}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Kod łączący z zasobami i kontrolą błędu systemu.}}{47}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Kod wykrywający twarz i wyznaczający ROI.}}{48}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Kod wykrywający oczy i sortujący je wzgledem pozycji.}}{49}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Kod prezentujący wybór trybu kalibracji.}}{50}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Kod przeprowadzający binaryzację i operacje morfologiczne na źrenicy.}}{51}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Kod wyznaczający środek wykrytej źrenicy.}}{52}{figure.caption.49}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Wykres czasowy sesji testującej dokładność wykonywanych pomiarów.}}{55}{figure.caption.51}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Obraz binarny odbicia rogówkowego, w trakcie próby testującej kalibrację zaawansowaną w widzialnym spektrum światła.}}{57}{figure.caption.52}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Wykres czasowy sesji testującej dokładność wykonywanych pomiarów.}}{55}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Obraz binarny odbicia rogówkowego, w trakcie próby testującej kalibrację zaawansowaną w widzialnym spektrum światła.}}{57}{figure.caption.51}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
