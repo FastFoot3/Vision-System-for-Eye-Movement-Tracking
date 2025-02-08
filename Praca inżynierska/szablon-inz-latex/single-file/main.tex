@@ -642,8 +642,8 @@ Filtr Haara jest jednym z przykładów filtrów, które przybliżają różniczk
 	x_t &= 1 \cdot s_t - 1 \cdot s_{t-1} \nonumber \\
 	x_t &= s_t - s_{t-1} \nonumber \\
 	\mathcal{Z}\{x_t\} &= \mathcal{Z} \{s_t - s_{t-1}\} \nonumber \\
-	X(z) &= (1 - z) \cdot S(z) \nonumber \\ % POWINNO BYĆ CHYBA (1 - z^{-1}) \cdot S(z)
-	\frac{X(z)}{S(z)} &= 1 - z \label{eq:sakady-transmitancja}
+	X(z) &= (1 - z^{-1}) \cdot S(z) \nonumber \\ % POWINNO BYĆ CHYBA (1 - z^{-1}) \cdot S(z)
+	\frac{X(z)}{S(z)} &= 1 - z^{-1} \label{eq:sakady-transmitancja}
 \end{align}   %!!!!!!!!!!!!!!!!!!!!!!!!!!!!TUTAJ JEST COŚ ŹLE Z TYM RÓWNANIEM%!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 Diagram omawianego modelu przedstawiony jest na rysunku \ref{fig:model-sakad}.
@@ -669,10 +669,10 @@ Wejście $s_t$ to pozycja celu, wyjście $x_t$ to pożądana pozycja oka. Można
 
 \begin{align} %!!!!!!!!!!!!!!!!!!!!!!!!!!!!TUTAJ JEST COŚ ŹLE Z TYM RÓWNANIEM%!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	\mathcal{Z}\{h \cdot (s_t - x_t)\} &= \mathcal{Z}\{x_{t+1}\} \nonumber \\
-	H(z) \cdot (S(z) - X(z)) &=  X(z) \nonumber \\ % POWINNO BYĆ CHYBA z \cdot X(z)
-	H(z) \cdot S(z) - H(z) \cdot X(z) &=  X(z) \nonumber \\
-	H(z) \cdot S(z) &= (H(z) + 1) \cdot X(z) \nonumber \\
-	\frac{X(z)}{S(z)} &= \frac{H(z)}{H(z) + 1} \label{eq:plynne-podazanie-transmitancja}
+	H(z) \cdot (S(z) - X(z)) &=  z \cdot X(z) \nonumber \\ % POWINNO BYĆ CHYBA z \cdot X(z)
+	H(z) \cdot S(z) - H(z) \cdot X(z) &= z \cdot X(z) \nonumber \\
+	H(z) \cdot S(z) &= (H(z) + z) \cdot X(z) \nonumber \\
+	\frac{X(z)}{S(z)} &= \frac{H(z)}{H(z) + z} \label{eq:plynne-podazanie-transmitancja}
 \end{align}   %!!!!!!!!!!!!!!!!!!!!!!!!!!!!TUTAJ JEST COŚ ŹLE Z TYM RÓWNANIEM%!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 W ten sposób sygnał z receptorów oka służy za błąd, który następnie jest kompensowany w celu utrzymania obrazu w przestrzeni widzenia plamkowego. Diagram modelu przedstawiony jest na rysunku \ref{fig:model-smooth}.
@@ -749,14 +749,14 @@ Badania wskazały, że dzieci są w stanie zrozumieć i odpowiednio odnieść si
 
 Mimo tego prezentowane śledzenie punktu spojrzenia było naturalne do interpretacji przez badanych \cite{bib:iMotions-children}. Publikacja ta pokazuje, jak okulografia może zostać skutecznie użyta w badaniach naukowych, ale przede wszystkim przedstawia istotność tej techniki w zastosowaniach komercyjnych, np. w testowaniu doświadczeń graczy przy produkcji gier wideo dla różnych grup wiekowych.
 
-\subsection{Porównanie z video-okulografią z użyciem kamerki internetowej}
+\subsection{Porównanie z video-okulografią z użyciem kamery internetowej}
 \label{subsec:porownanie-z-video-okulografia-z-uzyciem-kamerki-internetowej}
 
-Warto omówić także przykłady systemów opierających się jedynie na analizie wideo z kamerki internetowej, jako że system prezentowany w tej pracy działa przede wszystkim na tej zasadzie. Ten typ okulografii, opartej na analizie wideo w czasie rzeczywistym, cieszy się dużą popularnością wśród konsumentów, jako że sprzętowo wymaga od użytkownika posiadania jedynie komputera z wbudowaną lub zewnętrzną kamerą, a całość przetwarzania obrazu, wyświetlania i zbierania danych oraz wyliczania punktu spojrzenia realizowana jest przez software producenta eye trackera.
+Warto omówić także przykłady systemów opierających się jedynie na analizie wideo z kamery internetowej, jako że system prezentowany w tej pracy działa przede wszystkim na tej zasadzie. Ten typ okulografii, opartej na analizie wideo w czasie rzeczywistym, cieszy się dużą popularnością wśród konsumentów, jako że sprzętowo wymaga od użytkownika posiadania jedynie komputera z wbudowaną lub zewnętrzną kamerą, a całość przetwarzania obrazu, wyświetlania i zbierania danych oraz wyliczania punktu spojrzenia realizowana jest przez software producenta eye trackera.
 
 Istotność takiego rozwiązania pojawia się także, gdy przeprowadza się badania na dużej grupie, jako że osoba badana sama dostarcza sprzęt w formie laptopa czy nawet smartfona, a zbierane dane przesyłane są do badaczy przez internet, eliminując potrzebę stwarzania przestrzeni laboratoryjnej i planowania dogodnych terminów eksperymentów.
 
-Dlatego firmy specjalizujące się w okulografii często oferują także oprogramowanie do śledzenia ruchu gałek ocznych przez kamerkę internetową, jak wspomniana już wcześniej firma iMotions. Często dostępne są także rozwiązania od niezależnych dostawców oprogramowania, które za subskrypcją, opłatę lub całkowicie bezpłatnie oferują śledzenie punktu spojrzenia przez kamerę komputera. Jednym z takich programów, który zostanie omówiony, jest darmowy GazeRecorder.
+Dlatego firmy specjalizujące się w okulografii często oferują także oprogramowanie do śledzenia ruchu gałek ocznych przez kamerę internetową, jak wspomniana już wcześniej firma iMotions. Często dostępne są także rozwiązania od niezależnych dostawców oprogramowania, które za subskrypcją, opłatę lub całkowicie bezpłatnie oferują śledzenie punktu spojrzenia przez kamerę komputera. Jednym z takich programów, który zostanie omówiony, jest darmowy GazeRecorder.
 
 W publikacji ,,\english{WebET 3.0 -Validation Study Report}'' przeprowadzono badania sprawdzające efektywność śledzenia ruchu gałek ocznych przez oprogramowanie WebET 3.0 firmy iMotions z wykorzystaniem kamerek internetowych uczestników, bez względu na ich oświetlenie, rozdzielczość kamery czy prędkość internetu. Grupa badana została utworzona tak, by reprezentować różne pochodzenie, wiek, płeć i kolor oczu. Uczestnicy mogli także posiadać owłosienie twarzy oraz nosić okulary.
 
@@ -767,7 +767,7 @@ Wyniki dokładności wskazały, że system iMotions jest niezależny od zmiennyc
 \subsection{Podsumowanie metod w literaturze}
 \label{subsec:Podsumowanie-metod-w-literaturze}
 
-Metoda śledzenia ruchu gałek ocznych przy użyciu źrenicy i odbicia rogówkowego w podczerwieni znacznie przewyższa -- pod względem dokładności -- metodę polegającą na kamerce internetowej. W związku z tym, przy badaniach skupiających się na analizie gęsto ułożonych informacji, wyspecjalizowany okulograf może być bardziej pożądany. Jednakże aktualna dostępność sprzętu i oprogramowania potrzebnego do śledzenia z użyciem kamerki internetowej daje możliwość bardziej obszernych zastosowań, a ich dokładność pozwala na efektywne śledzenie punktu spojrzenia w przypadkach, gdy informacje są ułożone z odpowiednimi dystansami.
+Metoda śledzenia ruchu gałek ocznych przy użyciu źrenicy i odbicia rogówkowego w podczerwieni znacznie przewyższa -- pod względem dokładności -- metodę polegającą na kamerce internetowej. W związku z tym, przy badaniach skupiających się na analizie gęsto ułożonych informacji, wyspecjalizowany okulograf może być bardziej pożądany. Jednakże aktualna dostępność sprzętu i oprogramowania potrzebnego do śledzenia z użyciem kamery internetowej daje możliwość bardziej obszernych zastosowań, a ich dokładność pozwala na efektywne śledzenie punktu spojrzenia w przypadkach, gdy informacje są ułożone z odpowiednimi dystansami.
 
 
 
@@ -798,7 +798,7 @@ Postawienie konkretnych granic funkcjonalnych projektu jest kluczowym elementem 
 \subsection{Limitacje sprzętowe i środowiskowe}
 \label{subsec:Limitacje-sprzetowe-i-srodowiskowe}
 
-Do śledzenia ruchu gałek ocznych używany jest bardzo szeroki wachlarz sprzętów i związanych z nimi rozwiązań technicznych, omówionych w podrozdziałach \ref{sec:osadzenie-tematu-w-kontekscie-aktualnego-stanu-wiedzy} i \ref{sec:studia-literaturowe}. Jednakże w założeniu tego projektu było oparcie się na systemie wizyjnym, co pozwala na ograniczenie znanych metod do video-okulografii. Kolejną ustaloną limitacją było opieranie się jedynie na aktualnie dostępnym sprzęcie, którym był laptop ASUS Vivobook 15 z wbudowaną kamerką internetową USB2.0 HD UVC o częstotliwości próbkowania $30 \ \unit{\hertz}$. Podczas korzystania z kamery automatycznie włączane było także niewielkie źródło światła, przylegające z jej prawej strony.
+Do śledzenia ruchu gałek ocznych używany jest bardzo szeroki wachlarz sprzętów i związanych z nimi rozwiązań technicznych, omówionych w podrozdziałach \ref{sec:osadzenie-tematu-w-kontekscie-aktualnego-stanu-wiedzy} i \ref{sec:studia-literaturowe}. Jednakże w założeniu tego projektu było oparcie się na systemie wizyjnym, co pozwala na ograniczenie znanych metod do video-okulografii. Kolejną ustaloną limitacją było opieranie się jedynie na aktualnie dostępnym sprzęcie, którym był laptop ASUS Vivobook 15 z wbudowaną kamerą internetową USB2.0 HD UVC o częstotliwości próbkowania $30 \ \unit{\hertz}$. Podczas korzystania z kamery automatycznie włączane było także niewielkie źródło światła, przylegające z jej prawej strony.
 
 Tego typu laptop z wbudowaną kamerą reprezentuje jakość sprzętu często używaną do zastosowań biurowych i użytku własnego, dlatego też założono, że źródła światła powinny zostać ograniczone do podstawowego oświetlenia wewnętrznego, tworząc środowisko typowe dla pokoju mieszkalnego, w którym korzysta się z komputera.
 
@@ -871,7 +871,7 @@ Personalizacja, pozwalająca dostosować czułość detekcji oraz opcje obrysowa
 \subsection{ASUS Vivobook 15}
 \label{subsec:ASUS-Vivobook-15}
 
-Projekt prezentowany w tej pracy skupia się przede wszystkim na oprogramowaniu, dlatego sprzęt wykorzystany do jego zrealizowania zamyka się w laptopie z wbudowaną kamerką internetową, który jest także źródłem stawianych wymagań w punkcie \ref{subsec:Limitacje-sprzetowe-i-srodowiskowe}. Jest to ASUS Vivobook 15 D1502YA-BQ309, posiadający ośmiordzeniowy procesor AMD Ryzen 7 7730U z zintegrowanym układem graficznym ATI AMD Radeon Graphics. Notebook ten oryginalnie stosowany był do nauki i programowania, co pozwoliło na szybkie przystosowanie go do pracy nad prezentowanym rozwiązaniem. Wpasowuje się on również w założenie limitacji sprzętowych użytkowników.
+Projekt prezentowany w tej pracy skupia się przede wszystkim na oprogramowaniu, dlatego sprzęt wykorzystany do jego zrealizowania zamyka się w laptopie z wbudowaną kamerą internetową, który jest także źródłem stawianych wymagań w punkcie \ref{subsec:Limitacje-sprzetowe-i-srodowiskowe}. Jest to ASUS Vivobook 15 D1502YA-BQ309, posiadający ośmiordzeniowy procesor AMD Ryzen 7 7730U z zintegrowanym układem graficznym ATI AMD Radeon Graphics. Notebook ten oryginalnie stosowany był do nauki i programowania, co pozwoliło na szybkie przystosowanie go do pracy nad prezentowanym rozwiązaniem. Wpasowuje się on również w założenie limitacji sprzętowych użytkowników.
 
 Wbudowana kamera to USB2.0 HD UVC WebCam producenta Realtek. Urządzenie to rejestruje obraz w 30 klatkach na sekundę w rozdzielczości $1280 \times 720$, posiada także diodę światła białego, która ułatwia śledzenie w niesprzyjających warunkach oświetleniowych i tworzy widoczne na obrazie odbicie rogówkowe. Mimo że nie jest to kamera specjalistyczna, jej parametry są wystarczające do realizacji założeń projektu. Podobne specyfikacje są powszechne w kamerach wbudowanych w laptopy, co sprawia, że opracowane rozwiązanie może być łatwo wdrożone przez użytkowników bez konieczności zakupu dodatkowego sprzętu.
 
@@ -938,7 +938,7 @@ Praca nad projektem przebiegała w sposób iteracyjny, co przypomina metodykę z
 
 % w zasadzie trzeba było by to sprawdzić na wirtualce, albo można napisać od czapy że ma wymagania takie jak pyinstaller + kamera, wyświetlacz - NIE! ROBIMY TO NA MENADŻERZE ZADAŃ
 
-By móc korzystać z programu śledzącego ruch gałek ocznych, wymagane jest użycie kamery i komputera wyposażonego w odpowiednie podzespoły oraz oprogramowanie. Jakość i rodzaj wymaganej kamery internetowej są z grubsza bez znaczenia, jako że podczas korzystania z tego systemu można dostosować jego ustawienia, rekompensując niedociągnięcia kamerki internetowej. Równie prostym do wyznaczenia wymogiem jest wolne miejsce na dysku, które odpowiada sumie rozmiarów plików wykonywalnych z teoretycznym zapasem na powiększenie się pliku tekstowego z pomiarami ($10\%$ sumarycznego rozmiaru plików programowych), wynoszącym $100 \ \unit{\mega\byte} \cdot 1.1 = 110 \ \unit{\mega\byte}$. Dzięki plikom wykonywalnym do uruchomienia programu nie jest wymagane także żadne inne oprogramowanie. Aczkolwiek kwestia wymagań dotyczących wydajności procesora, rozmiaru pamięci RAM (ang. \english{random-access memory}) oraz wspieranego systemu operacyjnego wymaga głębszej analizy.
+By móc korzystać z programu śledzącego ruch gałek ocznych, wymagane jest użycie kamery i komputera wyposażonego w odpowiednie podzespoły oraz oprogramowanie. Jakość i rodzaj wymaganej kamery internetowej są z grubsza bez znaczenia, jako że podczas korzystania z tego systemu można dostosować jego ustawienia, rekompensując niedociągnięcia kamery internetowej. Równie prostym do wyznaczenia wymogiem jest wolne miejsce na dysku, które odpowiada sumie rozmiarów plików wykonywalnych z teoretycznym zapasem na powiększenie się pliku tekstowego z pomiarami ($10\%$ sumarycznego rozmiaru plików programowych), wynoszącym $100 \ \unit{\mega\byte} \cdot 1.1 = 110 \ \unit{\mega\byte}$. Dzięki plikom wykonywalnym do uruchomienia programu nie jest wymagane także żadne inne oprogramowanie. Aczkolwiek kwestia wymagań dotyczących wydajności procesora, rozmiaru pamięci RAM (ang. \english{random-access memory}) oraz wspieranego systemu operacyjnego wymaga głębszej analizy.
 
 \subsection{Procesor i pamięć RAM}
 \label{subsec:Procesor-i-pamięć-RAM}
@@ -1131,7 +1131,7 @@ zostaną kroki przykładowego scenariusza, ilustrowane zrzutami ekranu.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.6\textwidth]{pic/scenariusz/filmik yt.png}
-		\caption{Użytkownik uruchamia krótkie nagranie do analizy uwagi wzrokowej.}
+		\caption{Użytkownik uruchamia krótkie nagranie do analizy uwagi wzrokowej (źródło \url{YouTube.com}).}
 		\label{fig:scenariusz-yt}
 	\end{figure}
 
@@ -1421,7 +1421,7 @@ Na rysunku \ref{fig:kod-kontrola-bledow} widoczne jest wdrożenie podstawowej ko
 			raise IOError("Nie można załadować klasyfikatorów Haar")
 		
 		
-		# Uruchomienie kamerki
+		# Uruchomienie kamery
 		cap = cv2.VideoCapture(0) # 0 to pierwsza kamera
 		
 		# Sprawdzenie, czy kamera została poprawnie otwarta
@@ -1802,7 +1802,7 @@ Ostatecznie, konieczne było świadome podejmowanie decyzji o zakresie realizowa
 \item[EXE] wykonywalny (ang. \english{executable})
 \item[RAM] pamięć o dostępie swobodnym (ang. \english{random-access memory})
 \item[USB] uniwersalna magistrala szeregowa (ang. \english{Universal Serial Bus})
-\item[NIR] Bliska podczerwień (ang. \english{Near-InfraRed})
+\item[NIR] bliska podczerwień (ang. \english{Near-InfraRed})
 \item[ASCII] Amerykański standardowy kod dla wymiany informacji (ang. \english{American Standard Code for Information Interchange})
 \item[TXT] plik tekstowy (ang. \english{text file}) 
 \item[XML] rozszerzalny język znaczników (ang. \english{Extensible Markup Language})
@@ -1812,8 +1812,8 @@ Ostatecznie, konieczne było świadome podejmowanie decyzji o zakresie realizowa
 \item[$e_t$] uchyb systemu w dyskretnej chwili czasu
 \item[$g$] współczynnik filtra liniowego różniczkującego
 \item[$h$] współczynnik filtra liniowego
-\item[$P$] Ocena PassMark 
-\item[$CPU_{\%}$] Procent wykorzystania zasobów procesora
+\item[$P$] ocena PassMark 
+\item[$CPU_{\%}$] procent wykorzystania zasobów procesora
 \item[$\mathcal{Z}$] transformata Z
 \item[$\frac{X(z)}{S(z)}$] transmitancją układu dyskretnego
 \item[$i(x,y)$] wartość piksela w oryginalnym obrazie na współrzędnych $(x,y)$
@@ -1866,7 +1866,7 @@ Ostatecznie, konieczne było świadome podejmowanie decyzji o zakresie realizowa
 W systemie do pracy dołączono dodatkowe pliki zawierające:
 \begin{itemize}
 \item źródła programu,
-\item pliki wykonywalne,
+\item pliki wykonywalne
 \end{itemize}
 
 
